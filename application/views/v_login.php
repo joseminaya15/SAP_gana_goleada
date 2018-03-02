@@ -44,10 +44,10 @@
                         <div class="col-sm-6">
                             <h2 class="title_login">Ingreso a la cancha</h2>
                             <div class="mdl-input transparent">
-                                <input type="text" class="form-control" placeholder="Contrase&ntilde;a" id="password">
+                                <input type="text" class="form-control" placeholder="email" id="correo">
                             </div>
                             <div class="mdl-input transparent">
-                                <input type="text" class="form-control" placeholder="Correo electr&oacute;nico" id="correo">
+                                <input type="text" class="form-control" placeholder="Contrase&ntilde;a" id="password">
                             </div>
                         </div>
                     </div>
