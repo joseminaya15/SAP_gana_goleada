@@ -60,6 +60,9 @@
                                 <input type="text" class="form-control" placeholder="Correo electr&oacute;nico" id="correo">
                             </div>
                         </div>
+                        <div class="col-sm-12">
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="registrar();">Registrar</button>
+                        </div>
                     </div>
                 </div>
             </div>
