@@ -67,6 +67,26 @@ body{
     font-family: 'RobotoBold';
     color: #FFFFFF;
 }
+.button-login{
+	background-color: transparent;
+	text-transform: initial;
+	font-family: 'RobotoBold';
+	box-shadow: none;
+	color: #FFFFFF;
+}
+.button-login i{
+	vertical-align: middle;
+	margin-left: 5px;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+.button-login.registrar i,
+.button-login.registrar{
+	color: #F36F21;
+}
+.button-login.ingresar{
+	background-color: #FDB913; 
+}
 /*MDL-CARD*/
 .mdl-card__supporting-text{
 	width: 100%;

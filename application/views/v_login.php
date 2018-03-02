@@ -49,6 +49,10 @@
                             <div class="mdl-input transparent">
                                 <input type="text" class="form-control" placeholder="Contrase&ntilde;a" id="password">
                             </div>
+                            <div class="">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar">Registrarse<i class="mdi mdi-play_arrow"></i></button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar">Ingresar<i class="mdi mdi-play_arrow"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
