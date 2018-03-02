@@ -1,6 +1,6 @@
 <?php
 
-class M_correo extends  CI_Model{
+class M_login extends  CI_Model{
     function __construct(){
         parent::__construct();
     }
