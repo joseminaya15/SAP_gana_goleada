@@ -53,7 +53,7 @@ body{
 	background-color: rgba(0, 0, 0, 0.8);
 	display: block;
 	width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
 	position: absolute;
     top: 50%;
     left: 50%;
@@ -64,7 +64,11 @@ body{
 	width: 100%;
 }
 .mdl-card-login .mdl-card__supporting-text{
-	padding: 60px 125px;
+	padding: 50px;
+}
+.mdl-card-login .mdl-card__supporting-text img{
+	width: 100%;
+	max-width: 350px;
 }
 /*MDL-INPUT*/
 .mdl-input{
@@ -73,4 +77,11 @@ body{
 .mdl-input .form-control{
 	height: 45px;
     border-radius: 8px;
+}
+.mdl-input.transparent .form-control{
+	height: 45px;
+    border-radius: 15px;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    background-color: transparent;
 }

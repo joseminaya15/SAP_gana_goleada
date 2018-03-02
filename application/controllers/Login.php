@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Es extends CI_Controller {
+class Login extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
@@ -16,7 +16,7 @@ class Es extends CI_Controller {
 	public function index(){
 		$this->session->unset_userdata('user');
 	    $this->session->unset_userdata('Id_user');
-		$this->load->view('v_es');
+		$this->load->view('v_login');
 	}
 
 	function ingresar(){

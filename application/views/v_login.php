@@ -39,13 +39,14 @@
                 <div class="mdl-card mdl-card-login">
                     <div class="mdl-card__supporting-text">
                         <div class="col-sm-6">
-                            <img src="">
+                            <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
                         </div>
                         <div class="col-sm-6">
-                            <div class="mdl-input">
+                            <h2 class="title_login">Ingreso a la cancha</h2>
+                            <div class="mdl-input transparent">
                                 <input type="text" class="form-control" placeholder="Contrase&ntilde;a" id="password">
                             </div>
-                            <div class="mdl-input">
+                            <div class="mdl-input transparent">
                                 <input type="text" class="form-control" placeholder="Correo electr&oacute;nico" id="correo">
                             </div>
                         </div>
