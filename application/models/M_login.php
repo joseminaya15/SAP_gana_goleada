@@ -15,11 +15,13 @@ class M_login extends  CI_Model{
         return array("error" => EXIT_SUCCESS, "msj" => MSJ_INS, "Id" => $sol);
     }*/
 
-    function getDatosCorreos($user) {
+    function verificarUsuario($user, $pass) {
         $sql = "SELECT *
-                  FROM usuarios
-                 WHERE Email LIKE ?";
-        $result = $this->db->query($sql, array($user));
+                  FROM Users
+                 WHERE usuario = ?
+                   AND pass = ?
+                   AND activo = 1;";
+        $result = $this->db->query($sql, array($user, $pass));
         return $result->result();
     }
 }
