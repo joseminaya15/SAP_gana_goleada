@@ -25,7 +25,7 @@ class Es extends CI_Controller {
          try {
 			$usuario  = $this->input->post('usuario');
 			$password = $this->input->post('password');
-			$username = $this->M_usuario->verificarUsuario($usuario, $password);
+			$username = $this->M_login->verificarUsuario($usuario, $password);
 			if(count($username) != 0){
 				if($username[0]->usuario == $usuario){
 				$session = array('usuario' => $usuario,

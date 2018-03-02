@@ -38,9 +38,9 @@ function ingresar(){
       }
 	});
 }
-/*function cerrarCesion(){
+function cerrarCesion(){
 	$.ajax({
-		url  : 'admin/cerrarCesion',
+		url  : 'home/cerrarCesion',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -54,7 +54,7 @@ function ingresar(){
         msj('error',err.message);
       }
 	});
-}*/
+}
 $("#showpass").click(function(){
 	$(this).find('i').toggleClass("mdi-remove_red_eye mdi-visibility_off");
     var input = $(this).parent().find('.mdl-textfield__input');
