@@ -12,3 +12,50 @@ body{
 	bottom: 0;
 	right: 0;
 }
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #000000;
+    z-index: 10;
+}
+.header-left {
+    padding: 15px 0 15px 25px;
+    float: left;
+}
+.header-right {
+    float: right;
+    height: 68px;
+    max-width: 175px;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.background{
+	height: 100%;
+    width: 100%;
+    max-width: 20px;
+    float: right;
+}
+.header-right .background1 {
+    background-color: #54442E;
+}
+.header-right .background2 {
+    background-color: #8D6832;
+}
+.header-right .background3 {
+    background-color: #E29D2E;
+}
+.mdl-card-login{
+	background-color: rgba(0, 0, 0, 0.8);
+	display: block;
+	width: 100%;
+    max-width: 900px;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
