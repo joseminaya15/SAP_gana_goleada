@@ -37,9 +37,20 @@
             </div>
             <div class="container">
                 <div class="mdl-card mdl-card-login">
+                    <div class="mdl-card__title">
+                        <img src="">
+                    </div>
                     <div class="mdl-card__supporting-text">
                         <div class="col-sm-6">
-                            <img src="">
+                            <div class="mdl-input">
+                                <input type="text" class="form-control" placeholder="Nombre completo del capit&aacute;n" id="nombre">
+                            </div>
+                            <div class="mdl-input">
+                                <input type="text" class="form-control" placeholder="Nombre del Canal" id="canal">
+                            </div>
+                            <div class="mdl-input">
+                                <input type="text" class="form-control" placeholder="Pa&iacute;s" id="pais">
+                            </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="mdl-input">

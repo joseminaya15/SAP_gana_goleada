@@ -59,3 +59,18 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+/*MDL-CARD*/
+.mdl-card__supporting-text{
+	width: 100%;
+}
+.mdl-card-login .mdl-card__supporting-text{
+	padding: 60px 125px;
+}
+/*MDL-INPUT*/
+.mdl-input{
+	margin: 15px 0;
+}
+.mdl-input .form-control{
+	height: 45px;
+    border-radius: 8px;
+}
