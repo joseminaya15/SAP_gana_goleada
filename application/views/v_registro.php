@@ -27,9 +27,10 @@
         <section id="login">
             <div class="header">
                 <div class="header-left">
-                    <img class="logo-header" src="">
+                    <img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_favicon.png">
                 </div>
                 <div class="header-right">
+                    <h2 class="">Concurso para partners SMB</h2>
                     <div class="background background3"></div>
                     <div class="background background2"></div>
                     <div class="background background1"></div>
