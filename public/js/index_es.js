@@ -76,15 +76,6 @@ function soloLetras(e){
          return false;
      }
  }
- function valida(e){
-    tecla = (document.all) ? e.keyCode : e.which;
-    if (tecla==8){
-        return true;
-    }
-    patron      =/[0-9]/;
-    tecla_final = String.fromCharCode(tecla);
-    return patron.test(tecla_final);
-}
 function validateEmail(email){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
