@@ -139,6 +139,7 @@ body{
     width: 100%;
     max-width: 280px;
     border-radius: 25px;
+    margin: 1px;
 }
 .mdl-card-menu .mdl-card__title{
 	display: block;
