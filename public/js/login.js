@@ -40,7 +40,7 @@ function ingresar(){
 }
 function cerrarCesion(){
 	$.ajax({
-		url  : 'home/cerrarCesion',
+		url  : 'Menu/cerrarCesion',
 		type : 'POST'
 	}).done(function(data){
 		try{
