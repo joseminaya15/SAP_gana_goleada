@@ -44,10 +44,10 @@
                         <div class="col-sm-6">
                             <h2 class="title_login">Ingreso a la cancha</h2>
                             <div class="mdl-input transparent">
-                                <input type="text" class="form-control" placeholder="email" id="correo">
+                                <input type="text" class="form-control" placeholder="email" id="correo" onkeyup="verificarDatos(event);">
                             </div>
                             <div class="mdl-input transparent">
-                                <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password">
+                                <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password" onkeyup="verificarDatos(event);">
                             </div>
                             <div class="">
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar" onclick="goToRegister();">Registrarse<i class="mdi mdi-play_arrow"></i></button>
