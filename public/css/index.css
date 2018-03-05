@@ -120,6 +120,26 @@ body{
 	display: inline-block;
     width: 100%;
     max-width: 280px;
+    border-radius: 25px;
+}
+.mdl-card-menu .mdl-card__title{
+	display: block;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	height: 250px;
+}
+.mdl-card-menu .mdl-card__title img{
+	margin: auto;
+}
+.mdl-card-menu .mdl-card__supporting-text{
+	padding: 16px 30px;
+}
+.mdl-card-menu .mdl-card__supporting-text p{
+    font-size: 25px;
+    color: #FFFFFF;
+    max-width: 150px;
+    line-height: 28px;
 }
 /*MDL-INPUT*/
 .mdl-input{
