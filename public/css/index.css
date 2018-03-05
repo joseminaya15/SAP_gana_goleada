@@ -81,6 +81,10 @@ body{
 	font-family: 'RobotoBold';
 	box-shadow: none;
 	color: #FFFFFF;
+	padding: 0 20px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 10px;
 }
 .button-login i{
 	vertical-align: middle;
@@ -94,6 +98,7 @@ body{
 }
 .button-login.ingresar{
 	background-color: #FDB913; 
+	float: right;
 }
 /*MDL-CARD*/
 .mdl-card__supporting-text{
