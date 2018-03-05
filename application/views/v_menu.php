@@ -24,7 +24,7 @@
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
     </head>
     <body>
-        <section id="login">
+        <section id="menu">
             <div class="header">
                 <div class="header-left">
                     <img class="logo-header" src="">
@@ -36,7 +36,8 @@
                 </div>
             </div>
             <div class="container">
-                <h1 style="color: #fff;"><?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h1>
+                <h2 class="person_name">Bienvenido(a) <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
+                <p class="team_name">Team <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></p>
                 <div class="mdl-card mdl-card-menu">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>menu/anotacion.png">
