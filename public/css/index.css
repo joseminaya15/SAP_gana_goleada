@@ -115,6 +115,12 @@ body{
     line-height: 30px;
     font-size: 26px;
 }
+.mdl-card-menu{
+	background-color: rgba(0, 0, 0, 0.8);
+	display: inline-block;
+    width: 100%;
+    max-width: 280px;
+}
 /*MDL-INPUT*/
 .mdl-input{
 	margin: 15px 0;

@@ -36,7 +36,42 @@
                 </div>
             </div>
             <div class="container">
+<<<<<<< Updated upstream
                 <h1 style="color: #fff;"><?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h1>
+=======
+                <div class="mdl-card mdl-card-menu">
+                    <div class="mdl-card__title">
+                        <img src="<?php echo RUTA_IMG?>menu/anotacion.png">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>Nueva anotaci&oacute;n</p>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-card-menu">
+                    <div class="mdl-card__title">
+                        <img src="<?php echo RUTA_IMG?>menu/anotaciones.png">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>Mis anotaciones</p>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-card-menu">
+                    <div class="mdl-card__title">
+                        <img src="<?php echo RUTA_IMG?>menu/ranking.png">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>Ranking goleadores</p>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-card-menu">
+                    <div class="mdl-card__title">
+                        <img src="<?php echo RUTA_IMG?>menu/salon.png">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>Sal&oacute;n de la fama SAP</p>
+                    </div>
+                </div>
+>>>>>>> Stashed changes
             </div>
         </section>
 
