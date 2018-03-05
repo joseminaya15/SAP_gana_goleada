@@ -63,9 +63,17 @@
                             <div class="mdl-input">
                                 <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password">
                             </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-confirmar" onclick="registrar();">Registrar</button>
+                            <div class="col-xs-12 p-0">
+                                <div class="col-xs-6 p-0">
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label"><a>Acepto t&eacute;rminos y condiciones</a></span>
+                                    </label>
+                                </div>
+                                <div class="col-xs-6 p-0 text-right">
+                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="registrar();">Grabar</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
