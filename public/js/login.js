@@ -1,13 +1,6 @@
 function ingresar(){
 	var usuario  = $('#correo').val();
 	var password = $('#password').val();
-	/*if($('#checkbox-2').is(':checked') == true){
-		sessionStorage.setItem('CHECK', '1');
-		sessionStorage.setItem('USERNAME', 'sapadmin');
-		sessionStorage.setItem('PASS', 'admin');
-	}else{
-		sessionStorage.setItem('CHECK', '0');
-	}*/
 	if(usuario == null){
     msj('error', 'Ingrese su correo');
     return;
@@ -17,7 +10,6 @@ function ingresar(){
     return;
   }
 	if(password == null){
-		//$('#password').parent().addClass('is-invalid');
     msj('error', 'Ingrese su contraseña');
 		return;
 	}
@@ -34,8 +26,11 @@ function ingresar(){
         	$('#password').val("");
           location.href = 'Menu';
         }else {
-				  $('#correo').parent().addClass('is-invalid');
-				  $('#password').parent().addClass('is-invalid');
+          if(data.pass == null || data.pass == '') {
+            msj('error', 'alguno de sus datos son incorrectos');
+          }else {
+            msj('error', data.pass);
+          }
         	return;
         }
       }catch(err){

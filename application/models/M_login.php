@@ -15,11 +15,10 @@ class M_login extends  CI_Model{
         return array("error" => EXIT_SUCCESS, "msj" => MSJ_INS, "Id" => $sol);
     }
 
-    function verificarUsuario($user, $pass) {
+    function verificarUsuario($user) {
         $sql = "SELECT *
                   FROM users
-                 WHERE usuario LIKE '%".$user."%'
-                   AND pass = '".$pass."'";
+                 WHERE usuario LIKE '%".$user."%'";
         $result = $this->db->query($sql);
         return $result->result();
     }

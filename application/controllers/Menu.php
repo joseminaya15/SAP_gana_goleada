@@ -14,6 +14,12 @@ class Menu extends CI_Controller {
     }
 
 	public function index(){
-		$this->load->view('v_menu');
+        if($this->session->userdata('usuario') == null){
+            header("location: Login");
+        }
+        $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
+
+        return $data['nombre_capitan'];
+		//$this->load->view('v_menu');
 	}
 }
