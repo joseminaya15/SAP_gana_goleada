@@ -36,9 +36,7 @@
                 </div>
             </div>
             <div class="container">
-<<<<<<< Updated upstream
                 <h1 style="color: #fff;"><?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h1>
-=======
                 <div class="mdl-card mdl-card-menu">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>menu/anotacion.png">
@@ -71,7 +69,6 @@
                         <p>Sal&oacute;n de la fama SAP</p>
                     </div>
                 </div>
->>>>>>> Stashed changes
             </div>
         </section>
 
