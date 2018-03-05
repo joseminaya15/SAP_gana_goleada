@@ -4,6 +4,7 @@ function registrar() {
 	var canal 	 = $('#canal').val();
 	var correo   = $('#correo').val();
 	var pais 	 = $('#pais').val();
+	//var terminos = $('#checkbox-1').is(':checked');
 	if(nombre == '' && canal == '' && canal == '' && correo == '' && pais == ''){
 		msj('error', 'Ingrese sus datos');
 		return;
@@ -32,6 +33,10 @@ function registrar() {
 		msj('error', 'Ingrese su contraseña');
 		return;
 	}
+	/*if(terminos == false){
+		msj('error', 'Acepte los t&eacute;rminos y condiciones');
+		return;
+	}*/
 	$.ajax({
 		data : {nombre 	 : nombre,
 				canal 	 : canal,
