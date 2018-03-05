@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="container">
-                
+                <h1 style="color: #fff;"><?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h1>
             </div>
         </section>
 
