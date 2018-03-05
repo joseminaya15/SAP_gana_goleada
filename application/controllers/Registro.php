@@ -35,7 +35,8 @@ class Registro extends CI_Controller {
             $session    = array('nombre_capitan' => $nombre,
                                 'canal'          => $canal,
                                 'usuario'        => $usuario,
-                                'pais'           => $pais);
+                                'pais'           => $pais,
+                                'id_capitan'     => $datoInsert['Id']);
             $this->session->set_userdata($session);
 			$data['error'] = EXIT_SUCCESS;
         }catch(Exception $e) {
