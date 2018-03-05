@@ -31,7 +31,7 @@ function registrar() {
 	$.ajax({
 		data : {nombre 	 : nombre,
 				canal 	 : canal,
-				usuario  : usuario,
+				usuario  : correo,
 				password : password,
 				pais 	 : pais},
 		url  : 'registro/registrar',
@@ -40,11 +40,12 @@ function registrar() {
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	$('#nombre').val();
-			$('#password').val();
-			$('#canal').val();
-			$('#correo').val();
-			$('#pais').val();
+        	$('#nombre').val("");
+			$('#password').val("");
+			$('#canal').val("");
+			$('#correo').val("");
+			$('#pais').val("");
+			msj('error', 'Se registró correctamente');
         }else {
 			$('#usuario').parent().addClass('is-invalid');
 			$('#password').parent().addClass('is-invalid');

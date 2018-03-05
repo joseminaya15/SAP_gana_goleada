@@ -5,7 +5,7 @@ class M_login extends  CI_Model{
         parent::__construct();
     }
 
-   /* function insertarDatos($arrayInsert, $tabla){
+    function insertarDatos($arrayInsert, $tabla){
         $this->db->insert($tabla, $arrayInsert);
         $sol = $this->db->insert_id();
         if($this->db->affected_rows() != 1) {
@@ -13,15 +13,14 @@ class M_login extends  CI_Model{
             $data['error'] = EXIT_ERROR;
         }
         return array("error" => EXIT_SUCCESS, "msj" => MSJ_INS, "Id" => $sol);
-    }*/
+    }
 
     function verificarUsuario($user, $pass) {
         $sql = "SELECT *
-                  FROM Users
-                 WHERE usuario = ?
-                   AND pass = ?
-                   AND activo = 1;";
-        $result = $this->db->query($sql, array($user, $pass));
+                  FROM users
+                 WHERE usuario LIKE '%".$user."%'
+                   AND pass = '".$pass."'";
+        $result = $this->db->query($sql);
         return $result->result();
     }
 }

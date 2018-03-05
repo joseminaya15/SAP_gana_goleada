@@ -1,36 +1,41 @@
 function ingresar(){
-	var usuario  = $('#usuario').val();
+	var usuario  = $('#correo').val();
 	var password = $('#password').val();
-	if($('#checkbox-2').is(':checked') == true){
+	/*if($('#checkbox-2').is(':checked') == true){
 		sessionStorage.setItem('CHECK', '1');
 		sessionStorage.setItem('USERNAME', 'sapadmin');
 		sessionStorage.setItem('PASS', 'admin');
 	}else{
 		sessionStorage.setItem('CHECK', '0');
-	}
+	}*/
 	if(usuario == null){
-		$('#usuario').parent().addClass('is-invalid');
-		return;
-	}
+    msj('error', 'Ingrese su correo');
+    return;
+  }
+  if (!validateEmail(usuario)){
+    msj('error', 'El correo ingresado no tiene el formato correcto');
+    return;
+  }
 	if(password == null){
-		$('#password').parent().addClass('is-invalid');
+		//$('#password').parent().addClass('is-invalid');
+    msj('error', 'Ingrese su contraseña');
 		return;
 	}
 	$.ajax({
 		data : {usuario  : usuario,
 				    password : password},
-		url  : 'es/ingresar',
+		url  : 'Login/ingresar',
 		type : 'POST'
 	}).done(function(data){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	location.href = 'admin';
-        	$('#usuario').val("");
+        	$('#correo').val("");
         	$('#password').val("");
+          location.href = 'Registro';
         }else {
-				$('#usuario').parent().addClass('is-invalid');
-				$('#password').parent().addClass('is-invalid');
+				  $('#correo').parent().addClass('is-invalid');
+				  $('#password').parent().addClass('is-invalid');
         	return;
         }
       }catch(err){
@@ -98,4 +103,8 @@ function verificarDatos(e){
 		e.preventDefault();
 		ingresar();
     }
+}
+
+function goToRegister(){
+  location.href = "Registro";
 }

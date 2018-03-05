@@ -43,21 +43,21 @@
                     <div class="mdl-card__supporting-text">
                         <div class="col-sm-6">
                             <div class="mdl-input">
-                                <input type="text" class="form-control" placeholder="Nombre completo del capit&aacute;n" id="nombre">
+                                <input type="text" class="form-control" placeholder="Nombre completo del capit&aacute;n" id="nombre" maxlength="50" onkeypress="return soloLetras(event);">
                             </div>
                             <div class="mdl-input">
-                                <input type="text" class="form-control" placeholder="Nombre del Canal" id="canal">
+                                <input type="text" class="form-control" placeholder="Nombre del Canal" id="canal" maxlength="50">
                             </div>
                             <div class="mdl-input">
-                                <input type="text" class="form-control" placeholder="Pa&iacute;s" id="pais">
+                                <input type="text" class="form-control" placeholder="Pa&iacute;s" id="pais" maxlength="50" onkeypress="return soloLetras(event);">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="mdl-input">
-                                <input type="text" class="form-control" placeholder="Contrase&ntilde;a" id="password">
+                                <input type="text" class="form-control" placeholder="Correo electr&oacute;nico" id="correo">
                             </div>
                             <div class="mdl-input">
-                                <input type="text" class="form-control" placeholder="Correo electr&oacute;nico" id="correo">
+                                <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password">
                             </div>
                         </div>
                         <div class="col-sm-12">
