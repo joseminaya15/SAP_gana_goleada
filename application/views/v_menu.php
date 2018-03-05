@@ -71,6 +71,10 @@
                         <p>Sal&oacute;n de la fama SAP</p>
                     </div>
                 </div>
+                <div>
+                    <a>Ver Premios <i class="mdi mdi-play_arrow"></i></a>
+                    <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
+                </div>
             </div>
         </section>
 
