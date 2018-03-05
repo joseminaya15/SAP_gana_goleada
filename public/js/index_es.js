@@ -4,28 +4,32 @@ function registrar() {
 	var canal 	 = $('#canal').val();
 	var correo   = $('#correo').val();
 	var pais 	 = $('#pais').val();
-	if(nombre == null){
-		msj('error', 'Ingrese el nombre');
+	if(nombre == '' && canal == '' && canal == '' && correo == '' && pais == ''){
+		msj('error', 'Ingrese sus datos');
 		return;
 	}
-	if(password == null){
-		msj('error', 'Ingrese su contraseña');
+	if(nombre == null || nombre == undefined || nombre == ''){
+		msj('error', 'Ingrese el nombre del capitán');
 		return;
 	}
-	if(canal == null){
+	if(canal == ''){
 		msj('error', 'Ingrese su canal');
 		return;
 	}
-	if(correo == null){
+	if(pais == ''){
+		msj('error', 'Ingrese su país');
+		return;
+	}
+	if(correo == ''){
 		msj('error', 'Ingrese su correo');
 		return;
 	}
 	if (!validateEmail(correo)){
-		$('#correo').css('border-color','red');
+		msj('error', 'El formato del correo es incorrecto');
 		return;
 	}
-	if(pais == null){
-		msj('error', 'Ingrese su país');
+	if(password == ''){
+		msj('error', 'Ingrese su contraseña');
 		return;
 	}
 	$.ajax({
@@ -47,8 +51,7 @@ function registrar() {
 			$('#pais').val("");
 			msj('error', 'Se registró correctamente');
         }else {
-			$('#usuario').parent().addClass('is-invalid');
-			$('#password').parent().addClass('is-invalid');
+			msj('error', 'Su usuario o contraseña son incorrectas');
         	return;
         }
       }catch(err){
