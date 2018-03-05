@@ -32,7 +32,7 @@ function ingresar(){
         if(data.error == 0){
         	$('#correo').val("");
         	$('#password').val("");
-          location.href = 'Registro';
+          location.href = 'Menu';
         }else {
 				  $('#correo').parent().addClass('is-invalid');
 				  $('#password').parent().addClass('is-invalid');
