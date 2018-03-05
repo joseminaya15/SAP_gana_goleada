@@ -4,6 +4,7 @@ body{
 	padding: 0;
 	font-family: 'RobotoRegular';
 }
+#menu,
 #login{
     background: url(../img/fondo/fondo_sap.jpeg) no-repeat center center;
     background-size: cover !important;
@@ -114,6 +115,23 @@ body{
     margin: 5px 0;
     line-height: 30px;
     font-size: 26px;
+}
+.person_name,
+.team_name{
+	color: #FFFFFF;
+}
+.person_name{
+    margin: 10px 0;
+    line-height: 42px;
+}
+
+.team_name{
+    margin: 5px 0 15px 0;
+    font-size: 26px;
+    line-height: 30px;
+}
+#menu .container{
+	padding-top: 100px;
 }
 .mdl-card-menu{
 	background-color: rgba(0, 0, 0, 0.8);
