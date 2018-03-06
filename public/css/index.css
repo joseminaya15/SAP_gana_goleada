@@ -40,9 +40,9 @@ body{
 .header-right h2{
 	color: #FFFFFF;
 	font-family: 'RobotoMedium';
-	font-size: 22px;
+	font-size: 20px;
 	line-height: 26px;
-	margin-right: 29px;
+	margin-right: 55px;
 }
 .background{
 	height: 100%;
@@ -112,7 +112,7 @@ body{
 .footer-menu a{
 	color: #FFFFFF;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 37px;
     position: absolute;
     top: 50px;
 }
