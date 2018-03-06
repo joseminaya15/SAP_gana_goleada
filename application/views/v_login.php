@@ -11,7 +11,7 @@
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
     	<title>SAP Gana por Goleada</title>
-    	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/logo_favicon.png">
+    	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.css?v=<?php echo time();?>">
@@ -52,7 +52,7 @@
                                 <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password" onkeyup="verificarDatos(event);">
                             </div>
                             <div class="m-t-20">
-                                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar" href="http://test.brainblue.com/gana_por_goleada/Registro" target="_blank">Registrarse<i class="mdi mdi-play_arrow"></i></a>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar" onclick="goToRegister()">Registrarse<i class="mdi mdi-play_arrow"></i></button>
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="ingresar()">Ingresar<i class="mdi mdi-play_arrow"></i></button>
                             </div>
                         </div>

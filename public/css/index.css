@@ -123,6 +123,7 @@ body{
 	max-width: 125px;
     position: absolute;
     right: 0;
+    margin-bottom: 40px;
 }
 /*MDL-CARD*/
 .mdl-card__supporting-text{
