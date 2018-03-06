@@ -37,6 +37,9 @@
                 </div>
             </div>
             <div class="container">
+                <div class="text-right">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
+                </div>
                 <h2 class="person_name">Bienvenido(a) <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
                 <p class="team_name">Team <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
                 <div class="mdl-card mdl-card-menu">
@@ -71,7 +74,7 @@
                         <p>Sal&oacute;n de la fama SAP</p>
                     </div>
                 </div>
-                <div>
+                <div class="footer-menu">
                     <a>Ver Premios <i class="mdi mdi-play_arrow"></i></a>
                     <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
                 </div>

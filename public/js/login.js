@@ -38,23 +38,6 @@ function ingresar(){
       }
 	});
 }
-function cerrarCesion(){
-	$.ajax({
-		url  : 'Menu/cerrarCesion',
-		type : 'POST'
-	}).done(function(data){
-		try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-        	location.href = 'Login';
-        }else {
-        	return;
-        }
-      }catch(err){
-        msj('error',err.message);
-      }
-	});
-}
 $("#showpass").click(function(){
 	$(this).find('i').toggleClass("mdi-remove_red_eye mdi-visibility_off");
     var input = $(this).parent().find('.mdl-textfield__input');

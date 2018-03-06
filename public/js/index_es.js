@@ -85,3 +85,20 @@ function validateEmail(email){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
+function cerrarCesion(){
+	$.ajax({
+		url  : 'Menu/cerrarCesion',
+		type : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        	location.href = 'Login';
+        }else {
+        	return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+	});
+}
