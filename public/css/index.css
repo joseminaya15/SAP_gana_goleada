@@ -86,6 +86,9 @@ body{
 	line-height: 32px;
 	border-radius: 10px;
 }
+.button-login.logout{
+	background-color: #000000;
+}
 .button-login i{
 	vertical-align: middle;
 	margin-left: 5px;
@@ -99,6 +102,26 @@ body{
 .button-login.ingresar{
 	background-color: #FDB913; 
 	float: right;
+}
+.footer-menu{
+	position: relative;
+	margin-top: 20px;
+}
+.footer-menu a{
+	color: #FFFFFF;
+    text-decoration: none;
+    font-size: 40px;
+    position: absolute;
+    top: 50px;
+}
+.footer-menu a i{
+	color: #FFFFFF;
+	vertical-align: middle;
+}
+.footer-menu img{
+	max-width: 125px;
+    position: absolute;
+    right: 0;
 }
 /*MDL-CARD*/
 .mdl-card__supporting-text{
