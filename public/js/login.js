@@ -82,7 +82,3 @@ function verificarDatos(e){
 		ingresar();
     }
 }
-
-function goToRegister(){
-  location.href = "registro";
-}
