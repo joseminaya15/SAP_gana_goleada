@@ -101,5 +101,5 @@ function verificarDatos(e){
 }
 
 function goToRegister(){
-  location.href = "Registro";
+  location.href = "registro";
 }
