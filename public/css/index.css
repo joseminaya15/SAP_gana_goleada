@@ -1,14 +1,14 @@
 body{
 	overflow: hidden;
+	overflow-y: scroll;
 	margin: 0;
 	padding: 0;
 	font-family: 'RobotoRegular';
 }
-#menu,
-#login{
+.fondo-imagen{
     background: url(../img/fondo/fondo_sap.jpeg) no-repeat center center;
     background-size: cover !important;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
