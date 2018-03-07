@@ -51,42 +51,11 @@
                         <p>Nueva anotaci&oacute;n</p>
                     </div>
                 </div>
-                <div id="Anotaciones" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
-                    <div class="mdl-card__title">
-                        <img src="<?php echo RUTA_IMG?>menu/anotaciones.png">
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <p>Mis anotaciones</p>
-                    </div>
-                </div>
-                <div id="Ranking_goleadores" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
-                    <div class="mdl-card__title">
-                        <img src="<?php echo RUTA_IMG?>menu/ranking.png">
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <p>Ranking goleadores</p>
-                    </div>
-                </div>
-                <div id="Salon_de_fama" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
-                    <div class="mdl-card__title">
-                        <img src="<?php echo RUTA_IMG?>menu/salon.png">
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <p>Sal&oacute;n de la fama SAP</p>
-                    </div>
-                </div>
-                <div class="footer-menu">
-                    <a>Ver Premios <i class="mdi mdi-play_arrow"></i></a>
-                    <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
-                </div>
             </div>
         </section>
-
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/bootstrap-select.min.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>moment/moment.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>datetimepicker/js/bootstrap-material-datetimepicker.js?v=<?php echo time();?>"></script>
@@ -95,12 +64,5 @@
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>index_es.js?v=<?php echo time();?>"></script>
-        <script type="text/javascript">
-            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-                $('select').selectpicker('mobile');
-            } else {
-                $('select').selectpicker();
-            }
-        </script>
     </body>
 </html>

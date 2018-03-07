@@ -105,3 +105,6 @@ function cerrarCesion(){
       }
 	});
 }
+function goToMenu(id){
+	location.href = id;
+}

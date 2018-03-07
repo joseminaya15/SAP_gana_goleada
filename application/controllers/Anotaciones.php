@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Salon_de_fama extends CI_Controller {
+class Anotaciones extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-        $this->load->helper("url");//BORRAR CACHÉ DE LA PÁGINA
+        $this->load->helper("url");
         $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
@@ -14,7 +14,7 @@ class Salon_de_fama extends CI_Controller {
 	public function index(){
         $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
         $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
-		$this->load->view('v_fama', $data);
+		$this->load->view('v_anotaciones', $data);
 	}
     function cerrarCesion(){
         $data['error'] = EXIT_ERROR;

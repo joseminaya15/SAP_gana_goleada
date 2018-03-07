@@ -183,7 +183,20 @@ body{
     width: 100%;
     max-width: 280px;
     border-radius: 25px;
+    cursor: pointer;
     margin: 1px;
+    -webkit-transition: transform .2s linear;
+    -moz-transition: transform .2s linear;
+    -ms-transition: transform .2s linear;
+    -o-transition: transform .2s linear;
+    transition: transform .2s linear;
+}
+.mdl-card-menu:HOVER{
+	-webkit-transform: scale(1.02);
+	   -moz-transform: scale(1.02);
+	    -ms-transform: scale(1.02);
+	     -o-transform: scale(1.02);
+	        transform: scale(1.02);
 }
 .mdl-card-menu .mdl-card__title{
 	display: block;
