@@ -5,6 +5,10 @@ body{
 	padding: 0;
 	font-family: 'RobotoRegular';
 }
+.mdl-card-container{
+	max-width: 1200px;
+	width: 100%;
+}
 .fondo-imagen{
     background: url(../img/fondo/fondo_sap.png) no-repeat center center;
     background-size: cover !important;
@@ -133,6 +137,9 @@ body{
     margin-bottom: 40px;
 }
 /*MDL-CARD*/
+.mdl-card{
+	width: 100%;
+}
 .mdl-card__supporting-text{
 	width: 100%;
 }
@@ -217,6 +224,7 @@ body{
     max-width: 150px;
     line-height: 28px;
 }
+.mdl-card-ranking,
 .mdl-card-fama{
     max-width: calc(100% - 290px);
     display: inline-block;
@@ -255,6 +263,19 @@ body{
 	line-height: 32px;
 	font-family: 'RobotoMedium';
 	margin: 0;
+}
+.mdl-card-ranking{
+	border-radius: 15px;
+	padding: 0 20px;
+	margin-left: 20px;
+	max-width: calc(100% - 310px);
+}
+.mdl-card-ranking h2{
+    margin: 0;
+    font-size: 28px;
+    font-family: 'RobotoMedium';
+    border-bottom: 2px solid #000;
+    width: 100%;
 }
 /*MDL-INPUT*/
 .mdl-input{

@@ -35,7 +35,7 @@
                     <div class="background background1"></div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container mdl-card-container">
                 <div class="text-right">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
                 </div>
@@ -47,6 +47,63 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <p>Ranking goleadores</p>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-card-ranking">
+                    <div class="mdl-card__title">
+                        <h2>Ranking Goleadores</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Posici&oacute;</th>
+                                        <th>Equipo</th>
+                                        <th>Capit&aacute;n</th>
+                                        <th>Pa&iacute;s</th>
+                                        <th>Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#</td>
+                                        <td>Seidor</td>
+                                        <td>Jorge Rojas</td>
+                                        <td>Per&uacute;</td>
+                                        <td>90 goles</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#2</td>
+                                        <td>Seidor</td>
+                                        <td>Jorge Rojas</td>
+                                        <td>Per&uacute;</td>
+                                        <td>90 goles</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#3</td>
+                                        <td>Seidor</td>
+                                        <td>Jorge Rojas</td>
+                                        <td>Per&uacute;</td>
+                                        <td>90 goles</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#4</td>
+                                        <td>Seidor</td>
+                                        <td>Jorge Rojas</td>
+                                        <td>Per&uacute;</td>
+                                        <td>90 goles</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#5</td>
+                                        <td>Seidor</td>
+                                        <td>Jorge Rojas</td>
+                                        <td>Per&uacute;</td>
+                                        <td>90 goles</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
