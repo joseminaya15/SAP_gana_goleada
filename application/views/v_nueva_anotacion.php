@@ -37,7 +37,7 @@
                     <div class="background background1"></div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container mdl-card-container">
                 <div class="text-right">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
                 </div>

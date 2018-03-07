@@ -279,6 +279,15 @@ body{
     border-bottom: 2px solid #000;
     width: 100%;
 }
+.mdl-card-anotar{
+    display: inline-block;
+    max-width: 300px;
+}
+.mdl-card-cuentas{
+    display: inline-block;
+    max-width: calc(100% - 305px);
+    vertical-align: top;
+}
 /*MDL-INPUT*/
 .mdl-input{
 	margin: 15px 0;
