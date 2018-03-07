@@ -27,7 +27,7 @@
             <div class="fondo-imagen"></div>
             <div class="header">
                 <div class="header-left">
-                    <img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_favicon.png">
+                    <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_favicon.png"></a>
                 </div>
                 <div class="header-right">
                     <h2 class="">Concurso para partners SMB</h2>
@@ -49,6 +49,24 @@
                     <div class="mdl-card__supporting-text">
                         <p>Sal&oacute;n de la fama SAP</p>
                     </div>
+                </div>
+                <div class="mdl-card-fama">
+                	<div class="fama-imagen">
+                		<img src="<?php echo RUTA_IMG?>fama/riverplate.jpg">
+                		<p>River Plate</p>
+                	</div>
+                	<div class="fama-imagen">
+                		<img src="<?php echo RUTA_IMG?>fama/xolos.jpg">
+                		<p>Xolos</p>
+                	</div>
+                	<div class="fama-imagen">
+                		<img src="<?php echo RUTA_IMG?>fama/saopaulo.jpg">
+                		<p>Sao Paulo</p>
+                	</div>
+                	<div class="fama-imagen">
+                		<img src="<?php echo RUTA_IMG?>fama/mcity.jpg">
+                		<p>Manchester City</p>
+                	</div>                	
                 </div>
             </div>
         </section>

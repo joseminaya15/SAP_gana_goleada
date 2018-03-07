@@ -217,6 +217,45 @@ body{
     max-width: 150px;
     line-height: 28px;
 }
+.mdl-card-fama{
+    max-width: calc(100% - 290px);
+    display: inline-block;
+    vertical-align: top;
+}
+.fama-imagen{
+	width: 100%;
+	max-width: 400px;
+	display: inline-block;
+	margin: 11px;
+	position: relative;
+}
+.fama-imagen img{
+	width: 100%;
+}
+.fama-imagen:BEFORE{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000000;
+	height: 100%;
+	width: 100%;
+	opacity: 0.3;
+	z-index: 0;
+	display: block;
+}
+.fama-imagen p{
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	color: #FFFFFF;
+	font-size: 30px;
+	line-height: 32px;
+	font-family: 'RobotoMedium';
+	margin: 0;
+}
 /*MDL-INPUT*/
 .mdl-input{
 	margin: 15px 0;
