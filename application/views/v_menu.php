@@ -42,7 +42,7 @@
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
                 </div>
                 <h2 class="person_name">Bienvenido(a) <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
-                <p class="team_name">Team <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
+                <p class="team_name">Equipo <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
                 <div class="mdl-card mdl-card-menu">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>menu/anotacion.png">

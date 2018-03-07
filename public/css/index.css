@@ -6,7 +6,7 @@ body{
 	font-family: 'RobotoRegular';
 }
 .fondo-imagen{
-    background: url(../img/fondo/fondo_sap.jpeg) no-repeat center center;
+    background: url(../img/fondo/fondo_sap.png) no-repeat center center;
     background-size: cover !important;
 	position: fixed;
 	top: 0;
@@ -25,13 +25,19 @@ body{
     z-index: 10;
 }
 .header-left {
-    padding: 21px 0 21px 25px;
+    padding: 18px 0 17px 25px;
     float: left;
+    width: 100%;
+    max-width: 100px;
+}
+.header-left img{
+    max-width: 65px;
+    width: 100%;
 }
 .header-right {
     float: right;
     height: 68px;
-    max-width: 375px;
+    max-width: 355px;
     width: 100%;
     display: flex;
     display: -webkit-flex;
@@ -39,10 +45,10 @@ body{
 }
 .header-right h2{
 	color: #FFFFFF;
-	font-family: 'RobotoMedium';
+	font-family: 'RobotoRegular';
 	font-size: 20px;
 	line-height: 26px;
-	margin-right: 55px;
+	margin-right: 35px;
 }
 .background{
 	height: 100%;
@@ -89,7 +95,7 @@ body{
 	text-decoration: none !important;
 }
 .button-login.logout{
-	background-color: #000000;
+    text-decoration: underline !important;
 }
 .button-login i{
 	vertical-align: middle;
