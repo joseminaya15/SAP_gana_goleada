@@ -35,7 +35,7 @@
                     <div class="background background1"></div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container mdl-card-container">
                 <div class="text-right">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
                 </div>
@@ -47,6 +47,68 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <p>Mis anotaciones</p>
+                    </div>
+                </div>
+                <div class="mdl-card-anotaciones">
+                    <div class="mdl-card mdl-card-anotar">
+                        
+                    </div>
+                    <div class="mdl-card mdl-card-cuentas">
+                        <div class="mdl-card__title">
+                            <h2>Cuentas nuevas (NNN)</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Empresa</th>
+                                            <th>Deal Registration ID</th>
+                                            <th>Pa&iacute;s</th>
+                                            <th>Status</th>
+                                            <th>Goles</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Grupo Gloria</td>
+                                            <td>1982894022</td>
+                                            <td>Per&uacute;</td>
+                                            <td></td>
+                                            <td>3 goles</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Grupo AJE</td>
+                                            <td>1982894022</td>
+                                            <td>Per&uacute;</td>
+                                            <td></td>
+                                            <td>3 goles</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Grupo AJE</td>
+                                            <td>1982894022</td>
+                                            <td>Per&uacute;</td>
+                                            <td></td>
+                                            <td>3 goles</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Grupo AJE</td>
+                                            <td>1982894022</td>
+                                            <td>Per&uacute;</td>
+                                            <td></td>
+                                            <td>3 goles</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Grupo AJE</td>
+                                            <td>1982894022</td>
+                                            <td>Per&uacute;</td>
+                                            <td></td>
+                                            <td>3 goles</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
