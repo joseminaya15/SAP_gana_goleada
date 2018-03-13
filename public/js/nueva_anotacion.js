@@ -5,7 +5,6 @@ function nuevaAnotacion(){
 	var fecha 	   = $('#fecha').val();
 	//var goles 	   = $('#goles').val();
 	var id_serv	   = null;
-
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese su empresa');
 		return;
