@@ -43,7 +43,7 @@ class Nueva_anotacion extends CI_Controller {
             $dataInsert = array('Empresa'  => $empresa,
                                  'Deal_registration' => $deal_reg,
                                  'Pais'    => $pais,
-                                 'Flag'    => 1//POR APROVAR,
+                                 'Flag'    => FLAG_PENDIENTE,
                                  'Goles'   => $goles,
                                  'Id_serv' => $id_serv);
             $datosInsert = $this->M_datos->InsertDatos($dataInsert, 'anotaciones');
