@@ -301,6 +301,7 @@ body{
     vertical-align: top;
     margin: 3px 10px;
     padding: 25px;
+    border-radius: 20px;
 }
 .mdl-card-cuentas .mdl-card__title{
 	border-bottom: 1px solid #000000;

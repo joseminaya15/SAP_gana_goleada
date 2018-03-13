@@ -126,27 +126,57 @@
                     <div class="mdl-card mdl-card-cuentas">
                         <div class="mdl-card__title">
                             <h2>Cuentas nuevas (NNN)</h2>
-                            <div class="puntaje">
-                                <p class="m-0">GOLES</p>
-                            </div>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nombre de empresa NNN">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="País">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Deal Registration ID">
-                            </div>
-                            <div class="col-xs-6 p-0">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="DD/MM/YYYY">
-                                </div>
-                            </div>
-                            <div class="col-xs-6 p-0 text-right">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Anotar</button>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Posici&oacute;</th>
+                                            <th>Equipo</th>
+                                            <th>Capit&aacute;n</th>
+                                            <th>Pa&iacute;s</th>
+                                            <th>Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#</td>
+                                            <td>Seidor</td>
+                                            <td>Jorge Rojas</td>
+                                            <td>Per&uacute;</td>
+                                            <td>90 goles</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#2</td>
+                                            <td>Seidor</td>
+                                            <td>Jorge Rojas</td>
+                                            <td>Per&uacute;</td>
+                                            <td>90 goles</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#3</td>
+                                            <td>Seidor</td>
+                                            <td>Jorge Rojas</td>
+                                            <td>Per&uacute;</td>
+                                            <td>90 goles</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#4</td>
+                                            <td>Seidor</td>
+                                            <td>Jorge Rojas</td>
+                                            <td>Per&uacute;</td>
+                                            <td>90 goles</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#5</td>
+                                            <td>Seidor</td>
+                                            <td>Jorge Rojas</td>
+                                            <td>Per&uacute;</td>
+                                            <td>90 goles</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
