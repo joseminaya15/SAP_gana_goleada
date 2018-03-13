@@ -148,7 +148,7 @@
                                 </div>
                             </div>
                             <div class="col-xs-6 p-0 text-right">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Anotar</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="nuevaAnotacion()">Anotar</button>
                             </div>
                         </div>
                     </div>
@@ -165,6 +165,6 @@
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>index_es.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>Nueva_anotacion.js?v=<?php echo time();?>"></script>
     </body>
 </html>
