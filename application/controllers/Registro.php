@@ -5,7 +5,7 @@ class Registro extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-        $this->load->model('M_login');
+        $this->load->model('M_datos');
         $this->load->helper("url");//BORRAR CACHÉ DE LA PÁGINA
         $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
@@ -31,7 +31,7 @@ class Registro extends CI_Controller {
                                  'usuario'        => $usuario,
                                  'pass'           => base64_encode($password),
                                  'Pais'           => $pais);
-            $datoInsert = $this->M_login->insertarDatos($arrayInsert, 'Users');
+            $datoInsert = $this->M_datos->insertarDatos($arrayInsert, 'Users');
             $session    = array('nombre_capitan' => $nombre,
                                 'canal'          => $canal,
                                 'usuario'        => $usuario,
