@@ -16,9 +16,9 @@ function clonarFecha(inputNew,idButton) {
 }
 function initCalendarDaysMinToday(id, currentDate, fecha){
 	var startDate = new Date();
-	 if (currentDate != undefined) {
+	if (currentDate != undefined) {
             var startDate = new Date(currentDate);
-        }
+    }
 	$("#"+id).bootstrapMaterialDatePicker({ 
 		weekStart : 0, 
 		date	: true, 
@@ -54,11 +54,11 @@ function initButtonCalendarDaysMinToday(idButton, currentDate, fecha) {
 function initCalendarDaysRange(id, min, max){
 	$("#"+id).bootstrapMaterialDatePicker({ 
 		weekStart : 0, 
-		date	: true, 
-		time	: false, 
-		format 	: 'DD/MM/YYYY',
-		minDate : min,
-		maxDate : max
+		date	  : true, 
+		time	  : false, 
+		format 	  : 'DD/MM/YYYY',
+		minDate   : min,
+		maxDate   : max
 	});
 }
 function initButtonCalendarDaysRange(idButton, minDate, maxDate) {

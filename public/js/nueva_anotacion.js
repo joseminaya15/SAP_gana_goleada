@@ -83,3 +83,10 @@ function valida(e){
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
 }
+function initMaskInputs() {
+	for(var i = 0; i < arguments.length; i++) {
+		var text	= arguments[i];
+		var input	= $('#'+text);
+		input.mask('00/00/0000');
+	}
+}
