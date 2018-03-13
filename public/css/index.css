@@ -221,7 +221,7 @@ body{
 .mdl-card-menu .mdl-card__supporting-text p{
     font-size: 25px;
     color: #FFFFFF;
-    max-width: 150px;
+    max-width: 185px;
     line-height: 28px;
 }
 .mdl-card-anotaciones,
@@ -282,11 +282,45 @@ body{
 .mdl-card-anotar{
     display: inline-block;
     max-width: 300px;
+    margin: 3px 10px;
+    padding: 15px 25px;
+    border-radius: 20px;
+}
+.mdl-card-anotar p{
+	margin: 0;
+	line-height: 18px;
+    margin-top: 5px;
+}
+.mdl-card-anotar .mdl-puntos{
+	padding: 5px 0;
+	border-bottom: 1px solid #000;
 }
 .mdl-card-cuentas{
     display: inline-block;
-    max-width: calc(100% - 305px);
+    max-width: calc(100% - 345px);
     vertical-align: top;
+    margin: 3px 10px;
+    padding: 25px;
+}
+.mdl-card-cuentas .mdl-card__title{
+	border-bottom: 1px solid #000000;
+	padding: 5px 0;
+}
+.mdl-card-cuentas .mdl-card__title h2{
+	margin: 0;
+	font-size: 20px;
+	line-height: 22px;
+	font-family: 'RobotoMedium';
+	width: calc(100% - 150px);
+    display: inline-block;
+}
+.mdl-card-cuentas .mdl-card__title .puntaje{
+	max-width: 145px;
+	width: 100%;
+	text-align: right;
+}
+.mdl-card-cuentas .mdl-card__supporting-text{
+	padding: 20px 0;
 }
 /*MDL-INPUT*/
 .mdl-input{
@@ -311,8 +345,15 @@ body{
 .mdl-checkbox__box-outline{
 	border: 2px solid #FFFFFF;
 }
+.mdl-card-anotar .mdl-checkbox.is-checked .mdl-checkbox__box-outline,
+.mdl-card-anotar .mdl-checkbox__box-outline{
+	border: 2px solid #000000;
+}
 .mdl-checkbox.is-checked .mdl-checkbox__tick-outline{
 	background: #FFFFFF;
+}
+.mdl-card-anotar .mdl-checkbox.is-checked .mdl-checkbox__tick-outline{
+	background: #000000;
 }
 /*PLACEHOLDER*/
 input::placeholder {

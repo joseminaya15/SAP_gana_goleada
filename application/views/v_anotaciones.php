@@ -51,62 +51,102 @@
                 </div>
                 <div class="mdl-card-anotaciones">
                     <div class="mdl-card mdl-card-anotar">
-                        
+                        <div class="col-xs-12 mdl-puntos">
+                            <div class="punto-imagen">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                            </div>
+                            <div class="col-xs-10 p-l-0">
+                                <p>Cuentas nuevas (NNN)</p>
+                            </div>
+                            <div class="col-xs-2">
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="cuenta_nueva">
+                                    <input type="checkbox" id="cuenta_nueva" class="mdl-checkbox__input">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 mdl-puntos">
+                            <div class="punto-imagen">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                            </div>
+                            <div class="col-xs-10 p-l-0">
+                                <p>Oportunidades generadas de Social Selling</p>
+                            </div>
+                            <div class="col-xs-2">
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="social_selling">
+                                    <input type="checkbox" id="social_selling" class="mdl-checkbox__input">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 mdl-puntos">
+                            <div class="punto-imagen">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
+                            </div>
+                            <div class="col-xs-10 p-l-0">
+                                <p>Oportunidades generadas para Cloud</p>
+                            </div>
+                            <div class="col-xs-2">
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="oportunidad">
+                                    <input type="checkbox" id="oportunidad" class="mdl-checkbox__input">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 mdl-puntos">
+                            <div class="punto-imagen">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                            </div>
+                            <div class="col-xs-10 p-l-0">
+                                <p>Casos de &eacute;xitos de clientes aprobados</p>
+                            </div>
+                            <div class="col-xs-2">
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="caso">
+                                    <input type="checkbox" id="caso" class="mdl-checkbox__input">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 mdl-puntos">
+                            <div class="punto-imagen">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                            </div>
+                            <div class="col-xs-10 p-l-0">
+                                <p>Won & Booked (W/B)</p>
+                            </div>
+                            <div class="col-xs-2">
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="booked">
+                                    <input type="checkbox" id="booked" class="mdl-checkbox__input">
+                                </label>
+                            </div>
+                        </div>
                     </div>
                     <div class="mdl-card mdl-card-cuentas">
                         <div class="mdl-card__title">
                             <h2>Cuentas nuevas (NNN)</h2>
+                            <div class="puntaje">
+                                <p class="m-0">GOLES</p>
+                            </div>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Empresa</th>
-                                            <th>Deal Registration ID</th>
-                                            <th>Pa&iacute;s</th>
-                                            <th>Status</th>
-                                            <th>Goles</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Grupo Gloria</td>
-                                            <td>1982894022</td>
-                                            <td>Per&uacute;</td>
-                                            <td></td>
-                                            <td>3 goles</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Grupo AJE</td>
-                                            <td>1982894022</td>
-                                            <td>Per&uacute;</td>
-                                            <td></td>
-                                            <td>3 goles</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Grupo AJE</td>
-                                            <td>1982894022</td>
-                                            <td>Per&uacute;</td>
-                                            <td></td>
-                                            <td>3 goles</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Grupo AJE</td>
-                                            <td>1982894022</td>
-                                            <td>Per&uacute;</td>
-                                            <td></td>
-                                            <td>3 goles</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Grupo AJE</td>
-                                            <td>1982894022</td>
-                                            <td>Per&uacute;</td>
-                                            <td></td>
-                                            <td>3 goles</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nombre de empresa NNN">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="País">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Deal Registration ID">
+                            </div>
+                            <div class="col-xs-6 p-0">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="DD/MM/YYYY">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 p-0 text-right">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Anotar</button>
                             </div>
                         </div>
                     </div>
