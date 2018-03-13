@@ -75,7 +75,7 @@ function soloLetras(e){
          return false;
      }
  }
- function valida(e){
+function valida(e){
     tecla = (document.all) ? e.keyCode : e.which;
     if (tecla==8){
         return true;
