@@ -37,13 +37,13 @@ class Nueva_anotacion extends CI_Controller {
             $empresa  = $this->input->post('empresa');
             $deal_reg = $this->input->post('deal_reg');
             $pais     = $this->input->post('pais');
-            $flag     = $this->input->post('flag');
+            $fecha    = $this->input->post('fecha');
             $goles    = $this->input->post('goles');
             $id_serv  = $this->input->post('id_serv');
             $dataInsert = array('Empresa'  => $empresa,
                                  'Deal_registration' => $deal_reg,
                                  'Pais'    => $pais,
-                                 'Flag'    => $flag,
+                                 'Flag'    => 1//POR APROVAR,
                                  'Goles'   => $goles,
                                  'Id_serv' => $id_serv);
             $datosInsert = $this->M_datos->InsertDatos($dataInsert, 'anotaciones');
