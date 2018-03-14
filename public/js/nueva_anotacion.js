@@ -16,8 +16,13 @@ function nuevaAnotacion(){
 		msj('error', 'Ingrese su empresa');
 		return;
 	}
-	if(empresa == '' || empresa == null){
-		msj('error', 'Ingrese su empresa');
+	if(validarFormatoFecha(fecha)){
+      if(!existeFecha(fecha)){
+        msj('error', 'La fecha introducida no existe.');
+		return;
+      }
+	}else{
+	    msj('error', 'El formato de la fecha es incorrecto.');
 		return;
 	}
 	$.ajax({
@@ -69,4 +74,23 @@ function valida(e){
     patron 		=/[0-9]/;
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
+}
+function validarFormatoFecha(campo) {
+      var RegExPattern = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
+      if ((campo.match(RegExPattern)) && (campo!='')) {
+            return true;
+      } else {
+            return false;
+      }
+}
+function existeFecha(fecha){
+      var fechaf = fecha.split("/");
+      var day = fechaf[0];
+      var month = fechaf[1];
+      var year = fechaf[2];
+      var date = new Date(year,month,'0');
+      if((day-0)>(date.getDate()-0)){
+            return false;
+      }
+      return true;
 }

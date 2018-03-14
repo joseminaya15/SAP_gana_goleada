@@ -144,7 +144,7 @@
                             </div>
                             <div class="col-xs-6 p-0">
                                 <div class="form-group">
-                                    <input type="texto" class="form-control" id="exampleInputEmail1" placeholder="DD/MM/YYYY" id="fecha">
+                                    <input type="texto" class="form-control" id="fecha" name="fecha" maxlength="10" placeholder="dd/mm/aaaa">
                                 </div>
                             </div>
                             <div class="col-xs-6 p-0 text-right">
@@ -167,12 +167,11 @@
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Nueva_anotacion.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+        /*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
             $('select').selectpicker('mobile');
         } else {
             $('select').selectpicker();
-        }
-        initButtonCalendarDaysRange('fecha','01/11/2017','31/10/2018');
+        }*/
         initMaskInputs('fecha');
     </script>
     </body>
