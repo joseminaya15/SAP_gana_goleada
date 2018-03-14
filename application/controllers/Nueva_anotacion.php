@@ -39,7 +39,19 @@ class Nueva_anotacion extends CI_Controller {
             $pais     = $this->input->post('pais');
             $fecha    = $this->input->post('fecha');
             $goles    = $this->input->post('goles');
-            $id_serv  = $this->input->post('id_serv');
+            $servicio = $this->input->post('servicio');
+            $id_serv  = null;
+            if($servicio == 'Cuentas Nuevas'){
+                $id_serv = 1;
+            }else if($servicio == 'Social Selling'){
+                $id_serv = 2;
+            }else if($servicio == 'Cloud'){
+                $id_serv = 3;
+            }else if($servicio == 'clientes aprovados'){
+                $id_serv = 4;
+            }else if($servicio == 'Won & Booked'){
+                $id_serv = 5;
+            }
             $dataInsert = array('Empresa'  => $empresa,
                                  'Deal_registration' => $deal_reg,
                                  'Pais'    => $pais,
