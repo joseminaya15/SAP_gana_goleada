@@ -34,7 +34,7 @@ function registrar() {
 		return;
 	}
 	if(terminos == false){
-		msj('error', 'Acepte los t&eacute;rminos y condiciones');
+		msj('error', 'Acepte los términos y condiciones');
 		return;
 	}
 	$.ajax({

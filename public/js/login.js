@@ -26,10 +26,14 @@ function ingresar(){
         	$('#password').val("");
           location.href = 'Menu';
         }else {
-          if(data.pass == null || data.pass == '') {
-            msj('error', 'alguno de sus datos son incorrectos');
+          if(data.user == null || data.user == '' || data.user == undefined) {
+            if(data.pass == null || data.pass == '' || data.pass == undefined) {
+              msj('error', 'alguno de sus datos son incorrectos');
+            }else {
+              msj('error', data.pass);
+            }
           }else {
-            msj('error', data.pass);
+            msj('error', data.user);
           }
         	return;
         }

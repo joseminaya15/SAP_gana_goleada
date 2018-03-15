@@ -9,22 +9,22 @@ function nuevaAnotacion(){
 		return;
 	}
 	if(deal_regis == '' || deal_regis == null){
-		msj('error', 'Ingrese su empresa');
+		msj('error', 'Ingrese el Deal Registration ID');
 		return;
 	}
 	if(pais == '' || pais == null){
-		msj('error', 'Ingrese su empresa');
+		msj('error', 'Ingrese el pais');
 		return;
 	}
-	if(validarFormatoFecha(fecha)){
+	/*if(validarFormatoFecha(fecha)){
       if(!existeFecha(fecha)){
-        msj('error', 'La fecha introducida no existe.');
+        msj('error', 'La fecha introducida no existe');
 		return;
       }
 	}else{
-	    msj('error', 'El formato de la fecha es incorrecto.');
+	    msj('error', 'El formato de la fecha es incorrecto');
 		return;
-	}
+	}*/
 	$.ajax({
 		data : {empresa    : empresa,
 				deal_regis : deal_regis,
@@ -43,6 +43,7 @@ function nuevaAnotacion(){
 				$('#pais').val("");
 				$('#fecha').val("");
 	        }else {
+	        	msj('error', data.msj);
 	        	return;
 	        }
       }catch(err){

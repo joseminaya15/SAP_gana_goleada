@@ -134,13 +134,13 @@
                         </div>
                         <div class="mdl-card__supporting-text">
                             <div class="form-group">
-                                <input type="texto" class="form-control" id="exampleInputEmail1" placeholder="Nombre de empresa NNN" id="empresa">
+                                <input type="texto" class="form-control" placeholder="Nombre de empresa NNN" id="empresa">
                             </div>
                             <div class="form-group">
-                                <input type="texto" class="form-control" id="exampleInputEmail1" placeholder="País" id="pais">
+                                <input type="texto" class="form-control" placeholder="País" id="pais">
                             </div>
                             <div class="form-group">
-                                <input type="texto" class="form-control" id="exampleInputEmail1" placeholder="Deal Registration ID" id="deal_regis">
+                                <input type="texto" class="form-control" placeholder="Deal Registration ID" id="deal_regis">
                             </div>
                             <div class="col-xs-6 p-0">
                                 <div class="form-group">
