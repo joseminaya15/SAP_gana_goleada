@@ -15,8 +15,8 @@ class Anotaciones extends CI_Controller {
 	public function index(){
         $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
         $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
-        $datos = $this->M_datos->getTotal(1);
-        $data['total'] = $datos[0]->total;
+        $datos                  = $this->M_datos->getTotal(1);
+        $data['total']          = $datos[0]->total;
 		$this->load->view('v_anotaciones', $data);
 	}
 
