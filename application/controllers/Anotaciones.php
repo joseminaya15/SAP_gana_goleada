@@ -15,9 +15,9 @@ class Anotaciones extends CI_Controller {
 	public function index(){
         $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
         $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
-        $datos = $this->M_data->getTotal(1);
-        $data['total'] = $datos[0]->total;
-		$this->load->view('v_anotaciones', $data);
+        /*$datos = $this->M_data->getTotal(1);
+        $data['total'] = $datos[0]->total;*/
+		$this->load->view('v_anotaciones');
 	}
 
     function cerrarCesion(){
@@ -33,8 +33,8 @@ class Anotaciones extends CI_Controller {
         echo json_encode($data);
     }
 
-    function getDatosAnotaciones(){
-        $data['error'] = EXIT_ERROR;
+    /*function getDatosAnotaciones(){
+       $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
             $id_user = $this->input->post('id_user');
@@ -49,5 +49,5 @@ class Anotaciones extends CI_Controller {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
-    }
+    }*/
 }
