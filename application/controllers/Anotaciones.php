@@ -15,7 +15,7 @@ class Anotaciones extends CI_Controller {
 	public function index(){
         $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
         $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
-        $datos = $this->M_data->getTotal(1);
+        $datos = $this->M_datos->getTotal(1);
         $data['total'] = $datos[0]->total;
 		$this->load->view('v_anotaciones', $data);
 	}
@@ -38,11 +38,11 @@ class Anotaciones extends CI_Controller {
         $data['msj']   = null;
         try {
             $id_user = $this->input->post('id_user');
-            $datos   = $this->M_data->getDatosAnotaciones($id_user);
+            $datos   = $this->M_datos->getDatosAnotaciones($id_user);
             $html    = null;
-            foreach ($datos as $key) {
+            /*foreach ($datos as $key) {
                 $html .= '';
-            }
+            }*/
             $data['tabla'] = $html;
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
