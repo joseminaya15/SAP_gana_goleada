@@ -59,12 +59,12 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
-                            <div class="col-xs-10 p-l-0">
+                            <div class="name-anotacion col-xs-10 p-l-0">
                                 <p>Cuentas nuevas (NNN)</p>
                             </div>
                             <div class="col-xs-2">
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="cuenta_nueva">
-                                    <input type="radio" id="cuenta_nueva" class="mdl-radio__button" name="options" value="1">
+                                    <input type="radio" id="cuenta_nueva" class="mdl-radio__button" name="options" value="1" checked onclick="selectAnotacion(this.id)">
                                 </label>
                             </div>
                         </div>
@@ -73,12 +73,12 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
-                            <div class="col-xs-10 p-l-0">
+                            <div class="name-anotacion col-xs-10 p-l-0">
                                 <p>Oportunidades generadas de Social Selling</p>
                             </div>
                             <div class="col-xs-2">
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="social_selling">
-                                    <input type="radio" id="social_selling" class="mdl-radio__button" name="options" value="2">
+                                    <input type="radio" id="social_selling" class="mdl-radio__button" name="options" value="2" onclick="selectAnotacion(this.id)">
                                 </label>
                             </div>
                         </div>
@@ -87,12 +87,12 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
                             </div>
-                            <div class="col-xs-10 p-l-0">
+                            <div class="name-anotacion col-xs-10 p-l-0">
                                 <p>Oportunidades generadas para Cloud</p>
                             </div>
                             <div class="col-xs-2">
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidad">
-                                    <input type="radio" id="oportunidad" class="mdl-radio__button" name="options" value="3">
+                                    <input type="radio" id="oportunidad" class="mdl-radio__button" name="options" value="3" onclick="selectAnotacion(this.id)"> 
                                 </label>
                             </div>
                         </div>
@@ -100,12 +100,12 @@
                             <div class="punto-imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
-                            <div class="col-xs-10 p-l-0">
+                            <div class="name-anotacion col-xs-10 p-l-0">
                                 <p>Casos de &eacute;xitos de clientes aprobados</p>
                             </div>
                             <div class="col-xs-2">
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="caso">
-                                    <input type="radio" id="caso" class="mdl-radio__button" name="options" value="4">
+                                    <input type="radio" id="caso" class="mdl-radio__button" name="options" value="4" onclick="selectAnotacion(this.id)">
                                 </label>
                             </div>
                         </div>
@@ -115,12 +115,12 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
-                            <div class="col-xs-10 p-l-0">
+                            <div class="name-anotacion col-xs-10 p-l-0">
                                 <p>Won & Booked (W/B)</p>
                             </div>
                             <div class="col-xs-2">
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="booked">
-                                    <input type="radio" id="booked" class="mdl-radio__button" name="options" value="4">
+                                    <input type="radio" id="booked" class="mdl-radio__button" name="options" value="5" onclick="selectAnotacion(this.id)">
                                 </label>
                             </div>
                         </div>
@@ -129,7 +129,12 @@
                         <div class="mdl-card__title">
                             <h2>Cuentas nuevas (NNN)</h2>
                             <div class="puntaje">
-                                <p class="m-0">GOLES</p>
+                                <div class="numero-goles inline">
+                                    <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                    <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                    <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                </div>
+                                <p class="m-0 inline">GOLES</p>
                             </div>
                         </div>
                         <div class="mdl-card__supporting-text">
@@ -165,7 +170,7 @@
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>Nueva_anotacion.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>nueva_anotacion.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
         /*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
             $('select').selectpicker('mobile');

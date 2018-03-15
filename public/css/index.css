@@ -314,6 +314,9 @@ body{
 	font-family: 'RobotoMedium';
 	width: calc(100% - 150px);
     display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .mdl-card-cuentas .mdl-card__title .puntaje{
 	max-width: 145px;

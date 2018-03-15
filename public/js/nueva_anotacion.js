@@ -95,3 +95,16 @@ function existeFecha(fecha){
       }
       return true;
 }
+var nameAnotacion = null;
+var puntosGoles = null;
+function selectAnotacion(id){
+	var idButton = $('#'+id);
+	var card     = $('.mdl-card-cuentas');
+	var name     = idButton.parents('.mdl-puntos').find('.name-anotacion').find('p').text();
+	var puntos   = idButton.parents('.mdl-puntos').find('.punto-imagen').html();
+	var goles    = idButton.parents('.mdl-puntos').find('.punto-imagen').children().length;
+	card.find('.mdl-card__title').find('h2').text(name);
+	card.find('.mdl-card__title').find('.numero-goles').html(puntos);
+	nameAnotacion = name;
+	puntosGoles = goles;
+}

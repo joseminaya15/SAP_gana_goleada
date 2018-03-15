@@ -274,3 +274,6 @@
 .br-0{
 	border-radius: 0 !important;
 }
+.inline{
+	display: inline-block !important;
+}
