@@ -16,32 +16,34 @@ function nuevaAnotacion(){
 		msj('error', 'Ingrese el pais');
 		return;
 	}
-	/*if(validarFormatoFecha(fecha)){
-      if(!existeFecha(fecha)){
-        msj('error', 'La fecha introducida no existe');
-		return;
-      }
-	}else{
-	    msj('error', 'El formato de la fecha es incorrecto');
-		return;
-	}*/
+	if(fecha == null || fecha == ''){
+		msj('error', 'Ingrese la fecha');
+	}
+	if(nameAnotacion == null || nameAnotacion == ''){
+		nameAnotacion = 'Cuentas nuevas (NNN)';
+	}
+	if(puntosGoles == null || puntosGoles == ''){
+		puntosGoles = 3;
+	}
 	$.ajax({
 		data : {empresa    : empresa,
 				deal_regis : deal_regis,
 				pais 	   : pais,
-				fecha 	   : fecha/*,
-				goles 	   : goles,
-				servicio   : servicio*/},
+				fecha 	   : fecha,
+				goles 	   : puntosGoles,
+				servicio   : nameAnotacion},
 		url  : 'Nueva_anotacion/nuevaAnotacion',
 		type : 'POST'
 	}).done(function(data){
 		try{
 	        data = JSON.parse(data);
+	        console.log(data);
 	        if(data.error == 0){
 				$('#empresa').val("");
 				$('#deal_regis').val("");
 				$('#pais').val("");
 				$('#fecha').val("");
+				msj('error', 'Se registró correctamente su anotación');
 	        }else {
 	        	msj('error', data.msj);
 	        	return;

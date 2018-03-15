@@ -35,34 +35,34 @@ class Nueva_anotacion extends CI_Controller {
         $data['msj']   = null;
         try{
             $empresa  = $this->input->post('empresa');
-            $deal_reg = $this->input->post('deal_reg');
+            $deal_reg = $this->input->post('deal_regis');
             $pais     = $this->input->post('pais');
             $fecha    = $this->input->post('fecha');
             $goles    = $this->input->post('goles');
             $servicio = $this->input->post('servicio');
             $id_serv  = null;
             $arr_fecha = explode("/", $fecha);
-            if(checkdate($arr_fecha[0], $arr_fecha[1], $arr_fecha[2]) == false){
+            if(checkdate($arr_fecha[1], $arr_fecha[0], $arr_fecha[2]) == false){
                 $data['msj'] = 'La fecha ingresada no es correcta';
             }else {
-                /*if($servicio == 'Cuentas Nuevas'){
+                if($servicio == 'Cuentas nuevas (NNN)'){
                     $id_serv = 1;
-                }else if($servicio == 'Social Selling'){
+                }else if($servicio == 'Oportunidades generadas de Social Selling'){
                     $id_serv = 2;
-                }else if($servicio == 'Cloud'){
+                }else if($servicio == 'Oportunidades generadas para Cloud'){
                     $id_serv = 3;
-                }else if($servicio == 'clientes aprovados'){
+                }else if($servicio == 'Casos de éxitos de clientes aprobados'){
                     $id_serv = 4;
-                }else if($servicio == 'Won & Booked'){
+                }else if($servicio == 'Won & Booked (W/B)'){
                     $id_serv = 5;
-                }*/
+                }
                 $dataInsert = array('Empresa'  => $empresa,
                                      'Deal_registration' => $deal_reg,
                                      'Pais'    => $pais,
                                      'Flag'    => FLAG_PENDIENTE,
                                      'Goles'   => $goles,
                                      'Id_serv' => $id_serv);
-                $datosInsert = $this->M_datos->InsertDatos($dataInsert, 'anotaciones');
+                $datosInsert = $this->M_datos->insertarDatos($dataInsert, 'anotaciones');
                 $datos       = $this->M_datos->getTotal($id_serv);
                 $arrUpdate   = array('Total' => $datos[0]->total);
                 $this->M_datos->updateDatos($arrUpdate, $id_serv, 'servicios');
