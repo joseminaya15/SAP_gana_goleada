@@ -66,41 +66,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>#</td>
-                                        <td>Seidor</td>
-                                        <td>Jorge Rojas</td>
-                                        <td>Per&uacute;</td>
-                                        <td>90 goles</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#2</td>
-                                        <td>Seidor</td>
-                                        <td>Jorge Rojas</td>
-                                        <td>Per&uacute;</td>
-                                        <td>90 goles</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#3</td>
-                                        <td>Seidor</td>
-                                        <td>Jorge Rojas</td>
-                                        <td>Per&uacute;</td>
-                                        <td>90 goles</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#4</td>
-                                        <td>Seidor</td>
-                                        <td>Jorge Rojas</td>
-                                        <td>Per&uacute;</td>
-                                        <td>90 goles</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#5</td>
-                                        <td>Seidor</td>
-                                        <td>Jorge Rojas</td>
-                                        <td>Per&uacute;</td>
-                                        <td>90 goles</td>
-                                    </tr>
+                                    <?php echo $tabla ?>
                                 </tbody>
                             </table>
                         </div>
