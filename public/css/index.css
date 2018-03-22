@@ -295,6 +295,9 @@ body{
 	padding: 5px 0;
 	border-bottom: 1px solid #000;
 }
+.mdl-card-anotar .mdl-puntos .mdl-radio .mdl-radio__outer-circle{
+	border-radius: 0;
+}
 .mdl-card-cuentas{
     display: inline-block;
     max-width: calc(100% - 345px);

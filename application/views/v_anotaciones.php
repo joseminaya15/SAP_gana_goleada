@@ -57,12 +57,15 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
-                            <div class="col-xs-10 p-l-0">
-                                <p>Cuentas nuevas (NNN) <strong><?php echo $total_cn ?></strong></p>
+                            <div class="name-anotacion col-xs-8 p-0">
+                                <p>Cuentas nuevas (NNN)</p>
                             </div>
                             <div class="col-xs-2">
-                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="cuenta_nueva">
-                                    <input type="checkbox" id="cuenta_nueva" class="mdl-checkbox__input">
+                                <strong><?php echo $total_cn ?></strong>
+                            </div>
+                            <div class="col-xs-2">
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="cuenta_nueva">
+                                    <input type="radio" id="cuenta_nueva" class="mdl-radio__button" name="options" value="1" checked onclick="nuevaAnotacion(this.id)">
                                 </label>
                             </div>
                         </div>
@@ -71,12 +74,15 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
-                            <div class="col-xs-10 p-l-0">
-                                <p>Oportunidades generadas de Social Selling <strong><?php echo $total_sc ?></strong></p>
+                            <div class="name-anotacion col-xs-8 p-0">
+                                <p>Oportunidades generadas de Social Selling</p>
                             </div>
                             <div class="col-xs-2">
-                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="social_selling">
-                                    <input type="checkbox" id="social_selling" class="mdl-checkbox__input">
+                                <strong><?php echo $total_sc ?></strong>
+                            </div>
+                            <div class="col-xs-2">
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="social_selling">
+                                    <input type="radio" id="social_selling" class="mdl-radio__button" name="options" value="2" onclick="nuevaAnotacion(this.id)">
                                 </label>
                             </div>
                         </div>
@@ -85,12 +91,15 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
                             </div>
-                            <div class="col-xs-10 p-l-0">
-                                <p>Oportunidades generadas para Cloud <strong><?php echo $total_cl ?></strong></p>
+                            <div class="name-anotacion col-xs-8 p-0">
+                                <p>Oportunidades generadas para Cloud</p>
                             </div>
                             <div class="col-xs-2">
-                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="oportunidad">
-                                    <input type="checkbox" id="oportunidad" class="mdl-checkbox__input">
+                                <strong><?php echo $total_cl ?></strong>
+                            </div>
+                            <div class="col-xs-2">
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidad">
+                                    <input type="radio" id="oportunidad" class="mdl-radio__button" name="options" value="3" onclick="nuevaAnotacion(this.id)"> 
                                 </label>
                             </div>
                         </div>
@@ -98,12 +107,15 @@
                             <div class="punto-imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
-                            <div class="col-xs-10 p-l-0">
-                                <p>Casos de &eacute;xitos de clientes aprobados <strong><?php echo $total_ca ?></strong></p>
+                            <div class="name-anotacion col-xs-8 p-0">
+                                <p>Casos de &eacute;xitos de clientes aprobados</p>
                             </div>
                             <div class="col-xs-2">
-                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="caso">
-                                    <input type="checkbox" id="caso" class="mdl-checkbox__input">
+                                <strong><?php echo $total_ca ?></strong>
+                            </div>
+                            <div class="col-xs-2">
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="caso">
+                                    <input type="radio" id="caso" class="mdl-radio__button" name="options" value="4" onclick="nuevaAnotacion(this.id)">
                                 </label>
                             </div>
                         </div>
@@ -113,12 +125,15 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
-                            <div class="col-xs-10 p-l-0">
-                                <p>Won & Booked (W/B) <strong><?php echo $total_wb ?></strong></p>
+                            <div class="name-anotacion col-xs-8 p-0">
+                                <p>Won & Booked (W/B)</p>
                             </div>
                             <div class="col-xs-2">
-                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="booked">
-                                    <input type="checkbox" id="booked" class="mdl-checkbox__input">
+                                <strong><?php echo $total_wb ?></strong>
+                            </div>
+                            <div class="col-xs-2">
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="booked">
+                                    <input type="radio" id="booked" class="mdl-radio__button" name="options" value="5" onclick="nuevaAnotacion(this.id)">
                                 </label>
                             </div>
                         </div>
@@ -159,6 +174,6 @@
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>anotacion.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>anotaciones.js?v=<?php echo time();?>"></script>
     </body>
 </html>

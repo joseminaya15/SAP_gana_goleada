@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 function cambiarTabla(){
+=======
+function nuevaAnotacion(id){
+>>>>>>> Stashed changes
 	var servicio = $( "input:checked" ).val();
 	$.ajax({
 		data : {id_serv : servicio},
@@ -17,4 +21,8 @@ function cambiarTabla(){
         msj('error',err.message);
       }
 	});
+	var idButton = $('#'+id);
+	var card     = $('.mdl-card-cuentas');
+	var name     = idButton.parents('.mdl-puntos').find('.name-anotacion').find('p').text();
+	card.find('.mdl-card__title').find('h2').text(name);
 }
