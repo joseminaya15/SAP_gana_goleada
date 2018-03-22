@@ -17,14 +17,14 @@ class Admin extends CI_Controller {
         $html  = null;
         foreach ($datos as $key){
            $html .= '<tr>
-                        <td>'.$key->Deal_number.'</td>
+                        <td>'.$key->Deal_registration.'</td>
                         <td>'.$key->Nombre_canal.'</td>
                         <td>'.$key->Nombre_capitan.'</td>
                         <td>'.$key->Pais.'</td>
-                        <td>'.$key->Status.' goles</td>
+                        <td>'.$key->Flag.'</td>
                         <td>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular();">Anular</button>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar();">Aceptar</button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.');">Anular</button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.');">Aceptar</button>
                         </td>
                     </tr>';
         }
@@ -37,6 +37,64 @@ class Admin extends CI_Controller {
         try {
             $this->session->unset_userdata('usuario');
             $this->session->unset_userdata('Id_user');
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+    function anularAnotacion(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $id_serv   = $this->input->post('id_serv');
+            $arrUpdt   = array('Flag' => FLAG_RECHAZADO);
+            $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
+            $datos     = $this->M_datos->getDatosAdmin();
+            $html      = null;
+            foreach ($datos as $key){
+               $html .= '<tr>
+                            <td>'.$key->Deal_registration.'</td>
+                            <td>'.$key->Nombre_canal.'</td>
+                            <td>'.$key->Nombre_capitan.'</td>
+                            <td>'.$key->Pais.'</td>
+                            <td>'.$key->Flag.'</td>
+                            <td>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.');">Anular</button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.');">Aceptar</button>
+                            </td>
+                        </tr>';
+            }
+            $data['tabla'] = $html;
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+    function aceptarAnotacion(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $id_serv   = $this->input->post('id_serv');
+            $arrUpdt   = array('Flag' => FLAG_APROBADO);
+            $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
+            $datos     = $this->M_datos->getDatosAdmin();
+            $html      = null;
+            foreach ($datos as $key){
+               $html .= '<tr>
+                            <td>'.$key->Deal_registration.'</td>
+                            <td>'.$key->Nombre_canal.'</td>
+                            <td>'.$key->Nombre_capitan.'</td>
+                            <td>'.$key->Pais.'</td>
+                            <td>'.$key->Flag.'</td>
+                            <td>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.');">Anular</button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.');">Aceptar</button>
+                            </td>
+                        </tr>';
+            }
+            $data['tabla'] = $html;
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();

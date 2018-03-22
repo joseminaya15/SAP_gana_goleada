@@ -69,8 +69,10 @@ class M_datos extends  CI_Model{
     }
 
     function getDatosAdmin(){
-        $sql = "SELECT s.*,
-                       a.*,
+        $sql = "SELECT a.Id,
+                       a.Deal_registration,
+                       a.Flag,
+                       s.Tipo_serv,
                        u.Nombre_canal,
                        u.Nombre_capitan,
                        u.Pais
@@ -80,8 +82,7 @@ class M_datos extends  CI_Model{
                  WHERE a.Id_serv = s.Id
                    AND a.id_user = u.Id
                    AND a.Flag IN (2,3)
-              GROUP BY a.id_user
-              ORDER BY SUM(a.Goles) DESC";
+              GROUP BY a.id_user";
         $result = $this->db->query($sql);
         return $result->result();
     }
