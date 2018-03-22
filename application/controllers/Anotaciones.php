@@ -106,12 +106,106 @@ class Anotaciones extends CI_Controller {
         $data['msj']   = null;
         try {
             $id_user = $this->input->post('id_user');
-            $datos   = $this->M_datos->getDatosAnotaciones($id_user);
+            $goles   = $this->M_datos->getTotalGoles($this->session->userdata('Nombre_canal'));
             $html    = null;
-            /*foreach ($datos as $key) {
-                $html .= '';
-            }*/
-            $data['tabla'] = $html;
+            foreach ($goles as $key) {
+                if($id_user == 1){
+                    if($key->Flag == FLAG_APROBADO){
+                        $html .= '<tr>
+                                  <td>'.$key->Empresa.'</td>
+                                  <td>'.$key->Deal_registration.'</td>
+                                  <td>'.$key->Pais.'</td>
+                                  <td>'.$key->Flag.'</td>
+                                  <td>'.$key->Goles.'</td>
+                                </tr>';
+                    }else {
+                        $html .= '<tr>
+                                  <td>'.$key->Empresa.'</td>
+                                  <td>'.$key->Deal_registration.'</td>
+                                  <td>'.$key->Pais.'</td>
+                                  <td>'.$key->Flag.'</td>
+                                  <td>--</td>
+                                </tr>';
+                    }
+                }
+                if($id_user == 2){
+                    if($key->Flag == FLAG_APROBADO){
+                        $html .= '<tr>
+                                  <td>'.$key->Empresa.'</td>
+                                  <td>'.$key->Deal_registration.'</td>
+                                  <td>'.$key->Pais.'</td>
+                                  <td>'.$key->Flag.'</td>
+                                  <td>'.$key->Goles.'</td>
+                                </tr>';
+                    }else {
+                        $html .= '<tr>
+                                  <td>'.$key->Empresa.'</td>
+                                  <td>'.$key->Deal_registration.'</td>
+                                  <td>'.$key->Pais.'</td>
+                                  <td>'.$key->Flag.'</td>
+                                  <td>--</td>
+                                </tr>';
+                    }
+                }
+                if($id_user == 3){
+                    if($key->Flag == FLAG_APROBADO){
+                        $html .= '<tr>
+                                  <td>'.$key->Empresa.'</td>
+                                  <td>'.$key->Deal_registration.'</td>
+                                  <td>'.$key->Pais.'</td>
+                                  <td>'.$key->Flag.'</td>
+                                  <td>'.$key->Goles.'</td>
+                                </tr>';
+                    }else {
+                        $html .= '<tr>
+                                  <td>'.$key->Empresa.'</td>
+                                  <td>'.$key->Deal_registration.'</td>
+                                  <td>'.$key->Pais.'</td>
+                                  <td>'.$key->Flag.'</td>
+                                  <td>--</td>
+                                </tr>';
+                    }
+                }
+                if($id_user == 4){
+                    if($key->Flag == FLAG_APROBADO){
+                        $html .= '<tr>
+                                  <td>'.$key->Empresa.'</td>
+                                  <td>'.$key->Deal_registration.'</td>
+                                  <td>'.$key->Pais.'</td>
+                                  <td>'.$key->Flag.'</td>
+                                  <td>'.$key->Goles.'</td>
+                                </tr>';
+                    }else {
+                        $html .= '<tr>
+                                  <td>'.$key->Empresa.'</td>
+                                  <td>'.$key->Deal_registration.'</td>
+                                  <td>'.$key->Pais.'</td>
+                                  <td>'.$key->Flag.'</td>
+                                  <td>--</td>
+                                </tr>';
+                    }
+                }
+                if($id_user == 5){
+                    if($key->Flag == FLAG_APROBADO){
+                        $html .= '<tr>
+                                  <td>'.$key->Empresa.'</td>
+                                  <td>'.$key->Deal_registration.'</td>
+                                  <td>'.$key->Pais.'</td>
+                                  <td>'.$key->Flag.'</td>
+                                  <td>'.$key->Goles.'</td>
+                                </tr>';
+                    }else {
+                        $html .= '<tr>
+                                  <td>'.$key->Empresa.'</td>
+                                  <td>'.$key->Deal_registration.'</td>
+                                  <td>'.$key->Pais.'</td>
+                                  <td>'.$key->Flag.'</td>
+                                  <td>--</td>
+                                </tr>';
+                    }
+                }
+            }
+            $data['tabla']    = $html;
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();

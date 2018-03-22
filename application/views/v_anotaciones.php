@@ -139,7 +139,7 @@
                                             <th>Goles</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="data_tabla">
                                         <?php echo $tabla ?>
                                     </tbody>
                                 </table>
@@ -159,6 +159,6 @@
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>index_es.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>anotacion.js?v=<?php echo time();?>"></script>
     </body>
 </html>
