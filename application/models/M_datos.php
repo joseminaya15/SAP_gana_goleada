@@ -48,7 +48,7 @@ class M_datos extends  CI_Model{
         return $result->result();
     }
 
-    function getRankGoles($empresa){
+    function getRankGoles(){
         $sql = "SELECT s.*,
                        a.*,
                        u.Nombre_canal,
@@ -64,6 +64,24 @@ class M_datos extends  CI_Model{
               GROUP BY a.id_user
               ORDER BY SUM(a.Goles) DESC
               LIMIT 5";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+
+    function getDatosAdmin(){
+        $sql = "SELECT s.*,
+                       a.*,
+                       u.Nombre_canal,
+                       u.Nombre_capitan,
+                       u.Pais
+                  FROM servicios s,
+                       anotaciones a,
+                       users u
+                 WHERE a.Id_serv = s.Id
+                   AND a.id_user = u.Id
+                   AND a.Flag IN (2,3)
+              GROUP BY a.id_user
+              ORDER BY SUM(a.Goles) DESC";
         $result = $this->db->query($sql);
         return $result->result();
     }
