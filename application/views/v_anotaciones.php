@@ -132,49 +132,15 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Posici&oacute;</th>
-                                            <th>Equipo</th>
-                                            <th>Capit&aacute;n</th>
+                                            <th>Empresa</th>
+                                            <th>Deal Registration ID</th>
                                             <th>Pa&iacute;s</th>
-                                            <th>Score</th>
+                                            <th>Status</th>
+                                            <th>Goles</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>#</td>
-                                            <td>Seidor</td>
-                                            <td>Jorge Rojas</td>
-                                            <td>Per&uacute;</td>
-                                            <td>90 goles</td>
-                                        </tr>
-                                        <tr>
-                                            <td>#2</td>
-                                            <td>Seidor</td>
-                                            <td>Jorge Rojas</td>
-                                            <td>Per&uacute;</td>
-                                            <td>90 goles</td>
-                                        </tr>
-                                        <tr>
-                                            <td>#3</td>
-                                            <td>Seidor</td>
-                                            <td>Jorge Rojas</td>
-                                            <td>Per&uacute;</td>
-                                            <td>90 goles</td>
-                                        </tr>
-                                        <tr>
-                                            <td>#4</td>
-                                            <td>Seidor</td>
-                                            <td>Jorge Rojas</td>
-                                            <td>Per&uacute;</td>
-                                            <td>90 goles</td>
-                                        </tr>
-                                        <tr>
-                                            <td>#5</td>
-                                            <td>Seidor</td>
-                                            <td>Jorge Rojas</td>
-                                            <td>Per&uacute;</td>
-                                            <td>90 goles</td>
-                                        </tr>
+                                        <?php echo $tabla ?>
                                     </tbody>
                                 </table>
                             </div>

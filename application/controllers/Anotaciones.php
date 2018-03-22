@@ -15,16 +15,32 @@ class Anotaciones extends CI_Controller {
 	public function index(){
         $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
         $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
-        $goles       = $this->M_datos->getTotalGoles($this->session->userdata('Nombre_canal'));
+        $goles   = $this->M_datos->getTotalGoles($this->session->userdata('Nombre_canal'));
         $suma_cn = null;
         $suma_sc = null;
         $suma_cl = null;
         $suma_ca = null;
         $suma_wb = null;
+        $html    = null;
         foreach ($goles as $key) {
             if($key->Id_serv == 1){
                 if($key->Flag == FLAG_APROBADO){
                     $suma_cn += $key->Goles;
+                    $html .= '<tr>
+                              <td>'.$key->Empresa.'</td>
+                              <td>'.$key->Deal_registration.'</td>
+                              <td>'.$key->Pais.'</td>
+                              <td>'.$key->Flag.'</td>
+                              <td>'.$key->Goles.'</td>
+                            </tr>';
+                }else {
+                    $html .= '<tr>
+                              <td>'.$key->Empresa.'</td>
+                              <td>'.$key->Deal_registration.'</td>
+                              <td>'.$key->Pais.'</td>
+                              <td>'.$key->Flag.'</td>
+                              <td>--</td>
+                            </tr>';
                 }
             }
             if($key->Id_serv == 2){
@@ -68,6 +84,7 @@ class Anotaciones extends CI_Controller {
         $data['total_cl'] = $suma_cl;
         $data['total_ca'] = $suma_ca;
         $data['total_wb'] = $suma_wb;
+        $data['tabla']    = $html;
 		$this->load->view('v_anotaciones', $data);
 	}
 

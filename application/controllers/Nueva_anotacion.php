@@ -78,6 +78,7 @@ class Nueva_anotacion extends CI_Controller {
                 $arrUpdate   = array('Total' => $suma);
                 $this->M_datos->updateDatos($arrUpdate, $id_serv, 'servicios');*/
             }
+            $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();
         }

@@ -34,11 +34,14 @@ class M_datos extends  CI_Model{
 
     function getTotalGoles($empresa){
         $sql = "SELECT s.*,
-                       a.*
+                       a.*,
+                       u.Nombre_canal
                   FROM servicios s,
-                       anotaciones a
+                       anotaciones a,
+                       users u
                  WHERE a.Id_serv = s.Id
-                   AND a.Empresa LIKE '%".$empresa."%'";
+                   AND a.id_user = u.Id
+                   AND u.Nombre_canal LIKE '%".$empresa."%'";
         $result = $this->db->query($sql);
         return $result->result();
     }
