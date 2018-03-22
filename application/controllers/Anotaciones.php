@@ -15,8 +15,59 @@ class Anotaciones extends CI_Controller {
 	public function index(){
         $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
         $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
-        /*$datos = $this->M_datos->getTotal(1);
-        $data['total'] = $datos[0]->total;*/
+        $goles       = $this->M_datos->getTotalGoles($this->session->userdata('Nombre_canal'));
+        $suma_cn = null;
+        $suma_sc = null;
+        $suma_cl = null;
+        $suma_ca = null;
+        $suma_wb = null;
+        foreach ($goles as $key) {
+            if($key->Id_serv == 1){
+                if($key->Flag == FLAG_APROBADO){
+                    $suma_cn += $key->Goles;
+                }
+            }
+            if($key->Id_serv == 2){
+                if($key->Flag == FLAG_APROBADO){
+                    $suma_sc += $key->Goles;
+                }
+            }
+            if($key->Id_serv == 3){
+                if($key->Flag == FLAG_APROBADO){
+                    $suma_cl += $key->Goles;
+                }
+            }
+            if($key->Id_serv == 4){
+                if($key->Flag == FLAG_APROBADO){
+                    $suma_ca += $key->Goles;
+                }
+            }
+            if($key->Id_serv == 5){
+                if($key->Flag == FLAG_APROBADO){
+                    $suma_wb += $key->Goles;
+                }
+            }
+        }
+        if($suma_cn == null){
+            $suma_cn = 0;
+        }
+        if($suma_sc == null){
+            $suma_sc = 0;
+        }
+        if($suma_cl == null){
+            $suma_cl = 0;
+        }
+        if($suma_ca == null){
+            $suma_ca = 0;
+        }
+        if($suma_wb == null){
+            $suma_wb = 0;
+        }
+        $data['total_cn'] = $suma_cn;
+        $data['total_sc'] = $suma_sc;
+        $data['total_cl'] = $suma_cl;
+        $data['total_ca'] = $suma_ca;
+        $data['total_wb'] = $suma_wb;
 		$this->load->view('v_anotaciones', $data);
 	}
 

@@ -24,19 +24,22 @@ class M_datos extends  CI_Model{
         return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
 
-    function getTotal($id_serv) {
-        $sql = "SELECT SUM(a.Goles) AS total
+    function getDatosAnotaciones($id_serv){
+        $sql = "SELECT a.*
                   FROM anotaciones a
                  WHERE Id_serv = ?";
         $result = $this->db->query($sql, $id_serv);
         return $result->result();
     }
 
-    function getDatosAnotaciones($id_serv){
-        $sql = "SELECT a.*
-                  FROM anotaciones a
-                 WHERE Id_serv = ?";
-        $result = $this->db->query($sql, $id_serv);
+    function getTotalGoles($empresa){
+        $sql = "SELECT s.*,
+                       a.*
+                  FROM servicios s,
+                       anotaciones a
+                 WHERE a.Id_serv = s.Id
+                   AND a.Empresa LIKE '%".$empresa."%'";
+        $result = $this->db->query($sql);
         return $result->result();
     }
 }

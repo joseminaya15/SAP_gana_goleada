@@ -57,16 +57,26 @@ class Nueva_anotacion extends CI_Controller {
                     $id_serv = 5;
                 }
                 $dataInsert = array('Empresa'  => $empresa,
-                                     'Deal_registration' => $deal_reg,
-                                     'Pais'    => $pais,
-                                     'Flag'    => FLAG_PENDIENTE,
-                                     'Goles'   => $goles,
-                                     'Id_serv' => $id_serv);
+                                    'Deal_registration' => $deal_reg,
+                                    'Pais'    => $pais,
+                                    'Flag'    => FLAG_PENDIENTE,
+                                    'Goles'   => $goles,
+                                    'Id_serv' => $id_serv,
+                                    'id_user' => $this->session->userdata('Id_user'));
                 $datosInsert = $this->M_datos->insertarDatos($dataInsert, 'anotaciones');
-                $datos       = $this->M_datos->getTotal($id_serv);
-                $arrUpdate   = array('Total' => $datos[0]->total);
-                $this->M_datos->updateDatos($arrUpdate, $id_serv, 'servicios');
-                $data['error'] = EXIT_SUCCESS;
+                //$datos       = $this->M_datos->getTotal($id_serv, $this->session->userdata('Id_user'));
+                /*$goles       = $this->M_datos->getTotalGoles($this->session->userdata('Nombre_canal'));
+                $suma = null;
+                foreach ($datos as $key) {
+                   if($key->Flag == FLAG_APROBADO){
+                        $suma += $key->goles;
+                   }
+                }
+                if($suma == null){
+                    $suma = $goles[0]->Total;
+                }
+                $arrUpdate   = array('Total' => $suma);
+                $this->M_datos->updateDatos($arrUpdate, $id_serv, 'servicios');*/
             }
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();

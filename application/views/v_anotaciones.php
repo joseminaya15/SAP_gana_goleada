@@ -58,7 +58,7 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
                             <div class="col-xs-10 p-l-0">
-                                <p>Cuentas nuevas (NNN)</p>
+                                <p>Cuentas nuevas (NNN) <strong><?php echo $total_cn ?></strong></p>
                             </div>
                             <div class="col-xs-2">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="cuenta_nueva">
@@ -72,7 +72,7 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
                             <div class="col-xs-10 p-l-0">
-                                <p>Oportunidades generadas de Social Selling</p>
+                                <p>Oportunidades generadas de Social Selling <strong><?php echo $total_sc ?></strong></p>
                             </div>
                             <div class="col-xs-2">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="social_selling">
@@ -86,7 +86,7 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
                             </div>
                             <div class="col-xs-10 p-l-0">
-                                <p>Oportunidades generadas para Cloud</p>
+                                <p>Oportunidades generadas para Cloud <strong><?php echo $total_cl ?></strong></p>
                             </div>
                             <div class="col-xs-2">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="oportunidad">
@@ -99,7 +99,7 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
                             <div class="col-xs-10 p-l-0">
-                                <p>Casos de &eacute;xitos de clientes aprobados</p>
+                                <p>Casos de &eacute;xitos de clientes aprobados <strong><?php echo $total_ca ?></strong></p>
                             </div>
                             <div class="col-xs-2">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="caso">
@@ -114,7 +114,7 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
                             <div class="col-xs-10 p-l-0">
-                                <p>Won & Booked (W/B)</p>
+                                <p>Won & Booked (W/B) <strong><?php echo $total_wb ?></strong></p>
                             </div>
                             <div class="col-xs-2">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="booked">
