@@ -49,9 +49,9 @@
                         <p>Premios para Goleadores SAP</p>
                     </div>
                 </div>
-                <div class="mdl-card mdl-card-ranking">
+                <div class="mdl-card mdl-card-ranking m-t-5">
                     <div class="mdl-card__supporting-text">
-                        
+                        <img class="img-premios" src="<?php echo RUTA_IMG?>menu/premios.png">
                     </div>
                 </div>
             </div>
