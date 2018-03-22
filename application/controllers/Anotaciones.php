@@ -105,32 +105,39 @@ class Anotaciones extends CI_Controller {
        $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-            $id_user = $this->input->post('id_user');
+            $id_user = $this->input->post('id_serv');
             $goles   = $this->M_datos->getTotalGoles($this->session->userdata('Nombre_canal'));
-            $html    = null;
+            $html1   = null;
+            $html2   = null;
+            $html3   = null;
+            $html4   = null;
+            $html5   = null;
             foreach ($goles as $key) {
                 if($id_user == 1){
-                    if($key->Flag == FLAG_APROBADO){
-                        $html .= '<tr>
-                                  <td>'.$key->Empresa.'</td>
-                                  <td>'.$key->Deal_registration.'</td>
-                                  <td>'.$key->Pais.'</td>
-                                  <td>'.$key->Flag.'</td>
-                                  <td>'.$key->Goles.'</td>
-                                </tr>';
-                    }else {
-                        $html .= '<tr>
-                                  <td>'.$key->Empresa.'</td>
-                                  <td>'.$key->Deal_registration.'</td>
-                                  <td>'.$key->Pais.'</td>
-                                  <td>'.$key->Flag.'</td>
-                                  <td>--</td>
-                                </tr>';
-                    }
+                    if($key->Id_serv == 1){
+                      if($key->Flag == FLAG_APROBADO){
+                          $html1 .= '<tr>
+                                    <td>'.$key->Empresa.'</td>
+                                    <td>'.$key->Deal_registration.'</td>
+                                    <td>'.$key->Pais.'</td>
+                                    <td>'.$key->Flag.'</td>
+                                    <td>'.$key->Goles.'</td>
+                                  </tr>';
+                      }else {
+                          $html1 .= '<tr>
+                                    <td>'.$key->Empresa.'</td>
+                                    <td>'.$key->Deal_registration.'</td>
+                                    <td>'.$key->Pais.'</td>
+                                    <td>'.$key->Flag.'</td>
+                                    <td>--</td>
+                                  </tr>';
+                      }
+                    } 
                 }
                 if($id_user == 2){
-                    if($key->Flag == FLAG_APROBADO){
-                        $html .= '<tr>
+                  if($key->Id_serv == 2){
+                      if($key->Flag == FLAG_APROBADO){
+                        $html2 .= '<tr>
                                   <td>'.$key->Empresa.'</td>
                                   <td>'.$key->Deal_registration.'</td>
                                   <td>'.$key->Pais.'</td>
@@ -138,7 +145,7 @@ class Anotaciones extends CI_Controller {
                                   <td>'.$key->Goles.'</td>
                                 </tr>';
                     }else {
-                        $html .= '<tr>
+                        $html2 .= '<tr>
                                   <td>'.$key->Empresa.'</td>
                                   <td>'.$key->Deal_registration.'</td>
                                   <td>'.$key->Pais.'</td>
@@ -146,10 +153,12 @@ class Anotaciones extends CI_Controller {
                                   <td>--</td>
                                 </tr>';
                     }
+                  }
                 }
                 if($id_user == 3){
-                    if($key->Flag == FLAG_APROBADO){
-                        $html .= '<tr>
+                  if($key->Id_serv == 3){
+                      if($key->Flag == FLAG_APROBADO){
+                        $html3 .= '<tr>
                                   <td>'.$key->Empresa.'</td>
                                   <td>'.$key->Deal_registration.'</td>
                                   <td>'.$key->Pais.'</td>
@@ -157,7 +166,7 @@ class Anotaciones extends CI_Controller {
                                   <td>'.$key->Goles.'</td>
                                 </tr>';
                     }else {
-                        $html .= '<tr>
+                        $html3 .= '<tr>
                                   <td>'.$key->Empresa.'</td>
                                   <td>'.$key->Deal_registration.'</td>
                                   <td>'.$key->Pais.'</td>
@@ -165,10 +174,12 @@ class Anotaciones extends CI_Controller {
                                   <td>--</td>
                                 </tr>';
                     }
+                  }
                 }
                 if($id_user == 4){
-                    if($key->Flag == FLAG_APROBADO){
-                        $html .= '<tr>
+                  if($key->Id_serv == 4){
+                      if($key->Flag == FLAG_APROBADO){
+                        $html4 .= '<tr>
                                   <td>'.$key->Empresa.'</td>
                                   <td>'.$key->Deal_registration.'</td>
                                   <td>'.$key->Pais.'</td>
@@ -176,7 +187,7 @@ class Anotaciones extends CI_Controller {
                                   <td>'.$key->Goles.'</td>
                                 </tr>';
                     }else {
-                        $html .= '<tr>
+                        $html4 .= '<tr>
                                   <td>'.$key->Empresa.'</td>
                                   <td>'.$key->Deal_registration.'</td>
                                   <td>'.$key->Pais.'</td>
@@ -184,10 +195,12 @@ class Anotaciones extends CI_Controller {
                                   <td>--</td>
                                 </tr>';
                     }
+                  }
                 }
                 if($id_user == 5){
-                    if($key->Flag == FLAG_APROBADO){
-                        $html .= '<tr>
+                  if($key->Id_serv == 5){
+                      if($key->Flag == FLAG_APROBADO){
+                        $html5 .= '<tr>
                                   <td>'.$key->Empresa.'</td>
                                   <td>'.$key->Deal_registration.'</td>
                                   <td>'.$key->Pais.'</td>
@@ -195,7 +208,7 @@ class Anotaciones extends CI_Controller {
                                   <td>'.$key->Goles.'</td>
                                 </tr>';
                     }else {
-                        $html .= '<tr>
+                        $html5 .= '<tr>
                                   <td>'.$key->Empresa.'</td>
                                   <td>'.$key->Deal_registration.'</td>
                                   <td>'.$key->Pais.'</td>
@@ -203,9 +216,24 @@ class Anotaciones extends CI_Controller {
                                   <td>--</td>
                                 </tr>';
                     }
+                  }
                 }
             }
-            $data['tabla']    = $html;
+            if($id_user == 1){
+              $data['tabla'] = $html1;
+            }
+            if($id_user == 2){
+              $data['tabla'] = $html2;
+            }
+            if($id_user == 3){
+              $data['tabla'] = $html3;
+            }
+            if($id_user == 4){
+              $data['tabla'] = $html4;
+            }
+            if($id_user == 5){
+              $data['tabla'] = $html5;
+            }
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();

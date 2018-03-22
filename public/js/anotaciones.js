@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-function cambiarTabla(){
-=======
 function nuevaAnotacion(id){
->>>>>>> Stashed changes
 	var servicio = $( "input:checked" ).val();
 	$.ajax({
 		data : {id_serv : servicio},
