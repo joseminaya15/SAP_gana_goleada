@@ -1,4 +1,4 @@
-function nuevaAnotacion(){
+function cambiarTabla(){
 	var servicio = $( "input:checked" ).val();
 	$.ajax({
 		data : {id_serv : servicio},
