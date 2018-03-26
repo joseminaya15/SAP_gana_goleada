@@ -26,7 +26,7 @@ function ingresar(){
         if(data.error == 0){
         	$('#correo').val("");
         	$('#password').val("");
-          location.href = data.href/*'Menu'*/;
+          location.href = data.href;
         }else {
           if(data.user == null || data.user == '' || data.user == undefined) {
             if(data.pass == null || data.pass == '' || data.pass == undefined) {
