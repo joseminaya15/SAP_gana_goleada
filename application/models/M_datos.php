@@ -14,7 +14,6 @@ class M_datos extends  CI_Model{
         }
         return array("error" => EXIT_SUCCESS, "msj" => MSJ_INS, "Id" => $sol);
     }
-
     function updateDatos($arrayData, $id, $tabla){
         $this->db->where('Id'  , $id);
         $this->db->update($tabla, $arrayData);
@@ -23,7 +22,6 @@ class M_datos extends  CI_Model{
         }
         return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
-
     function getDatosAnotaciones($id_serv){
         $sql = "SELECT a.*
                   FROM anotaciones a
@@ -31,7 +29,6 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql, $id_serv);
         return $result->result();
     }
-
     function getTotalGoles($empresa){
         $sql = "SELECT s.*,
                        a.*,
@@ -47,7 +44,6 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-
     function getRankGoles(){
         $sql = "SELECT s.*,
                        a.*,
@@ -67,7 +63,6 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-
     function getDatosAdmin(){
         $sql = "SELECT a.Id,
                        a.Deal_registration,
