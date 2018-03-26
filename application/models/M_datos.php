@@ -81,8 +81,7 @@ class M_datos extends  CI_Model{
                        users u
                  WHERE a.Id_serv = s.Id
                    AND a.id_user = u.Id
-                   AND a.Flag IN (2,3)
-              GROUP BY a.id_user";
+                   AND a.Flag IN (1,3)";
         $result = $this->db->query($sql);
         return $result->result();
     }

@@ -25,23 +25,32 @@ class Login extends CI_Controller {
          try {
 			$usuario  = $this->input->post('usuario');
 			$password = $this->input->post('password');
-			$username = $this->M_login->verificarUsuario($usuario);
-			if(count($username) == 0) {
-				$data['user'] = 'Este usuario no existe';
+
+			if($usuario == 'sapadmin' && $password == 'admin'){
+				$data['href'] = 'Admin';
+				$session = array('usuario' => $usuario);
+			    $this->session->set_userdata($session);
+				$data['error'] = EXIT_SUCCESS;
 			}else {
-				if($password == base64_decode($username[0]->pass)){
-				if(count($username) != 0){
-					if(strtolower($username[0]->usuario) == strtolower($usuario)){
-						$session = array('usuario' 		  => $usuario,
-										 'Nombre_capitan' => $username[0]->Nombre_capitan,
-										 'Nombre_canal'   => $username[0]->Nombre_canal,
-										 'Id_user' 		  => $username[0]->Id);
-		          		$this->session->set_userdata($session);
-		          		$data['error'] = EXIT_SUCCESS;
-						}
-					}
+				$username = $this->M_login->verificarUsuario($usuario);
+				if(count($username) == 0) {
+					$data['user'] = 'Este usuario no existe';
 				}else {
-					$data['pass'] = 'La contraseña es incorrecta';
+					if($password == base64_decode($username[0]->pass)){
+					if(count($username) != 0){
+						if(strtolower($username[0]->usuario) == strtolower($usuario)){
+							$session = array('usuario' 		  => $usuario,
+											 'Nombre_capitan' => $username[0]->Nombre_capitan,
+											 'Nombre_canal'   => $username[0]->Nombre_canal,
+											 'Id_user' 		  => $username[0]->Id);
+			          		$this->session->set_userdata($session);
+			          		$data['href'] = 'Menu';
+			          		$data['error'] = EXIT_SUCCESS;
+							}
+						}
+					}else {
+						$data['pass'] = 'La contraseña es incorrecta';
+					}
 				}
 			}
         }catch(Exception $e) {

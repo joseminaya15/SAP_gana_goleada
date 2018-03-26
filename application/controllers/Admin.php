@@ -13,22 +13,43 @@ class Admin extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        $datos = $this->M_datos->getDatosAdmin();
-        $html  = null;
-        foreach ($datos as $key){
-           $html .= '<tr>
-                        <td>'.$key->Deal_registration.'</td>
-                        <td>'.$key->Nombre_canal.'</td>
-                        <td>'.$key->Nombre_capitan.'</td>
-                        <td>'.$key->Pais.'</td>
-                        <td>'.$key->Flag.'</td>
-                        <td>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.');">Anular</button>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.');">Aceptar</button>
-                        </td>
-                    </tr>';
+        if($this->session->userdata('usuario') == null){
+            header("location: Login");
         }
-        $data['tabla'] = $html;
+        $datos = $this->M_datos->getDatosAdmin();
+        if(count($datos) == 0){
+            $data['tabla'] = '';
+        }else {
+            $html  = null;
+            $count = 1;
+            $disabled  = '';
+            $estado    = '';
+            foreach ($datos as $key){
+               if($key->Flag == 1){
+                  $estado    = 'Pendiente';
+               }
+               if($key->Flag == 2){
+                  $estado    = 'Aprobado';
+               }
+               if($key->Flag == 3) {
+                  $disabled  = 'disabled';
+                  $estado    = 'Rechazado';
+               }
+               $html .= '<tr>
+                            <td>'.$key->Deal_registration.'</td>
+                            <td>'.$key->Nombre_canal.'</td>
+                            <td>'.$key->Nombre_capitan.'</td>
+                            <td>'.$key->Pais.'</td>
+                            <td>'.$estado.'</td>
+                            <td>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                            </td>
+                        </tr>';
+                $count++;
+            }
+            $data['tabla'] = $html;
+        }
 		$this->load->view('v_admin', $data);
 	}
     function cerrarCesion(){
@@ -51,21 +72,39 @@ class Admin extends CI_Controller {
             $arrUpdt   = array('Flag' => FLAG_RECHAZADO);
             $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
             $datos     = $this->M_datos->getDatosAdmin();
-            $html      = null;
-            foreach ($datos as $key){
-               $html .= '<tr>
-                            <td>'.$key->Deal_registration.'</td>
-                            <td>'.$key->Nombre_canal.'</td>
-                            <td>'.$key->Nombre_capitan.'</td>
-                            <td>'.$key->Pais.'</td>
-                            <td>'.$key->Flag.'</td>
-                            <td>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.');">Anular</button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.');">Aceptar</button>
-                            </td>
-                        </tr>';
+            $count     = 1;
+            $disabled  = '';
+            $estado    = '';
+            if(count($datos) == 0){
+                $data['tabla'] = '';
+            }else {
+                $html = null;
+                foreach ($datos as $key){
+                   if($key->Flag == 1){
+                      $estado    = 'Pendiente';
+                   }
+                   if($key->Flag == 2){
+                      $estado    = 'Aprobado';
+                   }
+                   if($key->Flag == 3) {
+                      $disabled  = 'disabled';
+                      $estado    = 'Rechazado';
+                   }
+                   $html .= '<tr>
+                                <td>'.$key->Deal_registration.'</td>
+                                <td>'.$key->Nombre_canal.'</td>
+                                <td>'.$key->Nombre_capitan.'</td>
+                                <td>'.$key->Pais.'</td>
+                                <td>'.$estado.'</td>
+                                <td>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                                </td>
+                            </tr>';
+                    $count++;
+                }
+                $data['tabla'] = $html;
             }
-            $data['tabla'] = $html;
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();
@@ -80,21 +119,39 @@ class Admin extends CI_Controller {
             $arrUpdt   = array('Flag' => FLAG_APROBADO);
             $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
             $datos     = $this->M_datos->getDatosAdmin();
-            $html      = null;
-            foreach ($datos as $key){
-               $html .= '<tr>
-                            <td>'.$key->Deal_registration.'</td>
-                            <td>'.$key->Nombre_canal.'</td>
-                            <td>'.$key->Nombre_capitan.'</td>
-                            <td>'.$key->Pais.'</td>
-                            <td>'.$key->Flag.'</td>
-                            <td>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.');">Anular</button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.');">Aceptar</button>
-                            </td>
-                        </tr>';
+            $count     = 1;
+            $disabled  = '';
+            $estado    = '';
+            if(count($datos) == 0){
+                $data['tabla'] = '';
+            }else {
+                $html = null;
+                foreach ($datos as $key){
+                   if($key->Flag == 1){
+                      $estado    = 'Pendiente';
+                   }
+                   if($key->Flag == 2){
+                      $estado    = 'Aprobado';
+                   }
+                   if($key->Flag == 3) {
+                      $disabled  = 'disabled';
+                      $estado    = 'Rechazado';
+                   }
+                   $html .= '<tr>
+                                <td>'.$key->Deal_registration.'</td>
+                                <td>'.$key->Nombre_canal.'</td>
+                                <td>'.$key->Nombre_capitan.'</td>
+                                <td>'.$key->Pais.'</td>
+                                <td>'.$estado.'</td>
+                                <td>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                                </td>
+                            </tr>';
+                    $count++;
+                }
+                $data['tabla'] = $html;
             }
-            $data['tabla'] = $html;
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();

@@ -5,9 +5,11 @@ function ingresar(){
     msj('error', 'Ingrese su correo');
     return;
   }
-  if (!validateEmail(usuario)){
-    msj('error', 'El correo ingresado no tiene el formato correcto');
-    return;
+  if(usuario != 'sapadmin'){
+    if (!validateEmail(usuario)){
+      msj('error', 'El correo ingresado no tiene el formato correcto');
+      return;
+    }
   }
 	if(password == null){
     msj('error', 'Ingrese su contraseña');
@@ -24,7 +26,7 @@ function ingresar(){
         if(data.error == 0){
         	$('#correo').val("");
         	$('#password').val("");
-          location.href = 'Menu';
+          location.href = data.href/*'Menu'*/;
         }else {
           if(data.user == null || data.user == '' || data.user == undefined) {
             if(data.pass == null || data.pass == '' || data.pass == undefined) {
@@ -88,4 +90,63 @@ function verificarDatos(e){
 }
 function goToRegister(){
   location.href = "Registro";
+}
+function cerrarCesion(){
+  $.ajax({
+    url  : 'admin/cerrarCesion',
+    type : 'POST'
+  }).done(function(data){
+    try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+          location.href = 'Login';
+        }else {
+          return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+  });
+}
+function anular(id, btn){
+  $.ajax({
+    data : {id_serv : id},
+    url  : 'admin/anularAnotacion',
+    type : 'POST'
+  }).done(function(data){
+    try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+          $('#tabla').html('');
+          $('#tabla').append(data.tabla);
+          $('#btnanular'+btn).prop('disabled', true);
+          $('#btnaceptar'+btn).prop('disabled', true);
+        }else {
+          return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+  });
+}
+function aceptar(id, btn){
+  $.ajax({
+    data : {id_serv : id},
+    url  : 'admin/aceptarAnotacion',
+    type : 'POST'
+  }).done(function(data){
+    try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+          $('#tabla').html('');
+          $('#tabla').append(data.tabla);
+          $('#btnanular'+btn).prop('disabled', true);
+          $('#btnaceptar'+btn).prop('disabled', true);
+        }else {
+          return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+  });
 }
