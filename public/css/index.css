@@ -370,3 +370,41 @@ input::placeholder {
 	font-style: italic;
 	color: #FFFFFF;
 }
+
+@media ( max-width: 768px ){
+	.mdl-card-login .mdl-card__supporting-text img{
+		max-width: 250px;
+	}
+	.mdl-card-login .mdl-card__supporting-text{
+		margin-top: 50px;
+	}
+	.header-left{
+	    max-width: calc(100% - 180px);
+        padding: 20px 0 20px 25px;
+	}
+	.header-right{
+	    max-width: 135px;
+	}
+	.background{
+		max-width: 5px;
+	}
+	.header-right h2{
+	    font-size: 16px;
+	    line-height: 18px;
+	    margin-right: 10px;
+	}
+}
+@media ( max-width: 640px ){
+	.mdl-card-login{
+		height: 100vh;
+	}
+	.mdl-card-login .mdl-card__supporting-text img{
+		max-width: 165px;
+	}
+	.mdl-card-login .mdl-card__supporting-text{
+		padding: 20px 15px 60px 15px;
+	}
+	.mdl-card-login .mdl-card__supporting-text{
+		margin-top: 60px;
+	}
+}

@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="mdl-card mdl-card-login">
                     <div class="mdl-card__supporting-text">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 text-center">
                             <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
                         </div>
                         <div class="col-sm-6 m-t-50">
