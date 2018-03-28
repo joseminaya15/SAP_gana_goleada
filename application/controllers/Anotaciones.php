@@ -101,7 +101,7 @@ class Anotaciones extends CI_Controller {
     }
     function getDatosAnotaciones(){
        $data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
+        $data['msj']  = null;
         try {
             $id_user = $this->input->post('id_serv');
             $goles   = $this->M_datos->getTotalGoles($this->session->userdata('Nombre_canal'));
