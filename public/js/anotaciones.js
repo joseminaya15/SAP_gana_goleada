@@ -22,3 +22,20 @@ function nuevaAnotacion(id){
 	var name     = idButton.parents('.mdl-puntos').find('.name-anotacion').find('p').text();
 	card.find('.mdl-card__title').find('h2').text(name);
 }
+function cerrarCesion(){
+	$.ajax({
+		url  : 'Anotaciones/cerrarCesion',
+		type : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        	location.href = 'Login';
+        }else {
+        	return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+	});
+}
