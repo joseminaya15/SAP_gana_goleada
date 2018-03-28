@@ -86,6 +86,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    margin-top: 30px;
 }
 .title_login{
     font-size: 22px;
@@ -160,13 +161,19 @@ body{
 }
 .mdl-registro{
 	overflow: inherit;
+	z-index: 10;
+	margin-top: 50px;
 }
 .mdl-registro .mdl-card__title{
 	display: block;
 	text-align: center;
+	padding-bottom: 0;
 } 
 .mdl-registro .mdl-card__title img{
 	margin-top: -120px;
+}
+.mdl-registro .mdl-card__supporting-text{
+	padding-top: 0;
 }
 .mdl-registro .mdl-card__supporting-text h2{
 	color: #FFFFFF;
@@ -305,13 +312,18 @@ body{
 }
 .mdl-card-anotar .mdl-puntos .mdl-radio .mdl-radio__outer-circle{
 	border-radius: 0;
+    border: 2px solid #000000;
+}
+.mdl-radio__ripple-container .mdl-ripple,
+.mdl-card-anotar .mdl-puntos .mdl-radio .mdl-radio__inner-circle{
+	background: #000000;
 }
 .mdl-card-cuentas{
     display: inline-block;
     max-width: calc(100% - 345px);
     vertical-align: top;
     margin: 3px 10px;
-    padding: 25px;
+    padding: 25px 25px 5px 25px;
     border-radius: 20px;
 }
 .mdl-card-cuentas .mdl-card__title{
@@ -336,6 +348,65 @@ body{
 }
 .mdl-card-cuentas .mdl-card__supporting-text{
 	padding: 20px 0;
+	height: 250px;
+}
+.mdl-card-cuentas .mdl-card__supporting-text .form-group input{
+	border: 1px solid #000000;
+}
+.mdl-estados{
+	max-width: calc(100% - 90px);
+	display: inline-block;
+}
+.mdl-estados ul{
+	list-style: none;
+    padding: 0;
+}
+.mdl-estados ul li{
+	display: inline-block;
+	margin-right: 5px;
+}
+.estados span,
+.mdl-estados ul li span{
+	content: '';
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+.estados span.green,
+.mdl-estados ul li span.green{
+    background-color: #72C168;
+}
+.estados span.yellow,
+.mdl-estados ul li span.yellow{
+    background-color: #FBB040;
+}
+.estados span.red,
+.mdl-estados ul li span.red{
+    background-color: #ED1D24;
+}
+.mdl-total{
+	width: 100%;
+    max-width: 85px;
+    display: inline-block;
+}
+.estados .circle{
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding: 0px 4px;
+    margin: 0 3px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 16px;
+}
+.estados .circle.circle-estado{
+    border: 1px solid #757575;
+}
+.estados .circle span{
+	margin: 0;
 }
 /*MDL-INPUT*/
 .mdl-input{
@@ -410,6 +481,8 @@ input::placeholder {
 @media ( max-width: 640px ){
 	.mdl-card-login{
 		height: 100vh;
+	    margin-top: 0;
+    	z-index: 0;
 	}
 	.mdl-registro .mdl-card__title img,
 	.mdl-card-login .mdl-card__supporting-text img{
