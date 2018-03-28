@@ -11,7 +11,7 @@ class Anotaciones extends CI_Controller {
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
-    }
+  }
 	public function index(){
         $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
         $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
@@ -87,8 +87,7 @@ class Anotaciones extends CI_Controller {
         $data['tabla']    = $html;
 		$this->load->view('v_anotaciones', $data);
 	}
-
-    function cerrarCesion(){
+  function cerrarCesion(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
@@ -100,7 +99,6 @@ class Anotaciones extends CI_Controller {
         }
         echo json_encode($data);
     }
-
     function getDatosAnotaciones(){
        $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
