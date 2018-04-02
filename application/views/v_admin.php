@@ -27,13 +27,23 @@
     <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
     <style type="text/css">
         body{
-            overflow-y: scroll;
+            background-color: #EDEDED;
         }
     </style>
 <body>
     <section id="principal">
-        <div id="content" class="mdl-container">
-            <img class="logo-home logo-table" src="<?php echo RUTA_IMG?>logo/logo_header.png">
+        <div class="header">
+            <div class="header-left">
+                <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
+            </div>
+            <div class="header-right">
+                <h2 class="">Concurso para partners SMB</h2>
+                <div class="background background3"></div>
+                <div class="background background2"></div>
+                <div class="background background1"></div>
+            </div>
+        </div>
+        <div id="content" class="mdl-card-container">
             <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout" onclick="cerrarCesion()">Cerrar Sesión</a>
             <div class="mdl-card mdl-card-table">
                 <div class="table-responsive">

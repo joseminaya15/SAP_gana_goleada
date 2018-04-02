@@ -446,6 +446,22 @@ input::placeholder {
 	font-style: italic;
 	color: #FFFFFF;
 }
+/*ADMIN*/
+#content{
+	margin: 100px auto;
+	text-align: right;
+}
+.button-logout{
+    text-transform: initial;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'RobotoMedium';
+    text-align: right;
+    margin: 15px 0;
+}
+.mdl-card-table{
+	padding: 25px;
+}
 @media ( max-width: 1200px ){
 	#menu .mdl-card-container{
 		max-width: 600px;
