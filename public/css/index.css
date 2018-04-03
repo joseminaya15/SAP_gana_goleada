@@ -110,6 +110,9 @@ body{
 .button-login.logout{
     text-decoration: underline !important;
 }
+.button-login.button-admin{
+	background-color: #000000;
+}
 .button-login i{
 	vertical-align: middle;
 	margin-left: 5px;

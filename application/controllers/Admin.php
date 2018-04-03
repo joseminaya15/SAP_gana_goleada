@@ -42,8 +42,8 @@ class Admin extends CI_Controller {
                             <td>'.$key->Pais.'</td>
                             <td>'.$estado.'</td>
                             <td>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
                             </td>
                         </tr>';
                 $count++;
@@ -97,8 +97,8 @@ class Admin extends CI_Controller {
                                 <td>'.$key->Pais.'</td>
                                 <td>'.$estado.'</td>
                                 <td>
-                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
-                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
                                 </td>
                             </tr>';
                     $count++;
@@ -144,8 +144,8 @@ class Admin extends CI_Controller {
                                 <td>'.$key->Pais.'</td>
                                 <td>'.$estado.'</td>
                                 <td>
-                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
-                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
                                 </td>
                             </tr>';
                     $count++;
