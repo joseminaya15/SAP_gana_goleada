@@ -29,7 +29,6 @@ class Nueva_anotacion extends CI_Controller {
         }
         echo json_encode($data);
     }
-
     function nuevaAnotacion(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -64,19 +63,6 @@ class Nueva_anotacion extends CI_Controller {
                                     'Id_serv' => $id_serv,
                                     'id_user' => $this->session->userdata('Id_user'));
                 $datosInsert = $this->M_datos->insertarDatos($dataInsert, 'anotaciones');
-                //$datos       = $this->M_datos->getTotal($id_serv, $this->session->userdata('Id_user'));
-                /*$goles       = $this->M_datos->getTotalGoles($this->session->userdata('Nombre_canal'));
-                $suma = null;
-                foreach ($datos as $key) {
-                   if($key->Flag == FLAG_APROBADO){
-                        $suma += $key->goles;
-                   }
-                }
-                if($suma == null){
-                    $suma = $goles[0]->Total;
-                }
-                $arrUpdate   = array('Total' => $suma);
-                $this->M_datos->updateDatos($arrUpdate, $id_serv, 'servicios');*/
             }
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
