@@ -4,6 +4,7 @@ function registrar() {
 	var canal 	 = $('#canal').val();
 	var correo   = $('#correo').val();
 	var pais 	 = $('#pais').val();
+	var partner  = $('#partner').val();
 	var terminos = $('#checkbox-1').is(':checked');
 	if(nombre == '' && canal == '' && canal == '' && correo == '' && pais == ''){
 		msj('error', 'Ingrese sus datos');
@@ -42,7 +43,8 @@ function registrar() {
 				canal 	 : canal,
 				usuario  : correo,
 				password : password,
-				pais 	 : pais},
+				pais 	 : pais,
+				partner  : partner},
 		url  : 'registro/registrar',
 		type : 'POST'
 	}).done(function(data){
@@ -54,6 +56,7 @@ function registrar() {
 			$('#canal').val("");
 			$('#correo').val("");
 			$('#pais').val("");
+			$('#partner').val("")
 			msj('error', 'Se registró correctamente');
 			setTimeout(function(){ 
 				location.href = "Login";
@@ -106,4 +109,13 @@ function cerrarCesion(){
 }
 function goToMenu(id){
 	location.href = id;
+}
+function valida(e){
+    tecla = (document.all) ? e.keyCode : e.which;
+    if (tecla==8){
+        return true;
+    }
+    patron 		=/[0-9]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
 }

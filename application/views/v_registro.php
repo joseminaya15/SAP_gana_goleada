@@ -65,7 +65,7 @@
                                 <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password">
                             </div>
                             <div class="mdl-input">
-                                <input type="text" class="form-control" placeholder="Partner ID" id="partner">
+                                <input type="text" class="form-control" placeholder="Partner ID" id="partner" onkeypress="return valida(event)" maxlength="6">
                             </div>
                             <div class="col-xs-12 p-0">
                                 <div class="col-xs-9 p-0">

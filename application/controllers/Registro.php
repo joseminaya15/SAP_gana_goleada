@@ -12,11 +12,9 @@ class Registro extends CI_Controller {
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
     }
-
 	public function index(){
 		$this->load->view('v_registro');
 	}
-
 	function registrar(){
 		$data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -26,16 +24,19 @@ class Registro extends CI_Controller {
          	$usuario  = $this->input->post('usuario');
          	$password = $this->input->post('password');
          	$pais  	  = $this->input->post('pais');
+            $partner  = $this->input->post('partner');
          	$arrayInsert = array('Nombre_capitan' => $nombre,
                                  'Nombre_canal'   => $canal,
                                  'usuario'        => $usuario,
                                  'pass'           => base64_encode($password),
-                                 'Pais'           => $pais);
+                                 'Pais'           => $pais,
+                                 'partner_id'     => $partner);
             $datoInsert = $this->M_datos->insertarDatos($arrayInsert, 'Users');
             $session    = array('nombre_capitan' => $nombre,
                                 'canal'          => $canal,
                                 'usuario'        => $usuario,
                                 'pais'           => $pais,
+                                'partner_id'     => $partner,
                                 'id_capitan'     => $datoInsert['Id']);
             $this->session->set_userdata($session);
 			$data['error'] = EXIT_SUCCESS;
