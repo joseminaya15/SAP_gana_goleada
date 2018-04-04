@@ -15,9 +15,9 @@ class Ranking_goleadores extends CI_Controller {
 	public function index(){
         $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
         $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
-        $goles = $this->M_datos->getRankGolesNorte();
-        $html  = null;
-        $count = 1;
+        $goles                  = $this->M_datos->getRankGolesNorte();
+        $html                   = null;
+        $count                  = 1;
         foreach ($goles as $key) {
             $html .= '<tr>
                         <td>#'.$count.'</td>
