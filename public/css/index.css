@@ -8,6 +8,16 @@ body{
 .img-premios{
 	width: 100%;
 }
+.back{
+	margin-top: 80px;
+}
+.back a.button-login.logout{
+	text-decoration: none !important;
+}
+.back a i{
+	vertical-align: middle;
+	margin-right: 5px;
+}
 .mdl-card-container{
 	max-width: 1200px;
 	width: 100%;

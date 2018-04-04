@@ -28,7 +28,7 @@
             <div class="fondo-imagen"></div>
             <div class="header">
                 <div class="header-left">
-                    <img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png">
+                    <a href="Login"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
                 </div>
                 <div class="header-right">
                     <h2 class="">Concurso para partners SMB</h2>

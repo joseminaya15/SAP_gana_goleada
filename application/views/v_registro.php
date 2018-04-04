@@ -28,7 +28,7 @@
             <div class="fondo-imagen"></div>
             <div class="header">
                 <div class="header-left">
-                    <img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png">
+                    <a href="Login"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
                 </div>
                 <div class="header-right">
                     <h2 class="">Concurso para partners SMB</h2>
@@ -38,6 +38,9 @@
                 </div>
             </div>
             <div class="container">
+                <div class="text-right back">
+                    <a href="Login" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout"><i class="mdi mdi-arrow_back"></i>Regresar</a>
+                </div>
                 <div class="mdl-card mdl-card-login mdl-registro">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
