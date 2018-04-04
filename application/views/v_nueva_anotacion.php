@@ -145,7 +145,7 @@
                                 <input type="texto" class="form-control" placeholder="País" id="pais">
                             </div>
                             <div class="form-group">
-                                <input type="texto" class="form-control" placeholder="Deal Registration ID" id="deal_regis">
+                                <input type="texto" class="form-control" placeholder="Deal Registration ID" id="deal_regis" onkeypress="return valida(event)" onchange="restringirNum()" maxlength="6">
                             </div>
                             <div class="col-xs-6 p-0">
                                 <div class="form-group">

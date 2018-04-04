@@ -12,6 +12,10 @@ function nuevaAnotacion(){
 		msj('error', 'Ingrese el Deal Registration ID');
 		return;
 	}
+	if(deal_regis.length < 6){
+		msj('error', 'Ingrese un código de 6 dígitos');
+		return;
+	}
 	if(pais == '' || pais == null){
 		msj('error', 'Ingrese el pais');
 		return;
@@ -126,4 +130,35 @@ function cerrarCesion(){
         msj('error',err.message);
       }
 	});
+}
+function restringirNum(){
+	var cadenaAnalizar = $('#deal_regis').val();
+	var cadena1 = cadenaAnalizar.charAt(0);
+	var cadena2 = parseInt(cadenaAnalizar.charAt(0))+1;
+	var cadena3 = parseInt(cadenaAnalizar.charAt(0))+2;
+	var cadena4 = parseInt(cadenaAnalizar.charAt(0))+3;
+	var cadena5 = parseInt(cadenaAnalizar.charAt(0))+4;
+	var cadena6 = parseInt(cadenaAnalizar.charAt(0))+5;
+	if(cadenaAnalizar.length != 0){
+		if(cadenaAnalizar.charAt(0) == cadenaAnalizar.charAt(1) && cadenaAnalizar.charAt(1) == cadenaAnalizar.charAt(2) 
+			&& cadenaAnalizar.charAt(2) == cadenaAnalizar.charAt(3) && cadenaAnalizar.charAt(3) == cadenaAnalizar.charAt(4) 
+			&& cadenaAnalizar.charAt(4) == cadenaAnalizar.charAt(5)){
+			msj('error', 'Los código no pueden ser los mismos');
+			return;
+		}
+		if(parseInt(cadena1)+0 == cadenaAnalizar.charAt(0) && cadena2 == cadenaAnalizar.charAt(1) && cadena3 == cadenaAnalizar.charAt(2) 
+			&& cadena4 == cadenaAnalizar.charAt(3) && cadena5 == cadenaAnalizar.charAt(4) && cadena6 == cadenaAnalizar.charAt(5)){
+			msj('error', 'El código no pueden ser consecutivos');
+			return;
+		}
+		if(cadenaAnalizar.substring(0, 2) < 17){
+			msj('error', 'Su código debe iniciar con un número mayor a 17');
+			return;
+		}
+	}else {
+		if(cadenaAnalizar.length < 6){
+			msj('error', 'Ingrese un código de 6 dígitos');
+			return;
+		}
+	}
 }
