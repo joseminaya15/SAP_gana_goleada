@@ -82,19 +82,19 @@ function valida(e){
     return patron.test(tecla_final);
 }
 function validarFormatoFecha(campo) {
-      var RegExPattern = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
-      if ((campo.match(RegExPattern)) && (campo!='')) {
-            return true;
-      } else {
-            return false;
-      }
+    var RegExPattern = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
+  	if ((campo.match(RegExPattern)) && (campo!='')) {
+        return true;
+  	} else {
+        return false;
+  	}
 }
 function existeFecha(fecha){
       var fechaf = fecha.split("/");
-      var day = fechaf[0];
-      var month = fechaf[1];
-      var year = fechaf[2];
-      var date = new Date(year,month,'0');
+      var day 	 = fechaf[0];
+      var month  = fechaf[1];
+      var year   = fechaf[2];
+      var date   = new Date(year,month,'0');
       if((day-0)>(date.getDate()-0)){
             return false;
       }

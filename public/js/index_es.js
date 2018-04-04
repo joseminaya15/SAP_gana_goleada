@@ -67,9 +67,8 @@ function registrar() {
       }
 	});
 }
-
 function soloLetras(e){
-    key 	     = e.keyCode || e.which;
+    key 	   = e.keyCode || e.which;
     tecla 	   = String.fromCharCode(key).toLowerCase();
     letras     = " áéíóúabcdefghijklmnñopqrstuvwxyz";
     especiales = "8-37-39-46";
