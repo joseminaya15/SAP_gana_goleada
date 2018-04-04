@@ -15,6 +15,10 @@ function nuevaAnotacion(){
 		msj('error', 'Ingrese un código de 6 dígitos');
 		return;
 	}
+	if(deal_regis.substring(0, 2) < 17){
+		msj('error', 'Su código debe iniciar con un número mayor a 17');
+		return;
+	}
 	if(pais == '' || pais == null){
 		msj('error', 'Ingrese el pais');
 		return;
