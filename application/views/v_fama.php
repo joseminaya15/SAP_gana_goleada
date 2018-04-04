@@ -37,7 +37,8 @@
                 </div>
             </div>
             <div class="container mdl-card-container">
-                <div class="text-right">
+                <div class="text-right menu">
+                    <a href="Menu"><i class="mdi mdi-home"></i>Menu</a>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
                 </div>
                 <h2 class="person_name">Bienvenido(a) <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>

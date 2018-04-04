@@ -14,9 +14,19 @@ body{
 .back a.button-login.logout{
 	text-decoration: none !important;
 }
+.menu a i,
 .back a i{
 	vertical-align: middle;
 	margin-right: 5px;
+}
+.menu a{
+	color: #FFFFFF;
+	padding:  0 20px;
+	border-right: 1px solid #FFFFFF;
+	text-decoration: none;
+}
+.menu a i{
+	color: #FFFFFF;
 }
 .mdl-card-container{
 	max-width: 1200px;
