@@ -81,4 +81,84 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
+    function getRankGolesNorte(){
+        $sql = "SELECT s.*,
+                       a.*,
+                       u.Nombre_canal,
+                       u.Nombre_capitan,
+                       u.Pais,
+                       SUM(a.Goles) as Status
+                  FROM servicios s,
+                       anotaciones a,
+                       users u
+                 WHERE a.Id_serv = s.Id
+                   AND a.id_user = u.Id
+                   AND a.Flag = 2
+                   AND a.Pais IN ('Perú')
+              GROUP BY a.id_user
+              ORDER BY SUM(a.Goles) DESC
+              LIMIT 5";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+    function getRankGolesSur(){
+        $sql = "SELECT s.*,
+                       a.*,
+                       u.Nombre_canal,
+                       u.Nombre_capitan,
+                       u.Pais,
+                       SUM(a.Goles) as Status
+                  FROM servicios s,
+                       anotaciones a,
+                       users u
+                 WHERE a.Id_serv = s.Id
+                   AND a.id_user = u.Id
+                   AND a.Flag = 2
+                   AND a.Pais IN ('Francia')
+              GROUP BY a.id_user
+              ORDER BY SUM(a.Goles) DESC
+              LIMIT 5";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+    function getRankGolesBrasil(){
+        $sql = "SELECT s.*,
+                       a.*,
+                       u.Nombre_canal,
+                       u.Nombre_capitan,
+                       u.Pais,
+                       SUM(a.Goles) as Status
+                  FROM servicios s,
+                       anotaciones a,
+                       users u
+                 WHERE a.Id_serv = s.Id
+                   AND a.id_user = u.Id
+                   AND a.Flag = 2
+                   AND a.Pais IN ('Brasil')
+              GROUP BY a.id_user
+              ORDER BY SUM(a.Goles) DESC
+              LIMIT 5";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+    function getRankGolesMexico(){
+        $sql = "SELECT s.*,
+                       a.*,
+                       u.Nombre_canal,
+                       u.Nombre_capitan,
+                       u.Pais,
+                       SUM(a.Goles) as Status
+                  FROM servicios s,
+                       anotaciones a,
+                       users u
+                 WHERE a.Id_serv = s.Id
+                   AND a.id_user = u.Id
+                   AND a.Flag = 2
+                   AND a.Pais IN ('Mexico')
+              GROUP BY a.id_user
+              ORDER BY SUM(a.Goles) DESC
+              LIMIT 5";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
 }

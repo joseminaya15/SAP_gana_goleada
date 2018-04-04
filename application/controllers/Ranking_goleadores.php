@@ -15,7 +15,7 @@ class Ranking_goleadores extends CI_Controller {
 	public function index(){
         $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
         $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
-        $goles = $this->M_datos->getRankGoles($this->session->userdata('Nombre_canal'));
+        $goles = $this->M_datos->getRankGolesNorte();
         $html  = null;
         $count = 1;
         foreach ($goles as $key) {
@@ -29,6 +29,48 @@ class Ranking_goleadores extends CI_Controller {
             $count++;
         }
         $data['tabla'] = $html;
+        $goles1 = $this->M_datos->getRankGolesSur();
+        $html1  = null;
+        $count1 = 1;
+        foreach ($goles1 as $key) {
+            $html1 .= '<tr>
+                        <td>#'.$count1.'</td>
+                        <td>'.$key->Nombre_canal.'</td>
+                        <td>'.$key->Nombre_capitan.'</td>
+                        <td>'.$key->Pais.'</td>
+                        <td>'.$key->Status.' goles</td>
+                    </tr>';
+            $count1++;
+        }
+        $data['tabla1'] = $html1;
+        $goles2 = $this->M_datos->getRankGolesSur();
+        $html2  = null;
+        $count2 = 1;
+        foreach ($goles2 as $key) {
+            $html2 .= '<tr>
+                        <td>#'.$count2.'</td>
+                        <td>'.$key->Nombre_canal.'</td>
+                        <td>'.$key->Nombre_capitan.'</td>
+                        <td>'.$key->Pais.'</td>
+                        <td>'.$key->Status.' goles</td>
+                    </tr>';
+            $count2++;
+        }
+        $data['tabla2'] = $html2;
+        $goles3 = $this->M_datos->getRankGolesSur();
+        $html3  = null;
+        $count3 = 1;
+        foreach ($goles3 as $key) {
+            $html3 .= '<tr>
+                        <td>#'.$count3.'</td>
+                        <td>'.$key->Nombre_canal.'</td>
+                        <td>'.$key->Nombre_capitan.'</td>
+                        <td>'.$key->Pais.'</td>
+                        <td>'.$key->Status.' goles</td>
+                    </tr>';
+            $count3++;
+        }
+        $data['tabla3'] = $html3;
 		$this->load->view('v_ranking_goleadores', $data);
 	}
     function cerrarCesion(){
