@@ -57,6 +57,7 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
                             <div class="name-anotacion col-xs-8 p-0">
                                 <p>Cuentas nuevas (NNN)</p>
@@ -107,6 +108,8 @@
                         <div class="col-xs-12 mdl-puntos">
                             <div class="punto-imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
                             <div class="name-anotacion col-xs-8 p-0">
                                 <p>Casos de &eacute;xitos de clientes aprobados</p>
@@ -122,6 +125,7 @@
                         </div>
                         <div class="col-xs-12 mdl-puntos">
                             <div class="punto-imagen">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
