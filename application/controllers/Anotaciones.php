@@ -122,12 +122,40 @@ class Anotaciones extends CI_Controller {
             $html4   = null;
             $html5   = null;
             $estado  = null;
-            foreach ($goles as $key) {
-                if($id_user == 1){
-                    if($key->Id_serv == 1){
-                      if($key->Flag == FLAG_APROBADO){
+            if(count($goles) != 0) {
+              foreach ($goles as $key) {
+                  if($id_user == 1){
+                      if($key->Id_serv == 1){
+                        if($key->Flag == FLAG_APROBADO){
+                            $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
+                            $html1 .= '<tr>
+                                      <td>'.$key->Empresa.'</td>
+                                      <td>'.$key->Deal_registration.'</td>
+                                      <td>'.$key->Pais.'</td>
+                                      <td>'.$estado.'</td>
+                                      <td>'.$key->Goles.'</td>
+                                    </tr>';
+                        }else {
+                            if($key->Flag == 1) {
+                              $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle circle-estado"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
+                            } else if($key->Flag == 3) {
+                              $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle circle-estado"><span class="red"></span></div></div>';
+                            }
+                            $html1 .= '<tr>
+                                      <td>'.$key->Empresa.'</td>
+                                      <td>'.$key->Deal_registration.'</td>
+                                      <td>'.$key->Pais.'</td>
+                                      <td>'.$estado.'</td>
+                                      <td>--</td>
+                                    </tr>';
+                        }
+                      } 
+                  }
+                  if($id_user == 2){
+                    if($key->Id_serv == 2){
+                        if($key->Flag == FLAG_APROBADO){
                           $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
-                          $html1 .= '<tr>
+                          $html2 .= '<tr>
                                     <td>'.$key->Empresa.'</td>
                                     <td>'.$key->Deal_registration.'</td>
                                     <td>'.$key->Pais.'</td>
@@ -140,7 +168,7 @@ class Anotaciones extends CI_Controller {
                           } else if($key->Flag == 3) {
                             $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle circle-estado"><span class="red"></span></div></div>';
                           }
-                          $html1 .= '<tr>
+                          $html2 .= '<tr>
                                     <td>'.$key->Empresa.'</td>
                                     <td>'.$key->Deal_registration.'</td>
                                     <td>'.$key->Pais.'</td>
@@ -148,116 +176,90 @@ class Anotaciones extends CI_Controller {
                                     <td>--</td>
                                   </tr>';
                       }
-                    } 
-                }
-                if($id_user == 2){
-                  if($key->Id_serv == 2){
-                      if($key->Flag == FLAG_APROBADO){
-                        $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
-                        $html2 .= '<tr>
-                                  <td>'.$key->Empresa.'</td>
-                                  <td>'.$key->Deal_registration.'</td>
-                                  <td>'.$key->Pais.'</td>
-                                  <td>'.$estado.'</td>
-                                  <td>'.$key->Goles.'</td>
-                                </tr>';
-                    }else {
-                        if($key->Flag == 1) {
-                          $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle circle-estado"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
-                        } else if($key->Flag == 3) {
-                          $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle circle-estado"><span class="red"></span></div></div>';
-                        }
-                        $html2 .= '<tr>
-                                  <td>'.$key->Empresa.'</td>
-                                  <td>'.$key->Deal_registration.'</td>
-                                  <td>'.$key->Pais.'</td>
-                                  <td>'.$estado.'</td>
-                                  <td>--</td>
-                                </tr>';
                     }
                   }
-                }
-                if($id_user == 3){
-                  if($key->Id_serv == 3){
-                      if($key->Flag == FLAG_APROBADO){
-                        $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
-                        $html3 .= '<tr>
-                                  <td>'.$key->Empresa.'</td>
-                                  <td>'.$key->Deal_registration.'</td>
-                                  <td>'.$key->Pais.'</td>
-                                  <td>'.$estado.'</td>
-                                  <td>'.$key->Goles.'</td>
-                                </tr>';
-                    }else {
-                        if($key->Flag == 1) {
-                          $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle circle-estado"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
-                        } else if($key->Flag == 3) {
-                          $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle circle-estado"><span class="red"></span></div></div>';
-                        }
-                        $html3 .= '<tr>
-                                  <td>'.$key->Empresa.'</td>
-                                  <td>'.$key->Deal_registration.'</td>
-                                  <td>'.$key->Pais.'</td>
-                                  <td>'.$estado.'</td>
-                                  <td>--</td>
-                                </tr>';
+                  if($id_user == 3){
+                    if($key->Id_serv == 3){
+                        if($key->Flag == FLAG_APROBADO){
+                          $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
+                          $html3 .= '<tr>
+                                    <td>'.$key->Empresa.'</td>
+                                    <td>'.$key->Deal_registration.'</td>
+                                    <td>'.$key->Pais.'</td>
+                                    <td>'.$estado.'</td>
+                                    <td>'.$key->Goles.'</td>
+                                  </tr>';
+                      }else {
+                          if($key->Flag == 1) {
+                            $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle circle-estado"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
+                          } else if($key->Flag == 3) {
+                            $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle circle-estado"><span class="red"></span></div></div>';
+                          }
+                          $html3 .= '<tr>
+                                    <td>'.$key->Empresa.'</td>
+                                    <td>'.$key->Deal_registration.'</td>
+                                    <td>'.$key->Pais.'</td>
+                                    <td>'.$estado.'</td>
+                                    <td>--</td>
+                                  </tr>';
+                      }
                     }
                   }
-                }
-                if($id_user == 4){
-                  if($key->Id_serv == 4){
-                      if($key->Flag == FLAG_APROBADO){
-                        $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
-                        $html4 .= '<tr>
-                                  <td>'.$key->Empresa.'</td>
-                                  <td>'.$key->Deal_registration.'</td>
-                                  <td>'.$key->Pais.'</td>
-                                  <td>'.$estado.'</td>
-                                  <td>'.$key->Goles.'</td>
-                                </tr>';
-                    }else {
-                        if($key->Flag == 1) {
-                          $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle circle-estado"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
-                        } else if($key->Flag == 3) {
-                          $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle circle-estado"><span class="red"></span></div></div>';
-                        }
-                        $html4 .= '<tr>
-                                  <td>'.$key->Empresa.'</td>
-                                  <td>'.$key->Deal_registration.'</td>
-                                  <td>'.$key->Pais.'</td>
-                                  <td>'.$estado.'</td>
-                                  <td>--</td>
-                                </tr>';
+                  if($id_user == 4){
+                    if($key->Id_serv == 4){
+                        if($key->Flag == FLAG_APROBADO){
+                          $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
+                          $html4 .= '<tr>
+                                    <td>'.$key->Empresa.'</td>
+                                    <td>'.$key->Deal_registration.'</td>
+                                    <td>'.$key->Pais.'</td>
+                                    <td>'.$estado.'</td>
+                                    <td>'.$key->Goles.'</td>
+                                  </tr>';
+                      }else {
+                          if($key->Flag == 1) {
+                            $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle circle-estado"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
+                          } else if($key->Flag == 3) {
+                            $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle circle-estado"><span class="red"></span></div></div>';
+                          }
+                          $html4 .= '<tr>
+                                    <td>'.$key->Empresa.'</td>
+                                    <td>'.$key->Deal_registration.'</td>
+                                    <td>'.$key->Pais.'</td>
+                                    <td>'.$estado.'</td>
+                                    <td>--</td>
+                                  </tr>';
+                      }
                     }
                   }
-                }
-                if($id_user == 5){
-                  if($key->Id_serv == 5){
-                      if($key->Flag == FLAG_APROBADO){
-                        $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
-                        $html5 .= '<tr>
-                                  <td>'.$key->Empresa.'</td>
-                                  <td>'.$key->Deal_registration.'</td>
-                                  <td>'.$key->Pais.'</td>
-                                  <td>'.$estado.'</td>
-                                  <td>'.$key->Goles.'</td>
-                                </tr>';
-                    }else {
-                        if($key->Flag == 1) {
-                          $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle circle-estado"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
-                        } else if($key->Flag == 3) {
-                          $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle circle-estado"><span class="red"></span></div></div>';
-                        }
-                        $html5 .= '<tr>
-                                  <td>'.$key->Empresa.'</td>
-                                  <td>'.$key->Deal_registration.'</td>
-                                  <td>'.$key->Pais.'</td>
-                                  <td>'.$estado.'</td>
-                                  <td>--</td>
-                                </tr>';
+                  if($id_user == 5){
+                    if($key->Id_serv == 5){
+                        if($key->Flag == FLAG_APROBADO){
+                          $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
+                          $html5 .= '<tr>
+                                    <td>'.$key->Empresa.'</td>
+                                    <td>'.$key->Deal_registration.'</td>
+                                    <td>'.$key->Pais.'</td>
+                                    <td>'.$estado.'</td>
+                                    <td>'.$key->Goles.'</td>
+                                  </tr>';
+                      }else {
+                          if($key->Flag == 1) {
+                            $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle circle-estado"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
+                          } else if($key->Flag == 3) {
+                            $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle circle-estado"><span class="red"></span></div></div>';
+                          }
+                          $html5 .= '<tr>
+                                    <td>'.$key->Empresa.'</td>
+                                    <td>'.$key->Deal_registration.'</td>
+                                    <td>'.$key->Pais.'</td>
+                                    <td>'.$estado.'</td>
+                                    <td>--</td>
+                                  </tr>';
+                      }
                     }
                   }
-                }
+              }
             }
             if($id_user == 1){
               $data['tabla'] = $html1;
