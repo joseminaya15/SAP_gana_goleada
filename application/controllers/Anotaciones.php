@@ -26,7 +26,7 @@ class Anotaciones extends CI_Controller {
     if(count($goles) != 0){
         foreach ($goles as $key) {
           if($key->Id_serv == 1){
-              if($key->Flag == FLAG_APROBADO){
+              if($key->Flag == 2){
                   $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
                   $suma_cn += $key->Goles;
                   $html .= '<tr>
@@ -36,11 +36,14 @@ class Anotaciones extends CI_Controller {
                             <td>'.$estado.'</td>
                             <td>'.$key->Goles.'</td>
                           </tr>';
+                  print_r('1');
               }else {
                   if($key->Flag == 1) {
                     $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle circle-estado"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
                   } else if($key->Flag == 3) {
                     $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle circle-estado"><span class="red"></span></div></div>';
+                  }else {
+                    $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
                   }
                   $html .= '<tr>
                             <td>'.$key->Empresa.'</td>
@@ -49,25 +52,26 @@ class Anotaciones extends CI_Controller {
                             <td>'.$estado.'</td>
                             <td>--</td>
                           </tr>';
+                  print_r('2');
               }
           }
           if($key->Id_serv == 2){
-              if($key->Flag == FLAG_APROBADO){
+              if($key->Flag == 2){
                   $suma_sc += $key->Goles;
               }
           }
           if($key->Id_serv == 3){
-              if($key->Flag == FLAG_APROBADO){
+              if($key->Flag == 2){
                   $suma_cl += $key->Goles;
               }
           }
           if($key->Id_serv == 4){
-              if($key->Flag == FLAG_APROBADO){
+              if($key->Flag == 2){
                   $suma_ca += $key->Goles;
               }
           }
           if($key->Id_serv == 5){
-              if($key->Flag == FLAG_APROBADO){
+              if($key->Flag == 2){
                   $suma_wb += $key->Goles;
               }
           }
