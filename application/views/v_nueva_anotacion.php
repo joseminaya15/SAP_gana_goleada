@@ -59,7 +59,6 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
                             <div class="name-anotacion col-xs-10 p-l-0">
                                 <p>Cuentas nuevas (NNN)</p>
@@ -135,7 +134,6 @@
                             <h2>Cuentas nuevas (NNN)</h2>
                             <div class="puntaje">
                                 <div class="numero-goles inline">
-                                    <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     <img src="<?php echo RUTA_IMG?>logo/punto.png">

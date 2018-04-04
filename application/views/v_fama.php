@@ -48,7 +48,7 @@
                         <img src="<?php echo RUTA_IMG?>menu/salon.png">
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <p>Sal&oacute;n de la fama SAP</p>
+                        <p>Historia para inspirar</p>
                     </div>
                 </div>
                 <div class="mdl-card-fama">
