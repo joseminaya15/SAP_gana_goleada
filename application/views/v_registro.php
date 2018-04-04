@@ -51,10 +51,10 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="mdl-input">
-                                <input type="text" class="form-control" placeholder="Nombre completo del capit&aacute;n" id="nombre" maxlength="50" onkeypress="return soloLetras(event);">
+                                <input type="text" class="form-control" autocomplete="off" placeholder="Nombre completo del capit&aacute;n" id="nombre" maxlength="50" onkeypress="return soloLetras(event);">
                             </div>
                             <div class="mdl-input">
-                                <input type="text" class="form-control" placeholder="Nombre del Canal" id="canal" maxlength="50">
+                                <input type="text" class="form-control" autocomplete="off" placeholder="Nombre del Canal" id="canal" maxlength="50">
                             </div>
                             <div class="mdl-select">
                                 <select class="selectpicker" title="País" id="pais">
@@ -67,13 +67,13 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="mdl-input">
-                                <input type="text" class="form-control" placeholder="Correo electr&oacute;nico" id="correo">
+                                <input type="text" class="form-control" autocomplete="off" placeholder="Correo electr&oacute;nico" id="correo">
                             </div>
                             <div class="mdl-input">
-                                <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password">
+                                <input type="password" class="form-control" autocomplete="off" placeholder="Contrase&ntilde;a" id="password">
                             </div>
                             <div class="mdl-input">
-                                <input type="text" class="form-control" placeholder="Partner ID" id="partner" onkeypress="return valida(event)" maxlength="6">
+                                <input type="text" class="form-control" autocomplete="off" placeholder="Partner ID" id="partner" onkeypress="return valida(event)" maxlength="6">
                             </div>
                             <div class="col-xs-12 p-0">
                                 <div class="col-xs-9 p-0">
