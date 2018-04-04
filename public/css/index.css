@@ -414,6 +414,7 @@ body{
 }
 .estados .circle span{
 	margin: 0;
+	margin-top: 5px;
 }
 /*MDL-INPUT*/
 .mdl-input{
