@@ -36,7 +36,6 @@ class Anotaciones extends CI_Controller {
                             <td>'.$estado.'</td>
                             <td>'.$key->Goles.'</td>
                           </tr>';
-                  print_r('1');
               }else {
                   if($key->Flag == 1) {
                     $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle circle-estado"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
@@ -52,7 +51,6 @@ class Anotaciones extends CI_Controller {
                             <td>'.$estado.'</td>
                             <td>--</td>
                           </tr>';
-                  print_r('2');
               }
           }
           if($key->Id_serv == 2){
