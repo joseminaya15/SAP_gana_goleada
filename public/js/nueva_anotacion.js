@@ -3,7 +3,6 @@ function nuevaAnotacion(){
 	var deal_regis = $('#deal_regis').val();
 	var pais 	   = $('#pais').val();
 	var fecha 	   = $('#fecha').val();
-	//var goles 	   = $('#goles').val();
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese su empresa');
 		return;
