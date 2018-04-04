@@ -53,8 +53,13 @@
                             <div class="mdl-input">
                                 <input type="text" class="form-control" placeholder="Nombre del Canal" id="canal" maxlength="50">
                             </div>
-                            <div class="mdl-input">
-                                <input type="text" class="form-control" placeholder="Pa&iacute;s" id="pais" maxlength="50" onkeypress="return soloLetras(event);">
+                            <div class="mdl-select">
+                                <select class="selectpicker" title="País" id="pais">
+                                    <option>Brasil</option>
+                                    <option>M&eacute;xico</option>
+                                    <option>Norte</option>
+                                    <option>Sur</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-sm-6">

@@ -417,6 +417,7 @@ body{
 	margin-top: 5px;
 }
 /*MDL-INPUT*/
+.mdl-select,
 .mdl-input{
 	margin: 15px 0;
 }
@@ -448,6 +449,16 @@ body{
 }
 .mdl-card-anotar .mdl-checkbox.is-checked .mdl-checkbox__tick-outline{
 	background: #000000;
+}
+.mdl-select .bootstrap-select{
+	width: 100% !important;
+}
+.mdl-select .bootstrap-select button{
+	height: 45px;
+	border-radius: 8px;
+}
+.mdl-select .bootstrap-select .pull-left{
+	font-style: italic;
 }
 /*PLACEHOLDER*/
 input::placeholder {
