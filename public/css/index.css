@@ -335,17 +335,17 @@ body{
 }
 .mdl-card-cuentas .mdl-card__title h2{
 	margin: 0;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 22px;
 	font-family: 'RobotoMedium';
-	width: calc(100% - 150px);
+	width: calc(100% - 130px);
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 .mdl-card-cuentas .mdl-card__title .puntaje{
-	max-width: 145px;
+	max-width: 135px;
 	width: 100%;
 	text-align: right;
 }
@@ -355,6 +355,10 @@ body{
 }
 .mdl-card-cuentas .mdl-card__supporting-text .form-group input{
 	border: 1px solid #000000;
+}
+.mdl-card-cuentas .info p{
+	font-size: 12px;
+	line-height: 16px;
 }
 .mdl-estados{
 	max-width: calc(100% - 90px);

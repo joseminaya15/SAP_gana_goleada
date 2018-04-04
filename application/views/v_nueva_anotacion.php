@@ -58,6 +58,7 @@
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
                             <div class="name-anotacion col-xs-10 p-l-0">
                                 <p>Cuentas nuevas (NNN)</p>
@@ -99,9 +100,11 @@
                         <div class="col-xs-12 mdl-puntos">
                             <div class="punto-imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
                             </div>
                             <div class="name-anotacion col-xs-10 p-l-0">
-                                <p>Casos de &eacute;xitos de clientes aprobados</p>
+                                <p>Casos de &eacute;xitos de clientes aprobados*</p>
                             </div>
                             <div class="col-xs-2">
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="caso">
@@ -111,6 +114,7 @@
                         </div>
                         <div class="col-xs-12 mdl-puntos">
                             <div class="punto-imagen">
+                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 <img src="<?php echo RUTA_IMG?>logo/punto.png">
@@ -130,6 +134,7 @@
                             <h2>Cuentas nuevas (NNN)</h2>
                             <div class="puntaje">
                                 <div class="numero-goles inline">
+                                    <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     <img src="<?php echo RUTA_IMG?>logo/punto.png">
@@ -155,6 +160,9 @@
                             <div class="col-xs-6 p-0 text-right">
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="nuevaAnotacion()">Anotar<i class="mdi mdi-play_arrow"></i></button>
                             </div>
+                        </div>
+                        <div class="col-xs-12 p-0 info">
+                            <p>(*) Recuerda que puedes cargar cualquier caso de &eacute;xito, no necesariamente tiene  estar relacionando con f&uacute;tbol.</p>
                         </div>
                     </div>
                 </div>
