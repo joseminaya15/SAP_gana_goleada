@@ -318,6 +318,9 @@ body{
     border-bottom: 2px solid #000;
     width: 100%;
 }
+.mdl-card-ranking .mdl-card__supporting-text{
+	height: 270px;
+}
 .mdl-card-anotar{
     display: inline-block;
     max-width: 300px;
