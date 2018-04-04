@@ -53,22 +53,86 @@
                     <div class="mdl-card__title">
                         <h2>Ranking Goleadores</h2>
                     </div>
-                    <div class="mdl-card__supporting-text">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Posici&oacute;</th>
-                                        <th>Equipo</th>
-                                        <th>Capit&aacute;n</th>
-                                        <th>Pa&iacute;s</th>
-                                        <th>Score</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php echo $tabla ?>
-                                </tbody>
-                            </table>
+                    <div class="mdl-card__supporting-text p-t-0">
+                        <ul class="nav nav-tabs m-b-20" role="tablist">
+                            <li role="presentation" class="active"><a href="#norte" aria-controls="norte" role="tab" data-toggle="tab">Norte</a></li>
+                            <li role="presentation"><a href="#sur" aria-controls="sur" role="tab" data-toggle="tab">Sur</a></li>
+                            <li role="presentation"><a href="#brasil" aria-controls="brasil" role="tab" data-toggle="tab">Brasil</a></li>
+                            <li role="presentation"><a href="#mexico" aria-controls="mexico" role="tab" data-toggle="tab">M&eacute;xico</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="norte">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Posici&oacute;n</th>
+                                                <th>Equipo</th>
+                                                <th>Capit&aacute;n</th>
+                                                <th>Pa&iacute;s</th>
+                                                <th>Score</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php echo $tabla ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="sur">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Posici&oacute;n</th>
+                                                <th>Equipo</th>
+                                                <th>Capit&aacute;n</th>
+                                                <th>Pa&iacute;s</th>
+                                                <th>Score</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php echo $tabla ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="brasil">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Posici&oacute;n</th>
+                                                <th>Equipo</th>
+                                                <th>Capit&aacute;n</th>
+                                                <th>Pa&iacute;s</th>
+                                                <th>Score</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php echo $tabla ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="mexico">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Posici&oacute;n</th>
+                                                <th>Equipo</th>
+                                                <th>Capit&aacute;n</th>
+                                                <th>Pa&iacute;s</th>
+                                                <th>Score</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php echo $tabla ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
