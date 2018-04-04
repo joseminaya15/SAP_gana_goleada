@@ -177,6 +177,7 @@ body{
 }
 .mdl-registro .mdl-card__supporting-text{
 	padding-top: 0;
+	overflow: inherit;
 }
 .mdl-registro .mdl-card__supporting-text h2{
 	color: #FFFFFF;

@@ -42,7 +42,7 @@
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
                     </div>
-                    <div class="mdl-card__supporting-text">
+                    <div class="mdl-card__supporting-text col-xs-12">
                         <div class="col-xs-12">
                             <h2>Nuevo registro</h2>
                         </div>
