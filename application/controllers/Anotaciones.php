@@ -13,8 +13,8 @@ class Anotaciones extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
   }
 	public function index(){
-    $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
-    $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
+    $data['nombre_capitan'] = ucwords($this->session->userdata('Nombre_capitan'));
+    $data['nombre_canal']   = ucwords($this->session->userdata('Nombre_canal'));
     $goles   = $this->M_datos->getTotalGoles($this->session->userdata('Nombre_canal'));
     $suma_cn = null;
     $suma_sc = null;

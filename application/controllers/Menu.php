@@ -16,8 +16,8 @@ class Menu extends CI_Controller {
         if($this->session->userdata('usuario') == null){
             header("location: Login");
         }
-        $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
-        $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
+        $data['nombre_capitan'] = ucwords($this->session->userdata('Nombre_capitan'));
+        $data['nombre_canal']   = ucwords($this->session->userdata('Nombre_canal'));
 		$this->load->view('v_menu', $data);
 	}
     function cerrarCesion(){

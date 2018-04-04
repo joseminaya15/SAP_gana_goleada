@@ -13,8 +13,8 @@ class Nueva_anotacion extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        $data['nombre_capitan'] = $this->session->userdata('Nombre_capitan');
-        $data['nombre_canal']   = $this->session->userdata('Nombre_canal');
+        $data['nombre_capitan'] = ucwords($this->session->userdata('Nombre_capitan'));
+        $data['nombre_canal']   = ucwords($this->session->userdata('Nombre_canal'));
 		$this->load->view('v_nueva_anotacion', $data);
 	}
     function cerrarCesion(){
