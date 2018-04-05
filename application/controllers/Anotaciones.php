@@ -31,10 +31,11 @@ class Anotaciones extends CI_Controller {
                   $suma_cn += $key->Goles;
                   $html .= '<tr>
                             <td>'.$key->Empresa.'</td>
-                            <td>'.$key->Deal_registration.'</td>
-                            <td>'.$key->Pais.'</td>
-                            <td>'.$estado.'</td>
-                            <td>'.$key->Goles.'</td>
+                            <td class="text-center">'.$key->Deal_registration.'</td>
+                            <td class="text-center">'.$key->Pais.'</td>
+                            <td class="text-center">'.$estado.'</td>
+                            <td class="text-center">'.$key->Goles.'</td>
+                            <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-email"></i></button></td>
                           </tr>';
               }else {
                   if($key->Flag == 1) {
@@ -45,12 +46,13 @@ class Anotaciones extends CI_Controller {
                     $estado = '<div class="estados"><div class="circle"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
                   }
                   $html .= '<tr>
-                            <td>'.$key->Empresa.'</td>
-                            <td>'.$key->Deal_registration.'</td>
-                            <td>'.$key->Pais.'</td>
-                            <td>'.$estado.'</td>
-                            <td>--</td>
-                          </tr>';
+                              <td>'.$key->Empresa.'</td>
+                              <td class="text-center">'.$key->Deal_registration.'</td>
+                              <td class="text-center">'.$key->Pais.'</td>
+                              <td class="text-center">'.$estado.'</td>
+                              <td class="text-center">--</td>
+                              <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-email"></i></button></td>
+                            </tr>';
               }
           }
           if($key->Id_serv == 2){
@@ -130,10 +132,11 @@ class Anotaciones extends CI_Controller {
                             $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
                             $html1 .= '<tr>
                                       <td>'.$key->Empresa.'</td>
-                                      <td>'.$key->Deal_registration.'</td>
-                                      <td>'.$key->Pais.'</td>
-                                      <td>'.$estado.'</td>
-                                      <td>'.$key->Goles.'</td>
+                                      <td class="text-center">'.$key->Deal_registration.'</td>
+                                      <td class="text-center">'.$key->Pais.'</td>
+                                      <td class="text-center">'.$estado.'</td>
+                                      <td class="text-center">'.$key->Goles.'</td>
+                                      <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
                                     </tr>';
                         }else {
                             if($key->Flag == 1) {
@@ -143,10 +146,11 @@ class Anotaciones extends CI_Controller {
                             }
                             $html1 .= '<tr>
                                       <td>'.$key->Empresa.'</td>
-                                      <td>'.$key->Deal_registration.'</td>
-                                      <td>'.$key->Pais.'</td>
-                                      <td>'.$estado.'</td>
-                                      <td>--</td>
+                                      <td class="text-center">'.$key->Deal_registration.'</td>
+                                      <td class="text-center">'.$key->Pais.'</td>
+                                      <td class="text-center">'.$estado.'</td>
+                                      <td class="text-center">--</td>
+                                      <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
                                     </tr>';
                         }
                       } 
@@ -157,10 +161,11 @@ class Anotaciones extends CI_Controller {
                           $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
                           $html2 .= '<tr>
                                     <td>'.$key->Empresa.'</td>
-                                    <td>'.$key->Deal_registration.'</td>
-                                    <td>'.$key->Pais.'</td>
-                                    <td>'.$estado.'</td>
-                                    <td>'.$key->Goles.'</td>
+                                    <td class="text-center">'.$key->Deal_registration.'</td>
+                                    <td class="text-center">'.$key->Pais.'</td>
+                                    <td class="text-center">'.$estado.'</td>
+                                    <td class="text-center">'.$key->Goles.'</td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }else {
                           if($key->Flag == 1) {
@@ -170,10 +175,11 @@ class Anotaciones extends CI_Controller {
                           }
                           $html2 .= '<tr>
                                     <td>'.$key->Empresa.'</td>
-                                    <td>'.$key->Deal_registration.'</td>
-                                    <td>'.$key->Pais.'</td>
-                                    <td>'.$estado.'</td>
-                                    <td>--</td>
+                                    <td class="text-center">'.$key->Deal_registration.'</td>
+                                    <td class="text-center">'.$key->Pais.'</td>
+                                    <td class="text-center">'.$estado.'</td>
+                                    <td class="text-center">--</td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }
                     }
@@ -184,10 +190,11 @@ class Anotaciones extends CI_Controller {
                           $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
                           $html3 .= '<tr>
                                     <td>'.$key->Empresa.'</td>
-                                    <td>'.$key->Deal_registration.'</td>
-                                    <td>'.$key->Pais.'</td>
-                                    <td>'.$estado.'</td>
-                                    <td>'.$key->Goles.'</td>
+                                    <td class="text-center">'.$key->Deal_registration.'</td>
+                                    <td class="text-center">'.$key->Pais.'</td>
+                                    <td class="text-center">'.$estado.'</td>
+                                    <td class="text-center">'.$key->Goles.'</td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }else {
                           if($key->Flag == 1) {
@@ -197,10 +204,11 @@ class Anotaciones extends CI_Controller {
                           }
                           $html3 .= '<tr>
                                     <td>'.$key->Empresa.'</td>
-                                    <td>'.$key->Deal_registration.'</td>
-                                    <td>'.$key->Pais.'</td>
-                                    <td>'.$estado.'</td>
-                                    <td>--</td>
+                                    <td class="text-center">'.$key->Deal_registration.'</td>
+                                    <td class="text-center">'.$key->Pais.'</td>
+                                    <td class="text-center">'.$estado.'</td>
+                                    <td class="text-center">--</td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }
                     }
@@ -211,10 +219,11 @@ class Anotaciones extends CI_Controller {
                           $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
                           $html4 .= '<tr>
                                     <td>'.$key->Empresa.'</td>
-                                    <td>'.$key->Deal_registration.'</td>
-                                    <td>'.$key->Pais.'</td>
-                                    <td>'.$estado.'</td>
-                                    <td>'.$key->Goles.'</td>
+                                    <td class="text-center">'.$key->Deal_registration.'</td>
+                                    <td class="text-center">'.$key->Pais.'</td>
+                                    <td class="text-center">'.$estado.'</td>
+                                    <td class="text-center">'.$key->Goles.'</td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }else {
                           if($key->Flag == 1) {
@@ -224,10 +233,11 @@ class Anotaciones extends CI_Controller {
                           }
                           $html4 .= '<tr>
                                     <td>'.$key->Empresa.'</td>
-                                    <td>'.$key->Deal_registration.'</td>
-                                    <td>'.$key->Pais.'</td>
-                                    <td>'.$estado.'</td>
-                                    <td>--</td>
+                                    <td class="text-center">'.$key->Deal_registration.'</td>
+                                    <td class="text-center">'.$key->Pais.'</td>
+                                    <td class="text-center">'.$estado.'</td>
+                                    <td class="text-center">--</td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }
                     }
@@ -238,10 +248,11 @@ class Anotaciones extends CI_Controller {
                           $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
                           $html5 .= '<tr>
                                     <td>'.$key->Empresa.'</td>
-                                    <td>'.$key->Deal_registration.'</td>
-                                    <td>'.$key->Pais.'</td>
-                                    <td>'.$estado.'</td>
-                                    <td>'.$key->Goles.'</td>
+                                    <td class="text-center">'.$key->Deal_registration.'</td>
+                                    <td class="text-center">'.$key->Pais.'</td>
+                                    <td class="text-center">'.$estado.'</td>
+                                    <td class="text-center">'.$key->Goles.'</td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }else {
                           if($key->Flag == 1) {
@@ -251,10 +262,11 @@ class Anotaciones extends CI_Controller {
                           }
                           $html5 .= '<tr>
                                     <td>'.$key->Empresa.'</td>
-                                    <td>'.$key->Deal_registration.'</td>
-                                    <td>'.$key->Pais.'</td>
-                                    <td>'.$estado.'</td>
-                                    <td>--</td>
+                                    <td class="text-center">'.$key->Deal_registration.'</td>
+                                    <td class="text-center">'.$key->Pais.'</td>
+                                    <td class="text-center">'.$estado.'</td>
+                                    <td class="text-center">--</td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }
                     }

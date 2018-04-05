@@ -443,18 +443,18 @@ body{
     border-radius: 50%;
     vertical-align: middle;
     padding: 0px 4px;
-    margin: 0 3px;
-    width: 20px;
-    height: 20px;
+    margin: 0 2px;
+    width: 18px;
+    height: 18px;
     text-align: center;
-    line-height: 16px;
+    line-height: 14px;
 }
 .estados .circle.circle-estado{
     border: 1px solid #757575;
 }
 .estados .circle span{
 	margin: 0;
-	margin-top: 5px;
+	margin-top: 4px;
 }
 /*MDL-INPUT*/
 .mdl-select,
@@ -510,6 +510,10 @@ input::placeholder {
 	font-size: 14px;
 	line-height: 16px;
     vertical-align: middle;
+}
+.table button i{
+	font-size: 20px;
+	vertical-align: middle;
 }
 .nav-tabs>li>a{
 	color: #555555;

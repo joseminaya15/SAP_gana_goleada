@@ -152,10 +152,11 @@
                                     <thead>
                                         <tr>
                                             <th>Empresa</th>
-                                            <th>Deal Registration ID</th>
-                                            <th>Pa&iacute;s</th>
-                                            <th>Status</th>
-                                            <th>Goles</th>
+                                            <th class="text-center">Deal Registration ID</th>
+                                            <th class="text-center">Pa&iacute;s</th>
+                                            <th class="text-center">Status</th>
+                                            <th class="text-center">Goles</th>
+                                            <th class="text-center">Alertas</th>
                                         </tr>
                                     </thead>
                                     <tbody id="data_tabla">
@@ -180,7 +181,27 @@
                 </div>
             </div>
         </section>
-
+        <!-- Modal -->
+        <div class="modal fade" id="modalAlerta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="mdl-card">
+                        <div class="mdl-card__title">
+                            <h2></h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <p></p>
+                        </div>
+                        <div class="mdl-card__actions">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Aceptar</button>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-close"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>
