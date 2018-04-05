@@ -187,12 +187,12 @@
                 <div class="modal-content">
                     <div class="mdl-card">
                         <div class="mdl-card__title">
-                            <h2></h2>
+                            <h2>¡Metiste Goles!</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            <p></p>
+                            <p>Su oportunidad a sido aceptada</p>
                         </div>
-                        <div class="mdl-card__actions">
+                        <div class="mdl-card__actions text-right">
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Aceptar</button>
                         </div>
                         <div class="mdl-card__menu">

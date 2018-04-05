@@ -39,6 +39,19 @@ function cerrarCesion(){
       }
 	});
 }
+var aprobado  = 'aprobado';
+var contacto  = 'contacto';
+var rechazado = 'rechazado';
 function showModalAlert(){
-	$('#modalAlerta').modal('show');
+	var modalAlert = $('#modalAlerta');
+	var nameTitle   = modalAlert.find('.mdl-card__title').find('h2');
+	var description = modalAlert.find('.mdl-card__supporting-text');
+	nameTitle.text('¡Metiste Goles!');
+	// nameTitle.text('¡Goles Rechazados!');
+	// nameTitle.text('Contáctanos');
+	// description.html('<p>Su oportunidad ha sido aceptada</p>');
+	// description.html('<p>Su oportunidad ha sido rechazada, por favor ponerse en contacto con <a href="mailto:carina.gonzales@sap.com">mailto:carina.gonzales@sap.com</a></p>');
+	description.html('<p>Queremos ponernos en contacto con usted, por favor escribirnos a <a href="mailto:carina.gonzales@sap.com">mailto:carina.gonzales@sap.com</a></p>');
+	// description.html('<p>Su oportunidad ha sido aceptada</p>');
+	modalAlert.modal('show');
 }

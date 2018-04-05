@@ -175,6 +175,11 @@ body{
 .mdl-card__supporting-text{
 	width: 100%;
 }
+.mdl-card__menu {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
 .mdl-card-login .mdl-card__supporting-text{
 	padding: 20px 100px 50px 100px;
 }
@@ -539,12 +544,26 @@ input::placeholder {
 .mdl-card-table{
 	padding: 25px;
 }
+/*MODAL*/
+#modalAlerta .mdl-card__title h2{
+    margin: 5px 0;
+    font-size: 28px;
+    line-height: 32px;
+    font-family: 'RobotoMedium';
+} 
+#modalAlerta .mdl-card__supporting-text p{
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+} 
+#modalAlerta .mdl-card__actions{
+	padding: 16px;
+}
 @media ( max-width: 1200px ){
 	#menu .mdl-card-container{
 		max-width: 600px;
 	}
 }
-
 @media ( max-width: 768px ){
 	.mdl-card-login .mdl-card__supporting-text img{
 		max-width: 250px;
