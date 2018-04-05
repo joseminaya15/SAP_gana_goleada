@@ -545,6 +545,40 @@ input::placeholder {
 	padding: 25px;
 }
 /*MODAL*/
+.modal.fade .modal-dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: -webkit-fit-content;
+    height: fit-content;
+    margin: auto;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    max-width: 300px;
+    width: 100%;
+}
+.modal.fade.in .modal-dialog{
+	opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 #modalAlerta .mdl-card__title h2{
     margin: 5px 0;
     font-size: 28px;
@@ -556,8 +590,19 @@ input::placeholder {
     line-height: 20px;
     color: #000000;
 } 
+#modalAlerta .mdl-card__supporting-text p a{
+	color: #008FD3;
+	text-decoration: underline;
+}
 #modalAlerta .mdl-card__actions{
 	padding: 16px;
+}
+#modalAlerta .mdl-card__actions button{
+    background-color: #008FD3;
+    border-radius: 15px;
+    color: #FFFFFF;
+    text-transform: initial;
+    font-family: 'RobotoMedium';
 }
 @media ( max-width: 1200px ){
 	#menu .mdl-card-container{

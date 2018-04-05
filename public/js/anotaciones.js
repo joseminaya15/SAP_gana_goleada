@@ -42,8 +42,8 @@ function cerrarCesion(){
 var aprobado  = 'aprobado';
 var contacto  = 'contacto';
 var rechazado = 'rechazado';
+var modalAlert = $('#modalAlerta');
 function showModalAlert(){
-	var modalAlert = $('#modalAlerta');
 	var nameTitle   = modalAlert.find('.mdl-card__title').find('h2');
 	var description = modalAlert.find('.mdl-card__supporting-text');
 	nameTitle.text('¡Metiste Goles!');
@@ -54,4 +54,7 @@ function showModalAlert(){
 	description.html('<p>Queremos ponernos en contacto con usted, por favor escribirnos a <a href="mailto:carina.gonzales@sap.com">mailto:carina.gonzales@sap.com</a></p>');
 	// description.html('<p>Su oportunidad ha sido aceptada</p>');
 	modalAlert.modal('show');
+}
+function closeModal(){
+	modalAlert.modal('hide');
 }
