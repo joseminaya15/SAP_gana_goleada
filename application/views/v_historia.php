@@ -69,6 +69,9 @@
                 		<p>Manchester City</p>
                 	</div>                	
                 </div>
+                <div class="mdl-card-menu mdl-card-exito">
+                    <a href="https://crpa4c19efc4.hana.ondemand.com/cat/ci/public/ui/nominations/" target="_blank"><img src="<?php echo RUTA_IMG?>menu/anotacion.png"><span>Denomina Aqu&iacute; tu caso de &eacute;xito</span></a>
+                </div>
             </div>
         </section>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>

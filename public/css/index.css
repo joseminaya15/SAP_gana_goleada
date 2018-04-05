@@ -47,6 +47,18 @@ body{
 	right: 0;
 	z-index: -1;
 }
+.fondo-imagen:BEFORE{
+    content: '';
+    background-color: #000000;
+    opacity: .4;
+    background-size: cover !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 0;
+}
 .header{
     position: fixed;
     top: 0;
@@ -210,6 +222,28 @@ body{
     margin: 5px 0;
     line-height: 30px;
     font-size: 26px;
+}
+.mdl-card-menu.mdl-card-exito{
+	padding: 10px;
+}
+.mdl-card-menu.mdl-card-exito:HOVER{
+	transform: inherit;
+}
+.mdl-card-exito a{
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+.mdl-card-exito a img{
+	width: 100%;
+    max-width: 80px;
+    display: inline-block;
+}
+.mdl-card-exito a span{
+    width: 100%;
+    max-width: 125px;
+    display: inline-block;
+    color: #FFFFFF;
 }
 .person_name,
 .team_name{

@@ -68,7 +68,7 @@
                         <p>Ranking goleadores</p>
                     </div>
                 </div>
-                <div id="Salon_de_fama" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                <div id="Historia_para_inspirar" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>menu/salon.png">
                     </div>
