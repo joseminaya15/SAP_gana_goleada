@@ -638,6 +638,15 @@ input::placeholder {
     text-transform: initial;
     font-family: 'RobotoMedium';
 }
+/*BUTTON-ACTIVO*/
+.mdl-button.message i{
+	color: #00A1E4;
+}
+/*DISABLED*/
+.mdl-button[disabled][disabled]{
+	cursor: no-drop;
+	opacity: .5;
+}
 @media ( max-width: 1200px ){
 	#menu .mdl-card-container{
 		max-width: 600px;
