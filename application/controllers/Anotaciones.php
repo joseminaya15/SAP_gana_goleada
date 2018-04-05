@@ -23,8 +23,14 @@ class Anotaciones extends CI_Controller {
     $suma_wb = null;
     $html    = null;
     $estado  = null;
+    $alertas = '';
     if(count($goles) != 0){
         foreach ($goles as $key) {
+          if($key->alertas == null || $key->alertas == ''){
+            $alertas = 'disabled';
+          }else {
+            $alertas = '';
+          }
           if($key->Id_serv == 1){
               if($key->Flag == 2){
                   $estado = '<div class="estados"><div class="circle circle-estado"><span class="green"></span></div><div class="circle"><span class="yellow"></span></div><div class="circle"><span class="red"></span></div></div>';
@@ -35,7 +41,7 @@ class Anotaciones extends CI_Controller {
                             <td class="text-center">'.$key->Pais.'</td>
                             <td class="text-center">'.$estado.'</td>
                             <td class="text-center">'.$key->Goles.'</td>
-                            <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-email"></i></button></td>
+                            <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                           </tr>';
               }else {
                   if($key->Flag == 1) {
@@ -51,7 +57,7 @@ class Anotaciones extends CI_Controller {
                               <td class="text-center">'.$key->Pais.'</td>
                               <td class="text-center">'.$estado.'</td>
                               <td class="text-center">--</td>
-                              <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-email"></i></button></td>
+                              <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                             </tr>';
               }
           }
@@ -124,8 +130,14 @@ class Anotaciones extends CI_Controller {
             $html4   = null;
             $html5   = null;
             $estado  = null;
+            $alertas = '';
             if(count($goles) != 0) {
               foreach ($goles as $key) {
+                  if($key->alertas == null || $key->alertas == ''){
+                    $alertas = 'disabled';
+                  }else {
+                    $alertas = '';
+                  }
                   if($id_user == 1){
                       if($key->Id_serv == 1){
                         if($key->Flag == FLAG_APROBADO){
@@ -136,7 +148,7 @@ class Anotaciones extends CI_Controller {
                                       <td class="text-center">'.$key->Pais.'</td>
                                       <td class="text-center">'.$estado.'</td>
                                       <td class="text-center">'.$key->Goles.'</td>
-                                      <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
+                                      <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                                     </tr>';
                         }else {
                             if($key->Flag == 1) {
@@ -150,7 +162,7 @@ class Anotaciones extends CI_Controller {
                                       <td class="text-center">'.$key->Pais.'</td>
                                       <td class="text-center">'.$estado.'</td>
                                       <td class="text-center">--</td>
-                                      <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
+                                      <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                                     </tr>';
                         }
                       } 
@@ -165,7 +177,7 @@ class Anotaciones extends CI_Controller {
                                     <td class="text-center">'.$key->Pais.'</td>
                                     <td class="text-center">'.$estado.'</td>
                                     <td class="text-center">'.$key->Goles.'</td>
-                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }else {
                           if($key->Flag == 1) {
@@ -179,7 +191,7 @@ class Anotaciones extends CI_Controller {
                                     <td class="text-center">'.$key->Pais.'</td>
                                     <td class="text-center">'.$estado.'</td>
                                     <td class="text-center">--</td>
-                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }
                     }
@@ -194,7 +206,7 @@ class Anotaciones extends CI_Controller {
                                     <td class="text-center">'.$key->Pais.'</td>
                                     <td class="text-center">'.$estado.'</td>
                                     <td class="text-center">'.$key->Goles.'</td>
-                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }else {
                           if($key->Flag == 1) {
@@ -208,7 +220,7 @@ class Anotaciones extends CI_Controller {
                                     <td class="text-center">'.$key->Pais.'</td>
                                     <td class="text-center">'.$estado.'</td>
                                     <td class="text-center">--</td>
-                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }
                     }
@@ -223,7 +235,7 @@ class Anotaciones extends CI_Controller {
                                     <td class="text-center">'.$key->Pais.'</td>
                                     <td class="text-center">'.$estado.'</td>
                                     <td class="text-center">'.$key->Goles.'</td>
-                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }else {
                           if($key->Flag == 1) {
@@ -237,7 +249,7 @@ class Anotaciones extends CI_Controller {
                                     <td class="text-center">'.$key->Pais.'</td>
                                     <td class="text-center">'.$estado.'</td>
                                     <td class="text-center">--</td>
-                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }
                     }
@@ -252,7 +264,7 @@ class Anotaciones extends CI_Controller {
                                     <td class="text-center">'.$key->Pais.'</td>
                                     <td class="text-center">'.$estado.'</td>
                                     <td class="text-center">'.$key->Goles.'</td>
-                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }else {
                           if($key->Flag == 1) {
@@ -266,7 +278,7 @@ class Anotaciones extends CI_Controller {
                                     <td class="text-center">'.$key->Pais.'</td>
                                     <td class="text-center">'.$estado.'</td>
                                     <td class="text-center">--</td>
-                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert()"><i class="mdi mdi-email"></i></button></td>
+                                    <td class="text-center"><button class="mdl-button mdl-js-button mdl-button--icon" onclick="showModalAlert('.$key->alertas.')" '.$alertas.'><i class="mdi mdi-email"></i></button></td>
                                   </tr>';
                       }
                     }
@@ -293,5 +305,17 @@ class Anotaciones extends CI_Controller {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
+    }
+
+    function showModalAlert(){
+      $data['error'] = EXIT_ERROR;
+      $data['msj']   = '';
+      try{
+
+        $data['error'] = EXIT_SUCCESS;
+      }catch(Exception $e){
+        $data['msj'] = $e->getMessage();
+      }
+      echo json_encode($data);
     }
 }
