@@ -39,3 +39,6 @@ function cerrarCesion(){
       }
 	});
 }
+function showModalAlert(){
+	$('#modalAlerta').modal('show');
+}

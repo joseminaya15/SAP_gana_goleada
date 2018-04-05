@@ -183,7 +183,7 @@
         </section>
         <!-- Modal -->
         <div class="modal fade" id="modalAlerta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="mdl-card">
                         <div class="mdl-card__title">
@@ -196,7 +196,7 @@
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Aceptar</button>
                         </div>
                         <div class="mdl-card__menu">
-                            <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-close"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
                         </div>
                     </div>
                 </div>
