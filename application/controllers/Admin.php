@@ -20,10 +20,12 @@ class Admin extends CI_Controller {
     if(count($datos) == 0){
         $data['tabla'] = '';
     }else {
-        $html  = null;
-        $count = 1;
+        $html      = null;
+        $count     = 1;
+        $i         = 1;
         $disabled  = '';
         $estado    = '';
+        $disabled2 = '';
         foreach ($datos as $key){
            if($key->Flag == 1){
               $estado    = 'Pendiente';
@@ -34,6 +36,11 @@ class Admin extends CI_Controller {
            if($key->Flag == 3) {
               $disabled  = 'disabled';
               $estado    = 'Rechazado';
+           }
+           if($key->alertas == 1){
+              $disabled2 = 'disabled';
+           }else {
+              $disabled2 = '';
            }
            $html .= '<tr>
                         <td>'.$key->Deal_registration.'</td>
@@ -46,7 +53,7 @@ class Admin extends CI_Controller {
                         <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
                         </td>
                         <td>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$count.');" id="btncontactar'.$count.'">Contactar</button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'>Contactar</button>
                         </td>
                     </tr>';
             $count++;
@@ -77,8 +84,10 @@ class Admin extends CI_Controller {
         $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
         $datos     = $this->M_datos->getDatosAdmin();
         $count     = 1;
+        $i         = 1;
         $disabled  = '';
         $estado    = '';
+        $disabled2 = '';
         if(count($datos) == 0){
             $data['tabla'] = '';
         }else {
@@ -94,6 +103,11 @@ class Admin extends CI_Controller {
                   $disabled  = 'disabled';
                   $estado    = 'Rechazado';
                }
+               if($key->alertas == 1){
+                  $disabled2 = 'disabled';
+               }else {
+                  $disabled2 = '';
+               }
                $html .= '<tr>
                             <td>'.$key->Deal_registration.'</td>
                             <td>'.$key->Nombre_canal.'</td>
@@ -105,7 +119,7 @@ class Admin extends CI_Controller {
                             <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
                             </td>
                             <td>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$count.');" id="btncontactar'.$count.'">Contactar</button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'>Contactar</button>
                             </td>
                         </tr>';
                 $count++;
@@ -128,8 +142,10 @@ class Admin extends CI_Controller {
         $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
         $datos     = $this->M_datos->getDatosAdmin();
         $count     = 1;
+        $i         = 1;
         $disabled  = '';
         $estado    = '';
+        $disabled2 = '';
         if(count($datos) == 0){
             $data['tabla'] = '';
         }else {
@@ -145,6 +161,11 @@ class Admin extends CI_Controller {
                   $disabled  = 'disabled';
                   $estado    = 'Rechazado';
                }
+               if($key->alertas == 1){
+                  $disabled2 = 'disabled';
+               }else {
+                  $disabled2 = '';
+               }
                $html .= '<tr>
                             <td>'.$key->Deal_registration.'</td>
                             <td>'.$key->Nombre_canal.'</td>
@@ -156,7 +177,7 @@ class Admin extends CI_Controller {
                             <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
                             </td>
                             <td>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$count.');" id="btncontactar'.$count.'">Contactar</button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'>Contactar</button>
                             </td>
                         </tr>';
                 $count++;
@@ -170,6 +191,61 @@ class Admin extends CI_Controller {
     echo json_encode($data);
   }
   function contactarUser(){
-
+    $data['error'] = EXIT_ERROR;
+    $data['msj']   = null;
+    try {
+        $id_serv   = $this->input->post('id_serv');
+        $arrUpdt   = array('alertas' => FLAG_PENDIENTE);
+        $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
+        $datos     = $this->M_datos->getDatosAdmin();
+        $count     = 1;
+        $i         = 1;
+        $disabled  = '';
+        $estado    = '';
+        $disabled2 = '';
+        if(count($datos) == 0){
+            $data['tabla'] = '';
+        }else {
+            $html = null;
+            foreach ($datos as $key){
+               if($key->Flag == 1){
+                  $estado    = 'Pendiente';
+               }
+               if($key->Flag == 2){
+                  $estado    = 'Aprobado';
+               }
+               if($key->Flag == 3) {
+                  $disabled  = 'disabled';
+                  $estado    = 'Rechazado';
+               }
+               if($key->alertas == 1){
+                  $disabled2 = 'disabled';
+               }else {
+                  $disabled2 = '';
+               }
+               $html .= '<tr>
+                            <td>'.$key->Deal_registration.'</td>
+                            <td>'.$key->Nombre_canal.'</td>
+                            <td>'.$key->Nombre_capitan.'</td>
+                            <td>'.$key->Pais.'</td>
+                            <td>'.$estado.'</td>
+                            <td>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                            </td>
+                            <td>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'>Contactar</button>
+                            </td>
+                        </tr>';
+                $count++;
+                $i++;
+            }
+            $data['tabla'] = $html;
+        }
+        $data['error'] = EXIT_SUCCESS;
+    } catch (Exception $e){
+        $data['msj'] = $e->getMessage();
+    }
+    echo json_encode($data);
   }
 }

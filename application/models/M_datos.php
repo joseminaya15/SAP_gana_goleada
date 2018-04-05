@@ -70,7 +70,8 @@ class M_datos extends  CI_Model{
                        s.Tipo_serv,
                        u.Nombre_canal,
                        u.Nombre_capitan,
-                       u.Pais
+                       u.Pais,
+                       a.alertas
                   FROM servicios s,
                        anotaciones a,
                        users u

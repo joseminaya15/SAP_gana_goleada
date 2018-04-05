@@ -150,19 +150,19 @@ function aceptar(id, btn){
       }
   });
 }
-function contactar(id, btn){
+function contactar(ids, btns){
   $.ajax({
-    data : {id_serv : id},
+    data : {id_serv : ids},
     url  : 'admin/contactarUser',
     type : 'POST'
   }).done(function(data){
     try{
         data = JSON.parse(data);
         if(data.error == 0){
-          /*$('#tabla').html('');
+          console.log(btns);
+          $('#btncontactar'+btns).prop('disabled', true);
+          $('#tabla').html('');
           $('#tabla').append(data.tabla);
-          $('#btnanular'+btn).prop('disabled', true);
-          $('#btnaceptar'+btn).prop('disabled', true);*/
         }else {
           return;
         }
