@@ -56,6 +56,7 @@
                                 <th class="text-center">País</th>
                                 <th class="text-center">Estado</th>
                                 <th class="text-center">Acción</th>
+                                <th class="text-center">Alertas</th>
                             </tr>
                         </thead>
                       <tbody id="tabla">

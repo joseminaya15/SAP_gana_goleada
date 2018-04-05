@@ -45,6 +45,9 @@ class Admin extends CI_Controller {
                         <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
                         <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
                         </td>
+                        <td>
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$count.');" id="btncontactar'.$count.'">Contactar</button>
+                        </td>
                     </tr>';
             $count++;
         }
@@ -69,7 +72,8 @@ class Admin extends CI_Controller {
     $data['msj']   = null;
     try {
         $id_serv   = $this->input->post('id_serv');
-        $arrUpdt   = array('Flag' => FLAG_RECHAZADO);
+        $arrUpdt   = array('Flag' => FLAG_RECHAZADO,
+                            'alertas' => FLAG_RECHAZADO);
         $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
         $datos     = $this->M_datos->getDatosAdmin();
         $count     = 1;
@@ -100,6 +104,9 @@ class Admin extends CI_Controller {
                             <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
                             <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
                             </td>
+                            <td>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$count.');" id="btncontactar'.$count.'">Contactar</button>
+                            </td>
                         </tr>';
                 $count++;
             }
@@ -116,7 +123,8 @@ class Admin extends CI_Controller {
     $data['msj']   = null;
     try {
         $id_serv   = $this->input->post('id_serv');
-        $arrUpdt   = array('Flag' => FLAG_APROBADO);
+        $arrUpdt   = array('Flag' => FLAG_APROBADO,
+                           'alertas' => FLAG_APROBADO);
         $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
         $datos     = $this->M_datos->getDatosAdmin();
         $count     = 1;
@@ -146,6 +154,9 @@ class Admin extends CI_Controller {
                             <td>
                             <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
                             <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                            </td>
+                            <td>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$count.');" id="btncontactar'.$count.'">Contactar</button>
                             </td>
                         </tr>';
                 $count++;
