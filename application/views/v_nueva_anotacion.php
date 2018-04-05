@@ -161,7 +161,7 @@
                             </div>
                         </div>
                         <div class="col-xs-12 p-0 info">
-                            <p>(*) Recuerda que puedes cargar cualquier caso de &eacute;xito, no necesariamente tiene  estar relacionando con f&uacute;tbol.</p>
+                            <p>(*) Recuerda que puedes cargar cualquier caso de &eacute;xito, no necesariamente tiene  estar relacionando con f&uacute;tbol.<a href="https://crpa4c19efc4.hana.ondemand.com/cat/ci/public/ui/nominations/" target="_blank"> Haz tu denominaci&oacute;n Aqu&iacute;</a></p>
                         </div>
                     </div>
                 </div>

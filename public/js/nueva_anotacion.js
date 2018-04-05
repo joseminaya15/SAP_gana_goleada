@@ -116,7 +116,11 @@ function selectAnotacion(id){
 	card.find('.mdl-card__title').find('.numero-goles').html(puntos);
 	nameAnotacion = name;
 	puntosGoles = goles;
+	$('.info').removeClass('show');
 }
+$('#caso').click(function() {
+	$('.info').addClass('show');
+});
 function cerrarCesion(){
 	$.ajax({
 		url  : 'Nueva_anotacion/cerrarCesion',

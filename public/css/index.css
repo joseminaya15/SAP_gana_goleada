@@ -380,9 +380,25 @@ body{
 .mdl-card-cuentas .mdl-card__supporting-text .form-group input{
 	border: 1px solid #000000;
 }
+.mdl-card-cuentas .info{
+	opacity: 0;
+	-webkit-transition: opacity .3s linear;
+	-moz-transition: opacity .3s linear;
+	-ms-transition: opacity .3s linear;
+	-o-transition: opacity .3s linear;
+	transition: opacity .3s linear;
+}
+.mdl-card-cuentas .info.show{
+	opacity: 1;
+}
 .mdl-card-cuentas .info p{
 	font-size: 12px;
 	line-height: 16px;
+}
+.mdl-card-cuentas .info p a{
+    color: #000000;
+    text-decoration: underline;
+    font-family: 'RobotoMedium';
 }
 .mdl-estados{
 	max-width: calc(100% - 90px);
