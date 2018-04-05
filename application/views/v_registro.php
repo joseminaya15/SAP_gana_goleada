@@ -56,12 +56,26 @@
                             <div class="mdl-input">
                                 <input type="text" class="form-control" autocomplete="off" placeholder="Nombre del Canal" id="canal" maxlength="50">
                             </div>
-                            <div class="mdl-select">
-                                <select class="selectpicker" title="País" id="pais">
-                                    <option>Brasil</option>
-                                    <option>M&eacute;xico</option>
-                                    <option>Norte</option>
-                                    <option>Sur</option>
+                            <div class="mdl-select" id="divPais">
+                                <select class="selectpicker" title="País" id="pais" onchange="cambiarPais();">
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Bolivia">Bolivia</option>
+                                    <option value="Brasil">Brasil</option>
+                                    <option value="Chile">Chile</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Costa rica">Costa rica</option>
+                                    <option value="Ecuador">Ecuador</option>
+                                    <option value="El salvador">El salvador</option>
+                                    <option value="Honduras">Honduras</option>
+                                    <option value="México">México</option>
+                                    <option value="Nicaragua">Nicaragua</option>
+                                    <option value="Panamá">Panamá</option>
+                                    <option value="Paraguay">Paraguay</option>
+                                    <option value="Perù">Perù</option>
+                                    <option value="Puerto rico">Puerto rico</option>
+                                    <option value="República dominicana">República dominicana</option>
+                                    <option value="Uruguay">Uruguay</option>
+                                    <option value="Venezuela">Venezuela</option>
                                 </select>
                             </div>
                         </div>

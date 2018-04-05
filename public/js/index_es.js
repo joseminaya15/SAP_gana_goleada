@@ -119,3 +119,530 @@ function valida(e){
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
 }
+function cambiarPais(){
+	var pais = $('#pais').val();
+	var combo = '';
+	if(pais == 'Colombia'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Ecuador'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Venezuela'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Venezuela">Venezuela - Norte</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Costa rica'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'El salvador'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Honduras'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Nicaragua'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Panamá'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Puerto rico'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'República dominicana'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Argentina'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Bolivia'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Chile'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Perù'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Paraguay'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Uruguay'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'Brasil'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="Brasil">Brasil</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="México">México</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else if(pais == 'México'){
+            combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
+            			'<option value="México">México</option>'+
+                        '<option value="Argentina">Argentina - Sur</option>'+
+                        '<option value="Bolivia">Bolivia - Sur</option>'+
+                        '<option value="Brasil">Brasil</option>'+
+                        '<option value="Chile">Chile - Sur</option>'+
+                        '<option value="Colombia">Colombia - Norte</option>'+
+                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Ecuador">Ecuador - Norte</option>'+
+                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Honduras">Honduras - Norte</option>'+
+                        '<option value="Nicaragua">Nicaragua - Norte</option>'+
+                        '<option value="Panamá">Panamá - Norte</option>'+ 
+                        '<option value="Paraguay">Paraguay - Sur</option>'+ 
+                        '<option value="Perù">Perù - Sur</option>'+
+                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
+                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Venezuela">Venezuela - Norte</option>'+
+                    '</select>';
+            componentHandler.upgradeAllRegistered();
+            $("#divPais").html('');
+            $("#divPais").append(combo);
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }
+}
