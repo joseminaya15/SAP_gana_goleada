@@ -72,8 +72,13 @@
                             <div class="mdl-input">
                                 <input type="password" class="form-control" autocomplete="off" placeholder="Contrase&ntilde;a" id="password">
                             </div>
-                            <div class="mdl-input">
-                                <input type="text" class="form-control" autocomplete="off" placeholder="Partner ID" id="partner" onkeypress="return valida(event)" maxlength="6">
+                            <div class="mdl-select">
+                                <select class="selectpicker" title="Partner ID" id="partner">
+                                    <option>452461</option>
+                                    <option>923988</option>
+                                    <option>1330489</option>
+                                    <option>485342</option>
+                                </select>
                             </div>
                             <div class="col-xs-12 p-0">
                                 <div class="col-xs-9 p-0">
