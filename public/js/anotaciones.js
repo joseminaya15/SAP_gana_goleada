@@ -43,9 +43,7 @@ var aprobado  = 'aprobado';
 var contacto  = 'contacto';
 var rechazado = 'rechazado';
 var modalAlert = $('#modalAlerta');
-var glob_serv = '';
-function showModalAlert(dato, id_srv){
-	glob_serv = id_srv;
+function showModalAlert(dato){
 	var nameTitle   = modalAlert.find('.mdl-card__title').find('h2');
 	var description = modalAlert.find('.mdl-card__supporting-text');
 	if(dato == 1){
@@ -61,22 +59,5 @@ function showModalAlert(dato, id_srv){
 	modalAlert.modal('show');
 }
 function closeModal(){
-	$.ajax({
-		data : { id_serv : glob_serv},
-		url  : 'Anotaciones/closeModal',
-		type : 'POST'
-	}).done(function(data){
-		try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-        	$('#data_tabla').html('');
-        	$('#data_tabla').append(data.tabla);
-        	modalAlert.modal('hide');
-        }else {
-        	return;
-        }
-      }catch(err){
-        msj('error',err.message);
-      }
-	});
+    modalAlert.modal('hide');
 }
