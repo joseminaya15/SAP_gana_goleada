@@ -32,6 +32,7 @@ class M_datos extends  CI_Model{
     function getTotalGoles($empresa){
         $sql = "SELECT s.*,
                        a.*,
+                       a.Id AS serv,
                        u.Nombre_canal,
                        u.Nombre_capitan,
                        u.Pais
