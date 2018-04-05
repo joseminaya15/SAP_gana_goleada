@@ -86,7 +86,7 @@
                             <div class="mdl-input">
                                 <input type="password" class="form-control" autocomplete="off" placeholder="Contrase&ntilde;a" id="password">
                             </div>
-                            <div class="mdl-select">
+                            <div class="mdl-select" id="divPartner">
                                 <select class="selectpicker" title="Partner ID" id="partner">
                                     <option>452461</option>
                                     <option>923988</option>
