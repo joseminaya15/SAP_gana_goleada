@@ -108,6 +108,13 @@ class Anotaciones extends CI_Controller {
       $data['total_ca'] = $suma_ca;
       $data['total_wb'] = $suma_wb;
       $data['tabla']    = $html;
+    }else {
+      $data['tabla']    = '';    
+      $data['total_cn'] = 0;
+      $data['total_sc'] = 0;
+      $data['total_cl'] = 0;
+      $data['total_ca'] = 0;
+      $data['total_wb'] = 0;
     }
 		$this->load->view('v_anotaciones', $data);
 	}
