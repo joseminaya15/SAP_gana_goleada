@@ -37,7 +37,7 @@ class Admin extends CI_Controller {
               $disabled  = 'disabled';
               $estado    = 'Rechazado';
            }
-           if($key->alertas == 1){
+           if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3){
               $disabled2 = 'disabled';
            }else {
               $disabled2 = '';
@@ -103,7 +103,7 @@ class Admin extends CI_Controller {
                   $disabled  = 'disabled';
                   $estado    = 'Rechazado';
                }
-               if($key->alertas == 1){
+               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3){
                   $disabled2 = 'disabled';
                }else {
                   $disabled2 = '';
@@ -161,9 +161,9 @@ class Admin extends CI_Controller {
                   $disabled  = 'disabled';
                   $estado    = 'Rechazado';
                }
-               if($key->alertas == 1){
+               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3){
                   $disabled2 = 'disabled';
-               }else {
+               }else if($key->alertas != 1 || $key->Flag == 1){
                   $disabled2 = '';
                }
                $html .= '<tr>
@@ -218,7 +218,7 @@ class Admin extends CI_Controller {
                   $disabled  = 'disabled';
                   $estado    = 'Rechazado';
                }
-               if($key->alertas == 1){
+               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3){
                   $disabled2 = 'disabled';
                }else {
                   $disabled2 = '';
