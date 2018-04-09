@@ -47,7 +47,7 @@
                         <img src="<?php echo RUTA_IMG?>menu/premio.png">
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <p>Premios para Goleadores SAP</p>
+                        <p>Premios para goleadores SAP</p>
                     </div>
                 </div>
                 <div class="mdl-card mdl-card-ranking mdl-premios m-t-5">

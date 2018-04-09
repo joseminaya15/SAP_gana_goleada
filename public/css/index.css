@@ -10,11 +10,13 @@ body{
 }
 .cierreQ{
 	margin-top: 20px;
+	margin-left: 10px;
 }
 .cierreQ p{
 	color: #000000;
 	margin: 0;
-	line-height: 20px;
+	line-height: 14px;
+    font-size: 12px;
 }
 .premioQ img{
 	width: 100%;

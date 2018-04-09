@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div class="footer-menu">
-                    <a href="Premios">Ver Premios <i class="mdi mdi-play_arrow"></i></a>
+                    <a href="Premios">Ver premios <i class="mdi mdi-play_arrow"></i></a>
                     <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
                 </div>
             </div>
