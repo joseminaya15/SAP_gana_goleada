@@ -53,20 +53,20 @@
                 </div>
                 <div class="mdl-card-fama">
                 	<div class="fama-imagen">
-                		<img src="<?php echo RUTA_IMG?>fama/riverplate.jpg">
-                		<p>River Plate</p>
+                		<a href="https://www.youtube.com/watch?v=NA5vKEd9U7c" target="_blank"><img src="<?php echo RUTA_IMG?>fama/riverplate.jpg"></a>
+                		<p>Tijuana</p>
                 	</div>
                 	<div class="fama-imagen">
-                		<img src="<?php echo RUTA_IMG?>fama/xolos.jpg">
+                		<a href="https://www.youtube.com/watch?v=U6MOrPdQfxI" target="_blank"><img src="<?php echo RUTA_IMG?>fama/xolos.jpg"></a>
                 		<p>Xolos</p>
                 	</div>
                 	<div class="fama-imagen">
-                		<img src="<?php echo RUTA_IMG?>fama/saopaulo.jpg">
-                		<p>Sao Paulo</p>
+                		<a href="https://www.youtube.com/watch?v=5C2yfKhXFfo" target="_blank"><img src="<?php echo RUTA_IMG?>fama/saopaulo.jpg"></a>
+                		<p>Gremio</p>
                 	</div>
                 	<div class="fama-imagen">
-                		<img src="<?php echo RUTA_IMG?>fama/mcity.jpg">
-                		<p>Manchester City</p>
+                		<a href="https://www.youtube.com/watch?v=s6D_rHnxqPU" target="_blank"><img src="<?php echo RUTA_IMG?>fama/mcity.jpg"></a>
+                		<p>El Am&eacute;rica</p>
                 	</div>                	
                 </div>
                 <div class="mdl-card-menu mdl-card-exito">
