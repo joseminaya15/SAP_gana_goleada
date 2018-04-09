@@ -52,19 +52,19 @@
                 </div>
                 <div class="mdl-card mdl-card-ranking mdl-premios m-t-5">
                     <div class="mdl-card__supporting-text m-t-10">
-                        <div class="col-sm-4 text-center">
+                        <div class="col-sm-4 text-center premioQ">
                             <img src="<?php echo RUTA_IMG?>premios/q2.png">
                         </div>
-                        <div class="col-sm-4 text-center">
+                        <div class="col-sm-4 text-center premioQ">
                             <img src="<?php echo RUTA_IMG?>premios/q3.png">
                         </div>
-                        <div class="col-sm-4 text-center">
+                        <div class="col-sm-4 text-center premioQ">
                             <img src="<?php echo RUTA_IMG?>premios/q4.png">
                         </div>
                         <div class="col-xs-12 cierreQ">
                             <p>Cierres de Q:</p>
                             <p>Q2: Jun 30/ Q3:Set 30/ Q4: Dic 31</p>
-                            <p>Q: Se presentan los ganadores 15 d&iacute;s luego del cierre</p>
+                            <p>Q: Se presentan los ganadores 15 d&iacute;as luego del cierre</p>
                         </div>
                     </div>
                 </div>

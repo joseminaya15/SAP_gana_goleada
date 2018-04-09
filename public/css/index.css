@@ -16,6 +16,10 @@ body{
 	margin: 0;
 	line-height: 20px;
 }
+.premioQ img{
+	width: 100%;
+	max-width: 212px;
+}
 .back{
 	margin-top: 80px;
 }
@@ -670,6 +674,12 @@ input::placeholder {
 	#menu .mdl-card-container{
 		max-width: 600px;
 	}
+	.mdl-card-anotar,
+	.mdl-card-cuentas,
+	.mdl-card-anotaciones,
+	.mdl-card-ranking{
+		max-width: 100%;
+	}
 }
 @media ( max-width: 768px ){
 	.mdl-card-login .mdl-card__supporting-text img{
@@ -695,6 +705,18 @@ input::placeholder {
 	    font-size: 16px;
 	    line-height: 18px;
 	    margin-right: 10px;
+	}
+	.mdl-card-ranking.mdl-premios .mdl-card__supporting-text{
+		padding: 20px 0;
+	}
+	.mdl-card-ranking{
+		margin: 20px 0;
+	}
+	.premioQ{
+		padding: 0;
+	}
+	.premioQ img{
+		margin: 15px;
 	}
 }
 @media ( max-width: 640px ){
