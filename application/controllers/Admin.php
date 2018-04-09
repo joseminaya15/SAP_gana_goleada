@@ -43,10 +43,11 @@ class Admin extends CI_Controller {
               $disabled2 = '';
            }
            $html .= '<tr>
-                        <td>'.$key->Deal_registration.'</td>
-                        <td>'.$key->Nombre_canal.'</td>
-                        <td>'.$key->Nombre_capitan.'</td>
-                        <td>'.$key->Pais.'</td>
+                        <td class="text-center">'.$key->Deal_registration.'</td>
+                        <td class="text-left">'.$key->Tipo_serv.'</td>
+                        <td class="text-center">'.$key->Nombre_canal.'</td>
+                        <td class="text-center">'.$key->Nombre_capitan.'</td>
+                        <td class="text-center">'.$key->Pais.'</td>
                         <td>'.$estado.'</td>
                         <td>
                         <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
@@ -109,10 +110,11 @@ class Admin extends CI_Controller {
                   $disabled2 = '';
                }
                $html .= '<tr>
-                            <td>'.$key->Deal_registration.'</td>
-                            <td>'.$key->Nombre_canal.'</td>
-                            <td>'.$key->Nombre_capitan.'</td>
-                            <td>'.$key->Pais.'</td>
+                            <td class="text-center">'.$key->Deal_registration.'</td>
+                            <td class="text-left">'.$key->Tipo_serv.'</td>
+                            <td class="text-center">'.$key->Nombre_canal.'</td>
+                            <td class="text-center">'.$key->Nombre_capitan.'</td>
+                            <td class="text-center">'.$key->Pais.'</td>
                             <td>'.$estado.'</td>
                             <td>
                             <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
@@ -167,10 +169,11 @@ class Admin extends CI_Controller {
                   $disabled2 = '';
                }
                $html .= '<tr>
-                            <td>'.$key->Deal_registration.'</td>
-                            <td>'.$key->Nombre_canal.'</td>
-                            <td>'.$key->Nombre_capitan.'</td>
-                            <td>'.$key->Pais.'</td>
+                            <td class="text-center">'.$key->Deal_registration.'</td>
+                            <td class="text-left">'.$key->Tipo_serv.'</td>
+                            <td class="text-center">'.$key->Nombre_canal.'</td>
+                            <td class="text-center">'.$key->Nombre_capitan.'</td>
+                            <td class="text-center">'.$key->Pais.'</td>
                             <td>'.$estado.'</td>
                             <td>
                             <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
@@ -224,10 +227,11 @@ class Admin extends CI_Controller {
                   $disabled2 = '';
                }
                $html .= '<tr>
-                            <td>'.$key->Deal_registration.'</td>
-                            <td>'.$key->Nombre_canal.'</td>
-                            <td>'.$key->Nombre_capitan.'</td>
-                            <td>'.$key->Pais.'</td>
+                            <td class="text-center">'.$key->Deal_registration.'</td>
+                            <td class="text-left">'.$key->Tipo_serv.'</td>
+                            <td class="text-center">'.$key->Nombre_canal.'</td>
+                            <td class="text-center">'.$key->Nombre_capitan.'</td>
+                            <td class="text-center">'.$key->Pais.'</td>
                             <td>'.$estado.'</td>
                             <td>
                             <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>

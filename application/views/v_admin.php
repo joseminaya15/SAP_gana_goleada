@@ -51,6 +51,7 @@
                         <thead>
                             <tr class="tr-header-reporte">
                                 <th class="text-center">Deal Registration</th>
+                                <th class="text-left">Oportunidad</th>
                                 <th class="text-center">Nombre Canal</th>
                                 <th class="text-center">Nombre Capitán</th>
                                 <th class="text-center">País</th>

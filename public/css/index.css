@@ -587,6 +587,9 @@ input::placeholder {
 	border-color: #EEEEEE;
 	color: #000000;
 }
+.dataTables_paginate{
+	margin-bottom: 20px;
+}
 /*ADMIN*/
 #content{
 	margin: 100px auto;
@@ -671,6 +674,19 @@ input::placeholder {
 .mdl-button[disabled][disabled]{
 	cursor: no-drop;
 	opacity: .5;
+}
+/*BARRA SCROLL*/
+::-webkit-scrollbar {
+	width: 4px;
+	height: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #aaa;
+	border-radius: 10px;
 }
 @media ( max-width: 1200px ){
 	#menu .mdl-card-container{
