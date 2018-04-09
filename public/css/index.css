@@ -8,6 +8,14 @@ body{
 .img-premios{
 	width: 100%;
 }
+.cierreQ{
+	margin-top: 20px;
+}
+.cierreQ p{
+	color: #000000;
+	margin: 0;
+	line-height: 20px;
+}
 .back{
 	margin-top: 80px;
 }
@@ -367,6 +375,9 @@ body{
 }
 .mdl-card-ranking .mdl-card__supporting-text{
 	height: 270px;
+}
+.mdl-card-ranking.mdl-premios .mdl-card__supporting-text{
+	height: 100%;
 }
 .mdl-card-anotar{
     display: inline-block;
