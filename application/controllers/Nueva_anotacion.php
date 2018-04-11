@@ -63,6 +63,7 @@ class Nueva_anotacion extends CI_Controller {
                                     'Id_serv' => $id_serv,
                                     'id_user' => $this->session->userdata('Id_user'));
                 $datosInsert = $this->M_datos->insertarDatos($dataInsert, 'anotaciones');
+                $this->sendEmailAnotacion($this->session->userdata('usuario'));
             }
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
@@ -86,7 +87,7 @@ class Nueva_anotacion extends CI_Controller {
             $this->email->initialize($configGmail);
             $this->email->from('info@sap-latam.com');
             $this->email->to($email);
-            $this->email->subject('');
+            $this->email->subject('Gracias por tu participación');
             $texto = '<!DOCTYPE html>
                         <html>
                             <body>
