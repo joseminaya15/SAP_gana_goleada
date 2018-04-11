@@ -1011,4 +1011,7 @@ header.dtp-header .dtp-actual-year {
 	.footer-menu img{
 		position: relative;
 	}
+	.mdl-card-fama{
+		max-width: 100%;
+	}
 }
