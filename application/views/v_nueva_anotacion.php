@@ -155,7 +155,7 @@
                             <div class="col-xs-6 p-0">
                                 <div class="form-group input-date">
                                     <div class="mdl-icon"><button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button></div>
-                                    <input type="texto" class="form-control" id="fecha" name="fecha" maxlength="10" placeholder="dd/mm/aaaa">
+                                    <input type="texto" class="form-control" id="fecha" name="fecha" maxlength="10" placeholder="dd/mm/aaaa" style="pointer-events: none;">
                                 </div>
                             </div>
                             <div class="col-xs-6 p-0 text-right">
@@ -187,7 +187,6 @@
             $('select').selectpicker();
         }*/
         initButtonCalendarDaysMaxToday('fecha');
-        initMaskInputs('fecha');
     </script>
     </body>
 </html>
