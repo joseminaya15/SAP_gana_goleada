@@ -70,4 +70,73 @@ class Nueva_anotacion extends CI_Controller {
         }
         echo json_encode($data);
     }
+    function sendEmailAnotacion($email){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {  
+            $this->load->library("email");
+            $configGmail = array('protocol'  => 'smtp',
+                                'smtp_host' => 'smtpout.secureserver.net',
+                                'smtp_port' => 3535,
+                                'smtp_user' => 'info@sap-latam.com',
+                                'smtp_pass' => 'sapinfo18',
+                                'mailtype'  => 'html',
+                                'charset'   => 'utf-8',
+                                'newline'   => "\r\n");
+            $this->email->initialize($configGmail);
+            $this->email->from('info@sap-latam.com');
+            $this->email->to($email);
+            $this->email->subject('');
+            $texto = '<!DOCTYPE html>
+                        <html>
+                            <body>
+                                <table width="500px" cellpadding="0" cellspacing="0" align="center" style="border: solid 1px #ccc;">
+                                    <tr>
+                                        <td>
+                                            <table width="500" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #000000;">
+                                                <tr>
+                                                    <td>
+                                                        <table>
+                                                            <tr>
+                                                                <td style="padding-left: 25px;"><a href="#"><img src="http://www.sap-latam.com/gana_por_goleada/public/img/logo/logo_home.png" width="175" alt="alternative text" border="0" style="display: block;"></a></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td>
+                                                        <table cellspacing="0" cellpadding="0" border="0" align="right">
+                                                            <tr>
+                                                                <td style="height: 80px;width: 20px;background-color: #54442E;"></td>
+                                                                <td style="height: 80px;width: 20px;background-color: #8D6832;"></td>
+                                                                <td style="height: 80px;width: 20px;background-color: #E29D2E;"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table width="400" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 30px 0">
+                                                <tr>
+                                                    <td style="text-align: center;padding: 0;margin: 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">¡Gracias por participar!</font></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: center;padding-top: 10px;padding-bottom: 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">En breve su puntuaci&oacute;n se reflejar&aacute; en la tabla de anotaciones.</font></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </body>
+                        </html>';
+            $this->email->message($texto);
+            $this->email->send();
+            $data['error'] = EXIT_SUCCESS;
+        }catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        return json_encode(array_map('utf8_encode', $data));
+    }
 }
