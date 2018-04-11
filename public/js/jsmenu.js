@@ -14,7 +14,7 @@ function clonarFecha(inputNew,idButton) {
 		$("#"+idButton).trigger("change");
 	}
 }
-function initCalendarDaysMinToday(id, currentDate, fecha){
+function initCalendarDaysMaxToday(id, currentDate, fecha){
 	var startDate = new Date();
 	if (currentDate != undefined) {
             var startDate = new Date(currentDate);
@@ -25,14 +25,14 @@ function initCalendarDaysMinToday(id, currentDate, fecha){
 		time	: false, 
 		format 	: 'DD/MM/YYYY',
 		currentDate : startDate,
-		minDate : (fecha == undefined) ? new Date() : fecha
+		maxDate : (fecha == undefined) ? new Date() : fecha
 	});
 }
-function initButtonCalendarDaysMinToday(idButton, currentDate, fecha) {
+function initButtonCalendarDaysMaxToday(idButton, currentDate, fecha) {
 	var text 		= idButton;
 	var id 			= $("#"+text);
 	var newInput	= null;
-	var iconButton 	= id.closest('.mdl-input').find('.mdl-icon');
+	var iconButton 	= id.closest('.input-date').find('.mdl-icon');
 	iconButton.find('.mdl-button').click(function(){
 		newInput = text+'ForCalendar';
 		if ( $('#'+newInput).length < 1 ) {
@@ -44,7 +44,7 @@ function initButtonCalendarDaysMinToday(idButton, currentDate, fecha) {
 			    onchange 	: 'clonarFecha($(this))',
 			    style		: 'position: absolute; top: 40px; border: transparent; color: transparent; z-index: -4'
 			}).appendTo(iconButton);
-			initCalendarDaysMinToday(newInput, currentDate, fecha);
+			initCalendarDaysMaxToday(newInput, currentDate, fecha);
 		}
 		$("#"+newInput).focus();			
 	});		
