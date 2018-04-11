@@ -43,7 +43,7 @@
                 </div>
                 <h2 class="person_name">Bienvenido(a) <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
                 <p class="team_name">Equipo <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
-                <div id="Salon_de_fama" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                <div class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>menu/salon.png">
                     </div>
@@ -70,7 +70,7 @@
                 	</div>                	
                 </div>
                 <div class="mdl-card-menu mdl-card-exito">
-                    <a href="https://crpa4c19efc4.hana.ondemand.com/cat/ci/public/ui/nominations/" target="_blank"><img src="<?php echo RUTA_IMG?>menu/anotacion.png"><span>Denomina Aqu&iacute; tu caso de &eacute;xito</span></a>
+                    <a href="https://crpa4c19efc4.hana.ondemand.com/cat/ci/public/ui/nominations/" target="_blank"><img src="<?php echo RUTA_IMG?>menu/anotacion.png"><span>Nomine su historia de éxito aqu&iacute;:</span></a>
                 </div>
             </div>
         </section>

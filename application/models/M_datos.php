@@ -35,7 +35,7 @@ class M_datos extends  CI_Model{
                        a.Id AS serv,
                        u.Nombre_canal,
                        u.Nombre_capitan,
-                       u.Pais
+                       u.Pais AS Pais_pers
                   FROM servicios s,
                        anotaciones a,
                        users u
