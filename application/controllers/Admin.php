@@ -48,13 +48,13 @@ class Admin extends CI_Controller {
                         <td class="text-center">'.$key->Nombre_canal.'</td>
                         <td class="text-center">'.$key->Nombre_capitan.'</td>
                         <td class="text-center">'.$key->Pais.'</td>
-                        <td>'.$estado.'</td>
-                        <td>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                        <td class="text-center">'.$estado.'</td>
+                        <td class="text-center">
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Anular" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-delete"></i></button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aceptar" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                         </td>
-                        <td>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'>Contactar</button>
+                        <td class="text-center">
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--icon" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-contact_mail"></i></button>
                         </td>
                     </tr>';
             $count++;
@@ -115,13 +115,13 @@ class Admin extends CI_Controller {
                             <td class="text-center">'.$key->Nombre_canal.'</td>
                             <td class="text-center">'.$key->Nombre_capitan.'</td>
                             <td class="text-center">'.$key->Pais.'</td>
-                            <td>'.$estado.'</td>
-                            <td>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                            <td class="text-center">'.$estado.'</td>
+                            <td class="text-center">
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Anular" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-delete"></i></button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aceptar" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                             </td>
-                            <td>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'>Contactar</button>
+                            <td class="text-center">
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-contact_mail"></i></button>
                             </td>
                         </tr>';
                 $count++;
@@ -174,13 +174,13 @@ class Admin extends CI_Controller {
                             <td class="text-center">'.$key->Nombre_canal.'</td>
                             <td class="text-center">'.$key->Nombre_capitan.'</td>
                             <td class="text-center">'.$key->Pais.'</td>
-                            <td>'.$estado.'</td>
-                            <td>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                            <td class="text-center">'.$estado.'</td>
+                            <td class="text-center">
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Anular" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-delete"></i></button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aceptar" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                             </td>
-                            <td>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'>Contactar</button>
+                            <td class="text-center">
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-contact_mail"></i></button>
                             </td>
                         </tr>';
                 $count++;
@@ -232,13 +232,13 @@ class Admin extends CI_Controller {
                             <td class="text-center">'.$key->Nombre_canal.'</td>
                             <td class="text-center">'.$key->Nombre_capitan.'</td>
                             <td class="text-center">'.$key->Pais.'</td>
-                            <td>'.$estado.'</td>
-                            <td>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'>Anular</button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'>Aceptar</button>
+                            <td class="text-center">'.$estado.'</td>
+                            <td class="text-center">
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Anular" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-delete"></i></button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aceptar" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                             </td>
-                            <td>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login button-admin" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'>Contactar</button>
+                            <td class="text-center">
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-contact_mail"></i></button>
                             </td>
                         </tr>';
                 $count++;

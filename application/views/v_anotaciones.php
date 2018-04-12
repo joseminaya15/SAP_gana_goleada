@@ -54,7 +54,7 @@
                     <div class="mdl-card mdl-card-anotar">
                         <ul class="nav nav-tabs" role="tablist">
                             <li id="home" class="active" onclick="selectTab(this.id)"><a href="#Tabhome" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                            <li id="sap"  onclick="selectTab(this.id)"><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">Sap Business One</a></li>
+                            <li id="sap"  onclick="selectTab(this.id)"><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">SAP Business One</a></li>
                         </ul>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active p-0" id="Tabhome">
@@ -213,7 +213,7 @@
                                     <thead>
                                         <tr>
                                             <th>Empresa</th>
-                                            <th class="text-center">Deal Registration ID</th>
+                                            <th class="text-center">Deal ID #</th>
                                             <th class="text-center">Pa&iacute;s</th>
                                             <th class="text-center">Status</th>
                                             <th class="text-center">Goles</th>

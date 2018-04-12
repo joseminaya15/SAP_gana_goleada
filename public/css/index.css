@@ -92,7 +92,7 @@ body{
     max-width: calc(100% - 360px);
 }
 .header-left img{
-    max-width: 160px;
+    max-width: 68px;
     width: 100%;
 }
 .header-right {
@@ -110,6 +110,12 @@ body{
 	font-size: 20px;
 	line-height: 26px;
 	margin-right: 35px;
+}
+.header-admin img{
+	float: left;
+	width: 100%;
+	max-width: 120px;
+	margin-bottom: 20px;
 }
 .background{
 	height: 100%;
@@ -610,9 +616,19 @@ input::placeholder {
 }
 /*TABLE*/
 .table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 16px;
     vertical-align: middle;
+    padding: 5px 8px;
+}
+.table>thead>tr>th{
+	padding: 10px 8px;
+}
+.md-admin .table>thead>tr>th{
+	background-color: #E4E4E4;
+}
+.md-admin .table{
+	border-bottom: none !important;
 }
 .table button i{
 	font-size: 20px;
@@ -628,6 +644,13 @@ input::placeholder {
 }
 .dataTables_paginate{
 	margin-bottom: 20px;
+}
+.paginate_button,
+.dataTables_info{
+	font-size: 14px;
+}
+.dt-button i{
+	font-size: 18px;
 }
 /*ADMIN*/
 #content{

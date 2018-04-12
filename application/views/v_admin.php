@@ -34,7 +34,7 @@
     <section id="principal">
         <div class="header">
             <div class="header-left">
-                <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
+                <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_admin.svg"></a>
             </div>
             <div class="header-right">
                 <h2 class="">Concurso para partners SMB</h2>
@@ -44,13 +44,16 @@
             </div>
         </div>
         <div id="content" class="mdl-card-container">
-            <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout" onclick="cerrarCesion()">Cerrar Sesión</a>
-            <div class="mdl-card mdl-card-table">
+            <div class="col-xs-12 header-admin">
+                <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
+                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout m-t-50" onclick="cerrarCesion()">Cerrar Sesión</a>
+            </div>
+            <div class="mdl-card mdl-card-table md-admin">
                 <div class="table-responsive">
                     <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
-                                <th class="text-center">Deal #</th>
+                                <th class="text-center">Deal ID #</th>
                                 <th class="text-left">Oportunidad</th>
                                 <th class="text-center">Nombre Canal</th>
                                 <th class="text-center">Nombre Capitán</th>
@@ -77,7 +80,7 @@
     <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.min.js?v=<?php echo time();?>"></script>
     <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.flash.min.js"></script>
@@ -89,11 +92,11 @@
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
-      $(document).ready(function() {
-          $('#example').DataTable( {
-              responsive: true,
-              dom: 'Bfrtip',
-              lengthMenu: [
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                responsive: true,
+                dom: 'Bfrtip',
+                lengthMenu: [
                             [ 10, 25, 50, -1 ],
                             [ '10 rows', '25 rows', '50 rows', 'Show all' ]
                           ],
@@ -101,12 +104,14 @@
                              'pageLength',
                              'excel', 'print'
                           ]
-          });
-          $('.buttons-excel').empty();
-          $('.buttons-print').empty();
-          $('.buttons-excel').append('<i class="fa fa-download"></i>');
-          $('.buttons-print').append('<i class="fa fa-print"></i>');
-      });
+            });
+            $('.buttons-excel').empty();
+            $('.buttons-print').empty();
+            $('.buttons-excel').append('<i class="fa fa-download"></i>');
+            $('.buttons-print').append('<i class="fa fa-print"></i>');
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
     </script>
 </body>
 </html>

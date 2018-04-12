@@ -56,7 +56,7 @@
                     <div class="mdl-card mdl-card-anotar">
                         <ul class="nav nav-tabs" role="tablist">
                             <li id="home" class="active" onclick="selectTab(this.id)"><a href="#Tabhome" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                            <li id="sap" onclick="selectTab(this.id)"><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">Sap Business One</a></li>
+                            <li id="sap" onclick="selectTab(this.id)"><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">SAP Business One</a></li>
                         </ul>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active p-0" id="Tabhome">
@@ -205,7 +205,7 @@
                                 <input type="texto" class="form-control" placeholder="País" id="pais">
                             </div>
                             <div class="form-group">
-                                <input type="texto" class="form-control" placeholder="Deal #" id="deal_regis" onkeypress="return valida(event)" onchange="restringirNum()" maxlength="6">
+                                <input type="texto" class="form-control" placeholder="Deal Registration ID" id="deal_regis" onkeypress="return valida(event)" onchange="restringirNum()" maxlength="6">
                             </div>
                             <div class="form-group">
                                 <textarea type="texto" rows="2" class="form-control" placeholder="Descripci&oacute;n" id="descripcion"></textarea> 

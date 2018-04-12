@@ -54,7 +54,7 @@
                     <div class="mdl-card__supporting-text m-t-10 p-0">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="active"><a href="#Tabhome" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                            <li><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">Sap Business One</a></li>
+                            <li><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">SAP Business One</a></li>
                         </ul>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active p-0 m-b-20" id="Tabhome">
@@ -70,10 +70,10 @@
                             </div>
                             <div role="tabpanel" class="tab-pane fade p-0 m-b-20" id="Tabsap">
                                 <div class="col-sm-4 text-center premioQ">
-                                    <img src="<?php echo RUTA_IMG?>premios/q2.png">
+                                    <img src="<?php echo RUTA_IMG?>premios/bq2.png">
                                 </div>
                                 <div class="col-sm-4 text-center premioQ">
-                                    <img src="<?php echo RUTA_IMG?>premios/q3.png">
+                                    <img src="<?php echo RUTA_IMG?>premios/bq3.png">
                                 </div>      
                             </div>
                         </div>

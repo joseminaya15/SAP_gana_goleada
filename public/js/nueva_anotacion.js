@@ -187,6 +187,7 @@ function selectTab(id){
 	card.find('.mdl-card__title').find('h2').text(titleChecked);
 	$('#deal_regis').fadeIn('fast');
 	$('#descripcion').fadeOut('fast');
+	$('.info').removeClass('show');
 }
 $('#sap').click(function() {
 	$('#deal_regis').fadeOut('fast');
