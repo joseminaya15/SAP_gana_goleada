@@ -54,23 +54,35 @@
                 <div class="mdl-card-fama">
                 	<div class="fama-imagen">
                 		<a href="https://www.youtube.com/watch?v=NA5vKEd9U7c" target="_blank"><img src="<?php echo RUTA_IMG?>fama/xolos.jpg"></a>
-                		<p>Tijuana - Xolos1</p>
+                        <div class="club">
+                            <p>Tijuana - Xolos1</p>
+                            <small>M&eacute;xico</small>
+                        </div>
                 	</div>
                 	<div class="fama-imagen">
                 		<a href="https://www.youtube.com/watch?v=U6MOrPdQfxI" target="_blank"><img src="<?php echo RUTA_IMG?>fama/tijuana.jpg"></a>
-                		<p>Tijuana - Xolos2</p>
+                		<div class="club">
+                            <p>Tijuana - Xolos2</p>
+                            <small>M&eacute;xico</small>
+                        </div>
                 	</div>
                 	<div class="fama-imagen">
                 		<a href="https://www.youtube.com/watch?v=5C2yfKhXFfo" target="_blank"><img src="<?php echo RUTA_IMG?>fama/gremio.jpg"></a>
-                		<p>Gremio</p>
+                		<div class="club">
+                            <p>Gremio</p>
+                            <small>Brasil</small>
+                        </div>
                 	</div>
                 	<div class="fama-imagen">
                 		<a href="https://www.youtube.com/watch?v=s6D_rHnxqPU" target="_blank"><img src="<?php echo RUTA_IMG?>fama/america.jpg"></a>
-                		<p>Am&eacute;rica</p>
+                		<div class="club">
+                            <p>Am&eacute;rica</p>
+                            <small>M&eacute;xico</small>
+                        </div>
                 	</div>                	
                 </div>
                 <div class="mdl-card-menu mdl-card-exito">
-                    <a href="https://crpa4c19efc4.hana.ondemand.com/cat/ci/public/ui/nominations/" target="_blank"><img src="<?php echo RUTA_IMG?>menu/anotacion.png"><span>Nomine su historia de éxito aqu&iacute;:</span></a>
+                    <a href="https://crpa4c19efc4.hana.ondemand.com/cat/ci/public/ui/nominations/" target="_blank"><img src="<?php echo RUTA_IMG?>menu/anotacion.png"><span>Nomine su historia de éxito <label>aqu&iacute;</label></span></a>
                 </div>
             </div>
         </section>

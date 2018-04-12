@@ -259,6 +259,12 @@ body{
     display: inline-block;
     color: #FFFFFF;
 }
+.mdl-card-exito a span label{
+	font-weight: 100;
+    text-decoration: underline;
+    color: #FDB913;
+    cursor: pointer;
+}
 .person_name,
 .team_name{
 	color: #FFFFFF;
@@ -355,16 +361,24 @@ body{
 	z-index: 1;
 	display: block;
 }
-.fama-imagen p{
+.fama-imagen .club{
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
+	z-index: 5;
+	text-align: right;
+}
+.fama-imagen p{
 	color: #FFFFFF;
 	font-size: 30px;
 	line-height: 32px;
 	font-family: 'RobotoMedium';
 	margin: 0;
-	z-index: 5;
+}
+.fama-imagen small{
+	color: #FFFFFF;
+	font-family: 'RobotoRegular';
+	font-size: 14px;
 }
 .mdl-card-ranking{
 	border-radius: 15px;
