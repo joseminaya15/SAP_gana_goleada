@@ -88,10 +88,6 @@
                             </div>
                             <div class="mdl-select" id="divPartner">
                                 <select class="selectpicker" title="Partner ID" id="partner">
-                                    <option>452461</option>
-                                    <option>923988</option>
-                                    <option>1330489</option>
-                                    <option>485342</option>
                                 </select>
                             </div>
                             <div class="col-xs-12 p-0">
