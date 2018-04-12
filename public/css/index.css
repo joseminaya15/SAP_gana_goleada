@@ -358,7 +358,7 @@ body{
 .fama-imagen p{
 	position: absolute;
 	bottom: 15px;
-	left: 15px;
+	right: 15px;
 	color: #FFFFFF;
 	font-size: 30px;
 	line-height: 32px;
