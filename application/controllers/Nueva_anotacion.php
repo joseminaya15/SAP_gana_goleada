@@ -121,13 +121,13 @@ class Nueva_anotacion extends CI_Controller {
                                         <td>
                                             <table width="400" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 30px 0">
                                                 <tr>
-                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 30px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">¡Gracias por participar!</font></td>
+                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 20px 0 5px 0;"><img width="180" src="http://www.sap-latam.com/gana_por_goleada/public/img/logo/logo_login.png"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 10px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">En breve su puntuaci&oacute;n se reflejar&aacute; en la tabla de anotaciones.</font></td>
+                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 10px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">¡Gracias por participar!</font></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 5px 0 20px 0;"><img width="180" src="http://www.sap-latam.com/gana_por_goleada/public/img/logo/logo_login.png"></td>
+                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">En breve su puntuaci&oacute;n se reflejar&aacute; en la tabla de anotaciones.</font></td>
                                                 </tr>
                                             </table>
                                         </td>
