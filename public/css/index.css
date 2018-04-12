@@ -408,16 +408,25 @@ body{
 }
 .mdl-card-anotar p{
 	margin: 0;
-	line-height: 18px;
+	line-height: 16px;
     margin-top: 5px;
 }
 .mdl-card-anotar .mdl-puntos{
 	padding: 5px 0;
 	border-bottom: 1px solid #000;
 }
+.mdl-card-anotar .mdl-puntos:LAST-CHILD{
+	border: none;
+}
 .mdl-card-anotar .mdl-puntos .mdl-radio .mdl-radio__outer-circle{
 	border-radius: 0;
     border: 2px solid #000000;
+}
+.mdl-card-anotar .tab-pane{
+    height: 275px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 10px;
 }
 .mdl-radio__ripple-container .mdl-ripple,
 .mdl-card-anotar .mdl-puntos .mdl-radio .mdl-radio__inner-circle{
@@ -454,6 +463,7 @@ body{
 .mdl-card-cuentas .mdl-card__supporting-text{
 	padding: 20px 0;
 	height: 250px;
+	overflow-y: scroll;
 }
 .mdl-card-cuentas .mdl-card__supporting-text .form-group input{
 	border: 1px solid #000000;
