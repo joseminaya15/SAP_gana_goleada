@@ -1,8 +1,9 @@
 function nuevaAnotacion(){
-	var empresa    = $('#empresa').val();
-	var deal_regis = $('#deal_regis').val();
-	var pais 	   = $('#pais').val();
-	var fecha 	   = $('#fecha').val();
+	var empresa     = $('#empresa').val();
+	var deal_regis  = $('#deal_regis').val();
+	var descripcion = $('#descripcion').val();
+	var pais 	    = $('#pais').val();
+	var fecha 	    = $('#fecha').val();
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese su empresa');
 		return;
@@ -19,6 +20,10 @@ function nuevaAnotacion(){
 		msj('error', 'Su código debe iniciar con un número mayor a 17');
 		return;
 	}
+	/*if(descripcion.length > 500){
+		msj('error', 'La descripcion debe contener menos de 500 caracteres');
+		return;
+	}*/
 	if(pais == '' || pais == null){
 		msj('error', 'Ingrese el pais');
 		return;
@@ -34,12 +39,13 @@ function nuevaAnotacion(){
 	}
 	$('#idNuevaAnotacion').prop("disabled", true);
 	$.ajax({
-		data : {empresa    : empresa,
-				deal_regis : deal_regis,
-				pais 	   : pais,
-				fecha 	   : fecha,
-				goles 	   : puntosGoles,
-				servicio   : nameAnotacion},
+		data : {empresa     : empresa,
+				deal_regis  : deal_regis,
+				descripcion : descripcion,
+				pais 	    : pais,
+				fecha 	    : fecha,
+				goles 	    : puntosGoles,
+				servicio    : nameAnotacion},
 		url  : 'Nueva_anotacion/nuevaAnotacion',
 		type : 'POST'
 	}).done(function(data){

@@ -35,6 +35,7 @@ class Nueva_anotacion extends CI_Controller {
         try {
             $empresa  = $this->input->post('empresa');
             $deal_reg = $this->input->post('deal_regis');
+            $descrip  = $this->input->post('descripcion');
             $pais     = $this->input->post('pais');
             $fecha    = $this->input->post('fecha');
             $goles    = $this->input->post('goles');
@@ -57,6 +58,7 @@ class Nueva_anotacion extends CI_Controller {
                 }
                 $dataInsert = array('Empresa'           => $empresa,
                                     'Deal_registration' => $deal_reg,
+                                    'descripcion'       => $descrip,
                                     'Pais'              => $pais,
                                     'Flag'              => FLAG_PENDIENTE,
                                     'Goles'             => $goles,

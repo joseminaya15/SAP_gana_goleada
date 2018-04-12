@@ -50,7 +50,7 @@
                     <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
-                                <th class="text-center">Deal Registration</th>
+                                <th class="text-center">Deal #</th>
                                 <th class="text-left">Oportunidad</th>
                                 <th class="text-center">Nombre Canal</th>
                                 <th class="text-center">Nombre Capitán</th>
