@@ -63,17 +63,17 @@
                                     <option value="Brasil">Brasil</option>
                                     <option value="Chile">Chile</option>
                                     <option value="Colombia">Colombia</option>
-                                    <option value="Costa rica">Costa rica</option>
+                                    <option value="Costa rica">Costa Rica</option>
                                     <option value="Ecuador">Ecuador</option>
-                                    <option value="El salvador">El salvador</option>
+                                    <option value="El salvador">El Salvador</option>
                                     <option value="Honduras">Honduras</option>
                                     <option value="México">México</option>
                                     <option value="Nicaragua">Nicaragua</option>
                                     <option value="Panamá">Panamá</option>
                                     <option value="Paraguay">Paraguay</option>
-                                    <option value="Perù">Perù</option>
-                                    <option value="Puerto rico">Puerto rico</option>
-                                    <option value="República dominicana">República dominicana</option>
+                                    <option value="Perú">Perú</option>
+                                    <option value="Puerto rico">Puerto Rico</option>
+                                    <option value="República dominicana">República Dominicana</option>
                                     <option value="Uruguay">Uruguay</option>
                                     <option value="Venezuela">Venezuela</option>
                                 </select>

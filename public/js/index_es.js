@@ -130,18 +130,18 @@ function cambiarPais(){
                         '<option value="Bolivia">Bolivia - Sur</option>'+
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -196,17 +196,17 @@ function cambiarPais(){
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -245,18 +245,18 @@ function cambiarPais(){
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
 	                        '<option value="1283028">B1 Consulting, C.A. - 821134</option>'+
@@ -286,25 +286,25 @@ function cambiarPais(){
             } else {
                 $('select').selectpicker();
             }
-        }else if(pais == 'Costa rica'){
+        }else if(pais == 'Costa Rica'){
             combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
-            			'<option value="Costa rica">Costa rica - Norte</option>'+
+            			'<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Argentina">Argentina - Sur</option>'+
                         '<option value="Bolivia">Bolivia - Sur</option>'+
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -330,25 +330,25 @@ function cambiarPais(){
             } else {
                 $('select').selectpicker();
             }
-        }else if(pais == 'El salvador'){
+        }else if(pais == 'El Salvador'){
             combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
-            			'<option value="El salvador">El salvador - Norte</option>'+
+            			'<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Argentina">Argentina - Sur</option>'+
                         '<option value="Bolivia">Bolivia - Sur</option>'+
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -373,17 +373,17 @@ function cambiarPais(){
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -410,17 +410,17 @@ function cambiarPais(){
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -446,17 +446,17 @@ function cambiarPais(){
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -482,25 +482,25 @@ function cambiarPais(){
             } else {
                 $('select').selectpicker();
             }
-        }else if(pais == 'Puerto rico'){
+        }else if(pais == 'Puerto Rico'){
             combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
-            			'<option value="Puerto rico">Puerto rico - Norte</option>'+
+            			'<option value="Puerto Rico">Puerto Rico - Norte</option>'+
                         '<option value="Argentina">Argentina - Sur</option>'+
                         '<option value="Bolivia">Bolivia - Sur</option>'+
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -520,25 +520,25 @@ function cambiarPais(){
             } else {
                 $('select').selectpicker();
             }
-        }else if(pais == 'República dominicana'){
+        }else if(pais == 'República Dominicana'){
             combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
-            			'<option value="República dominicana">República dominicana - Norte</option>'+
+            			'<option value="República Dominicana">República Dominicana - Norte</option>'+
                         '<option value="Argentina">Argentina - Sur</option>'+
                         '<option value="Bolivia">Bolivia - Sur</option>'+
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -569,18 +569,18 @@ function cambiarPais(){
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -620,18 +620,18 @@ function cambiarPais(){
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -656,18 +656,18 @@ function cambiarPais(){
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Bolivia">Bolivia - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -709,25 +709,25 @@ function cambiarPais(){
             } else {
                 $('select').selectpicker();
             }
-        }else if(pais == 'Perù'){
+        }else if(pais == 'Perú'){
             combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
-            			'<option value="Perù">Perù - Sur</option>'+
+            			'<option value="Perú">Perú - Sur</option>'+
                         '<option value="Argentina">Argentina - Sur</option>'+
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Bolivia">Bolivia - Sur</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -773,17 +773,17 @@ function cambiarPais(){
                         '<option value="Bolivia">Bolivia - Sur</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
              combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -804,23 +804,23 @@ function cambiarPais(){
             }
         }else if(pais == 'Uruguay'){
             combo = '<select class="selectpicker" id="pais" onchange="cambiarPais();" style="display: block !important">'+
-            			'<option value="Uruguay">Uruguay</option>'+
+            			'<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Argentina">Argentina - Sur</option>'+
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Bolivia">Bolivia - Sur</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -846,18 +846,18 @@ function cambiarPais(){
                         '<option value="Bolivia">Bolivia - Sur</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="México">México</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
@@ -975,17 +975,17 @@ function cambiarPais(){
                         '<option value="Brasil">Brasil</option>'+
                         '<option value="Chile">Chile - Sur</option>'+
                         '<option value="Colombia">Colombia - Norte</option>'+
-                        '<option value="Costa rica">Costa rica - Norte</option>'+
+                        '<option value="Costa Rica">Costa Rica - Norte</option>'+
                         '<option value="Ecuador">Ecuador - Norte</option>'+
-                        '<option value="El salvador">El salvador - Norte</option>'+
+                        '<option value="El Salvador">El Salvador - Norte</option>'+
                         '<option value="Honduras">Honduras - Norte</option>'+
                         '<option value="Nicaragua">Nicaragua - Norte</option>'+
                         '<option value="Panamá">Panamá - Norte</option>'+ 
                         '<option value="Paraguay">Paraguay - Sur</option>'+ 
-                        '<option value="Perù">Perù - Sur</option>'+
-                        '<option value="Puerto rico">Puerto rico - Norte</option>'+
-                        '<option value="República dominicana">República dominicana - Norte</option>'+
-                        '<option value="Uruguay">Uruguay</option>'+
+                        '<option value="Perú">Perú - Sur</option>'+
+                        '<option value="Puerto Rico">Puerto Rico - Norte</option>'+
+                        '<option value="República Dominicana">República Dominicana - Norte</option>'+
+                        '<option value="Uruguay">Uruguay - Sur</option>'+
                         '<option value="Venezuela">Venezuela - Norte</option>'+
                     '</select>';
             combPatn = '<select class="selectpicker" id="partner" style="display: block !important">'+
