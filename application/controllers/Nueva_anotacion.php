@@ -87,7 +87,7 @@ class Nueva_anotacion extends CI_Controller {
             $this->email->initialize($configGmail);
             $this->email->from('info@sap-latam.com');
             $this->email->to($email);
-            $this->email->subject('Gracias por tu participación');
+            $this->email->subject('Gracias por tu participación en SAP Gana por Goleada');
             $texto = '<!DOCTYPE html>
                         <html>
                             <body>
