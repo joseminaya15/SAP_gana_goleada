@@ -197,7 +197,7 @@
                                 <p class="m-0 inline">GOLES</p>
                             </div>
                         </div>
-                        <div class="mdl-card__supporting-text">
+                        <div class="mdl-card__supporting-text registro">
                             <div class="form-group">
                                 <input type="texto" class="form-control" placeholder="Nombre de empresa NNN" id="empresa">
                             </div>
@@ -205,7 +205,10 @@
                                 <input type="texto" class="form-control" placeholder="País" id="pais">
                             </div>
                             <div class="form-group">
-                                <input type="texto" class="form-control" placeholder="Deal Registration ID" id="deal_regis" onkeypress="return valida(event)" onchange="restringirNum()" maxlength="6">
+                                <input type="texto" class="form-control" placeholder="Deal #" id="deal_regis" onkeypress="return valida(event)" onchange="restringirNum()" maxlength="6">
+                            </div>
+                            <div class="form-group">
+                                <textarea type="texto" rows="2" class="form-control" placeholder="Descripci&oacute;n" id="descripcion"></textarea> 
                             </div>
                             <div class="col-xs-6 p-0">
                                 <div class="form-group input-date">

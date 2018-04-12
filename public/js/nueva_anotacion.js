@@ -185,4 +185,10 @@ function selectTab(id){
 	var nameChecked  = idPanel.find('.mdl-puntos').find('.mdl-radio.is-checked');
 	var titleChecked = nameChecked.parents('.mdl-puntos').find('.name-anotacion').find('p').text();
 	card.find('.mdl-card__title').find('h2').text(titleChecked);
+	$('#deal_regis').fadeIn('fast');
+	$('#descripcion').fadeOut('fast');
 }
+$('#sap').click(function() {
+	$('#deal_regis').fadeOut('fast');
+	$('#descripcion').fadeIn('fast');
+});

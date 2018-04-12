@@ -5,6 +5,9 @@ body{
 	padding: 0;
 	font-family: 'RobotoRegular';
 }
+#descripcion{
+	display: none;
+}
 .img-premios{
 	width: 100%;
 }
@@ -465,8 +468,13 @@ body{
 	height: 245px;
 	overflow-y: scroll;
 }
+.mdl-card-cuentas .mdl-card__supporting-text.registro{
+	overflow: hidden;
+}
+.mdl-card-cuentas .mdl-card__supporting-text .form-group textarea,
 .mdl-card-cuentas .mdl-card__supporting-text .form-group input{
 	border: 1px solid #000000;
+	box-shadow: none;
 }
 .mdl-card-cuentas .info{
 	opacity: 0;
@@ -595,6 +603,7 @@ body{
 	padding-left: 40px;
 }
 /*PLACEHOLDER*/
+textarea::placeholder,
 input::placeholder {
 	font-style: italic;
 	color: #FFFFFF;
