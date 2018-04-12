@@ -159,7 +159,7 @@
                                 </div>
                             </div>
                             <div class="col-xs-6 p-0 text-right">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="nuevaAnotacion()">Anotar<i class="mdi mdi-play_arrow"></i></button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" id="idNuevaAnotacion" onclick="nuevaAnotacion()">Anotar<i class="mdi mdi-play_arrow"></i></button>
                             </div>
                         </div>
                         <div class="col-xs-12 p-0 info">

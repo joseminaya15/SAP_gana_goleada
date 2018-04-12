@@ -32,6 +32,7 @@ function nuevaAnotacion(){
 	if(puntosGoles == null || puntosGoles == ''){
 		puntosGoles = 3;
 	}
+	$('#idNuevaAnotacion').prop("disabled", true);
 	$.ajax({
 		data : {empresa    : empresa,
 				deal_regis : deal_regis,
@@ -51,6 +52,7 @@ function nuevaAnotacion(){
 				$('#pais').val("");
 				$('#fecha').val("");
 				msj('error', 'Se registró correctamente su anotación');
+				$('#idNuevaAnotacion').prop("disabled", false);
 	        }else {
 	        	msj('error', data.msj);
 	        	return;
