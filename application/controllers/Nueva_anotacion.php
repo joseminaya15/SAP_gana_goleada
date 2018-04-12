@@ -55,13 +55,13 @@ class Nueva_anotacion extends CI_Controller {
                 }else if($servicio == 'Won & Booked (W/B)'){
                     $id_serv = 5;
                 }
-                $dataInsert = array('Empresa'  => $empresa,
+                $dataInsert = array('Empresa'           => $empresa,
                                     'Deal_registration' => $deal_reg,
-                                    'Pais'    => $pais,
-                                    'Flag'    => FLAG_PENDIENTE,
-                                    'Goles'   => $goles,
-                                    'Id_serv' => $id_serv,
-                                    'id_user' => $this->session->userdata('Id_user'));
+                                    'Pais'              => $pais,
+                                    'Flag'              => FLAG_PENDIENTE,
+                                    'Goles'             => $goles,
+                                    'Id_serv'           => $id_serv,
+                                    'id_user'           => $this->session->userdata('Id_user'));
                 $datosInsert = $this->M_datos->insertarDatos($dataInsert, 'anotaciones');
                 $this->sendEmailAnotacion($this->session->userdata('usuario'));
             }
@@ -76,7 +76,7 @@ class Nueva_anotacion extends CI_Controller {
         $data['msj']   = null;
         try {  
             $this->load->library("email");
-            $configGmail = array('protocol'  => 'smtp',
+            $configGmail = array('protocol' => 'smtp',
                                 'smtp_host' => 'smtpout.secureserver.net',
                                 'smtp_port' => 3535,
                                 'smtp_user' => 'info@sap-latam.com',
