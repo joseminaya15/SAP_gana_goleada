@@ -113,10 +113,10 @@ function existeFecha(fecha){
       return true;
 }
 var nameAnotacion = null;
-var puntosGoles = null;
+var puntosGoles   = null;
+var card          = $('.mdl-card-cuentas');
 function selectAnotacion(id){
 	var idButton = $('#'+id);
-	var card     = $('.mdl-card-cuentas');
 	var name     = idButton.parents('.mdl-puntos').find('.name-anotacion').find('p').text();
 	var puntos   = idButton.parents('.mdl-puntos').find('.punto-imagen').html();
 	var goles    = idButton.parents('.mdl-puntos').find('.punto-imagen').children().length;
@@ -176,4 +176,13 @@ function restringirNum(){
 			return;
 		}
 	}
+}
+function selectTab(id){
+	var idPanel      = $('#Tab'+id);
+	card.find('.mdl-card__title').find('h2').text();
+	idPanel.find('.mdl-puntos').find('.mdl-radio').removeClass('is-checked');
+	idPanel.find('.mdl-puntos:nth-child(1)').find('.mdl-radio').addClass('is-checked');
+	var nameChecked  = idPanel.find('.mdl-puntos').find('.mdl-radio.is-checked');
+	var titleChecked = nameChecked.parents('.mdl-puntos').find('.name-anotacion').find('p').text();
+	card.find('.mdl-card__title').find('h2').text(titleChecked);
 }

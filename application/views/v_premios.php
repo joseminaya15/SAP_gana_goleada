@@ -51,17 +51,33 @@
                     </div>
                 </div>
                 <div class="mdl-card mdl-card-ranking mdl-premios m-t-5">
-                    <div class="mdl-card__supporting-text m-t-10">
-                        <div class="col-sm-4 text-center premioQ">
-                            <img src="<?php echo RUTA_IMG?>premios/q2.png">
+                    <div class="mdl-card__supporting-text m-t-10 p-0">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#Tabhome" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                            <li><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">Sap Business One</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active p-0 m-b-20" id="Tabhome">
+                                <div class="col-sm-4 text-center premioQ">
+                                    <img src="<?php echo RUTA_IMG?>premios/q2.png">
+                                </div>
+                                <div class="col-sm-4 text-center premioQ">
+                                    <img src="<?php echo RUTA_IMG?>premios/q3.png">
+                                </div>
+                                <div class="col-sm-4 text-center premioQ">
+                                    <img src="<?php echo RUTA_IMG?>premios/q4.png">
+                                </div>      
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade p-0 m-b-20" id="Tabsap">
+                                <div class="col-sm-4 text-center premioQ">
+                                    <img src="<?php echo RUTA_IMG?>premios/q2.png">
+                                </div>
+                                <div class="col-sm-4 text-center premioQ">
+                                    <img src="<?php echo RUTA_IMG?>premios/q3.png">
+                                </div>      
+                            </div>
                         </div>
-                        <div class="col-sm-4 text-center premioQ">
-                            <img src="<?php echo RUTA_IMG?>premios/q3.png">
-                        </div>
-                        <div class="col-sm-4 text-center premioQ">
-                            <img src="<?php echo RUTA_IMG?>premios/q4.png">
-                        </div>
-                        <div class="col-xs-12 cierreQ">
+                        <div class="col-xs-12 cierreQ m-b-15">
                             <p>Cierres de Q:</p>
                             <p>Q2: Jun 30/ Q3:Set 30/ Q4: Dic 31</p>
                             <p>Q: Se presentan los ganadores 15 d&iacute;as luego del cierre</p>

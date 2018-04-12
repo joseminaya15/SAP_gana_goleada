@@ -1,3 +1,4 @@
+var card     = $('.mdl-card-cuentas');
 function nuevaAnotacion(id){
 	var servicio = $( "input:checked" ).val();
 	$.ajax({
@@ -18,7 +19,6 @@ function nuevaAnotacion(id){
       }
 	});
 	var idButton = $('#'+id);
-	var card     = $('.mdl-card-cuentas');
 	var name     = idButton.parents('.mdl-puntos').find('.name-anotacion').find('p').text();
 	card.find('.mdl-card__title').find('h2').text(name);
 }
@@ -63,4 +63,13 @@ function showModalAlert(dato,contador){
 function closeModal(){
 	modalAlert.modal('hide');
 	$('#buttonAlert'+conteo).removeClass('message');
+}
+function selectTab(id){
+	var idPanel      = $('#Tab'+id);
+	card.find('.mdl-card__title').find('h2').text();
+	idPanel.find('.mdl-puntos').find('.mdl-radio').removeClass('is-checked');
+	idPanel.find('.mdl-puntos:nth-child(1)').find('.mdl-radio').addClass('is-checked');
+	var nameChecked  = idPanel.find('.mdl-puntos').find('.mdl-radio.is-checked');
+	var titleChecked = nameChecked.parents('.mdl-puntos').find('.name-anotacion').find('p').text();
+	card.find('.mdl-card__title').find('h2').text(titleChecked);
 }

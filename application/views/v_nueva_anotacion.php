@@ -55,11 +55,11 @@
                 <div class="mdl-card-anotaciones">
                     <div class="mdl-card mdl-card-anotar">
                         <ul class="nav nav-tabs" role="tablist">
-                            <li class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                            <li><a href="#sap" aria-controls="profile" role="tab" data-toggle="tab">Sap Business One</a></li>
+                            <li id="home" class="active" onclick="selectTab(this.id)"><a href="#Tabhome" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                            <li id="sap" onclick="selectTab(this.id)"><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">Sap Business One</a></li>
                         </ul>
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane fade in active p-0" id="home">
+                            <div role="tabpanel" class="tab-pane fade in active p-0" id="Tabhome">
                                 <div class="col-xs-12 mdl-puntos">
                                     <div class="punto-imagen">
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
@@ -135,7 +135,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade p-0" id="sap">
+                            <div role="tabpanel" class="tab-pane fade p-0" id="Tabsap">
                                 <div class="col-xs-12 mdl-puntos">
                                     <div class="punto-imagen">
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
@@ -148,7 +148,7 @@
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidadb1">
-                                            <input type="radio" id="oportunidadb1" class="mdl-radio__button" name="options" value="1" onclick="selectAnotacion(this.id)">
+                                            <input type="radio" id="oportunidadb1" class="mdl-radio__button" name="options1" value="6" checked onclick="selectAnotacion(this.id)">
                                         </label>
                                     </div>
                                 </div>
@@ -159,11 +159,11 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p># Env&iacute;os B1 desde la Agencia Virtual </p>
+                                        <p># Env&iacute;os B1 desde la Agencia Virtual</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="envioagencia">
-                                            <input type="radio" id="envioagencia" class="mdl-radio__button" name="options" value="1" onclick="selectAnotacion(this.id)">
+                                            <input type="radio" id="envioagencia" class="mdl-radio__button" name="options1" value="7" onclick="selectAnotacion(this.id)">
                                         </label>
                                     </div>
                                 </div>
@@ -177,7 +177,7 @@
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="casoaprobado">
-                                            <input type="radio" id="casoaprobado" class="mdl-radio__button" name="options" value="1" onclick="selectAnotacion(this.id)">
+                                            <input type="radio" id="casoaprobado" class="mdl-radio__button" name="options1" value="8" onclick="selectAnotacion(this.id)">
                                         </label>
                                     </div>
                                 </div>

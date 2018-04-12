@@ -52,93 +52,154 @@
                 </div>
                 <div class="mdl-card-anotaciones">
                     <div class="mdl-card mdl-card-anotar">
-                        <div class="col-xs-12 mdl-puntos">
-                            <div class="punto-imagen">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li id="home" class="active" onclick="selectTab(this.id)"><a href="#Tabhome" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                            <li id="sap"  onclick="selectTab(this.id)"><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">Sap Business One</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active p-0" id="Tabhome">
+                                <div class="col-xs-12 mdl-puntos">
+                                    <div class="punto-imagen">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                    </div>
+                                    <div class="name-anotacion col-xs-8 p-0">
+                                        <p>Won & Booked (W/B)</p>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="booked">
+                                            <input type="radio" id="booked" class="mdl-radio__button" name="options" value="1" checked onclick="nuevaAnotacion(this.id)">
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <strong><?php echo $total_wb ?></strong>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 mdl-puntos">
+                                    <div class="punto-imagen">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                    </div>
+                                    <div class="name-anotacion col-xs-8 p-0">
+                                        <p>Cuentas nuevas (NNN)</p>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="cuenta_nueva">
+                                            <input type="radio" id="cuenta_nueva" class="mdl-radio__button" name="options" value="2" onclick="nuevaAnotacion(this.id)">
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <strong><?php echo $total_cn ?></strong>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 mdl-puntos">
+                                    <div class="punto-imagen">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                    </div>
+                                    <div class="name-anotacion col-xs-8 p-0">
+                                        <p>Casos de &eacute;xitos de clientes aprobados</p>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="caso">
+                                            <input type="radio" id="caso" class="mdl-radio__button" name="options" value="3" onclick="nuevaAnotacion(this.id)">
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <strong><?php echo $total_ca ?></strong>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 mdl-puntos">
+                                    <div class="punto-imagen">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                    </div>
+                                    <div class="name-anotacion col-xs-8 p-0">
+                                        <p>Oportunidades generadas de Social Selling</p>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="social_selling">
+                                            <input type="radio" id="social_selling" class="mdl-radio__button" name="options" value="4" onclick="nuevaAnotacion(this.id)">
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <strong><?php echo $total_sc ?></strong>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 mdl-puntos">
+                                    <div class="punto-imagen">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
+                                    </div>
+                                    <div class="name-anotacion col-xs-8 p-0">
+                                        <p>Oportunidades generadas para Cloud</p>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidad">
+                                            <input type="radio" id="oportunidad" class="mdl-radio__button" name="options" value="5" onclick="nuevaAnotacion(this.id)"> 
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <strong><?php echo $total_cl ?></strong>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="name-anotacion col-xs-8 p-0">
-                                <p>Won & Booked (W/B)</p>
-                            </div>
-                            <div class="col-xs-2">
-                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="booked">
-                                    <input type="radio" id="booked" class="mdl-radio__button" name="options" value="1" checked onclick="nuevaAnotacion(this.id)">
-                                </label>
-                            </div>
-                            <div class="col-xs-2">
-                                <strong><?php echo $total_wb ?></strong>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 mdl-puntos">
-                            <div class="punto-imagen">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                            </div>
-                            <div class="name-anotacion col-xs-8 p-0">
-                                <p>Cuentas nuevas (NNN)</p>
-                            </div>
-                            <div class="col-xs-2">
-                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="cuenta_nueva">
-                                    <input type="radio" id="cuenta_nueva" class="mdl-radio__button" name="options" value="2" onclick="nuevaAnotacion(this.id)">
-                                </label>
-                            </div>
-                            <div class="col-xs-2">
-                                <strong><?php echo $total_cn ?></strong>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 mdl-puntos">
-                            <div class="punto-imagen">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                            </div>
-                            <div class="name-anotacion col-xs-8 p-0">
-                                <p>Casos de &eacute;xitos de clientes aprobados</p>
-                            </div>
-                            <div class="col-xs-2">
-                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="caso">
-                                    <input type="radio" id="caso" class="mdl-radio__button" name="options" value="3" onclick="nuevaAnotacion(this.id)">
-                                </label>
-                            </div>
-                            <div class="col-xs-2">
-                                <strong><?php echo $total_ca ?></strong>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 mdl-puntos">
-                            <div class="punto-imagen">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                            </div>
-                            <div class="name-anotacion col-xs-8 p-0">
-                                <p>Oportunidades generadas de Social Selling</p>
-                            </div>
-                            <div class="col-xs-2">
-                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="social_selling">
-                                    <input type="radio" id="social_selling" class="mdl-radio__button" name="options" value="4" onclick="nuevaAnotacion(this.id)">
-                                </label>
-                            </div>
-                            <div class="col-xs-2">
-                                <strong><?php echo $total_sc ?></strong>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 mdl-puntos">
-                            <div class="punto-imagen">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
-                            </div>
-                            <div class="name-anotacion col-xs-8 p-0">
-                                <p>Oportunidades generadas para Cloud</p>
-                            </div>
-                            <div class="col-xs-2">
-                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidad">
-                                    <input type="radio" id="oportunidad" class="mdl-radio__button" name="options" value="5" onclick="nuevaAnotacion(this.id)"> 
-                                </label>
-                            </div>
-                            <div class="col-xs-2">
-                                <strong><?php echo $total_cl ?></strong>
+                            <div role="tabpanel" class="tab-pane fade p-0" id="Tabsap">
+                                <div class="col-xs-12 mdl-puntos">
+                                    <div class="punto-imagen">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
+                                    </div>
+                                    <div class="name-anotacion col-xs-8 p-0">
+                                        <p># Oportunidades de B1</p>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidadb1">
+                                            <input type="radio" id="oportunidadb1" class="mdl-radio__button" name="options1" value="6" checked onclick="nuevaAnotacion(this.id)"> 
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <strong><?php echo $total_cl ?></strong>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 mdl-puntos">
+                                    <div class="punto-imagen">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
+                                    </div>
+                                    <div class="name-anotacion col-xs-8 p-0">
+                                        <p># Env&iacute;os B1 desde la Agencia Virtual</p>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="envioagencia">
+                                            <input type="radio" id="envioagencia" class="mdl-radio__button" name="options1" value="7" onclick="nuevaAnotacion(this.id)"> 
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <strong><?php echo $total_cl ?></strong>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 mdl-puntos">
+                                    <div class="punto-imagen">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
+                                    </div>
+                                    <div class="name-anotacion col-xs-8 p-0">
+                                        <p>Casos de Referencias de B1 aprobadas por SAP</p>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="casoaprobado">
+                                            <input type="radio" id="casoaprobado" class="mdl-radio__button" name="options1" value="8" onclick="nuevaAnotacion(this.id)"> 
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <strong><?php echo $total_cl ?></strong>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
