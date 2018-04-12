@@ -51,10 +51,10 @@ function nuevaAnotacion(){
 	}).done(function(data){
 		try{
 	        data = JSON.parse(data);
-	        console.log(data);
 	        if(data.error == 0){
 				$('#empresa').val("");
 				$('#deal_regis').val("");
+				$('#descripcion').val("");
 				$('#pais').val("");
 				$('#fecha').val("");
 				msj('error', 'Se registró correctamente su anotación');
