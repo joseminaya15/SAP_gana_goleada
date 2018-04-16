@@ -5,6 +5,15 @@ body{
 	padding: 0;
 	font-family: 'RobotoRegular';
 }
+.md-admin .mdi-close{
+	color: #F10C09;
+}
+.md-admin .mdi-done{
+	color: #009300;
+}
+.md-admin .mdi-warning{
+	color: #DDAF26;
+}
 #descripcion{
 	display: none;
 }
