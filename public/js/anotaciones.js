@@ -50,13 +50,13 @@ function showModalAlert(dato,contador){
 	var description = modalAlert.find('.mdl-card__supporting-text');
 	if(dato == 1){
 		nameTitle.text('Contáctanos');
-		description.html('<p>Queremos ponernos en contacto con usted, por favor escribirnos a <a href="mailto:carina.gonzales@sap.com">mailto:carina.gonzales@sap.com</a></p>');
+		description.html('<p>Queremos ponernos en contacto con usted, por favor escribirnos a <a href="mailto:carina.gonzales@sap.com">carina.gonzales@sap.com</a></p>');
 	}else if(dato == 2) {
 		nameTitle.text('¡Metiste Goles!');
 		description.html('<p>Su oportunidad ha sido aceptada</p>');
 	}else if(dato == 3) {
 		nameTitle.text('¡Goles Rechazados!');
-		description.html('<p>Su oportunidad ha sido rechazada, por favor ponerse en contacto con <a href="mailto:carina.gonzales@sap.com">mailto:carina.gonzales@sap.com</a></p>');
+		description.html('<p>Su oportunidad ha sido rechazada, por favor ponerse en contacto con <a href="mailto:carina.gonzales@sap.com">carina.gonzales@sap.com</a></p>');
 	}
 	modalAlert.modal('show');
 }

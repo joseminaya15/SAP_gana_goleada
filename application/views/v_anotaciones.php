@@ -256,9 +256,6 @@
                         <div class="mdl-card__actions text-right">
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="closeModal()">Aceptar</button>
                         </div>
-                        <!-- <div class="mdl-card__menu">
-                            <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
-                        </div> -->
                     </div>
                 </div>
             </div>
