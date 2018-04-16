@@ -44,7 +44,7 @@ var contacto  = 'contacto';
 var rechazado = 'rechazado';
 var modalAlert = $('#modalAlerta');
 var conteo    = null;
-function showModalAlert(dato,contador){
+function showModalAlert(dato,contador, id){
 	conteo = contador;
 	var nameTitle   = modalAlert.find('.mdl-card__title').find('h2');
 	var description = modalAlert.find('.mdl-card__supporting-text');
@@ -58,7 +58,22 @@ function showModalAlert(dato,contador){
 		nameTitle.text('¡Goles Rechazados!');
 		description.html('<p>Su oportunidad ha sido rechazada, por favor ponerse en contacto con <a href="mailto:carina.gonzales@sap.com">carina.gonzales@sap.com</a></p>');
 	}
-	modalAlert.modal('show');
+	$.ajax({
+		data : {id : id},
+		url  : 'Anotaciones/showModalAlert',
+		type : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        	modalAlert.modal('show');
+        }else {
+        	return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+	});
 }
 function closeModal(){
 	modalAlert.modal('hide');
