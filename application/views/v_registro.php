@@ -30,7 +30,7 @@
                 <div class="header-left">
                     <a href="Login"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
                 </div>
-                <div class="header-right">
+                <div class="header-right home">
                     <h2 class="">Concurso para partners SMB</h2>
                     <div class="background background3"></div>
                     <div class="background background2"></div>

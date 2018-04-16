@@ -25,7 +25,7 @@
         <section id="menu">
             <div class="fondo-imagen"></div>
             <div class="header">
-                <div class="header-left">
+                <div class="header-left home">
                     <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
                 </div>
                 <div class="header-right">
