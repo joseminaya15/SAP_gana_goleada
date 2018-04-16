@@ -52,7 +52,7 @@ class Admin extends CI_Controller {
                         <td class="text-center">
                         <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Anular" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                         <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aceptar" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--icon" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                         </td>
                     </tr>';
             $count++;
@@ -119,7 +119,7 @@ class Admin extends CI_Controller {
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aceptar" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                             </td>
                             <td class="text-center">
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                             </td>
                         </tr>';
                 $count++;
@@ -178,7 +178,7 @@ class Admin extends CI_Controller {
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aceptar" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                             </td>
                             <td class="text-center">
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                             </td>
                         </tr>';
                 $count++;
@@ -236,7 +236,7 @@ class Admin extends CI_Controller {
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aceptar" onclick="aceptar('.$key->Id.', '.$count.');" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                             </td>
                             <td class="text-center">
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
+                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                             </td>
                         </tr>';
                 $count++;
