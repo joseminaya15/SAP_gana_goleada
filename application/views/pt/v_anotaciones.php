@@ -269,6 +269,6 @@
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>anotaciones.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>ptanotaciones.js?v=<?php echo time();?>"></script>
     </body>
 </html>
