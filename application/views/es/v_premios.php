@@ -66,6 +66,9 @@
                                 </div>
                                 <div class="col-sm-4 text-center premioQ">
                                     <img src="<?php echo RUTA_IMG?>premios/q4.png">
+                                </div>
+                                <div class="col-xs-12 cierreQ m-b-15">
+                                    <p>*El premio es por Market Unit</p>
                                 </div>      
                             </div>
                             <div role="tabpanel" class="tab-pane fade p-0 m-b-20" id="Tabsap">
@@ -74,11 +77,11 @@
                                 </div>
                                 <div class="col-sm-4 text-center premioQ">
                                     <img src="<?php echo RUTA_IMG?>premios/bq3.png">
-                                </div>      
+                                </div>
+                                <div class="col-xs-12 cierreQ m-b-15">
+                                    <p>*El premio es por LAC</p>
+                                </div>        
                             </div>
-                        </div>
-                        <div class="col-xs-12 cierreQ m-b-15">
-                            <p></p>
                         </div>
                     </div>
                 </div>
