@@ -6,9 +6,11 @@ function ingresar(){
     return;
   }
   if(usuario != 'sapadmin'){
-    if (!validateEmail(usuario)){
-      msj('error', 'El correo ingresado no tiene el formato correcto');
-      return;
+    if(usuario != 'ptadmin'){
+      if (!validateEmail(usuario)){
+        msj('error', 'El correo ingresado no tiene el formato correcto');
+        return;
+      }
     }
   }
 	if(password == null){

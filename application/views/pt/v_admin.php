@@ -37,7 +37,11 @@
                 <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_admin.svg"></a>
             </div>
             <div class="header-right">
+                <?php if($user == 'sapadmin') { ?>
                 <h2 class="">Concurso para partners SMB</h2>
+                <?php }else { ?>
+                <h2 class="">Concurso para parceiros</h2>
+                <?php } ?>
                 <div class="background background1"></div>
                 <div class="background background2"></div>
                 <div class="background background3"></div>
@@ -46,13 +50,18 @@
         <div id="content" class="mdl-card-container">
             <div class="col-xs-12 header-admin">
                 <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
+                <?php if($user == 'sapadmin') { ?>
                 <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout m-t-50" onclick="cerrarCesion()">Cerrar Sesión</a>
+                <?php }else { ?>
+                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout m-t-50" onclick="cerrarCesion()">Encerrar a sessão</a>
+                <?php } ?>
             </div>
             <div class="mdl-card mdl-card-table md-admin">
                 <div class="table-responsive">
                     <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
+                                <?php if($user == 'sapadmin') { ?>
                                 <th class="text-center">Deal ID #</th>
                                 <th class="text-left">Oportunidad</th>
                                 <th class="text-left">Nombre Canal</th>
@@ -60,6 +69,15 @@
                                 <th class="text-left">País</th>
                                 <th class="text-left">Estado</th>
                                 <th class="text-center">Acción</th>
+                                <?php }else { ?>
+                                <th class="text-center">Deal ID #</th>
+                                <th class="text-left">Oportunidade</th>
+                                <th class="text-left">Nome do parceiro</th>
+                                <th class="text-left">Nome completo do capitão do time</th>
+                                <th class="text-left">País</th>
+                                <th class="text-left">Estado</th>
+                                <th class="text-center">Ação</th>
+                                <?php } ?>
                             </tr>
                         </thead>
                       <tbody id="tabla">
@@ -92,6 +110,7 @@
     <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+            <?php if($user == 'sapadmin') { ?>
             $('#example').DataTable( {
                 responsive: true,
                 dom: 'Bfrtip',
@@ -104,6 +123,42 @@
                              'excel', 'print'
                           ]
             });
+            <?php }else { ?>
+            $('#example').DataTable( {
+              responsive: true,
+              dom: 'Bfrtip',
+              language:{
+                "emptyTable":     "Tietoja ei ole saatavilla",
+                "info" : "Afficher _START_ a _END_ des _TOTAL_ résultats",
+                "infoEmpty":      "Näytetään 0 - 0 tapahtumaa 0:sta",
+                "search": "haku:",
+                "lengthMenu":   "Afficher _MENU_ lignes",
+                "paginate": {
+                    "first":    "Primero",
+                    "last":     "Ultimo",
+                    "next":     "Seuraava",
+                    "previous": "Edellinen"
+                },
+              },
+              lengthMenu: [
+                            //text: 'My button',
+                            [ 10, 25, 50, -1 ],
+                            [ '10 fileiras', '25 fileiras', '50 fileiras', 'veja tudo' ]
+                          ],
+                          buttons: [
+                              {
+                                text: 'mostre 10 fileiras',
+                                extend: 'pageLength'
+                              },
+                              {
+                                extend:'excel'
+                              },
+                              {
+                                extend:'print'
+                              }
+                          ]
+            });
+            <?php } ?>
             $('.buttons-excel').empty();
             $('.buttons-print').empty();
             $('.buttons-excel').append('<i class="fa fa-download"></i>');

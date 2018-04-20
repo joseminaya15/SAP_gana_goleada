@@ -57,6 +57,7 @@ class Admin extends CI_Controller {
                     </tr>';
             $count++;
         }
+        $data['user']  = $this->session->userdata('usuario');
         $data['tabla'] = $html;
     }
 		$this->load->view('pt/v_admin', $data);
