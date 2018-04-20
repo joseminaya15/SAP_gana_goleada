@@ -128,16 +128,16 @@
               responsive: true,
               dom: 'Bfrtip',
               language:{
-                "emptyTable":     "Tietoja ei ole saatavilla",
+                "emptyTable":     "Nenhum dado está disponível",
                 "info" : "Afficher _START_ a _END_ des _TOTAL_ résultats",
-                "infoEmpty":      "Näytetään 0 - 0 tapahtumaa 0:sta",
-                "search": "haku:",
+                "infoEmpty":      "Mostrando de 0 a 0 eventos de 0",
+                "search": "Pesquisa:",
                 "lengthMenu":   "Afficher _MENU_ lignes",
                 "paginate": {
                     "first":    "Primero",
                     "last":     "Ultimo",
-                    "next":     "Seuraava",
-                    "previous": "Edellinen"
+                    "next":     "Seguinte",
+                    "previous": "Anterior"
                 },
               },
               lengthMenu: [
