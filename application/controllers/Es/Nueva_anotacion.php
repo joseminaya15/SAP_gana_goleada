@@ -63,7 +63,8 @@ class Nueva_anotacion extends CI_Controller {
                                     'Flag'              => FLAG_PENDIENTE,
                                     'Goles'             => $goles,
                                     'Id_serv'           => $id_serv,
-                                    'id_user'           => $this->session->userdata('Id_user'));
+                                    'id_user'           => $this->session->userdata('Id_user'),
+                                    'flg_pais'          => 1);
                 $datosInsert = $this->M_datos->insertarDatos($dataInsert, 'anotaciones');
                 $this->sendEmailAnotacion($this->session->userdata('usuario'));
             }

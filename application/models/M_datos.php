@@ -64,7 +64,7 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-    function getDatosAdmin(){
+    function getDatosAdmin($id_pais){
         $sql = "SELECT a.Id,
                        a.Deal_registration,
                        a.Flag,
@@ -78,6 +78,7 @@ class M_datos extends  CI_Model{
                        users u
                  WHERE a.Id_serv = s.Id
                    AND a.id_user = u.Id
+                   AND a.flg_pais = ".$id_pais."
                    AND a.Flag IN (1,3)
               ORDER BY a.Flag ASC";
         $result = $this->db->query($sql);
