@@ -18,7 +18,7 @@ class Menu extends CI_Controller {
         }
         $data['nombre_capitan'] = ucwords($this->session->userdata('Nombre_capitan'));
         $data['nombre_canal']   = ucwords($this->session->userdata('Nombre_canal'));
-		$this->load->view('v_menu', $data);
+		$this->load->view('es/v_menu', $data);
 	}
     function cerrarCesion(){
         $data['error'] = EXIT_ERROR;
