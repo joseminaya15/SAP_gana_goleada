@@ -137,13 +137,13 @@ body{
     float: right;
 }
 .header-right .background1 {
-    background-color: #54442E;
+    background-color: rgba(240, 171, 0, 0.4);
 }
 .header-right .background2 {
-    background-color: #8D6832;
+    background-color: rgba(240, 171, 0, 0.7);
 }
 .header-right .background3 {
-    background-color: #E29D2E;
+    background-color: rgba(240, 171, 0, 1);
 }
 .mdl-card-login{
 	background-color: rgba(0, 0, 0, 0.8);

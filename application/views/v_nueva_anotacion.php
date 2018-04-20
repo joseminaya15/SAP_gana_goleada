@@ -32,9 +32,9 @@
                 </div>
                 <div class="header-right">
                     <h2 class="">Concurso para partners SMB</h2>
-                    <div class="background background3"></div>
-                    <div class="background background2"></div>
                     <div class="background background1"></div>
+                    <div class="background background2"></div>
+                    <div class="background background3"></div>
                 </div>
             </div>
             <div class="container mdl-card-container">
@@ -56,7 +56,7 @@
                     <div class="mdl-card mdl-card-anotar">
                         <ul class="nav nav-tabs" role="tablist">
                             <li id="home" class="active" onclick="selectTab(this.id)"><a href="#Tabhome" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                            <li id="sap" onclick="selectTab(this.id)"><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">SAP Business One</a></li>
+                            <li id="sap" onclick="selectTab(this.id)"><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">SAP B1</a></li>
                         </ul>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active p-0" id="Tabhome">

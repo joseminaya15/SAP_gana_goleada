@@ -31,10 +31,11 @@
                     <a href="Login"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
                 </div>
                 <div class="header-right">
+                    <a href=""></a>
                     <h2 class="">Concurso para partners SMB</h2>
-                    <div class="background background3"></div>
-                    <div class="background background2"></div>
                     <div class="background background1"></div>
+                    <div class="background background2"></div>
+                    <div class="background background3"></div>
                 </div>
             </div>
             <div class="container">
