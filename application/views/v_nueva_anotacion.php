@@ -144,7 +144,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p># Oportunidades de B1</p>
+                                        <p># Oportunidades generadas para B1</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidadb1">
@@ -159,7 +159,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p># Env&iacute;os B1 desde la Agencia Virtual</p>
+                                        <p># Campa&ntilde;as ejecutadas desde la Agencia Virtual</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="envioagencia">
@@ -173,7 +173,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p>Casos de Referencias de B1 aprobadas por SAP</p>
+                                        <p>Casos de Referencias de B1 aprobados por SAP</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="casoaprobado">
