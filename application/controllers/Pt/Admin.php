@@ -16,7 +16,7 @@ class Admin extends CI_Controller {
     if($this->session->userdata('usuario') == null){
         header("location: Login");
     }
-    $datos = $this->M_datos->getDatosAdmin(2);
+    $datos = $this->M_datos->getDatosAdmin();
     if(count($datos) == 0){
         $data['tabla'] = '';
     }else {
@@ -82,7 +82,7 @@ class Admin extends CI_Controller {
         $arrUpdt   = array('Flag' => FLAG_RECHAZADO,
                             'alertas' => FLAG_RECHAZADO);
         $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
-        $datos     = $this->M_datos->getDatosAdmin(2);
+        $datos     = $this->M_datos->getDatosAdmin();
         $count     = 1;
         $i         = 1;
         $disabled  = '';
@@ -141,7 +141,7 @@ class Admin extends CI_Controller {
         $arrUpdt   = array('Flag' => FLAG_APROBADO,
                            'alertas' => FLAG_APROBADO);
         $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
-        $datos     = $this->M_datos->getDatosAdmin(2);
+        $datos     = $this->M_datos->getDatosAdmin();
         $count     = 1;
         $i         = 1;
         $disabled  = '';
@@ -199,7 +199,7 @@ class Admin extends CI_Controller {
         $id_serv   = $this->input->post('id_serv');
         $arrUpdt   = array('alertas' => FLAG_PENDIENTE);
         $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
-        $datos     = $this->M_datos->getDatosAdmin(2);
+        $datos     = $this->M_datos->getDatosAdmin();
         $count     = 1;
         $i         = 1;
         $disabled  = '';

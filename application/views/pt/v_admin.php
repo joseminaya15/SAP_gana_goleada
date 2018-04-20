@@ -10,7 +10,7 @@
     <meta name="date"                   content="January 25, 2018"/>
     <meta name="language"               content="es">
     <meta name="theme-color"            content="#000000">
-	<title>Ganhe de goleada com o SAP</title>
+	<title>SAP Gana por Goleada</title>
     <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/logo_favicon.png">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
@@ -37,11 +37,7 @@
                 <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_admin.svg"></a>
             </div>
             <div class="header-right">
-                <?php if($user == 'sapadmin') { ?>
                 <h2 class="">Concurso para partners SMB</h2>
-                <?php }else { ?>
-                <h2 class="">Concurso para parceiros</h2>
-                <?php } ?>
                 <div class="background background1"></div>
                 <div class="background background2"></div>
                 <div class="background background3"></div>
@@ -50,18 +46,13 @@
         <div id="content" class="mdl-card-container">
             <div class="col-xs-12 header-admin">
                 <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
-                <?php if($user == 'sapadmin') { ?>
                 <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout m-t-50" onclick="cerrarCesion()">Cerrar Sesión</a>
-                <?php }else { ?>
-                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout m-t-50" onclick="cerrarCesion()">Encerrar a sessão</a>
-                <?php } ?>
             </div>
             <div class="mdl-card mdl-card-table md-admin">
                 <div class="table-responsive">
                     <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
-                                <?php if($user == 'sapadmin') { ?>
                                 <th class="text-center">Deal ID #</th>
                                 <th class="text-left">Oportunidad</th>
                                 <th class="text-left">Nombre Canal</th>
@@ -69,15 +60,6 @@
                                 <th class="text-left">País</th>
                                 <th class="text-left">Estado</th>
                                 <th class="text-center">Acción</th>
-                                <?php }else { ?>
-                                <th class="text-center">Deal ID #</th>
-                                <th class="text-left">Oportunidade</th>
-                                <th class="text-left">Nome do parceiro</th>
-                                <th class="text-left">Nome completo do capitão do time</th>
-                                <th class="text-left">País</th>
-                                <th class="text-left">Estado</th>
-                                <th class="text-center">Ação</th>
-                                <?php } ?>
                             </tr>
                         </thead>
                       <tbody id="tabla">
@@ -110,44 +92,30 @@
     <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            <?php if($user == 'sapadmin') { ?>
             $('#example').DataTable( {
                 responsive: true,
                 dom: 'Bfrtip',
-                lengthMenu: [
-                            [ 10, 25, 50, -1 ],
-                            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
-                          ],
-                          buttons: [
-                             'pageLength',
-                             'excel', 'print'
-                          ]
-            });
-            <?php }else { ?>
-            $('#example').DataTable( {
-              responsive: true,
-              dom: 'Bfrtip',
-              language:{
-                "emptyTable":     "Nenhum dado está disponível",
-                "info" : "Afficher _START_ a _END_ des _TOTAL_ résultats",
+                language:{
+                "emptyTable":     "Ningún dato está disponible",
+                "info" : "Mostrando _START_ a _END_ de _TOTAL_ resultados",
                 "infoEmpty":      "Mostrando de 0 a 0 eventos de 0",
-                "search": "Pesquisa:",
-                "lengthMenu":   "Afficher _MENU_ lignes",
+                "search": "Búsqueda:",
+                "lengthMenu":   "Mostrando _MENU_ lineas",
                 "paginate": {
                     "first":    "Primero",
                     "last":     "Ultimo",
-                    "next":     "Seguinte",
+                    "next":     "Siguiente",
                     "previous": "Anterior"
                 },
               },
               lengthMenu: [
                             //text: 'My button',
                             [ 10, 25, 50, -1 ],
-                            [ '10 fileiras', '25 fileiras', '50 fileiras', 'veja tudo' ]
+                            [ '10 filas', '25 filas', '50 filas', 'ver todo' ]
                           ],
                           buttons: [
                               {
-                                text: 'mostre 10 fileiras',
+                                text: 'mostrar 10 filas',
                                 extend: 'pageLength'
                               },
                               {
@@ -158,14 +126,12 @@
                               }
                           ]
             });
-            <?php } ?>
             $('.buttons-excel').empty();
             $('.buttons-print').empty();
             $('.buttons-excel').append('<i class="fa fa-download"></i>');
             $('.buttons-print').append('<i class="fa fa-print"></i>');
             $('[data-toggle="tooltip"]').tooltip();
         });
-
     </script>
 </body>
 </html>
