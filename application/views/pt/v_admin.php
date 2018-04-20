@@ -45,7 +45,7 @@
         </div>
         <div id="content" class="mdl-card-container">
             <div class="col-xs-12 header-admin">
-                <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
+                <img src="<?php echo RUTA_IMG?>logo/logo_pt.png">
                 <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout m-t-50" onclick="cerrarCesion()">Cerrar Sesión</a>
             </div>
             <div class="mdl-card mdl-card-table md-admin">

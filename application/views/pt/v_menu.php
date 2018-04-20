@@ -78,7 +78,7 @@
                 </div>
                 <div class="footer-menu">
                     <a href="Premios">Ver prêmios <i class="mdi mdi-play_arrow"></i></a>
-                    <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
+                    <img src="<?php echo RUTA_IMG?>logo/logo_pt.png">
                 </div>
             </div>
         </section>

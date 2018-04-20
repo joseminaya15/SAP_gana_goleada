@@ -42,7 +42,7 @@
                 <div class="mdl-card mdl-card-login">
                     <div class="mdl-card__supporting-text">
                         <div class="col-sm-6 text-center">
-                            <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
+                            <img src="<?php echo RUTA_IMG?>logo/logo_pt.png">
                         </div>
                         <div class="col-sm-6 m-t-50">
                             <h2 class="title_login">Entre no est&aacute;dio</h2>
