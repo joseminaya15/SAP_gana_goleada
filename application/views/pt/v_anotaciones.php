@@ -29,7 +29,7 @@
                     <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
                 </div>
                 <div class="header-right">
-                    <h2 class="">Concurso para partners SMB</h2>
+                    <h2 class="">Concurso para parceiros</h2>
                     <div class="background background1"></div>
                     <div class="background background2"></div>
                     <div class="background background3"></div>
@@ -38,16 +38,16 @@
             <div class="container mdl-card-container">
                 <div class="text-right menu">
                     <a href="Menu"><i class="mdi mdi-home"></i>Menu</a>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Encerrar a sessão</button>
                 </div>
-                <h2 class="person_name">Bienvenido(a) <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
-                <p class="team_name">Equipo <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
+                <h2 class="person_name">Bem vindo <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
+                <p class="team_name">Equipe <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
                 <div id="Anotaciones" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>menu/anotaciones.png">
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <p>Mis anotaciones</p>
+                        <p>Minhas anotações</p>
                     </div>
                 </div>
                 <div class="mdl-card-anotaciones">
@@ -84,7 +84,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-8 p-0">
-                                        <p>Cuentas nuevas (NNN)</p>
+                                        <p>Contas novas (NNN)</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="cuenta_nueva">
@@ -102,7 +102,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-8 p-0">
-                                        <p>Casos de &eacute;xitos de clientes aprobados</p>
+                                        <p>Casos de sucesso de clientes aprovados*</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="caso">
@@ -119,7 +119,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-8 p-0">
-                                        <p>Oportunidades generadas de Social Selling</p>
+                                        <p>Oportunidades geradas a partir de Social Selling</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="social_selling">
@@ -136,7 +136,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
                                     </div>
                                     <div class="name-anotacion col-xs-8 p-0">
-                                        <p>Oportunidades generadas para Cloud</p>
+                                        <p>Oportunidades Cloud</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidad">
@@ -155,7 +155,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
                                     </div>
                                     <div class="name-anotacion col-xs-8 p-0">
-                                        <p># Oportunidades generadas para B1</p>
+                                        <p># Oportunidades B1</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidadb1">
@@ -172,7 +172,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
                                     </div>
                                     <div class="name-anotacion col-xs-8 p-0">
-                                        <p># Campa&ntilde;as ejecutadas desde la Agencia Virtual</p>
+                                        <p># Campanhas executadas a partir da Agência Virtual</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="envioagencia">
@@ -189,7 +189,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
                                     </div>
                                     <div class="name-anotacion col-xs-8 p-0">
-                                        <p>Casos de Referencias de B1 aprobados por SAP</p>
+                                        <p>Casos de Referências B1 aprovadas pela SAP</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="casoaprobado">
@@ -216,7 +216,7 @@
                                             <th class="text-center">Deal ID #</th>
                                             <th class="text-center">Pa&iacute;s</th>
                                             <th class="text-center">Status</th>
-                                            <th class="text-center">Goles</th>
+                                            <th class="text-center">Gols</th>
                                             <th class="text-center">Alertas</th>
                                         </tr>
                                     </thead>
@@ -229,9 +229,9 @@
                         <div class="mdl-card__actions">
                             <div class="mdl-estados">
                                 <ul class="m-0">
-                                    <li><span class="green"></span>Aprobada</li>
-                                    <li><span class="yellow"></span>Pendiente</li>
-                                    <li><span class="red"></span>Rechazada</li>
+                                    <li><span class="green"></span>Aprovado</li>
+                                    <li><span class="yellow"></span>Pendente</li>
+                                    <li><span class="red"></span>Recusado</li>
                                 </ul>
                             </div>
                             <div class="mdl-total">
@@ -248,13 +248,13 @@
                 <div class="modal-content">
                     <div class="mdl-card">
                         <div class="mdl-card__title">
-                            <h2>¡Metiste Goles!</h2>
+                            <h2>Você marcou gols!</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            <p>Su oportunidad a sido aceptada</p>
+                            <p>Sua oportunidade foi aceitada.</p>
                         </div>
                         <div class="mdl-card__actions text-right">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="closeModal()">Aceptar</button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="closeModal()">Aceitar</button>
                         </div>
                     </div>
                 </div>

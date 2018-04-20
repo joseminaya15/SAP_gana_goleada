@@ -30,7 +30,7 @@
                     <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
                 </div>
                 <div class="header-right">
-                    <h2 class="">Concurso para partners SMB</h2>
+                    <h2 class="">Concurso para parceiros</h2>
                     <div class="background background1"></div>
                     <div class="background background2"></div>
                     <div class="background background3"></div>
@@ -39,16 +39,16 @@
             <div class="container mdl-card-container">
                 <div class="text-right menu">
                     <a href="Menu"><i class="mdi mdi-home"></i>Menu</a>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Encerrar a sessão</button>
                 </div>
-                <h2 class="person_name">Bienvenido(a) <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
-                <p class="team_name">Equipo <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
+                <h2 class="person_name">Bem vindo <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
+                <p class="team_name">Equipe <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
                 <div class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>menu/salon.png">
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <p>Historia para inspirar</p>
+                        <p>História para inspirar</p>
                     </div>
                 </div>
                 <div class="mdl-card-fama">
@@ -82,7 +82,7 @@
                 	</div>                	
                 </div>
                 <div class="mdl-card-menu mdl-card-exito">
-                    <a href="https://crpa4c19efc4.hana.ondemand.com/cat/ci/public/ui/nominations/" target="_blank"><img src="<?php echo RUTA_IMG?>menu/anotacion.png"><span>Nomine su historia de éxito <label>aqu&iacute;</label></span></a>
+                    <a href="https://crpa4c19efc4.hana.ondemand.com/cat/ci/public/ui/nominations/" target="_blank"><img src="<?php echo RUTA_IMG?>menu/anotacion.png"><span>Envie o seu caso de sucesso <label>aqui</label></span></a>
                 </div>
             </div>
         </section>

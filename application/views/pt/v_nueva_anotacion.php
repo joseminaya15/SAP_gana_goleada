@@ -49,7 +49,7 @@
                         <img src="<?php echo RUTA_IMG?>menu/anotacion.png">
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <p>Nueva anotaci&oacute;n</p>
+                        <p>Novas Anotaç&otilde;es</p>
                     </div>
                 </div>
                 <div class="mdl-card-anotaciones">
@@ -83,7 +83,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p>Cuentas nuevas (NNN)</p>
+                                        <p>Contas novas (NNN)</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="cuenta_nueva">
@@ -98,7 +98,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p>Casos de &eacute;xitos de clientes aprobados*</p>
+                                        <p>Casos de sucesso de clientes aprovados*</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="caso">
@@ -112,7 +112,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p>Oportunidades generadas de Social Selling</p>
+                                        <p>Oportunidades geradas a partir de Social Selling</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="social_selling">
@@ -126,7 +126,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p>Oportunidades generadas para Cloud</p>
+                                        <p>Oportunidades Cloud</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidad">
@@ -144,7 +144,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p># Oportunidades generadas para B1</p>
+                                        <p># Oportunidades B1</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidadb1">
@@ -159,7 +159,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p># Campa&ntilde;as ejecutadas desde la Agencia Virtual</p>
+                                        <p># Campanhas executadas a partir da Agência Virtual</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="envioagencia">
@@ -173,7 +173,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p>Casos de Referencias de B1 aprobados por SAP</p>
+                                        <p>Casos de Referências B1 aprovadas pela SAP</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="casoaprobado">
@@ -194,12 +194,12 @@
                                     <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                 </div>
-                                <p class="m-0 inline">GOLES</p>
+                                <p class="m-0 inline">Gols</p>
                             </div>
                         </div>
                         <div class="mdl-card__supporting-text registro">
                             <div class="form-group">
-                                <input type="texto" class="form-control" placeholder="Nombre de empresa NNN" id="empresa">
+                                <input type="texto" class="form-control" placeholder="Nome da empresa NNN" id="empresa">
                             </div>
                             <div class="form-group">
                                 <input type="texto" class="form-control" placeholder="País" id="pais">
@@ -208,7 +208,7 @@
                                 <input type="texto" class="form-control" placeholder="Deal Registration ID" id="deal_regis" onkeypress="return valida(event)" onchange="restringirNum()" maxlength="6">
                             </div>
                             <div class="form-group">
-                                <textarea type="texto" rows="2" class="form-control" placeholder="Descripci&oacute;n" id="descripcion"></textarea> 
+                                <textarea type="texto" rows="2" class="form-control" placeholder="Descrição" id="descripcion"></textarea> 
                             </div>
                             <div class="col-xs-6 p-0">
                                 <div class="form-group input-date">
@@ -221,7 +221,7 @@
                             </div>
                         </div>
                         <div class="col-xs-12 p-0 info">
-                            <p>(*) Recuerda que puedes cargar cualquier caso de &eacute;xito, no necesariamente tiene  estar relacionando con f&uacute;tbol.<a href="https://crpa4c19efc4.hana.ondemand.com/cat/ci/public/ui/nominations/" target="_blank"> Haz tu denominaci&oacute;n Aqu&iacute;</a></p>
+                            <p>(*) Lembre-se que você pode fazer o envio de qualquer caso de sucesso, não é necessário estar relacionado com o futebol.<a href="https://crpa4c19efc4.hana.ondemand.com/cat/ci/public/ui/nominations/" target="_blank"> Faça o seu envio aqui.</a></p>
                         </div>
                     </div>
                 </div>

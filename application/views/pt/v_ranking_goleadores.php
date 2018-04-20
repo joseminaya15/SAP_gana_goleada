@@ -29,7 +29,7 @@
                     <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
                 </div>
                 <div class="header-right">
-                    <h2 class="">Concurso para partners SMB</h2>
+                    <h2 class="">Concurso para parceiros</h2>
                     <div class="background background1"></div>
                     <div class="background background2"></div>
                     <div class="background background3"></div>
@@ -38,26 +38,26 @@
             <div class="container mdl-card-container">
                 <div class="text-right menu">
                     <a href="Menu"><i class="mdi mdi-home"></i>Menu</a>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Encerrar a sessão</button>
                 </div>
-                <h2 class="person_name">Bienvenido(a) <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
-                <p class="team_name">Equipo <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
+                <h2 class="person_name">Bem vindo <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
+                <p class="team_name">Equipe <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
                 <div id="Ranking_goleadores" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>menu/ranking.png">
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <p>Ranking goleadores</p>
+                        <p>Ranking dos Artilheiros</p>
                     </div>
                 </div>
                 <div class="mdl-card mdl-card-ranking">
                     <div class="mdl-card__title">
-                        <h2>Ranking Goleadores</h2>
+                        <h2>Ranking dos Artilheiros</h2>
                     </div>
                     <div class="mdl-card__supporting-text p-t-0">
                         <ul class="nav nav-tabs m-b-20" role="tablist">
                             <li role="presentation" class="active"><a href="#norte" aria-controls="norte" role="tab" data-toggle="tab">Norte</a></li>
-                            <li role="presentation"><a href="#sur" aria-controls="sur" role="tab" data-toggle="tab">Sur</a></li>
+                            <li role="presentation"><a href="#sur" aria-controls="sur" role="tab" data-toggle="tab">Sul</a></li>
                             <li role="presentation"><a href="#brasil" aria-controls="brasil" role="tab" data-toggle="tab">Brasil</a></li>
                             <li role="presentation"><a href="#mexico" aria-controls="mexico" role="tab" data-toggle="tab">M&eacute;xico</a></li>
                         </ul>
@@ -67,11 +67,11 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>Posici&oacute;n</th>
-                                                <th>Equipo</th>
-                                                <th>Capit&aacute;n</th>
+                                                <th>Posição</th>
+                                                <th>Equipe</th>
+                                                <th>Capitão do time</th>
                                                 <th>Pa&iacute;s</th>
-                                                <th>Score</th>
+                                                <th>Pontuação</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -85,11 +85,11 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>Posici&oacute;n</th>
-                                                <th>Equipo</th>
-                                                <th>Capit&aacute;n</th>
+                                                <th>Posição</th>
+                                                <th>Equipe</th>
+                                                <th>Capitão do time</th>
                                                 <th>Pa&iacute;s</th>
-                                                <th>Score</th>
+                                                <th>Pontuação</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -103,11 +103,11 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>Posici&oacute;n</th>
-                                                <th>Equipo</th>
-                                                <th>Capit&aacute;n</th>
+                                                <th>Posição</th>
+                                                <th>Equipe</th>
+                                                <th>Capitão do time</th>
                                                 <th>Pa&iacute;s</th>
-                                                <th>Score</th>
+                                                <th>Pontuação</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -121,11 +121,11 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>Posici&oacute;n</th>
-                                                <th>Equipo</th>
-                                                <th>Capit&aacute;n</th>
+                                                <th>Posição</th>
+                                                <th>Equipe</th>
+                                                <th>Capitão do time</th>
                                                 <th>Pa&iacute;s</th>
-                                                <th>Score</th>
+                                                <th>Pontuação</th>
                                             </tr>
                                         </thead>
                                         <tbody>

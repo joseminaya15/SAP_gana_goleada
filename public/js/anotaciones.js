@@ -49,14 +49,14 @@ function showModalAlert(dato,contador, id){
 	var nameTitle   = modalAlert.find('.mdl-card__title').find('h2');
 	var description = modalAlert.find('.mdl-card__supporting-text');
 	if(dato == 1){
-		nameTitle.text('Contáctanos');
-		description.html('<p>Queremos ponernos en contacto con usted, por favor escribirnos a <a href="mailto:carina.gonzales@sap.com">carina.gonzales@sap.com</a></p>');
+		nameTitle.text('Entre em contato conosco');
+		description.html('<p>Queremos entrar em contato com você, por favor nos escreva um email: <a href="mailto:carina.gonzales@sap.com">carina.gonzales@sap.com</a></p>');
 	}else if(dato == 2) {
-		nameTitle.text('¡Metiste Goles!');
-		description.html('<p>Su oportunidad ha sido aceptada</p>');
+		nameTitle.text('Você marcou gols!');
+		description.html('<p>Sua oportunidade foi aceitada.</p>');
 	}else if(dato == 3) {
-		nameTitle.text('¡Goles Rechazados!');
-		description.html('<p>Su oportunidad ha sido rechazada, por favor ponerse en contacto con <a href="mailto:carina.gonzales@sap.com">carina.gonzales@sap.com</a></p>');
+		nameTitle.text('Seus gols foram rejeitados!');
+		description.html('<p>Sua oportunidade foi rejeitada, por favor entre em contato conosco. <a href="mailto:carina.gonzales@sap.com">carina.gonzales@sap.com</a></p>');
 	}
 	$.ajax({
 		data : {id : id},

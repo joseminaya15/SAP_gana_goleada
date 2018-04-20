@@ -9,15 +9,15 @@ function nuevaAnotacion(){
 		return;
 	}
 	if(deal_regis == '' || deal_regis == null){
-		msj('error', 'Ingrese el Deal Registration ID');
+		msj('error', 'Insira o ID do registro de transação');
 		return;
 	}
 	if(deal_regis.length < 6){
-		msj('error', 'Ingrese un código de 6 dígitos');
+		msj('error', 'Digite um código de 6 dígitos');
 		return;
 	}
 	if(deal_regis.substring(0, 2) < 17){
-		msj('error', 'Su código debe iniciar con un número mayor a 17');
+		msj('error', 'Seu código deve iniciar com um número maior que 17');
 		return;
 	}
 	/*if(descripcion.length > 500){
@@ -25,14 +25,14 @@ function nuevaAnotacion(){
 		return;
 	}*/
 	if(pais == '' || pais == null){
-		msj('error', 'Ingrese el pais');
+		msj('error', 'Digite o país');
 		return;
 	}
 	if(fecha == null || fecha == ''){
-		msj('error', 'Ingrese la fecha');
+		msj('error', 'Digite a data');
 	}
 	if(nameAnotacion == null || nameAnotacion == ''){
-		nameAnotacion = 'Cuentas nuevas (NNN)';
+		nameAnotacion = 'Contas novas (NNN)';
 	}
 	if(puntosGoles == null || puntosGoles == ''){
 		puntosGoles = 3;
@@ -57,7 +57,7 @@ function nuevaAnotacion(){
 				$('#descripcion').val("");
 				$('#pais').val("");
 				$('#fecha').val("");
-				msj('error', 'Se registró correctamente su anotación');
+				msj('error', 'Sua anotação foi registrada');
 				$('#idNuevaAnotacion').prop("disabled", false);
 	        }else {
 	        	msj('error', data.msj);
@@ -158,21 +158,21 @@ function restringirNum(){
 		if(cadenaAnalizar.charAt(0) == cadenaAnalizar.charAt(1) && cadenaAnalizar.charAt(1) == cadenaAnalizar.charAt(2) 
 			&& cadenaAnalizar.charAt(2) == cadenaAnalizar.charAt(3) && cadenaAnalizar.charAt(3) == cadenaAnalizar.charAt(4) 
 			&& cadenaAnalizar.charAt(4) == cadenaAnalizar.charAt(5)){
-			msj('error', 'Los código no pueden ser los mismos');
+			msj('error', 'Os códigos não podem ser os mesmos');
 			return;
 		}
 		if(parseInt(cadena1)+0 == cadenaAnalizar.charAt(0) && cadena2 == cadenaAnalizar.charAt(1) && cadena3 == cadenaAnalizar.charAt(2) 
 			&& cadena4 == cadenaAnalizar.charAt(3) && cadena5 == cadenaAnalizar.charAt(4) && cadena6 == cadenaAnalizar.charAt(5)){
-			msj('error', 'El código no pueden ser consecutivos');
+			msj('error', 'O código não pode ser consecutivo');
 			return;
 		}
 		if(cadenaAnalizar.substring(0, 2) < 17){
-			msj('error', 'Su código debe iniciar con un número mayor a 17');
+			msj('error', 'Seu código deve iniciar com um número maior que 17');
 			return;
 		}
 	}else {
 		if(cadenaAnalizar.length < 6){
-			msj('error', 'Ingrese un código de 6 dígitos');
+			msj('error', 'Digite um código de 6 dígitos');
 			return;
 		}
 	}
