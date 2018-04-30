@@ -116,7 +116,7 @@ class Anotaciones extends CI_Controller {
       $data['total_ca'] = 0;
       $data['total_wb'] = 0;
     }
-		$this->load->view('v_anotaciones', $data);
+		$this->load->view('es/v_anotaciones', $data);
 	}
   function cerrarCesion(){
       $data['error'] = EXIT_ERROR;

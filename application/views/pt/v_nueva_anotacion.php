@@ -94,15 +94,15 @@
                                 <div class="col-xs-12 mdl-puntos">
                                     <div class="punto-imagen">
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">  
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p>Casos de sucesso de clientes aprovados*</p>
+                                        <p>Oportunidades Cloud</p>
                                     </div>
                                     <div class="col-xs-2">
-                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="caso">
-                                            <input type="radio" id="caso" class="mdl-radio__button" name="options" value="3" onclick="selectAnotacion(this.id)">
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidad">
+                                            <input type="radio" id="oportunidad" class="mdl-radio__button" name="options" value="5" onclick="selectAnotacion(this.id)"> 
                                         </label>
                                     </div>
                                 </div>
@@ -123,14 +123,14 @@
                                 <div class="col-xs-12 mdl-puntos">
                                     <div class="punto-imagen">
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p>Oportunidades Cloud</p>
+                                        <p>Casos de sucesso de clientes aprovados*</p>
                                     </div>
                                     <div class="col-xs-2">
-                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidad">
-                                            <input type="radio" id="oportunidad" class="mdl-radio__button" name="options" value="5" onclick="selectAnotacion(this.id)"> 
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="caso">
+                                            <input type="radio" id="caso" class="mdl-radio__button" name="options" value="3" onclick="selectAnotacion(this.id)">
                                         </label>
                                     </div>
                                 </div>

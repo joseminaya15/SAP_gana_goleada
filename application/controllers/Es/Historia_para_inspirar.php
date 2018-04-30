@@ -14,7 +14,7 @@ class Historia_para_inspirar extends CI_Controller {
 	public function index(){
         $data['nombre_capitan'] = ucwords($this->session->userdata('Nombre_capitan'));
         $data['nombre_canal']   = ucwords($this->session->userdata('Nombre_canal'));
-		$this->load->view('v_historia', $data);
+		$this->load->view('es/v_historia', $data);
 	}
     function cerrarCesion(){
         $data['error'] = EXIT_ERROR;

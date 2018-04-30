@@ -71,7 +71,7 @@ class Ranking_goleadores extends CI_Controller {
             $count3++;
         }
         $data['tabla3'] = $html3;
-		$this->load->view('v_ranking_goleadores', $data);
+		$this->load->view('es/v_ranking_goleadores', $data);
 	}
     function cerrarCesion(){
         $data['error'] = EXIT_ERROR;
