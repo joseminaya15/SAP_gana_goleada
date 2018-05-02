@@ -76,7 +76,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php echo $tabla ?>
+                                            <?php echo $tabla1 ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -94,7 +94,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php echo $tabla1 ?>
+                                            <?php echo $tabla2 ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -112,7 +112,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php echo $tabla2 ?>
+                                            <?php echo $tabla3 ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -130,7 +130,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php echo $tabla3 ?>
+                                            <?php echo $tabla4 ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -148,7 +148,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php echo $tabla4 ?>
+                                            <?php echo $tabla5 ?>
                                         </tbody>
                                     </table>
                                 </div>

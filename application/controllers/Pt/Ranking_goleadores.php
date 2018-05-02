@@ -29,7 +29,7 @@ class Ranking_goleadores extends CI_Controller {
             $count++;
         }
         $data['tabla'] = $html;
-        $goles1 = $this->M_datos->getRankGolesSur();
+        $goles1 = $this->M_datos->getRankGolesNorte();
         $html1  = null;
         $count1 = 1;
         foreach ($goles1 as $key) {
@@ -57,7 +57,7 @@ class Ranking_goleadores extends CI_Controller {
             $count2++;
         }
         $data['tabla2'] = $html2;
-        $goles3 = $this->M_datos->getRankGolesSur();
+        $goles3 = $this->M_datos->getRankGolesBrasil();
         $html3  = null;
         $count3 = 1;
         foreach ($goles3 as $key) {
@@ -71,11 +71,11 @@ class Ranking_goleadores extends CI_Controller {
             $count3++;
         }
         $data['tabla3'] = $html3;
-        $goles4 = $this->M_datos->getRankGolesSur();
+        $goles4 = $this->M_datos->getRankGolesMexico();
         $html4  = null;
         $count4 = 1;
         foreach ($goles4 as $key) {
-            $html3 .= '<tr>
+            $html4 .= '<tr>
                         <td>#'.$count4.'</td>
                         <td>'.$key->Nombre_canal.'</td>
                         <td>'.$key->Nombre_capitan.'</td>
@@ -85,6 +85,20 @@ class Ranking_goleadores extends CI_Controller {
             $count4++;
         }
         $data['tabla4'] = $html4;
+        $goles5 = $this->M_datos->getRankGolesGeneral();
+        $html5  = null;
+        $count5 = 1;
+        foreach ($goles5 as $key) {
+            $html5 .= '<tr>
+                        <td>#'.$count5.'</td>
+                        <td>'.$key->Nombre_canal.'</td>
+                        <td>'.$key->Nombre_capitan.'</td>
+                        <td>'.$key->Pais.'</td>
+                        <td>'.$key->Status.' goles</td>
+                    </tr>';
+            $count5++;
+        }
+        $data['tabla5'] = $html5;
 		$this->load->view('pt/v_ranking_goleadores', $data);
 	}
     function cerrarCesion(){

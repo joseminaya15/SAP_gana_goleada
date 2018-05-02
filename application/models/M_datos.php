@@ -96,7 +96,7 @@ class M_datos extends  CI_Model{
                  WHERE a.Id_serv = s.Id
                    AND a.id_user = u.Id
                    AND a.Flag = 2
-                   AND a.Pais IN ('Perú')
+                   AND a.Pais IN ('Colombia','Costa Rica','Ecuador','El Salvador','Honduras','Nicaragua','Panamá','Puerto Rico','República Dominicana','Venezuela')
               GROUP BY a.id_user
               ORDER BY SUM(a.Goles) DESC
               LIMIT 5";
@@ -116,7 +116,7 @@ class M_datos extends  CI_Model{
                  WHERE a.Id_serv = s.Id
                    AND a.id_user = u.Id
                    AND a.Flag = 2
-                   AND a.Pais IN ('Francia')
+                   AND a.Pais IN ('Argentina','Bolivia','Chile','Paraguay','Perú','Uruguay')
               GROUP BY a.id_user
               ORDER BY SUM(a.Goles) DESC
               LIMIT 5";
@@ -156,7 +156,27 @@ class M_datos extends  CI_Model{
                  WHERE a.Id_serv = s.Id
                    AND a.id_user = u.Id
                    AND a.Flag = 2
-                   AND a.Pais IN ('Mexico')
+                   AND a.Pais IN ('México')
+              GROUP BY a.id_user
+              ORDER BY SUM(a.Goles) DESC
+              LIMIT 5";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+    function getRankGolesGeneral(){
+      $sql = "SELECT s.*,
+                       a.*,
+                       u.Nombre_canal,
+                       u.Nombre_capitan,
+                       u.Pais,
+                       SUM(a.Goles) as Status
+                  FROM servicios s,
+                       anotaciones a,
+                       users u
+                 WHERE a.Id_serv = s.Id
+                   AND a.id_user = u.Id
+                   AND a.Flag = 2
+                   AND a.Pais IN ('México', 'Brasil', 'Argentina','Bolivia','Chile','Paraguay','Perú','Uruguay', 'Colombia','Costa Rica','Ecuador','El Salvador','Honduras','Nicaragua','Panamá','Puerto Rico','República Dominicana','Venezuela')
               GROUP BY a.id_user
               ORDER BY SUM(a.Goles) DESC
               LIMIT 5";
