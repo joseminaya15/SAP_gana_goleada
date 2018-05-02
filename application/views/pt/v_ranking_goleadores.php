@@ -56,13 +56,31 @@
                     </div>
                     <div class="mdl-card__supporting-text p-t-0">
                         <ul class="nav nav-tabs m-b-20" role="tablist">
-                            <li role="presentation" class="active"><a href="#norte" aria-controls="norte" role="tab" data-toggle="tab">Norte</a></li>
+                            <li role="presentation" class="active"><a href="#lac" aria-controls="lac" role="tab" data-toggle="tab">LAC</a></li>
+                            <li role="presentation"><a href="#norte" aria-controls="norte" role="tab" data-toggle="tab">Norte</a></li>
                             <li role="presentation"><a href="#sur" aria-controls="sur" role="tab" data-toggle="tab">Sul</a></li>
                             <li role="presentation"><a href="#brasil" aria-controls="brasil" role="tab" data-toggle="tab">Brasil</a></li>
                             <li role="presentation"><a href="#mexico" aria-controls="mexico" role="tab" data-toggle="tab">M&eacute;xico</a></li>
-                            <li role="presentation"><a href="#lac" aria-controls="lac" role="tab" data-toggle="tab">LAC</a></li>
                         </ul>
                         <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade" id="lac">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Posição</th>
+                                                <th>Equipe</th>
+                                                <th>Capitão do time</th>
+                                                <th>Pa&iacute;s</th>
+                                                <th>Pontuação</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php echo $tabla5 ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                             <div role="tabpanel" class="tab-pane fade in active" id="norte">
                                 <div class="table-responsive">
                                     <table class="table">
@@ -131,24 +149,6 @@
                                         </thead>
                                         <tbody>
                                             <?php echo $tabla4 ?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade" id="lac">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Posição</th>
-                                                <th>Equipe</th>
-                                                <th>Capitão do time</th>
-                                                <th>Pa&iacute;s</th>
-                                                <th>Pontuação</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php echo $tabla5 ?>
                                         </tbody>
                                     </table>
                                 </div>
