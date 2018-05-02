@@ -71,6 +71,20 @@ class Ranking_goleadores extends CI_Controller {
             $count3++;
         }
         $data['tabla3'] = $html3;
+        $goles4 = $this->M_datos->getRankGolesSur();
+        $html4  = null;
+        $count4 = 1;
+        foreach ($goles4 as $key) {
+            $html3 .= '<tr>
+                        <td>#'.$count4.'</td>
+                        <td>'.$key->Nombre_canal.'</td>
+                        <td>'.$key->Nombre_capitan.'</td>
+                        <td>'.$key->Pais.'</td>
+                        <td>'.$key->Status.' goles</td>
+                    </tr>';
+            $count4++;
+        }
+        $data['tabla4'] = $html4;
 		$this->load->view('es/v_ranking_goleadores', $data);
 	}
     function cerrarCesion(){

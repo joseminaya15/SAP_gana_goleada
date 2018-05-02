@@ -13,7 +13,7 @@ class Registro extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-		$this->load->view('v_registro');
+		$this->load->view('es/v_registro');
 	}
 	function registrar(){
 		$data['error'] = EXIT_ERROR;
