@@ -13,6 +13,9 @@ class Nueva_anotacion extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
+        if($this->session->userdata('usuario') == null){
+            header("location: Login");
+        }
         $data['nombre_capitan'] = ucwords($this->session->userdata('Nombre_capitan'));
         $data['nombre_canal']   = ucwords($this->session->userdata('Nombre_canal'));
 		$this->load->view('es/v_nueva_anotacion', $data);
