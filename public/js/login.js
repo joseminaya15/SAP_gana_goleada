@@ -173,3 +173,28 @@ function contactar(ids, btns){
       }
   });
 }
+function cambiarIdioma(){
+  var idioma = $('#Idioma').val();
+  if(idioma == 'Español'){
+    location.href = 'http://localhost/SAP_gana_goleada/es/login';
+  }else if(idioma == 'Inglés'){
+    location.href = 'http://localhost/SAP_gana_goleada/en/login';
+  }else if(idioma == 'Portugués'){
+    location.href = 'http://localhost/SAP_gana_goleada/pt/login';
+  }
+  $.ajax({
+    data  : {idioma : idioma},
+    url   : 'Login/cambiarIdioma',
+    type  : 'POST'
+  }).done(function(data){
+    try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        }else{
+          return;
+        }
+      } catch (err){
+        msj('error',err.message);
+      }
+  });
+}
