@@ -31,7 +31,13 @@
                     <a href="Login"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
                 </div>
                 <div class="header-right idioma">
-                    <a href="../Es/Login">Espa&ntilde;ol</a>
+                    <div class="mdl-idioma">
+                        <select class="selectpicker" id="IdiomaHome" name="Idioma" onchange="cambiarIdioma()">
+                            <option value="Portugués">Portugu&ecirc;s</option>
+                            <option value="Español">Espa&ntilde;ol</option>
+                            <option value="Inglés">English</option>
+                        </select>
+                    </div>
                     <h2 class="">Concurso para parceiros</h2>
                     <div class="background background1"></div>
                     <div class="background background2"></div>

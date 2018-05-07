@@ -93,6 +93,8 @@ body{
     width: 100%;
     background-color: #000000;
     z-index: 10;
+    display: flex;
+    align-items: center;
 }
 .header-left {
     padding: 18px 0 17px 25px;
@@ -111,14 +113,11 @@ body{
 .header-right{
     float: right;
     height: 68px;
-    max-width: 355px;
     width: 100%;
     display: flex;
     display: -webkit-flex;
     align-items: center;
-}
-.header-right.idioma{
-	max-width: 275px;
+    justify-content: flex-end;
 }
 .header-right.idioma a{
     color: #FFFFFF;
@@ -140,6 +139,7 @@ body{
 	line-height: 26px;
 	margin-right: 25px;
 	width: 100%;
+	max-width: 225px; 
     text-align: right;
 }
 .header-admin img{
@@ -905,6 +905,23 @@ header.dtp-header .dtp-actual-year {
 }
 .dtp-content circle[fill="#2196F3"] {
 	fill: #00A1E4;
+}
+/*MDL-SELECT*/
+.mdl-idioma .bootstrap-select{
+	width: 100% !important;
+}
+.mdl-idioma .dropdown-menu>li>a{
+	font-size: 14px;
+	color: #000000;
+}
+.mdl-idioma .bootstrap-select button{
+    box-shadow: none;
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    border: none;
+}
+.mdl-idioma .bootstrap-select .dropdown-toggle:focus{
+	outline: 0 !important;
 }
 @media ( min-width : 800px ) {
 	.dtp>.dtp-content {
