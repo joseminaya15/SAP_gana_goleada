@@ -182,7 +182,7 @@ function cambiarIdioma(){
   }else if(idioma == 'Portugués'){
     location.href = 'http://localhost/SAP_gana_goleada/pt/login';
   }
-  $.ajax({
+  $.ajax({ 
     data  : {idioma : idioma},
     url   : 'Login/cambiarIdioma',
     type  : 'POST'
