@@ -27,11 +27,11 @@
         <section id="login">
             <div class="fondo-imagen"></div>
             <div class="header">
-                <div class="header-left">
+                <div class="header-left home">
                     <a href="Login"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_home.png"></a>
                 </div>
                 <div class="header-right home">
-                    <h2 class="">Concurso para partners SMB</h2>
+                    <h2 class="">Competition for partners SMB</h2>
                     <div class="background background1"></div>
                     <div class="background background2"></div>
                     <div class="background background3"></div>
@@ -39,7 +39,7 @@
             </div>
             <div class="container">
                 <div class="text-right back">
-                    <a href="Login" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout"><i class="mdi mdi-arrow_back"></i>Regresar</a>
+                    <a href="Login" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout"><i class="mdi mdi-arrow_back"></i>Return</a>
                 </div>
                 <div class="mdl-card mdl-card-login mdl-registro">
                     <div class="mdl-card__title">
@@ -47,17 +47,17 @@
                     </div>
                     <div class="mdl-card__supporting-text col-xs-12">
                         <div class="col-xs-12">
-                            <h2>Nuevo registro</h2>
+                            <h2>New register</h2>
                         </div>
                         <div class="col-sm-6">
                             <div class="mdl-input">
-                                <input type="text" class="form-control" autocomplete="off" placeholder="Nombre completo del capit&aacute;n" id="nombre" maxlength="50" onkeypress="return soloLetras(event);">
+                                <input type="text" class="form-control" autocomplete="off" placeholder="Full Name of the captain" id="nombre" maxlength="50" onkeypress="return soloLetras(event);">
                             </div>
                             <div class="mdl-input">
-                                <input type="text" class="form-control" autocomplete="off" placeholder="Nombre del Canal" id="canal" maxlength="50">
+                                <input type="text" class="form-control" autocomplete="off" placeholder="Channel Name" id="canal" maxlength="50">
                             </div>
                             <div class="mdl-select" id="divPais">
-                                <select class="selectpicker" title="País" id="pais" onchange="cambiarPais();">
+                                <select class="selectpicker" title="Country" id="pais" onchange="cambiarPais();">
                                     <option value="Argentina">Argentina</option>
                                     <option value="Bolivia">Bolivia</option>
                                     <option value="Brasil">Brasil</option>
@@ -81,10 +81,10 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="mdl-input">
-                                <input type="text" class="form-control" autocomplete="off" placeholder="Correo electr&oacute;nico" id="correo">
+                                <input type="text" class="form-control" autocomplete="off" placeholder="Email" id="correo">
                             </div>
                             <div class="mdl-input">
-                                <input type="password" class="form-control" autocomplete="off" placeholder="Contrase&ntilde;a" id="password">
+                                <input type="password" class="form-control" autocomplete="off" placeholder="Password" id="password">
                             </div>
                             <div class="mdl-select" id="divPartner">
                                 <select class="selectpicker" title="Partner ID" id="partner">
@@ -94,11 +94,11 @@
                                 <div class="col-xs-9 p-0">
                                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
                                         <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-                                        <span class="mdl-checkbox__label"><a>Acepto t&eacute;rminos y condiciones</a></span>
+                                        <span class="mdl-checkbox__label"><a>I accept terms ans conditions</a></span>
                                     </label>
                                 </div>
                                 <div class="col-xs-3 p-0 text-right">
-                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="registrar();">Grabar</button>
+                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="registrar();">Save</button>
                                 </div>
                             </div>
                         </div>

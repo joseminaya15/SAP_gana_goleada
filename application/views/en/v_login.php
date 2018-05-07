@@ -32,7 +32,7 @@
                 </div>
                 <div class="header-right idioma">
                     <a href="../Pt/Login">Português</a>
-                    <h2 class="">Concurso para partners SMB</h2>
+                    <h2 class="">Competition for partners SMB</h2>
                     <div class="background background1"></div>
                     <div class="background background2"></div>
                     <div class="background background3"></div>
@@ -45,16 +45,16 @@
                             <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
                         </div>
                         <div class="col-sm-6 m-t-50">
-                            <h2 class="title_login">Ingreso a la cancha</h2>
+                            <h2 class="title_login">Entry to the court</h2>
                             <div class="mdl-input transparent">
                                 <input type="text" class="form-control" placeholder="email" id="correo" onkeyup="verificarDatos(event);">
                             </div>
                             <div class="mdl-input transparent">
-                                <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password" onkeyup="verificarDatos(event);">
+                                <input type="password" class="form-control" placeholder="password" id="password" onkeyup="verificarDatos(event);">
                             </div>
                             <div class="m-t-20">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar" onclick="goToRegister()">Registrarse<i class="mdi mdi-play_arrow"></i></button>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="ingresar()">Ingresar<i class="mdi mdi-play_arrow"></i></button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar" onclick="goToRegister()">Register<i class="mdi mdi-play_arrow"></i></button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="ingresar()">Login<i class="mdi mdi-play_arrow"></i></button>
                             </div>
                         </div>
                     </div>
