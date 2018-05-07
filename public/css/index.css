@@ -138,7 +138,7 @@ body{
 	font-family: 'RobotoRegular';
 	font-size: 20px;
 	line-height: 26px;
-	margin-right: 35px;
+	margin-right: 25px;
 	width: 100%;
     text-align: right;
 }
@@ -359,7 +359,7 @@ body{
 .mdl-card-menu .mdl-card__supporting-text p{
     font-size: 25px;
     color: #FFFFFF;
-    max-width: 185px;
+    max-width: 175px;
     line-height: 28px;
 }
 .mdl-card-anotaciones,

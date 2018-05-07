@@ -59,7 +59,7 @@ class Admin extends CI_Controller {
         }
         $data['tabla'] = $html;
     }
-		$this->load->view('es/v_admin', $data);
+		$this->load->view('en/v_admin', $data);
 	}
   function cerrarCesion(){
     $data['error'] = EXIT_ERROR;
