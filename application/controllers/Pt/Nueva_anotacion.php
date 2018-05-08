@@ -65,7 +65,7 @@ class Nueva_anotacion extends CI_Controller {
                                     'Id_serv'           => $id_serv,
                                     'id_user'           => $this->session->userdata('Id_user'),
                                     'flg_pais'          => 1,
-                                    'lenguaje'          => $this->session->userdata('idioma'));
+                                    'lenguaje'          => 'Español');
                 $datosInsert = $this->M_datos->insertarDatos($dataInsert, 'anotaciones');
                 $this->sendEmailAnotacion($this->session->userdata('usuario'));
             }

@@ -4,6 +4,7 @@ function nuevaAnotacion(){
 	var descripcion = $('#descripcion').val();
 	var pais 	    = $('#pais').val();
 	var fecha 	    = $('#fecha').val();
+	var servicio    = '';
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese su empresa');
 		return;
@@ -32,7 +33,17 @@ function nuevaAnotacion(){
 		msj('error', 'Digite a data');
 	}
 	if(nameAnotacion == null || nameAnotacion == ''){
-		nameAnotacion = 'Contas novas (NNN)';
+		servicio = 'Won & Booked (W/B)';
+	}else {
+		if(nameAnotacion == 'Contas novas (NNN)'){
+			servicio = 'Cuentas nuevas (NNN)';
+		}else if(nameAnotacion == 'Oportunidades Cloud'){
+			servicio = 'Oportunidades generadas para Cloud';
+		}else if(nameAnotacion == 'Oportunidades geradas a partir de Social Selling'){
+			servicio = 'Oportunidades generadas de Social Selling';
+		}else if(nameAnotacion == 'Casos de sucesso de clientes aprovados*'){
+			servicio = 'Casos de éxitos de clientes aprobados*';
+		}
 	}
 	if(puntosGoles == null || puntosGoles == ''){
 		puntosGoles = 3;
@@ -45,7 +56,7 @@ function nuevaAnotacion(){
 				pais 	    : pais,
 				fecha 	    : fecha,
 				goles 	    : puntosGoles,
-				servicio    : nameAnotacion},
+				servicio    : servicio},
 		url  : 'Nueva_anotacion/nuevaAnotacion',
 		type : 'POST'
 	}).done(function(data){
