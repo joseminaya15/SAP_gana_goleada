@@ -16,7 +16,7 @@ class Admin extends CI_Controller {
     if($this->session->userdata('usuario') == null){
         header("location: Login");
     }
-    $datos = $this->M_datos->getDatosAdmin();
+    $datos = $this->M_datos->getDatosAdmin($this->session->userdata('idioma'));
     if(count($datos) == 0){
         $data['tabla'] = '';
     }else {

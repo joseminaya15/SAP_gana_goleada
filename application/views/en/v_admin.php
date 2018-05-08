@@ -37,7 +37,7 @@
                 <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_admin.svg"></a>
             </div>
             <div class="header-right">
-                <h2 class="">Concurso para partners SMB</h2>
+                <h2 class="">Competition for partners SMB</h2>
                 <div class="background background1"></div>
                 <div class="background background2"></div>
                 <div class="background background3"></div>
@@ -46,7 +46,7 @@
         <div id="content" class="mdl-card-container">
             <div class="col-xs-12 header-admin">
                 <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
-                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout m-t-50" onclick="cerrarCesion()">Cerrar Sesión</a>
+                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout m-t-50" onclick="cerrarCesion()">Sign out</a>
             </div>
             <div class="mdl-card mdl-card-table md-admin">
                 <div class="table-responsive">
@@ -54,12 +54,12 @@
                         <thead>
                             <tr class="tr-header-reporte">
                                 <th class="text-center">Deal ID #</th>
-                                <th class="text-left">Oportunidad</th>
-                                <th class="text-left">Nombre Canal</th>
-                                <th class="text-left">Nombre Capitán</th>
-                                <th class="text-left">País</th>
-                                <th class="text-left">Estado</th>
-                                <th class="text-center">Acción</th>
+                                <th class="text-left">Opportunities</th>
+                                <th class="text-left">Name channel</th>
+                                <th class="text-left">Captain name</th>
+                                <th class="text-left">Country</th>
+                                <th class="text-left">Status</th>
+                                <th class="text-center">Action</th>
                             </tr>
                         </thead>
                       <tbody id="tabla">

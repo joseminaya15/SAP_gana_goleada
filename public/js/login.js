@@ -1,4 +1,5 @@
 function ingresar(){
+  var idioma   = $('#Idioma').val();
 	var usuario  = $('#correo').val();
 	var password = $('#password').val();
 	if(usuario == null){
@@ -19,7 +20,8 @@ function ingresar(){
 	}
 	$.ajax({
 		data : {usuario  : usuario,
-				    password : password},
+				    password : password,
+            idioma   : idioma},
 		url  : 'Login/ingresar',
 		type : 'POST'
 	}).done(function(data){
@@ -176,11 +178,11 @@ function contactar(ids, btns){
 function cambiarIdioma(){
   var idioma = $('#Idioma').val();
   if(idioma == 'Español'){
-    location.href = 'http://localhost/SAP_gana_goleada/es/login';
+    location.href = 'http://www.sap-latam.com/gana_por_goleada/es/Login';
   }else if(idioma == 'Inglés'){
-    location.href = 'http://localhost/SAP_gana_goleada/en/login';
+    location.href = 'http://www.sap-latam.com/gana_por_goleada/en/Login';
   }else if(idioma == 'Portugués'){
-    location.href = 'http://localhost/SAP_gana_goleada/pt/login';
+    location.href = 'http://www.sap-latam.com/gana_por_goleada/pt/Login';
   }
   $.ajax({ 
     data  : {idioma : idioma},

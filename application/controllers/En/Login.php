@@ -21,6 +21,7 @@ class Login extends CI_Controller {
 		$data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
+         	$idioma  = $this->input->post('idioma');
 			$usuario  = $this->input->post('usuario');
 			$password = $this->input->post('password');
 
@@ -40,7 +41,8 @@ class Login extends CI_Controller {
 							$session = array('usuario' 		  => $usuario,
 											 'Nombre_capitan' => $username[0]->Nombre_capitan,
 											 'Nombre_canal'   => $username[0]->Nombre_canal,
-											 'Id_user' 		  => $username[0]->Id);
+											 'Id_user' 		  => $username[0]->Id,
+											 'idioma' 	  	  => $idioma);
 			          		$this->session->set_userdata($session);
 			          		$data['href'] = 'Menu';
 			          		$data['error'] = EXIT_SUCCESS;

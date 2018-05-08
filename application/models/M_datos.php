@@ -64,7 +64,7 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-    function getDatosAdmin(){
+    function getDatosAdmin($lenguaje){
         $sql = "SELECT a.Id,
                        a.Deal_registration,
                        a.Flag,
@@ -78,7 +78,8 @@ class M_datos extends  CI_Model{
                        users u
                  WHERE a.Id_serv = s.Id
                    AND a.id_user = u.Id
-                   AND a.Flag IN (1,3)
+                   AND a.Flag IN (1,3),
+                   AND a.lenguaje LIKE '%".$lenguaje."%'
               ORDER BY a.Flag ASC";
         $result = $this->db->query($sql);
         return $result->result();
