@@ -110,12 +110,12 @@
             <div class="modal-dialog modal-large" role="document">
                 <div class="modal-content">
                     <div class="mdl-card">
-                        <div class="mdl-card__title">
+                        <div class="mdl-card__title p-b-0">
                             <h2>T&eacute;rminos y Condiciones</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
                             <div class="conditions">
-                                <h2>Bases y Condiciones para el Concurso “Gana por Goleada con SAP” para Partners de SAP</h2>
+                                <p>Bases y Condiciones para el Concurso “Gana por Goleada con SAP” para Partners de SAP</p>
                                 <h2>1. Forma de participaci&oacute;n</h2>
                                 <p>SAP Latinoam&eacute;rica (en adelante, el "Organizador" o "SAP"), realizar&aacute; una actividad de car&aacute;cter gratuito (en adelante el "Concurso") en el que participar&aacute;n todos aquellos partners que est&eacute;n activos en el programa Partner Edge (en adelante, los "Partners") y respondan a la propuesta del Concurso.</p>
                                 <p>Las Market Units (MU) que participan son:</p>

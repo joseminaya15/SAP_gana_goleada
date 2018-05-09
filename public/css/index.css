@@ -936,9 +936,9 @@ header.dtp-header .dtp-actual-year {
 }
 .modal-large .mdl-card .mdl-card__title h2 {
     text-align: center;
-    font-size: 48px;
+    font-size: 28px;
     font-family: 'RobotoBold';
-    margin: 0;
+    margin: auto;
 }
 .modal-large .mdl-card .mdl-card__title p {
     font-size: 26px;
