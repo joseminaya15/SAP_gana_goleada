@@ -86,3 +86,6 @@ function initButtonCalendarDaysRange(idButton, minDate, maxDate) {
 	var valueNewInput = $("#"+newInput).val();
 	id.text(valueNewInput);
 }
+function modalTerminos(){
+	$('#ModalTerminos').modal('show');
+}

@@ -700,7 +700,7 @@ input::placeholder {
 	padding: 25px;
 }
 /*MODAL*/
-.modal.fade .modal-dialog{
+.modal-center.modal.fade .modal-dialog{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -723,7 +723,7 @@ input::placeholder {
     max-width: 300px;
     width: 100%;
 }
-.modal.fade.in .modal-dialog{
+.modal-center.modal.fade.in .modal-dialog{
 	opacity: 1;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -922,6 +922,43 @@ header.dtp-header .dtp-actual-year {
 }
 .mdl-idioma .bootstrap-select .dropdown-toggle:focus{
 	outline: 0 !important;
+}
+/*MODAL TERMINOS*/
+.modal-large{
+	width: 100% !important;
+    margin: 0;
+}
+.modal-large .mdl-card {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    padding: 16px;
+}
+.modal-large .mdl-card .mdl-card__title h2 {
+    text-align: center;
+    font-size: 48px;
+    font-family: 'RobotoBold';
+    margin: 0;
+}
+.modal-large .mdl-card .mdl-card__title p {
+    font-size: 26px;
+    text-decoration: underline;
+}
+.modal-large .mdl-card .mdl-card__supporting-text .conditions h2 {
+    font-size: 20px;
+    font-family: 'RobotoMedium';
+    margin: 15px 0;
+    line-height: 24px;
+    color: #000;
+}
+.modal-large .mdl-card .mdl-card__supporting-text .conditions p {
+    line-height: 20px;
+    margin: 8px 0;
+}
+.modal-large .mdl-card .mdl-card__supporting-text .conditions a {
+    line-height: 20px;
+    margin: 8px 0;
+    color: #000000;
 }
 @media ( min-width : 800px ) {
 	.dtp>.dtp-content {

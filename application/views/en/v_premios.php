@@ -53,8 +53,8 @@
                 <div class="mdl-card mdl-card-ranking mdl-premios m-t-5">
                     <div class="mdl-card__supporting-text m-t-10 p-0">
                         <ul class="nav nav-tabs" role="tablist">
-                            <li class="active"><a href="#Tabhome" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                            <li><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">SAP B1</a></li>
+                            <li class="active"><a href="#Tabhome" aria-controls="home" role="tab" data-toggle="tab">GB</a></li>
+                            <li><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">B1</a></li>
                         </ul>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active p-0 m-b-20" id="Tabhome">
