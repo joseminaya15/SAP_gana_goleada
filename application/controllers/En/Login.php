@@ -42,7 +42,7 @@ class Login extends CI_Controller {
 											 'Nombre_capitan' => $username[0]->Nombre_capitan,
 											 'Nombre_canal'   => $username[0]->Nombre_canal,
 											 'Id_user' 		  => $username[0]->Id,
-											 'idioma' 	  	  => $idioma);
+											 'idioma' 	  	  => 'Inglés');
 			          		$this->session->set_userdata($session);
 			          		$data['href'] = 'Menu';
 			          		$data['error'] = EXIT_SUCCESS;
