@@ -5,48 +5,67 @@ function nuevaAnotacion(){
 	var pais 	    = $('#pais').val();
 	var fecha 	    = $('#fecha').val();
 	var servicio    = '';
+
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese su empresa');
 		return;
 	}
-	if(deal_regis == '' || deal_regis == null){
-		msj('error', 'Insira o ID do registro de transação');
-		return;
-	}
-	if(deal_regis.length < 6){
-		msj('error', 'Digite um código de 6 dígitos');
-		return;
-	}
-	if(deal_regis.substring(0, 2) < 17){
-		msj('error', 'Seu código deve iniciar com um número maior que 17');
-		return;
-	}
-	/*if(descripcion.length > 500){
-		msj('error', 'La descripcion debe contener menos de 500 caracteres');
-		return;
-	}*/
 	if(pais == '' || pais == null){
 		msj('error', 'Digite o país');
 		return;
 	}
-	if(fecha == null || fecha == ''){
-		msj('error', 'Digite a data');
-	}
-	if(nameAnotacion == null || nameAnotacion == ''){
-		servicio = 'Won & Booked (W/B)';
-	}else {
-		if(nameAnotacion == 'Contas novas (NNN)'){
-			servicio = 'Cuentas nuevas (NNN)';
-		}else if(nameAnotacion == 'Oportunidades Cloud'){
-			servicio = 'Oportunidades generadas para Cloud';
-		}else if(nameAnotacion == 'Oportunidades geradas a partir de Social Selling'){
-			servicio = 'Oportunidades generadas de Social Selling';
-		}else if(nameAnotacion == 'Casos de successo aprovados (clientes)*'){
-			servicio = 'Casos de éxitos de clientes aprobados*';
+	if(tab == 1) {
+		if(nameAnotacion == null || nameAnotacion == ''){
+			nameAnotacion = '# Oportunidades generadas para B1';
 		}
-	}
-	if(puntosGoles == null || puntosGoles == ''){
-		puntosGoles = 3;
+		if(puntosGoles == null || puntosGoles == ''){
+			puntosGoles = 4;
+		}
+		if(nameAnotacion == '# Oportunidades B1'){
+			servicio = '# Oportunidades generadas para B1';
+		}
+		if(nameAnotacion == '# Campanhas executadas a partir da Agência Virtual'){
+			servicio = '# Campañas ejecutadas desde la Agencia Virtual';
+		}
+		if(nameAnotacion == 'Casos de Referências B1 aprovadas pela SAP'){
+			servicio = 'Casos de Referencias de B1 aprobados por SAP';
+		}
+	}else {
+		if(deal_regis == '' || deal_regis == null){
+			msj('error', 'Insira o ID do registro de transação');
+			return;
+		}
+		if(deal_regis.length < 6){
+			msj('error', 'Digite um código de 6 dígitos');
+			return;
+		}
+		if(deal_regis.substring(0, 2) < 17){
+			msj('error', 'Seu código deve iniciar com um número maior que 17');
+			return;
+		}
+		/*if(descripcion.length > 500){
+			msj('error', 'La descripcion debe contener menos de 500 caracteres');
+			return;
+		}*/
+		if(fecha == null || fecha == ''){
+			msj('error', 'Digite a data');
+		}
+		if(nameAnotacion == null || nameAnotacion == ''){
+			servicio = 'Won & Booked (W/B)';
+		}else {
+			if(nameAnotacion == 'Contas novas (NNN)'){
+				servicio = 'Cuentas nuevas (NNN)';
+			}else if(nameAnotacion == 'Oportunidades Cloud'){
+				servicio = 'Oportunidades generadas para Cloud';
+			}else if(nameAnotacion == 'Oportunidades geradas a partir de Social Selling'){
+				servicio = 'Oportunidades generadas de Social Selling';
+			}else if(nameAnotacion == 'Casos de successo aprovados (clientes)*'){
+				servicio = 'Casos de éxitos de clientes aprobados*';
+			}
+		}
+		if(puntosGoles == null || puntosGoles == ''){
+			puntosGoles = 4;
+		}
 	}
 	$('#idNuevaAnotacion').prop("disabled", true);
 	$.ajax({
