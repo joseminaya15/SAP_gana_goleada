@@ -184,4 +184,11 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
+    function getIdServicioByNombre($servicio){
+        $sql = "SELECT s.Id
+                  FROM servicios s
+                 WHERE Tipo_serv LIKE '%".$servicio."%'";
+        $result = $this->db->query($sql);
+        return $result->row()->Id;
+    }
 }

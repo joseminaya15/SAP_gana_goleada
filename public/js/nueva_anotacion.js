@@ -4,38 +4,62 @@ function nuevaAnotacion(){
 	var descripcion = $('#descripcion').val();
 	var pais 	    = $('#pais').val();
 	var fecha 	    = $('#fecha').val();
+	var servicio    = '';
+
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese su empresa');
 		return;
 	}
-	if(deal_regis == '' || deal_regis == null){
-		msj('error', 'Ingrese el Deal Registration ID');
-		return;
-	}
-	if(deal_regis.length < 6){
-		msj('error', 'Ingrese un código de 6 dígitos');
-		return;
-	}
-	if(deal_regis.substring(0, 2) < 17){
-		msj('error', 'Su código debe iniciar con un número mayor a 17');
-		return;
-	}
-	/*if(descripcion.length > 500){
-		msj('error', 'La descripcion debe contener menos de 500 caracteres');
-		return;
-	}*/
 	if(pais == '' || pais == null){
 		msj('error', 'Ingrese el pais');
 		return;
 	}
-	if(fecha == null || fecha == ''){
-		msj('error', 'Ingrese la fecha');
-	}
-	if(nameAnotacion == null || nameAnotacion == ''){
-		nameAnotacion = 'Cuentas nuevas (NNN)';
-	}
-	if(puntosGoles == null || puntosGoles == ''){
-		puntosGoles = 3;
+	if(tab == 1) {
+		if(nameAnotacion == null || nameAnotacion == ''){
+			nameAnotacion = '# Oportunidades generadas para B1';
+		}
+		if(puntosGoles == null || puntosGoles == ''){
+			puntosGoles = 4;
+		}
+		if(nameAnotacion == '# Oportunidades generadas para B1' || nameAnotacion == '# Campañas ejecutadas desde la Agencia Virtual' || nameAnotacion == 'Casos de Referencias de B1 aprobados por SAP'){
+			servicio = nameAnotacion;
+		}
+	}else {
+		if(deal_regis == '' || deal_regis == null){
+			msj('error', 'Ingrese el Deal Registration ID');
+			return;
+		}
+		if(deal_regis.length < 6){
+			msj('error', 'Ingrese un código de 6 dígitos');
+			return;
+		}
+		if(deal_regis.substring(0, 2) < 17){
+			msj('error', 'Su código debe iniciar con un número mayor a 17');
+			return;
+		}
+		/*if(descripcion.length > 500){
+			msj('error', 'La descripcion debe contener menos de 500 caracteres');
+			return;
+		}*/
+		if(fecha == null || fecha == ''){
+			msj('error', 'Ingrese la fecha');
+		}
+		if(nameAnotacion == null || nameAnotacion == ''){
+			servicio = 'Won & Booked (W/B)';
+		}else {
+			if(nameAnotacion == 'Cuentas nuevas (NNN)'){
+				servicio = 'Cuentas nuevas (NNN)';
+			}if(nameAnotacion == 'Oportunidades generadas para Cloud'){
+				servicio = 'Oportunidades generadas para Cloud';
+			}if(nameAnotacion == 'Oportunidades generadas de Social Selling'){
+				servicio = 'Oportunidades generadas de Social Selling';
+			}if(nameAnotacion == 'Casos de successo aprovados (clientes)*'){
+				servicio = 'Casos de éxitos de clientes aprobados*';
+			}
+		}
+		if(puntosGoles == null || puntosGoles == ''){
+			puntosGoles = 4;
+		}
 	}
 	$('#idNuevaAnotacion').prop("disabled", true);
 	$.ajax({
@@ -45,7 +69,7 @@ function nuevaAnotacion(){
 				pais 	    : pais,
 				fecha 	    : fecha,
 				goles 	    : puntosGoles,
-				servicio    : nameAnotacion},
+				servicio    : servicio},
 		url  : 'Nueva_anotacion/nuevaAnotacion',
 		type : 'POST'
 	}).done(function(data){
@@ -177,6 +201,7 @@ function restringirNum(){
 		}
 	}
 }
+var tab = 0;
 function selectTab(id){
 	var idPanel      = $('#Tab'+id);
 	card.find('.mdl-card__title').find('h2').text();
@@ -188,6 +213,7 @@ function selectTab(id){
 	$('#deal_regis').fadeIn('fast');
 	$('#descripcion').fadeOut('fast');
 	$('.info').removeClass('show');
+	tab = 1;
 }
 $('#sap').click(function() {
 	$('#deal_regis').fadeOut('fast');

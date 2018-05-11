@@ -126,7 +126,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-10 p-l-0">
-                                        <p>Casos de &eacute;xitos de clientes aprobados*</p>
+                                        <p>Casos de successo aprovados (clientes)*</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="caso">

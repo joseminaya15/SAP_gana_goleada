@@ -41,7 +41,7 @@ function nuevaAnotacion(){
 			servicio = 'Oportunidades generadas para Cloud';
 		}else if(nameAnotacion == 'Oportunidades geradas a partir de Social Selling'){
 			servicio = 'Oportunidades generadas de Social Selling';
-		}else if(nameAnotacion == 'Casos de sucesso de clientes aprovados*'){
+		}else if(nameAnotacion == 'Casos de successo aprovados (clientes)*'){
 			servicio = 'Casos de éxitos de clientes aprobados*';
 		}
 	}
