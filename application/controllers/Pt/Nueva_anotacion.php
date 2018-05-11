@@ -45,7 +45,8 @@ class Nueva_anotacion extends CI_Controller {
             if(checkdate($arr_fecha[1], $arr_fecha[0], $arr_fecha[2]) == false){
                 $data['msj'] = 'La fecha ingresada no es correcta';
             }else {
-                if($servicio == 'Cuentas nuevas (NNN)'){
+                $id_serv = $this->M_datos->getIdServicioByNombre($servicio);
+                /*if($servicio == 'Cuentas nuevas (NNN)'){
                     $id_serv = 1;
                 }else if($servicio == 'Oportunidades generadas de Social Selling'){
                     $id_serv = 2;
@@ -55,7 +56,7 @@ class Nueva_anotacion extends CI_Controller {
                     $id_serv = 4;
                 }else if($servicio == 'Won & Booked (W/B)'){
                     $id_serv = 5;
-                }
+                }*/
                 $dataInsert = array('Empresa'           => $empresa,
                                     'Deal_registration' => $deal_reg,
                                     'descripcion'       => $descrip,

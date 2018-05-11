@@ -5,48 +5,67 @@ function nuevaAnotacion(){
 	var pais 	    = $('#pais').val();
 	var fecha 	    = $('#fecha').val();
 	var servicio    = '';
+
 	if(empresa == '' || empresa == null){
 		msj('error', 'Enter your company');
 		return;
 	}
-	if(deal_regis == '' || deal_regis == null){
-		msj('error', 'Enter the Deal Registration ID');
-		return;
-	}
-	if(deal_regis.length < 6){
-		msj('error', 'Enter a code of 6 digits');
-		return;
-	}
-	if(deal_regis.substring(0, 2) < 17){
-		msj('error', 'Your code should start with a number greater than 17');
-		return;
-	}
-	/*if(descripcion.length > 500){
-		msj('error', 'La descripcion debe contener menos de 500 caracteres');
-		return;
-	}*/
 	if(pais == '' || pais == null){
 		msj('error', 'Enter the country');
 		return;
 	}
-	if(fecha == null || fecha == ''){
-		msj('error', 'Enter the date');
-	}
-	if(nameAnotacion == null || nameAnotacion == ''){
-		servicio = 'Won & Booked (W/B)';
-	}else {
-		if(nameAnotacion == 'New accounts (NNN)'){
-			servicio = 'Cuentas nuevas (NNN)';
-		}if(nameAnotacion == 'Opportunities generated for Cloud'){
-			servicio = 'Oportunidades generadas para Cloud';
-		}if(nameAnotacion == 'Opportunities generated from Social Selling'){
-			servicio = 'Oportunidades generadas de Social Selling';
-		}if(nameAnotacion == 'Success stories of approved clients*'){
-			servicio = 'Casos de éxitos de clientes aprobados*';
+	if(tab == 1) {
+		if(nameAnotacion == null || nameAnotacion == ''){
+			nameAnotacion = '# Oportunidades generadas para B1';
 		}
-	}
-	if(puntosGoles == null || puntosGoles == ''){
-		puntosGoles = 3;
+		if(puntosGoles == null || puntosGoles == ''){
+			puntosGoles = 4;
+		}
+		if(nameAnotacion == '# Opportunities generated for B1'){
+			servicio = '# Oportunidades generadas para B1';
+		}
+		if(nameAnotacion == '# Campaigns executed from the Virtual Agency'){
+			servicio = '# Campañas ejecutadas desde la Agencia Virtual';
+		}
+		if(nameAnotacion == 'Cases of B1 References approved by SAP'){
+			servicio = 'Casos de Referencias de B1 aprobados por SAP';
+		}
+	}else {
+		if(deal_regis == '' || deal_regis == null){
+			msj('error', 'Enter the Deal Registration ID');
+			return;
+		}
+		if(deal_regis.length < 6){
+			msj('error', 'Enter a code of 6 digits');
+			return;
+		}
+		if(deal_regis.substring(0, 2) < 17){
+			msj('error', 'Your code should start with a number greater than 17');
+			return;
+		}
+		/*if(descripcion.length > 500){
+			msj('error', 'La descripcion debe contener menos de 500 caracteres');
+			return;
+		}*/
+		if(fecha == null || fecha == ''){
+			msj('error', 'Enter the date');
+		}
+		if(nameAnotacion == null || nameAnotacion == ''){
+			servicio = 'Won & Booked (W/B)';
+		}else {
+			if(nameAnotacion == 'New accounts (NNN)'){
+				servicio = 'Cuentas nuevas (NNN)';
+			}if(nameAnotacion == 'Opportunities generated for Cloud'){
+				servicio = 'Oportunidades generadas para Cloud';
+			}if(nameAnotacion == 'Opportunities generated from Social Selling'){
+				servicio = 'Oportunidades generadas de Social Selling';
+			}if(nameAnotacion == 'Success stories of approved clients*'){
+				servicio = 'Casos de éxitos de clientes aprobados*';
+			}
+		}
+		if(puntosGoles == null || puntosGoles == ''){
+			puntosGoles = 4;
+		}
 	}
 	$('#idNuevaAnotacion').prop("disabled", true);
 	$.ajax({
@@ -188,6 +207,7 @@ function restringirNum(){
 		}
 	}
 }
+var tab = 0;
 function selectTab(id){
 	var idPanel      = $('#Tab'+id);
 	card.find('.mdl-card__title').find('h2').text();
@@ -199,6 +219,7 @@ function selectTab(id){
 	$('#deal_regis').fadeIn('fast');
 	$('#descripcion').fadeOut('fast');
 	$('.info').removeClass('show');
+	tab = 1;
 }
 $('#sap').click(function() {
 	$('#deal_regis').fadeOut('fast');

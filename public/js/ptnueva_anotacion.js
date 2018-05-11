@@ -207,6 +207,7 @@ function restringirNum(){
 		}
 	}
 }
+var tab = 0;
 function selectTab(id){
 	var idPanel      = $('#Tab'+id);
 	card.find('.mdl-card__title').find('h2').text();
@@ -218,6 +219,7 @@ function selectTab(id){
 	$('#deal_regis').fadeIn('fast');
 	$('#descripcion').fadeOut('fast');
 	$('.info').removeClass('show');
+	tab = 1;
 }
 $('#sap').click(function() {
 	$('#deal_regis').fadeOut('fast');
