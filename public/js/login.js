@@ -179,8 +179,6 @@ function cambiarIdioma(){
   var idioma = $('#Idioma').val();
   if(idioma == 'Español'){
     location.href = 'http://www.sap-latam.com/gana_por_goleada/es/Login';
-  }else if(idioma == 'Inglés'){
-    location.href = 'http://www.sap-latam.com/gana_por_goleada/en/Login';
   }else if(idioma == 'Portugués'){
     location.href = 'http://www.sap-latam.com/gana_por_goleada/pt/Login';
   }

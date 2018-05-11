@@ -10,7 +10,7 @@
         <meta name="date"                   content="Febrero 15, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
-    	<title>SAP Gana por Goleada</title>
+    	<title>Score with SAP</title>
     	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
@@ -48,7 +48,7 @@
                 <div class="mdl-card mdl-card-login">
                     <div class="mdl-card__supporting-text">
                         <div class="col-sm-6 text-center">
-                            <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
+                            <img src="<?php echo RUTA_IMG?>logo/logo_en.png">
                         </div>
                         <div class="col-sm-6 m-t-50">
                             <h2 class="title_login">Entry to the court</h2>

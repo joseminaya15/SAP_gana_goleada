@@ -10,7 +10,7 @@
         <meta name="date"                   content="Febrero 15, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
-    	<title>Ganhe de goleada com o SAP</title>
+    	<title>Ganhe de goleada com a SAP</title>
     	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
@@ -41,14 +41,14 @@
                     <a href="Menu"><i class="mdi mdi-home"></i>Menu</a>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Encerrar a sessão</button>
                 </div>
-                <h2 class="person_name">Bem vindo <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
+                <h2 class="person_name">Bem-vindo <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
                 <p class="team_name">Equipe <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
                 <div class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>menu/salon.png">
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <p>História para inspirar</p>
+                        <p>Histórias de sucesso</p>
                     </div>
                 </div>
                 <div class="mdl-card-fama">
