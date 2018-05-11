@@ -40,14 +40,14 @@
                     <a href="Menu"><i class="mdi mdi-home"></i>Menu</a>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Encerrar a sessão</button>
                 </div>
-                <h2 class="person_name">Bem vindo <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
+                <h2 class="person_name">Bem-vindo <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
                 <p class="team_name">Equipe <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
                 <div id="Ranking_goleadores" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>menu/premio.png">
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <p>Prêmios para Artilheiros SAP</p>
+                        <p>Prêmios para goleadores SAP</p>
                     </div>
                 </div>
                 <div class="mdl-card mdl-card-ranking mdl-premios m-t-5">

@@ -35,10 +35,9 @@
                         <select class="selectpicker" id="Idioma" name="Idioma" onchange="cambiarIdioma()">
                             <option value="Portugués">Portugu&ecirc;s</option>
                             <option value="Español">Espa&ntilde;ol</option>
-                            <option value="Inglés">English</option>
                         </select>
                     </div>
-                    <h2 class="">Concurso para parceiros</h2>
+                    <h2 class="">Concurso para parceiros SMB</h2>
                     <div class="background background1"></div>
                     <div class="background background2"></div>
                     <div class="background background3"></div>

@@ -40,7 +40,7 @@
                     <a href="Menu"><i class="mdi mdi-home"></i>Menu</a>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Encerrar a sessão</button>
                 </div>
-                <h2 class="person_name">Bem vindo <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
+                <h2 class="person_name">Bem-vindo <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
                 <p class="team_name">Equipe <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p>
                 <div id="Anotaciones" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                     <div class="mdl-card__title">
@@ -136,7 +136,7 @@
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                     </div>
                                     <div class="name-anotacion col-xs-8 p-0">
-                                        <p>Casos de sucesso de clientes aprovados*</p>
+                                        <p>Casos de sucesso aprovados (clientes)*</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="caso">
