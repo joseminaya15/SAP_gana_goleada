@@ -48,7 +48,7 @@
                         <img src="<?php echo RUTA_IMG?>menu/salon.png">
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <p>História de sucesso</p>
+                        <p>Histórias de sucesso</p>
                     </div>
                 </div>
                 <div class="mdl-card-fama">

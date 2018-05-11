@@ -73,7 +73,7 @@
                         <img src="<?php echo RUTA_IMG?>menu/salon.png">
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <p>Hist&oacute;ria de sucesso</p>
+                        <p>Hist&oacute;rias de sucesso</p>
                     </div>
                 </div>
                 <div class="footer-menu">
