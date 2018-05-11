@@ -10,7 +10,7 @@
     <meta name="date"                   content="January 25, 2018"/>
     <meta name="language"               content="es">
     <meta name="theme-color"            content="#000000">
-	<title>SAP Gana por Goleada</title>
+	<title>Ganhe de goleada com a SAP</title>
     <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/logo_favicon.png">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
@@ -37,7 +37,7 @@
                 <a href="Menu"><img class="logo-header" src="<?php echo RUTA_IMG?>logo/logo_admin.svg"></a>
             </div>
             <div class="header-right">
-                <h2 class="">Concurso para partners SMB</h2>
+                <h2 class="">Concurso para parceiros</h2>
                 <div class="background background1"></div>
                 <div class="background background2"></div>
                 <div class="background background3"></div>
@@ -46,7 +46,7 @@
         <div id="content" class="mdl-card-container">
             <div class="col-xs-12 header-admin">
                 <img src="<?php echo RUTA_IMG?>logo/logo_pt.png">
-                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout m-t-50" onclick="cerrarCesion()">Cerrar Sesión</a>
+                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout m-t-50" onclick="cerrarCesion()">Encerrar a sessão</a>
             </div>
             <div class="mdl-card mdl-card-table md-admin">
                 <div class="table-responsive">

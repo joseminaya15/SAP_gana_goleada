@@ -265,6 +265,8 @@ body{
 } 
 .mdl-registro .mdl-card__title img{
 	margin-top: -120px;
+	width: 100%;
+	max-width: 292px;
 }
 .mdl-registro .mdl-card__supporting-text{
 	padding-top: 0;
