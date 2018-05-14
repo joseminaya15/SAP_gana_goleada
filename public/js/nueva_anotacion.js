@@ -16,13 +16,10 @@ function nuevaAnotacion(){
 	}
 	if(tab == 1) {
 		if(nameAnotacion == null || nameAnotacion == ''){
-			nameAnotacion = 'Won & Booked (W/B) pt';
+			nameAnotacion = '# Oportunidades generadas para B1';
 		}
 		if(puntosGoles == null || puntosGoles == ''){
 			puntosGoles = 4;
-		}
-		if(nameAnotacion == 'Won & Booked (W/B)'){
-			servicio = 'Won & Booked (W/B) pt';
 		}
 		if(nameAnotacion == '# Oportunidades generadas para B1' || nameAnotacion == '# Campañas ejecutadas desde la Agencia Virtual' || nameAnotacion == 'Casos de Referencias de B1 aprobados por SAP'){
 			servicio = nameAnotacion;
