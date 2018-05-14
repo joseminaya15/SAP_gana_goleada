@@ -59,21 +59,21 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active p-0 m-b-20" id="Tabhome">
                                 <div class="col-sm-4 text-center premioQ">
-                                    <img src="<?php echo RUTA_IMG?>premios/q2.png">
+                                    <img src="<?php echo RUTA_IMG?>premios/pq2.png">
                                 </div>
                                 <div class="col-sm-4 text-center premioQ">
-                                    <img src="<?php echo RUTA_IMG?>premios/q3.png">
+                                    <img src="<?php echo RUTA_IMG?>premios/pq3.png">
                                 </div>
                                 <div class="col-sm-4 text-center premioQ">
-                                    <img src="<?php echo RUTA_IMG?>premios/q4.png">
+                                    <img src="<?php echo RUTA_IMG?>premios/pq4.png">
                                 </div>      
                             </div>
                             <div role="tabpanel" class="tab-pane fade p-0 m-b-20" id="Tabsap">
                                 <div class="col-sm-4 text-center premioQ">
-                                    <img src="<?php echo RUTA_IMG?>premios/bq2.png">
+                                    <img src="<?php echo RUTA_IMG?>premios/pbq2.png">
                                 </div>
                                 <div class="col-sm-4 text-center premioQ">
-                                    <img src="<?php echo RUTA_IMG?>premios/bq3.png">
+                                    <img src="<?php echo RUTA_IMG?>premios/pbq3.png">
                                 </div>      
                             </div>
                         </div>

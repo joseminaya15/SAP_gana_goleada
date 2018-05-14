@@ -152,34 +152,16 @@
                                 <div class="col-xs-12 mdl-puntos">
                                     <div class="punto-imagen">
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
-                                    </div>
-                                    <div class="name-anotacion col-xs-8 p-0">
-                                        <p>Won & Booked (W/B)</p>
-                                    </div>
-                                    <div class="col-xs-2">
-                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="booked1">
-                                            <input type="radio" id="booked1" class="mdl-radio__button" name="options1" value="6" checked onclick="selectAnotacion(this.id)">
-                                        </label>
-                                    </div>
-                                    <div class="col-xs-2">
-                                        <strong><?php echo $total_cl ?></strong>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 mdl-puntos">
-                                    <div class="punto-imagen">
-                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">
                                         <img src="<?php echo RUTA_IMG?>logo/punto.png"> 
-                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">                            
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">  
+                                        <img src="<?php echo RUTA_IMG?>logo/punto.png">                           
                                     </div>
                                     <div class="name-anotacion col-xs-8 p-0">
                                         <p># Oportunidades generadas para B1</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="oportunidadb1">
-                                            <input type="radio" id="oportunidadb1" class="mdl-radio__button" name="options1" value="7" onclick="nuevaAnotacion(this.id)"> 
+                                            <input type="radio" id="oportunidadb1" class="mdl-radio__button" name="options1" value="6" checked onclick="nuevaAnotacion(this.id)"> 
                                         </label>
                                     </div>
                                     <div class="col-xs-2">
@@ -197,7 +179,7 @@
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="envioagencia">
-                                            <input type="radio" id="envioagencia" class="mdl-radio__button" name="options1" value="8" onclick="nuevaAnotacion(this.id)"> 
+                                            <input type="radio" id="envioagencia" class="mdl-radio__button" name="options1" value="7" onclick="nuevaAnotacion(this.id)"> 
                                         </label>
                                     </div>
                                     <div class="col-xs-2">
@@ -214,7 +196,7 @@
                                     </div>
                                     <div class="col-xs-2">
                                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="casoaprobado">
-                                            <input type="radio" id="casoaprobado" class="mdl-radio__button" name="options1" value="9" onclick="nuevaAnotacion(this.id)"> 
+                                            <input type="radio" id="casoaprobado" class="mdl-radio__button" name="options1" value="8" onclick="nuevaAnotacion(this.id)"> 
                                         </label>
                                     </div>
                                     <div class="col-xs-2">
