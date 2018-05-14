@@ -62,10 +62,10 @@
                                     <img src="<?php echo RUTA_IMG?>premios/pq2.png">
                                 </div>
                                 <div class="col-sm-4 text-center premioQ">
-                                    <img src="<?php echo RUTA_IMG?>premios/pq3.png">
+                                    <img src="<?php echo RUTA_IMG?>premios/pq3.jpg">
                                 </div>
                                 <div class="col-sm-4 text-center premioQ">
-                                    <img src="<?php echo RUTA_IMG?>premios/pq4.png">
+                                    <img src="<?php echo RUTA_IMG?>premios/pq4.jpg">
                                 </div>      
                             </div>
                             <div role="tabpanel" class="tab-pane fade p-0 m-b-20" id="Tabsap">
