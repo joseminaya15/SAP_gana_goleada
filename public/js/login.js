@@ -198,3 +198,20 @@ function cambiarIdioma(){
       }
   });
 }
+function sendEmail(email){
+  $.ajax({ 
+    data  : {email : email},
+    url   : 'Admin/sendEmail',
+    type  : 'POST'
+  }).done(function(data){
+    try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        }else{
+          return;
+        }
+      } catch (err){
+        msj('error',err.message);
+      }
+  });
+}
