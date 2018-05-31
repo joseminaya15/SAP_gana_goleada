@@ -302,16 +302,16 @@ class Admin extends CI_Controller {
                                         <td>
                                             <table width="400" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 30px 0">
                                                 <tr>
-                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 20px 0 5px 0;"><img width="180" src="http://www.sap-latam.com/gana_por_goleada/public/img/logo/logo_login.png"></td>
+                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 20px 0 5px 0;"><img width="180" src="http://www.sap-latam.com/gana_por_goleada/public/img/logo/logo_pt.png"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 10px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Estimado Socio de Negocios:</font></td>
+                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 10px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Prezado Parceiro de Negócios:</font></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">Muchas gracias por tu participación.  Tu postulación ya fue evaluada. Conoce el resultado ingresando al portal con tu contraseña.</font></td>
+                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">Muito obrigado pela sua participação. Sua inscrição já foi avaliada. Conheça o resultado entrando no portal com sua senha.</font></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding: 2px 0;line-height: 16px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Saludos,</font></td>
+                                                    <td style="text-align: center;padding: 2px 0;line-height: 16px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Saudações,</font></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: center;padding: 2px 0;line-height: 16px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Team SAP</font></td>

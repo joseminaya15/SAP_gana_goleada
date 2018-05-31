@@ -69,6 +69,7 @@ class Nueva_anotacion extends CI_Controller {
                                     'lenguaje'          => 'Portugés');
                 $datosInsert = $this->M_datos->insertarDatos($dataInsert, 'anotaciones');
                 $this->sendEmailAnotacion($this->session->userdata('usuario'));
+                $this->sendEmailAdmin();
             }
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
@@ -84,15 +85,15 @@ class Nueva_anotacion extends CI_Controller {
             $configGmail = array('protocol' => 'smtp',
                                 'smtp_host' => 'smtpout.secureserver.net',
                                 'smtp_port' => 3535,
-                                'smtp_user' => 'info@sap-latam.com',
-                                'smtp_pass' => 'sapinfo18',
+                                'smtp_user' => 'info@marketinghpe.com',
+                                'smtp_pass' => 'hpeinfo18',
                                 'mailtype'  => 'html',
                                 'charset'   => 'utf-8',
                                 'newline'   => "\r\n");
             $this->email->initialize($configGmail);
             $this->email->from('info@sap-latam.com');
             $this->email->to($email);
-            $this->email->subject('Gracias por tu participación en SAP Gana por Goleada');
+            $this->email->subject('Obrigado por sua participação no SAP Win by Goleada.');
             $texto = '<!DOCTYPE html>
                         <html>
                             <body>
@@ -126,13 +127,13 @@ class Nueva_anotacion extends CI_Controller {
                                         <td>
                                             <table width="400" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 30px 0">
                                                 <tr>
-                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 20px 0 5px 0;"><img width="180" src="http://www.sap-latam.com/gana_por_goleada/public/img/logo/logo_login.png"></td>
+                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 20px 0 5px 0;"><img width="180" src="http://www.sap-latam.com/gana_por_goleada/public/img/logo/logo_pt.png"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 10px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">¡Gracias por participar!</font></td>
+                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 10px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">¡Obrigado por participar!</font></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">En breve su puntuaci&oacute;n se reflejar&aacute; en la tabla de anotaciones.</font></td>
+                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">Em resumo, sua pontuação será refletida na tabela de anotações.</font></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -148,7 +149,7 @@ class Nueva_anotacion extends CI_Controller {
         }
         return json_encode(array_map('utf8_encode', $data));
     }
-    /*function sendEmailAdmin(){
+    function sendEmailAdmin(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {  
@@ -164,7 +165,7 @@ class Nueva_anotacion extends CI_Controller {
             $this->email->initialize($configGmail);
             $this->email->from('info@sap-latam.com');
             $this->email->to('jhonatanibericom@gmail.com');
-            $this->email->subject('A new record has been entered for evaluation in SAP Gana por Goleada.');
+            $this->email->subject('Un nuevo registro ha sido ingresado para evaluación en SAP Gana por Goleada.');
             $texto = '<!DOCTYPE html>
                         <html>
                             <body>
@@ -201,7 +202,7 @@ class Nueva_anotacion extends CI_Controller {
                                                     <td style="text-align: center;padding: 0;margin: 0;padding: 20px 0 5px 0;"><img width="180" src="http://www.sap-latam.com/gana_por_goleada/public/img/logo/logo_login.png"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 10px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Dear Administrator:</font></td>
+                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 10px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Estimado Administrador:</font></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">Una nueva nominación ha sido subida al sistema para su evaluación.</font></td>
@@ -225,5 +226,5 @@ class Nueva_anotacion extends CI_Controller {
             $data['msj'] = $e->getMessage();
         }
         return json_encode(array_map('utf8_encode', $data));
-    }*/
+    }
 }
