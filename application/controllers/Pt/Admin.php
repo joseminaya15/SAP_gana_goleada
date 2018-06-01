@@ -308,13 +308,10 @@ class Admin extends CI_Controller {
                                                     <td style="text-align: center;padding: 0;margin: 0;padding: 10px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Prezado Parceiro de Negócios:</font></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">Muito obrigado pela sua participação. Sua inscrição já foi avaliada. Conheça o resultado entrando no portal com sua senha.</font></td>
+                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">Muito obrigado pela sua participação. Sua anotação já foi avaliada - Acesse o portal com seus dados de Login e verifique o seu resultado! </font></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding: 2px 0;line-height: 16px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Saudações,</font></td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="text-align: center;padding: 2px 0;line-height: 16px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Team SAP</font></td>
+                                                    <td style="text-align: center;padding: 2px 0;line-height: 16px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Team Partner & SME Marketing, SAP LAC</font></td>
                                                 </tr>
                                             </table>
                                         </td>

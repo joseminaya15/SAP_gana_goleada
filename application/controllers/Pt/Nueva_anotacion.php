@@ -93,7 +93,7 @@ class Nueva_anotacion extends CI_Controller {
             $this->email->initialize($configGmail);
             $this->email->from('info@sap-latam.com');
             $this->email->to($email);
-            $this->email->subject('Obrigado por sua participação no SAP Win by Goleada.');
+            $this->email->subject('Obrigado por sua participação no SAP Ganhe de Goleada. Sua anotação foi recebida!');
             $texto = '<!DOCTYPE html>
                         <html>
                             <body>
@@ -130,10 +130,14 @@ class Nueva_anotacion extends CI_Controller {
                                                     <td style="text-align: center;padding: 0;margin: 0;padding: 20px 0 5px 0;"><img width="180" src="http://www.sap-latam.com/gana_por_goleada/public/img/logo/logo_pt.png"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 10px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">¡Obrigado por participar!</font></td>
+                                                    <td style="text-align: center;padding: 0;margin: 0;padding: 10px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Obrigado por participar!</font></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">Em resumo, sua pontuação será refletida na tabela de anotações.</font></td>
+                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">Sua anotação foi recebida e está sendo avaliada! 
+                                                        Assim que aprovada, você receberá um email de confirmação e sua pontuação será atualizada na tabela de anotações. </font></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: center;padding: 2px 0;line-height: 16px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Team Partner & SME Marketing, SAP LAC</font></td>
                                                 </tr>
                                             </table>
                                         </td>
