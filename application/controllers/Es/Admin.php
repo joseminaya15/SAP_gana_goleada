@@ -327,6 +327,6 @@ class Admin extends CI_Controller {
         }catch (Exception $e){
             $data['msj'] = $e->getMessage();
         }
-        return json_encode(array_map('utf8_encode', $data));
+        echo json_encode(array_map('utf8_encode', $data));
     }
 }

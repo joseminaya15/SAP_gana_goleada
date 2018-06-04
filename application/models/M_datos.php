@@ -81,7 +81,7 @@ class M_datos extends  CI_Model{
                    AND a.id_user = u.Id
                    AND a.Flag IN (1,3)
                    AND a.lenguaje LIKE '%".$lenguaje."%'
-              ORDER BY a.Flag ASC";
+              ORDER BY a.Flag, a.Deal_registration ASC";
         $result = $this->db->query($sql);
         return $result->result();
     }
