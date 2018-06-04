@@ -55,6 +55,7 @@
                             <tr class="tr-header-reporte">
                                 <th class="text-center">Deal ID #</th>
                                 <th class="text-left">Oportunidad</th>
+                                <th class="text-left">Nombre Empresa</th>
                                 <th class="text-left">Nombre Canal</th>
                                 <th class="text-left">Nombre Capitán</th>
                                 <th class="text-left">País</th>

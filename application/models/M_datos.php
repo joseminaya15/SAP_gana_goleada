@@ -69,6 +69,7 @@ class M_datos extends  CI_Model{
                        a.Deal_registration,
                        a.Flag,
                        s.Tipo_serv,
+                       a.Empresa,
                        u.Nombre_canal,
                        u.Nombre_capitan,
                        u.Pais,

@@ -45,6 +45,7 @@ class Admin extends CI_Controller {
            $html .= '<tr>
                         <td class="text-center">'.$key->Deal_registration.'</td>
                         <td class="text-left">'.$key->Tipo_serv.'</td>
+                        <td class="text-left">'.$key->Empresa.'</td>
                         <td class="text-left">'.$key->Nombre_canal.'</td>
                         <td class="text-left">'.$key->Nombre_capitan.'</td>
                         <td class="text-left">'.$key->Pais.'</td>
@@ -110,6 +111,7 @@ class Admin extends CI_Controller {
                $html .= '<tr>
                             <td class="text-center">'.$key->Deal_registration.'</td>
                             <td class="text-left">'.$key->Tipo_serv.'</td>
+                            <td class="text-left">'.$key->Empresa.'</td>
                             <td class="text-left">'.$key->Nombre_canal.'</td>
                             <td class="text-left">'.$key->Nombre_capitan.'</td>
                             <td class="text-left">'.$key->Pais.'</td>
@@ -169,6 +171,7 @@ class Admin extends CI_Controller {
                $html .= '<tr>
                             <td class="text-center">'.$key->Deal_registration.'</td>
                             <td class="text-left">'.$key->Tipo_serv.'</td>
+                            <td class="text-left">'.$key->Empresa.'</td>
                             <td class="text-left">'.$key->Nombre_canal.'</td>
                             <td class="text-left">'.$key->Nombre_capitan.'</td>
                             <td class="text-left">'.$key->Pais.'</td>
@@ -227,6 +230,7 @@ class Admin extends CI_Controller {
                $html .= '<tr>
                             <td class="text-center">'.$key->Deal_registration.'</td>
                             <td class="text-left">'.$key->Tipo_serv.'</td>
+                            <td class="text-left">'.$key->Empresa.'</td>
                             <td class="text-left">'.$key->Nombre_canal.'</td>
                             <td class="text-left">'.$key->Nombre_capitan.'</td>
                             <td class="text-left">'.$key->Pais.'</td>
