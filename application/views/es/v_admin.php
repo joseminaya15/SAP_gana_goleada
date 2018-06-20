@@ -59,6 +59,7 @@
                                 <th class="text-left">Nombre Canal</th>
                                 <th class="text-left">Nombre Capitán</th>
                                 <th class="text-left">País</th>
+                                <th class="text-left">Fecha</th>
                                 <th class="text-left">Estado</th>
                                 <th class="text-center">Acción</th>
                             </tr>

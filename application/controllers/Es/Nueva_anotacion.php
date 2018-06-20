@@ -45,6 +45,7 @@ class Nueva_anotacion extends CI_Controller {
             $servicio = $this->input->post('servicio');
             $id_serv  = null;
             $arr_fecha = explode("/", $fecha);
+            $fechaServidor = date("Y-m-d");
             if(checkdate($arr_fecha[1], $arr_fecha[0], $arr_fecha[2]) == false){
                 $data['msj'] = 'La fecha ingresada no es correcta';
             }else {
@@ -69,6 +70,7 @@ class Nueva_anotacion extends CI_Controller {
                                     'Id_serv'           => $id_serv,
                                     'id_user'           => $this->session->userdata('Id_user'),
                                     'flg_pais'          => 1,
+                                    'fecha'             => $fechaServidor,
                                     'lenguaje'          => $this->session->userdata('idioma'));
                 $datosInsert = $this->M_datos->insertarDatos($dataInsert, 'anotaciones');
                 $this->sendEmailAnotacion($this->session->userdata('usuario'));
@@ -95,7 +97,7 @@ class Nueva_anotacion extends CI_Controller {
                                 'newline'   => "\r\n");
             $this->email->initialize($configGmail);
             $this->email->from('info@sap-latam.com');
-            $this->email->to($email);
+            $this->email->to('pyf136@gmail.com');//($email);
             $this->email->subject('Gracias por tu participación en SAP Gana por Goleada');
             $texto = '<!DOCTYPE html>
                         <html>
@@ -167,7 +169,7 @@ class Nueva_anotacion extends CI_Controller {
                                 'newline'   => "\r\n");
             $this->email->initialize($configGmail);
             $this->email->from('info@sap-latam.com');
-            $this->email->to('jhonatanibericom@gmail.com');
+            $this->email->to('pyf136@gmail.com');//('jhonatanibericom@gmail.com');
             $this->email->subject('Un nuevo registro ha sido ingresado para evaluación en SAP Gana por Goleada.');
             $texto = '<!DOCTYPE html>
                         <html>

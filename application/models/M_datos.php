@@ -74,13 +74,15 @@ class M_datos extends  CI_Model{
                        u.Nombre_capitan,
                        u.Pais,
                        a.alertas,
-                       u.usuario
+                       u.usuario,
+                       a.fecha
                   FROM servicios s,
                        anotaciones a,
                        users u
                  WHERE a.Id_serv = s.Id
                    AND a.id_user = u.Id
-                   AND a.Flag IN (1,3)
+                   AND a.Flag IN (1,2,3,4)
+                   AND a.Deal_registration <> 0
                    AND a.lenguaje LIKE '%".$lenguaje."%'
               ORDER BY a.Flag, a.Deal_registration ASC";
         $result = $this->db->query($sql);
