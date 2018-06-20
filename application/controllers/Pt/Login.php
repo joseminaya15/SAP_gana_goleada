@@ -25,7 +25,7 @@ class Login extends CI_Controller {
 			$password = $this->input->post('password');
 
 			if($usuario == 'sapadmin' && $password == 'admin'){
-				$data['href'] = 'pt/Admin';
+				$data['href'] = 'Admin';
 				$session = array('usuario' => $usuario);
 			    $this->session->set_userdata($session);
 				$data['error'] = EXIT_SUCCESS;
@@ -57,8 +57,6 @@ class Login extends CI_Controller {
 					}
 				}
 			}
-			// print_r($this->session->userdata('lenguaje'));
-			// exit;
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
         }

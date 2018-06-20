@@ -17,7 +17,7 @@ class Admin extends CI_Controller {
         if($this->session->userdata('usuario') == null){
             header("location: Login");
         }
-        $datos = $this->M_datos->getDatosAdmin($this->session->userdata('idioma'));
+        $datos = $this->M_datos->getDatosAdmin('Inglés');
         if(count($datos) == 0){
             $data['tabla'] = '';
         }else {
@@ -73,7 +73,7 @@ class Admin extends CI_Controller {
             }
             $data['tabla'] = $html;
         }
-    	$this->load->view('v_admin', $data);
+    	$this->load->view('en/v_admin', $data);
 	}
 
     function cerrarCesion(){
@@ -97,7 +97,7 @@ class Admin extends CI_Controller {
             $arrUpdt   = array('Flag' => FLAG_RECHAZADO,
                                 'alertas' => FLAG_RECHAZADO);
             $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
-            $datos     = $this->M_datos->getDatosAdmin($this->session->userdata('idioma'));
+            $datos     = $this->M_datos->getDatosAdmin('Ingles');
             $count     = 1;
             $i         = 1;
             $disabled  = '';
@@ -168,7 +168,7 @@ class Admin extends CI_Controller {
             $arrUpdt   = array('Flag' => FLAG_APROBADO,
                                'alertas' => FLAG_APROBADO);
             $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
-            $datos     = $this->M_datos->getDatosAdmin($this->session->userdata('idioma'));
+            $datos     = $this->M_datos->getDatosAdmin('Ingles');
             $count     = 1;
             $i         = 1;
             $disabled  = '';
@@ -239,7 +239,7 @@ class Admin extends CI_Controller {
             $arrUpdt   = array('Flag' => FLAG_OBSERVADO,
                                'alertas' => FLAG_OBSERVADO);
             $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
-            $datos     = $this->M_datos->getDatosAdmin($this->session->userdata('idioma'));
+            $datos     = $this->M_datos->getDatosAdmin('Ingles');
             $count     = 1;
             $i         = 1;
             $disabled  = '';

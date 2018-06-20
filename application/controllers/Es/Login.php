@@ -24,11 +24,9 @@ class Login extends CI_Controller {
          	$idioma   = $this->input->post('idioma');
 			$usuario  = $this->input->post('usuario');
 			$password = $this->input->post('password');
-			print_r($idioma);
-			exit;
 
 			if($usuario == 'sapadmin' && $password == 'admin'){
-				$data['href'] = 'es/Admin';
+				$data['href'] = 'Admin';
 				$session = array('usuario' => $usuario);
 			    $this->session->set_userdata($session);
 				$data['error'] = EXIT_SUCCESS;
