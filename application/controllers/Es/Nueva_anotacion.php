@@ -97,7 +97,7 @@ class Nueva_anotacion extends CI_Controller {
                                 'newline'   => "\r\n");
             $this->email->initialize($configGmail);
             $this->email->from('info@sap-latam.com');
-            $this->email->to('pyf136@gmail.com');//($email);
+            $this->email->to($email);
             $this->email->subject('Gracias por tu participación en SAP Gana por Goleada');
             $texto = '<!DOCTYPE html>
                         <html>
@@ -169,7 +169,7 @@ class Nueva_anotacion extends CI_Controller {
                                 'newline'   => "\r\n");
             $this->email->initialize($configGmail);
             $this->email->from('info@sap-latam.com');
-            $this->email->to('pyf136@gmail.com');//('jhonatanibericom@gmail.com');
+            $this->email->to('jhonatanibericom@gmail.com');
             $this->email->subject('Un nuevo registro ha sido ingresado para evaluación en SAP Gana por Goleada.');
             $texto = '<!DOCTYPE html>
                         <html>

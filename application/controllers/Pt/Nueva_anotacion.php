@@ -13,6 +13,9 @@ class Nueva_anotacion extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
+        if($this->session->userdata('usuario') == null){
+            header("location: Login");
+        }
         $data['nombre_capitan'] = ucwords($this->session->userdata('Nombre_capitan'));
         $data['nombre_canal']   = ucwords($this->session->userdata('Nombre_canal'));
 		$this->load->view('pt/v_nueva_anotacion', $data);
@@ -42,6 +45,7 @@ class Nueva_anotacion extends CI_Controller {
             $servicio = $this->input->post('servicio');
             $id_serv  = null;
             $arr_fecha = explode("/", $fecha);
+            $fechaServidor = date("Y-m-d");
             if(checkdate($arr_fecha[1], $arr_fecha[0], $arr_fecha[2]) == false){
                 $data['msj'] = 'La fecha ingresada no es correcta';
             }else {
@@ -66,6 +70,7 @@ class Nueva_anotacion extends CI_Controller {
                                     'Id_serv'           => $id_serv,
                                     'id_user'           => $this->session->userdata('Id_user'),
                                     'flg_pais'          => 1,
+                                    'fecha'             => $fechaServidor,
                                     'lenguaje'          => 'Portugés');
                 $datosInsert = $this->M_datos->insertarDatos($dataInsert, 'anotaciones');
                 $this->sendEmailAnotacion($this->session->userdata('usuario'));
