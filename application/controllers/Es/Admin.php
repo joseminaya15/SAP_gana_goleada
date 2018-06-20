@@ -49,7 +49,11 @@ class Admin extends CI_Controller {
                 }else {
                     $disabled2 = '';
                 }
-                $fecha = date("d/m/Y", strtotime($key->fecha));
+                if($key->fecha != '0000-00-00' ) {
+                    $fecha = date("d/m/Y", strtotime($key->fecha));    
+                } else {
+                    $fecha = '-';
+                }
                 $html .= '<tr>
                               <td class="text-center">'.$key->Deal_registration.'</td>
                               <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -125,7 +129,11 @@ class Admin extends CI_Controller {
                     }else {
                         $disabled2 = '';
                     }
-                    $fecha = date("d/m/Y", strtotime($key->fecha));
+                    if($key->fecha != '0000-00-00' ) {
+                        $fecha = date("d/m/Y", strtotime($key->fecha));    
+                    } else {
+                        $fecha = '-';
+                    }
                     $html .= '<tr>
                                   <td class="text-center">'.$key->Deal_registration.'</td>
                                   <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -192,7 +200,11 @@ class Admin extends CI_Controller {
                     }else if($key->alertas != 1 || $key->Flag == 1){
                         $disabled2 = '';
                     }
-                    $fecha = date("d/m/Y", strtotime($key->fecha));
+                    if($key->fecha != '0000-00-00' ) {
+                        $fecha = date("d/m/Y", strtotime($key->fecha));    
+                    } else {
+                        $fecha = '-';
+                    }
                     $html .= '<tr>
                                   <td class="text-center">'.$key->Deal_registration.'</td>
                                   <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -259,7 +271,11 @@ class Admin extends CI_Controller {
                     }else {
                         $disabled2 = '';
                     }
-                    $fecha = date("d/m/Y", strtotime($key->fecha));
+                    if($key->fecha != '0000-00-00' ) {
+                        $fecha = date("d/m/Y", strtotime($key->fecha));    
+                    } else {
+                        $fecha = '-';
+                    }
                     $html .= '<tr>
                                 <td class="text-center">'.$key->Deal_registration.'</td>
                                 <td class="text-left">'.$key->Tipo_serv.'</td>
