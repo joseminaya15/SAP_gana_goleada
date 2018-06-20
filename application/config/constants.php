@@ -109,3 +109,4 @@ defined('MSJ_DELETE_SUCCESS') OR define('MSJ_DELETE_SUCCESS', 'Se ha eliminado c
 defined('FLAG_PENDIENTE') OR define('FLAG_PENDIENTE', 1);
 defined('FLAG_APROBADO')  OR define('FLAG_APROBADO', 2);
 defined('FLAG_RECHAZADO') OR define('FLAG_RECHAZADO', 3);
+defined('FLAG_OBSERVADO') OR define('FLAG_OBSERVADO', 4);

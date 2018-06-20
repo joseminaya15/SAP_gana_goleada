@@ -28,16 +28,22 @@ class Admin extends CI_Controller {
         $disabled2 = '';
         foreach ($datos as $key){
            if($key->Flag == 1){
+              $disabled  = '';
               $estado    = 'Pendiente';
            }
            if($key->Flag == 2){
+              $disabled  = 'disabled';
               $estado    = 'Aprobado';
            }
            if($key->Flag == 3) {
               $disabled  = 'disabled';
               $estado    = 'Rechazado';
            }
-           if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3){
+           if($key->Flag == 4) {
+              $disabled  = '';
+              $estado    = 'Observado';
+           }
+           if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
               $disabled2 = 'disabled';
            }else {
               $disabled2 = '';
@@ -49,11 +55,12 @@ class Admin extends CI_Controller {
                         <td class="text-left">'.$key->Nombre_canal.'</td>
                         <td class="text-left">'.$key->Nombre_capitan.'</td>
                         <td class="text-left">'.$key->Pais.'</td>
+                        <td class="text-left">'.$key->fecha.'</td>
                         <td class="text-left">'.$estado.'</td>
                         <td class="text-center">
                         <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                         <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Observar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                         </td>
                     </tr>';
             $count++;
@@ -103,7 +110,10 @@ class Admin extends CI_Controller {
                   $disabled  = 'disabled';
                   $estado    = 'Rechazado';
                }
-               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3){
+               if($key->Flag == 4) {
+                  $estado    = 'Observado';
+               }
+               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
                   $disabled2 = 'disabled';
                }else {
                   $disabled2 = '';
@@ -115,6 +125,7 @@ class Admin extends CI_Controller {
                             <td class="text-left">'.$key->Nombre_canal.'</td>
                             <td class="text-left">'.$key->Nombre_capitan.'</td>
                             <td class="text-left">'.$key->Pais.'</td>
+                            <td class="text-left">'.$key->fecha.'</td>
                             <td class="text-left">'.$estado.'</td>
                             <td class="text-center">
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
@@ -161,7 +172,10 @@ class Admin extends CI_Controller {
                   $disabled  = 'disabled';
                   $estado    = 'Rechazado';
                }
-               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3){
+               if($key->Flag == 4) {
+                  $estado    = 'Observado';
+               }
+               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
                   $disabled2 = 'disabled';
                }else if($key->alertas != 1 || $key->Flag == 1){
                   $disabled2 = '';
@@ -173,6 +187,7 @@ class Admin extends CI_Controller {
                             <td class="text-left">'.$key->Nombre_canal.'</td>
                             <td class="text-left">'.$key->Nombre_capitan.'</td>
                             <td class="text-left">'.$key->Pais.'</td>
+                            <td class="text-left">'.$key->fecha.'</td>
                             <td class="text-left">'.$estado.'</td>
                             <td class="text-center">
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
@@ -195,7 +210,8 @@ class Admin extends CI_Controller {
     $data['msj']   = null;
     try {
         $id_serv   = $this->input->post('id_serv');
-        $arrUpdt   = array('alertas' => FLAG_PENDIENTE);
+        $arrUpdt   = array('Flag' => FLAG_OBSERVADO,
+                           'alertas' => FLAG_OBSERVADO);
         $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
         $datos     = $this->M_datos->getDatosAdmin('Español');
         $count     = 1;
@@ -218,7 +234,10 @@ class Admin extends CI_Controller {
                   $disabled  = 'disabled';
                   $estado    = 'Rechazado';
                }
-               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3){
+               if($key->Flag == 4) {
+                  $estado    = 'Observado';
+               }
+               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
                   $disabled2 = 'disabled';
                }else {
                   $disabled2 = '';
@@ -230,6 +249,7 @@ class Admin extends CI_Controller {
                             <td class="text-left">'.$key->Nombre_canal.'</td>
                             <td class="text-left">'.$key->Nombre_capitan.'</td>
                             <td class="text-left">'.$key->Pais.'</td>
+                            <td class="text-left">'.$key->fecha.'</td>
                             <td class="text-left">'.$estado.'</td>
                             <td class="text-center">
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
