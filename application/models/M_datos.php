@@ -82,7 +82,6 @@ class M_datos extends  CI_Model{
                  WHERE a.Id_serv = s.Id
                    AND a.id_user = u.Id
                    AND a.Flag IN (1,2,3,4)
-                   AND a.Deal_registration <> 0
                    AND a.lenguaje LIKE '%".$lenguaje."%'
               ORDER BY a.Flag, a.Deal_registration ASC";
         $result = $this->db->query($sql);
