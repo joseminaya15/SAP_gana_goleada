@@ -24,9 +24,11 @@ class Login extends CI_Controller {
          	$idioma   = $this->input->post('idioma');
 			$usuario  = $this->input->post('usuario');
 			$password = $this->input->post('password');
+			print_r($idioma);
+			exit;
 
 			if($usuario == 'sapadmin' && $password == 'admin'){
-				$data['href'] = 'http://localhost:8080/SAP_gana_goleada/Admin';
+				$data['href'] = 'es/Admin';
 				$session = array('usuario' => $usuario);
 			    $this->session->set_userdata($session);
 				$data['error'] = EXIT_SUCCESS;
@@ -42,7 +44,7 @@ class Login extends CI_Controller {
 											 'Nombre_capitan' => $username[0]->Nombre_capitan,
 											 'Nombre_canal'   => $username[0]->Nombre_canal,
 											 'Id_user' 		  => $username[0]->Id,
-											 'idioma' 	  	  => $idioma);
+											 'idioma' 	  	  => 'Español');
 			          		$this->session->set_userdata($session);
 			          		$data['href'] = 'Menu';
 			          		$data['error'] = EXIT_SUCCESS;

@@ -21,21 +21,20 @@ class Login extends CI_Controller {
 		$data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
-         	$idioma  = $this->input->post('idioma');
 			$usuario  = $this->input->post('usuario');
 			$password = $this->input->post('password');
 
 			if($usuario == 'sapadmin' && $password == 'admin'){
-				$data['href'] = 'http://localhost:8080/SAP_gana_goleada/Admin';
+				$data['href'] = 'pt/Admin';
 				$session = array('usuario' => $usuario);
 			    $this->session->set_userdata($session);
 				$data['error'] = EXIT_SUCCESS;
-			}else if($usuario == 'ptadmin' && $password == 'admin'){
-				$data['href'] = 'http://localhost:8080/SAP_gana_goleada/Admin';
+			}/*else if($usuario == 'ptadmin' && $password == 'admin'){
+				$data['href'] = 'http://localhost/SAP_gana_goleada/Admin';
 				$session = array('usuario' => $usuario);
 			    $this->session->set_userdata($session);
 				$data['error'] = EXIT_SUCCESS;
-			}else {
+			}*/else {
 				$username = $this->M_login->verificarUsuario($usuario);
 				if(count($username) == 0) {
 					$data['user'] = 'Este usuario no existe';
@@ -47,7 +46,7 @@ class Login extends CI_Controller {
 											 'Nombre_capitan' => $username[0]->Nombre_capitan,
 											 'Nombre_canal'   => $username[0]->Nombre_canal,
 											 'Id_user' 		  => $username[0]->Id,
-											 'idioma' 	  	  => $idioma);
+											 'idioma' 	  	  => 'Portugués');
 			          		$this->session->set_userdata($session);
 			          		$data['href'] = 'Menu';
 			          		$data['error'] = EXIT_SUCCESS;
@@ -58,6 +57,8 @@ class Login extends CI_Controller {
 					}
 				}
 			}
+			// print_r($this->session->userdata('lenguaje'));
+			// exit;
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
         }

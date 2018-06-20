@@ -2,6 +2,7 @@ function ingresar(){
     var idioma   = $('#Idioma').val();
 	var usuario  = $('#correo').val();
 	var password = $('#password').val();
+    var carpeta  = '';
 	if(usuario == null){
         msj('error', 'Ingrese su correo');
         return;
@@ -110,7 +111,7 @@ function cerrarCesion(){
         try{
             data = JSON.parse(data);
             if(data.error == 0){
-                location.href = data.direccion;
+                location.href = 'Login';
             }else {
                 return;
             }
