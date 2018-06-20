@@ -58,8 +58,9 @@
                                 <th class="text-left">Name channel</th>
                                 <th class="text-left">Captain name</th>
                                 <th class="text-left">Country</th>
+                                <th class="text-left" width="80">Date</th>
                                 <th class="text-left">Status</th>
-                                <th class="text-center">Action</th>
+                                <th class="text-center" width="120">Action</th>
                             </tr>
                         </thead>
                       <tbody id="tabla">
