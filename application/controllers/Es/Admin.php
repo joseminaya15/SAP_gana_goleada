@@ -11,290 +11,296 @@ class Admin extends CI_Controller {
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
         $this->output->set_header('Pragma: no-cache');
-  }
+    }
+
 	public function index(){
-    if($this->session->userdata('usuario') == null){
-        header("location: Login");
-    }
-    $datos = $this->M_datos->getDatosAdmin('Español');
-    if(count($datos) == 0){
-        $data['tabla'] = '';
-    }else {
-        $html      = null;
-        $count     = 1;
-        $i         = 1;
-        $disabled  = '';
-        $estado    = '';
-        $disabled2 = '';
-        foreach ($datos as $key){
-           if($key->Flag == 1){
-              $disabled  = '';
-              $estado    = 'Pendiente';
-           }
-           if($key->Flag == 2){
-              $disabled  = 'disabled';
-              $estado    = 'Aprobado';
-           }
-           if($key->Flag == 3) {
-              $disabled  = 'disabled';
-              $estado    = 'Rechazado';
-           }
-           if($key->Flag == 4) {
-              $disabled  = '';
-              $estado    = 'Observado';
-           }
-           if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
-              $disabled2 = 'disabled';
-           }else {
-              $disabled2 = '';
-           }
-           $fecha = date("d-m-Y", strtotime($key->fecha));
-           $html .= '<tr>
-                        <td class="text-center">'.$key->Deal_registration.'</td>
-                        <td class="text-left">'.$key->Tipo_serv.'</td>
-                        <td class="text-left">'.$key->Empresa.'</td>
-                        <td class="text-left">'.$key->Nombre_canal.'</td>
-                        <td class="text-left">'.$key->Nombre_capitan.'</td>
-                        <td class="text-left">'.$key->Pais.'</td>
-                        <td class="text-left" width="80">'.$fecha.'</td>
-                        <td class="text-left">'.$estado.'</td>
-                        <td class="text-center" width="120">
-                          <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
-                          <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
-                          <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
-                        </td>
-                    </tr>';
-            $count++;
+        if($this->session->userdata('usuario') == null){
+            header("location: Login");
         }
-        $data['tabla'] = $html;
-    }
-		$this->load->view('es/v_admin', $data);
+        $datos = $this->M_datos->getDatosAdmin('Español');
+        if(count($datos) == 0){
+            $data['tabla'] = '';
+        }else {
+            $html      = null;
+            $count     = 1;
+            $i         = 1;
+            $disabled  = '';
+            $estado    = '';
+            $disabled2 = '';
+            foreach ($datos as $key){
+                if($key->Flag == 1){
+                    $disabled  = '';
+                    $estado    = 'Pendiente';
+                }
+                if($key->Flag == 2){
+                    $disabled  = 'disabled';
+                    $estado    = 'Aprobado';
+                }
+                if($key->Flag == 3) {
+                    $disabled  = 'disabled';
+                    $estado    = 'Rechazado';
+                }
+                if($key->Flag == 4) {
+                    $disabled  = '';
+                    $estado    = 'Observado';
+                }
+                if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
+                    $disabled2 = 'disabled';
+                }else {
+                    $disabled2 = '';
+                }
+                $fecha = date("d/m/Y", strtotime($key->fecha));
+                $html .= '<tr>
+                              <td class="text-center">'.$key->Deal_registration.'</td>
+                              <td class="text-left">'.$key->Tipo_serv.'</td>
+                              <td class="text-left">'.$key->Empresa.'</td>
+                              <td class="text-left">'.$key->Nombre_canal.'</td>
+                              <td class="text-left">'.$key->Nombre_capitan.'</td>
+                              <td class="text-left">'.$key->Pais.'</td>
+                              <td class="text-left" width="80">'.$fecha.'</td>
+                              <td class="text-left">'.$estado.'</td>
+                              <td class="text-center" width="120">
+                                  <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                  <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
+                                  <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
+                              </td>
+                          </tr>';
+                $count++;
+            }
+            $data['tabla'] = $html;
+        }
+    	$this->load->view('es/v_admin', $data);
 	}
-  function cerrarCesion(){
-    $data['error'] = EXIT_ERROR;
-    $data['msj']   = null;
-    try {
-        $this->session->unset_userdata('usuario');
-        $this->session->unset_userdata('Id_user');
-        $data['error'] = EXIT_SUCCESS;
-    } catch (Exception $e){
-        $data['msj'] = $e->getMessage();
-    }
-    echo json_encode($data);
-  }
-  function anularAnotacion(){
-    $data['error'] = EXIT_ERROR;
-    $data['msj']   = null;
-    try {
-        $id_serv   = $this->input->post('id_serv');
-        $arrUpdt   = array('Flag' => FLAG_RECHAZADO,
-                            'alertas' => FLAG_RECHAZADO);
-        $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
-        $datos     = $this->M_datos->getDatosAdmin('Español');
-        $count     = 1;
-        $i         = 1;
-        $disabled  = '';
-        $estado    = '';
-        $disabled2 = '';
-        if(count($datos) == 0){
-            $data['tabla'] = '';
-        }else {
-            $html = null;
-            foreach ($datos as $key){
-               if($key->Flag == 1){
-                  $disabled  = '';
-                  $estado    = 'Pendiente';
-               }
-               if($key->Flag == 2){
-                  $disabled  = 'disabled';
-                  $estado    = 'Aprobado';
-               }
-               if($key->Flag == 3) {
-                  $disabled  = 'disabled';
-                  $estado    = 'Rechazado';
-               }
-               if($key->Flag == 4) {
-                  $disabled  = '';
-                  $estado    = 'Observado';
-               }
-               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
-                  $disabled2 = 'disabled';
-               }else {
-                  $disabled2 = '';
-               }
-               $fecha = date("d-m-Y", strtotime($key->fecha));
-               $html .= '<tr>
-                            <td class="text-center">'.$key->Deal_registration.'</td>
-                            <td class="text-left">'.$key->Tipo_serv.'</td>
-                            <td class="text-left">'.$key->Empresa.'</td>
-                            <td class="text-left">'.$key->Nombre_canal.'</td>
-                            <td class="text-left">'.$key->Nombre_capitan.'</td>
-                            <td class="text-left">'.$key->Pais.'</td>
-                            <td class="text-left" width="80">'.$fecha.'</td>
-                            <td class="text-left">'.$estado.'</td>
-                            <td class="text-center" width="120">
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Observar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
-                            </td>
-                        </tr>';
-                $count++;
-            }
-            $data['tabla'] = $html;
+
+    function cerrarCesion(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $this->session->unset_userdata('usuario');
+            $this->session->unset_userdata('Id_user');
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
         }
-        $data['error'] = EXIT_SUCCESS;
-    } catch (Exception $e){
-        $data['msj'] = $e->getMessage();
+        echo json_encode($data);
     }
-    echo json_encode($data);
-  }
-  function aceptarAnotacion(){
-    $data['error'] = EXIT_ERROR;
-    $data['msj']   = null;
-    try {
-        $id_serv   = $this->input->post('id_serv');
-        $arrUpdt   = array('Flag' => FLAG_APROBADO,
-                           'alertas' => FLAG_APROBADO);
-        $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
-        $datos     = $this->M_datos->getDatosAdmin('Español');
-        $count     = 1;
-        $i         = 1;
-        $disabled  = '';
-        $estado    = '';
-        $disabled2 = '';
-        if(count($datos) == 0){
-            $data['tabla'] = '';
-        }else {
-            $html = null;
-            foreach ($datos as $key){
-               if($key->Flag == 1){
-                  $disabled  = '';
-                  $estado    = 'Pendiente';
-               }
-               if($key->Flag == 2){
-                  $disabled  = 'disabled';
-                  $estado    = 'Aprobado';
-               }
-               if($key->Flag == 3) {
-                  $disabled  = 'disabled';
-                  $estado    = 'Rechazado';
-               }
-               if($key->Flag == 4) {
-                  $disabled  = '';
-                  $estado    = 'Observado';
-               }
-               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
-                  $disabled2 = 'disabled';
-               }else if($key->alertas != 1 || $key->Flag == 1){
-                  $disabled2 = '';
-               }
-               $fecha = date("d-m-Y", strtotime($key->fecha));
-               $html .= '<tr>
-                            <td class="text-center">'.$key->Deal_registration.'</td>
-                            <td class="text-left">'.$key->Tipo_serv.'</td>
-                            <td class="text-left">'.$key->Empresa.'</td>
-                            <td class="text-left">'.$key->Nombre_canal.'</td>
-                            <td class="text-left">'.$key->Nombre_capitan.'</td>
-                            <td class="text-left">'.$key->Pais.'</td>
-                            <td class="text-left" width="80">'.$fecha.'</td>
-                            <td class="text-left">'.$estado.'</td>
-                            <td class="text-center" width="120">
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Observar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
-                            </td>
-                        </tr>';
-                $count++;
+
+    function anularAnotacion(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $id_serv   = $this->input->post('id_serv');
+            $arrUpdt   = array('Flag' => FLAG_RECHAZADO,
+                                'alertas' => FLAG_RECHAZADO);
+            $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
+            $datos     = $this->M_datos->getDatosAdmin('Español');
+            $count     = 1;
+            $i         = 1;
+            $disabled  = '';
+            $estado    = '';
+            $disabled2 = '';
+            if(count($datos) == 0){
+                $data['tabla'] = '';
+            }else {
+                $html = null;
+                foreach ($datos as $key){
+                    if($key->Flag == 1){
+                        $disabled  = '';
+                        $estado    = 'Pendiente';
+                    }
+                    if($key->Flag == 2){
+                        $disabled  = 'disabled';
+                        $estado    = 'Aprobado';
+                    }
+                    if($key->Flag == 3) {
+                        $disabled  = 'disabled';
+                        $estado    = 'Rechazado';
+                    }
+                    if($key->Flag == 4) {
+                        $disabled  = '';
+                        $estado    = 'Observado';
+                    }
+                    if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
+                        $disabled2 = 'disabled';
+                    }else {
+                        $disabled2 = '';
+                    }
+                    $fecha = date("d/m/Y", strtotime($key->fecha));
+                    $html .= '<tr>
+                                  <td class="text-center">'.$key->Deal_registration.'</td>
+                                  <td class="text-left">'.$key->Tipo_serv.'</td>
+                                  <td class="text-left">'.$key->Empresa.'</td>
+                                  <td class="text-left">'.$key->Nombre_canal.'</td>
+                                  <td class="text-left">'.$key->Nombre_capitan.'</td>
+                                  <td class="text-left">'.$key->Pais.'</td>
+                                  <td class="text-left" width="80">'.$fecha.'</td>
+                                  <td class="text-left">'.$estado.'</td>
+                                  <td class="text-center" width="120">
+                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
+                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
+                                  </td>
+                              </tr>';
+                    $count++;
+                }
+                $data['tabla'] = $html;
             }
-            $data['tabla'] = $html;
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
         }
-        $data['error'] = EXIT_SUCCESS;
-    } catch (Exception $e){
-        $data['msj'] = $e->getMessage();
+        echo json_encode($data);
     }
-    echo json_encode($data);
-  }
-  function contactarUser(){
-    $data['error'] = EXIT_ERROR;
-    $data['msj']   = null;
-    try {
-        $id_serv   = $this->input->post('id_serv');
-        $arrUpdt   = array('Flag' => FLAG_OBSERVADO,
-                           'alertas' => FLAG_OBSERVADO);
-        $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
-        $datos     = $this->M_datos->getDatosAdmin('Español');
-        $count     = 1;
-        $i         = 1;
-        $disabled  = '';
-        $estado    = '';
-        $disabled2 = '';
-        if(count($datos) == 0){
-            $data['tabla'] = '';
-        }else {
-            $html = null;
-            foreach ($datos as $key){
-               if($key->Flag == 1){
-                  $disabled  = '';
-                  $estado    = 'Pendiente';
-               }
-               if($key->Flag == 2){
-                  $disabled  = 'disabled';
-                  $estado    = 'Aprobado';
-               }
-               if($key->Flag == 3) {
-                  $disabled  = 'disabled';
-                  $estado    = 'Rechazado';
-               }
-               if($key->Flag == 4) {
-                  $disabled  = '';
-                  $estado    = 'Observado';
-               }
-               if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
-                  $disabled2 = 'disabled';
-               }else {
-                  $disabled2 = '';
-               }
-               $fecha = date("d-m-Y", strtotime($key->fecha));
-               $html .= '<tr>
-                            <td class="text-center">'.$key->Deal_registration.'</td>
-                            <td class="text-left">'.$key->Tipo_serv.'</td>
-                            <td class="text-left">'.$key->Empresa.'</td>
-                            <td class="text-left">'.$key->Nombre_canal.'</td>
-                            <td class="text-left">'.$key->Nombre_capitan.'</td>
-                            <td class="text-left">'.$key->Pais.'</td>
-                            <td class="text-left" width="80">'.$fecha.'</td>
-                            <td class="text-left">'.$estado.'</td>
-                            <td class="text-center" width="120">
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
-                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Observar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
-                            </td>
-                        </tr>';
-                $count++;
-                $i++;
+
+    function aceptarAnotacion(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $id_serv   = $this->input->post('id_serv');
+            $arrUpdt   = array('Flag' => FLAG_APROBADO,
+                               'alertas' => FLAG_APROBADO);
+            $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
+            $datos     = $this->M_datos->getDatosAdmin('Español');
+            $count     = 1;
+            $i         = 1;
+            $disabled  = '';
+            $estado    = '';
+            $disabled2 = '';
+            if(count($datos) == 0){
+                $data['tabla'] = '';
+            }else {
+                $html = null;
+                foreach ($datos as $key){
+                    if($key->Flag == 1){
+                        $disabled  = '';
+                        $estado    = 'Pendiente';
+                    }
+                    if($key->Flag == 2){
+                        $disabled  = 'disabled';
+                        $estado    = 'Aprobado';
+                    }
+                    if($key->Flag == 3) {
+                        $disabled  = 'disabled';
+                        $estado    = 'Rechazado';
+                    }
+                    if($key->Flag == 4) {
+                        $disabled  = '';
+                        $estado    = 'Observado';
+                    }
+                    if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
+                        $disabled2 = 'disabled';
+                    }else if($key->alertas != 1 || $key->Flag == 1){
+                        $disabled2 = '';
+                    }
+                    $fecha = date("d/m/Y", strtotime($key->fecha));
+                    $html .= '<tr>
+                                  <td class="text-center">'.$key->Deal_registration.'</td>
+                                  <td class="text-left">'.$key->Tipo_serv.'</td>
+                                  <td class="text-left">'.$key->Empresa.'</td>
+                                  <td class="text-left">'.$key->Nombre_canal.'</td>
+                                  <td class="text-left">'.$key->Nombre_capitan.'</td>
+                                  <td class="text-left">'.$key->Pais.'</td>
+                                  <td class="text-left" width="80">'.$fecha.'</td>
+                                  <td class="text-left">'.$estado.'</td>
+                                  <td class="text-center" width="120">
+                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
+                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
+                                  </td>
+                              </tr>';
+                    $count++;
+                }
+                $data['tabla'] = $html;
             }
-            $data['tabla'] = $html;
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
         }
-        $data['error'] = EXIT_SUCCESS;
-    } catch (Exception $e){
-        $data['msj'] = $e->getMessage();
+        echo json_encode($data);
     }
-    echo json_encode($data);
-  }
-  function sendEmail(){
+
+    function contactarUser(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $id_serv   = $this->input->post('id_serv');
+            $arrUpdt   = array('Flag' => FLAG_OBSERVADO,
+                               'alertas' => FLAG_OBSERVADO);
+            $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
+            $datos     = $this->M_datos->getDatosAdmin('Español');
+            $count     = 1;
+            $i         = 1;
+            $disabled  = '';
+            $estado    = '';
+            $disabled2 = '';
+            if(count($datos) == 0){
+                $data['tabla'] = '';
+            }else {
+                $html = null;
+                foreach ($datos as $key){
+                    if($key->Flag == 1){
+                        $disabled  = '';
+                        $estado    = 'Pendiente';
+                    }
+                    if($key->Flag == 2){
+                        $disabled  = 'disabled';
+                        $estado    = 'Aprobado';
+                    }
+                    if($key->Flag == 3) {
+                        $disabled  = 'disabled';
+                        $estado    = 'Rechazado';
+                    }
+                    if($key->Flag == 4) {
+                        $disabled  = '';
+                        $estado    = 'Observado';
+                    }
+                    if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
+                        $disabled2 = 'disabled';
+                    }else {
+                        $disabled2 = '';
+                    }
+                    $fecha = date("d/m/Y", strtotime($key->fecha));
+                    $html .= '<tr>
+                                <td class="text-center">'.$key->Deal_registration.'</td>
+                                <td class="text-left">'.$key->Tipo_serv.'</td>
+                                <td class="text-left">'.$key->Empresa.'</td>
+                                <td class="text-left">'.$key->Nombre_canal.'</td>
+                                <td class="text-left">'.$key->Nombre_capitan.'</td>
+                                <td class="text-left">'.$key->Pais.'</td>
+                                <td class="text-left" width="80">'.$fecha.'</td>
+                                <td class="text-left">'.$estado.'</td>
+                                <td class="text-center" width="120">
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
+                                </td>
+                            </tr>';
+                    $count++;
+                    $i++;
+                }
+                $data['tabla'] = $html;
+            }
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+
+    function sendEmail(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
             $email_partner = $this->input->post('email');
             $this->load->library("email");
-            $configGmail = array('protocol' => 'smtp',
-                                'smtp_host' => 'smtpout.secureserver.net',
-                                'smtp_port' => 3535,
-                                'smtp_user' => 'info@marketinghpe.com',
-                                'smtp_pass' => 'hpeinfo18',
-                                'mailtype'  => 'html',
-                                'charset'   => 'utf-8',
-                                'newline'   => "\r\n");
+            $configGmail = array('protocol'  => 'smtp',
+                                 'smtp_host' => 'smtpout.secureserver.net',
+                                 'smtp_port' => 3535,
+                                 'smtp_user' => 'info@marketinghpe.com',
+                                 'smtp_pass' => 'hpeinfo18',
+                                 'mailtype'  => 'html',
+                                 'charset'   => 'utf-8',
+                                 'newline'   => "\r\n");
             $this->email->initialize($configGmail);
             $this->email->from('info@sap-latam.com');
             $this->email->to($email_partner);
