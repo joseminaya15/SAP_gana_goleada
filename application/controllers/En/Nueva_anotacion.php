@@ -74,6 +74,7 @@ class Nueva_anotacion extends CI_Controller {
                                     'lenguaje'          => 'Inglés');
                 $datosInsert = $this->M_datos->insertarDatos($dataInsert, 'anotaciones');
                 $this->sendEmailAnotacion($this->session->userdata('usuario'));
+                $this->sendEmailAdmin();
             }
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
@@ -89,8 +90,8 @@ class Nueva_anotacion extends CI_Controller {
             $configGmail = array('protocol' => 'smtp',
                                 'smtp_host' => 'smtpout.secureserver.net',
                                 'smtp_port' => 3535,
-                                'smtp_user' => 'info@sap-latam.com',
-                                'smtp_pass' => 'sapinfo18',
+                                'smtp_user' => 'info@marketinghpe.com',
+                                'smtp_pass' => 'hpeinfo18',
                                 'mailtype'  => 'html',
                                 'charset'   => 'utf-8',
                                 'newline'   => "\r\n");
@@ -153,7 +154,7 @@ class Nueva_anotacion extends CI_Controller {
         }
         return json_encode(array_map('utf8_encode', $data));
     }
-    /*function sendEmailAdmin(){
+    function sendEmailAdmin(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {  
@@ -230,5 +231,5 @@ class Nueva_anotacion extends CI_Controller {
             $data['msj'] = $e->getMessage();
         }
         return json_encode(array_map('utf8_encode', $data));
-    }*/
+    }
 }
