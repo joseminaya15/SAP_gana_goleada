@@ -48,6 +48,7 @@ class Admin extends CI_Controller {
            }else {
               $disabled2 = '';
            }
+           $fecha = date("d-m-Y", strtotime($key->fecha));
            $html .= '<tr>
                         <td class="text-center">'.$key->Deal_registration.'</td>
                         <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -55,12 +56,12 @@ class Admin extends CI_Controller {
                         <td class="text-left">'.$key->Nombre_canal.'</td>
                         <td class="text-left">'.$key->Nombre_capitan.'</td>
                         <td class="text-left">'.$key->Pais.'</td>
-                        <td class="text-left">'.$key->fecha.'</td>
+                        <td class="text-left" width="80">'.$fecha.'</td>
                         <td class="text-left">'.$estado.'</td>
-                        <td class="text-center">
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
+                        <td class="text-center" width="120">
+                          <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                          <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
+                          <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                         </td>
                     </tr>';
             $count++;
@@ -118,6 +119,7 @@ class Admin extends CI_Controller {
                }else {
                   $disabled2 = '';
                }
+               $fecha = date("d-m-Y", strtotime($key->fecha));
                $html .= '<tr>
                             <td class="text-center">'.$key->Deal_registration.'</td>
                             <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -125,9 +127,9 @@ class Admin extends CI_Controller {
                             <td class="text-left">'.$key->Nombre_canal.'</td>
                             <td class="text-left">'.$key->Nombre_capitan.'</td>
                             <td class="text-left">'.$key->Pais.'</td>
-                            <td class="text-left">'.$key->fecha.'</td>
+                            <td class="text-left" width="80">'.$fecha.'</td>
                             <td class="text-left">'.$estado.'</td>
-                            <td class="text-center">
+                            <td class="text-center" width="120">
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                             </td>
@@ -182,6 +184,7 @@ class Admin extends CI_Controller {
                }else if($key->alertas != 1 || $key->Flag == 1){
                   $disabled2 = '';
                }
+               $fecha = date("d-m-Y", strtotime($key->fecha));
                $html .= '<tr>
                             <td class="text-center">'.$key->Deal_registration.'</td>
                             <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -189,9 +192,9 @@ class Admin extends CI_Controller {
                             <td class="text-left">'.$key->Nombre_canal.'</td>
                             <td class="text-left">'.$key->Nombre_capitan.'</td>
                             <td class="text-left">'.$key->Pais.'</td>
-                            <td class="text-left">'.$key->fecha.'</td>
+                            <td class="text-left" width="80">'.$fecha.'</td>
                             <td class="text-left">'.$estado.'</td>
-                            <td class="text-center">
+                            <td class="text-center" width="120">
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                             </td>
@@ -246,6 +249,7 @@ class Admin extends CI_Controller {
                }else {
                   $disabled2 = '';
                }
+               $fecha = date("d-m-Y", strtotime($key->fecha));
                $html .= '<tr>
                             <td class="text-center">'.$key->Deal_registration.'</td>
                             <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -253,9 +257,9 @@ class Admin extends CI_Controller {
                             <td class="text-left">'.$key->Nombre_canal.'</td>
                             <td class="text-left">'.$key->Nombre_capitan.'</td>
                             <td class="text-left">'.$key->Pais.'</td>
-                            <td class="text-left">'.$key->fecha.'</td>
+                            <td class="text-left" width="80">'.$fecha.'</td>
                             <td class="text-left">'.$estado.'</td>
-                            <td class="text-center">
+                            <td class="text-center" width="120">
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                             <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                             </td>
