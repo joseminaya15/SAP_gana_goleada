@@ -59,7 +59,7 @@
                             </div>
                             <div class="m-t-20">
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar" onclick="goToRegister()">Registrarse<i class="mdi mdi-play_arrow"></i></button>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="ingresar()">Ingresar<i class="mdi mdi-play_arrow"></i></button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="ingresar('es/')">Ingresar<i class="mdi mdi-play_arrow"></i></button>
                             </div>
                         </div>
                     </div>

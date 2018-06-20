@@ -21,7 +21,7 @@ function ingresar(){
 	$.ajax({
 		data : {usuario  : usuario,
 				password : password,
-            idioma   : idioma},
+                idioma   : idioma},
 		url  : 'Login/ingresar',
 		type : 'POST'
 	}).done(function(data){
@@ -110,7 +110,7 @@ function cerrarCesion(){
         try{
             data = JSON.parse(data);
             if(data.error == 0){
-                location.href = 'Login';
+                location.href = data.direccion;
             }else {
                 return;
             }
