@@ -102,9 +102,11 @@ class Admin extends CI_Controller {
             $html = null;
             foreach ($datos as $key){
                if($key->Flag == 1){
+                  $disabled  = '';
                   $estado    = 'Pendiente';
                }
                if($key->Flag == 2){
+                  $disabled  = 'disabled';
                   $estado    = 'Aprobado';
                }
                if($key->Flag == 3) {
@@ -112,6 +114,7 @@ class Admin extends CI_Controller {
                   $estado    = 'Rechazado';
                }
                if($key->Flag == 4) {
+                  $disabled  = '';
                   $estado    = 'Observado';
                }
                if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
@@ -167,9 +170,11 @@ class Admin extends CI_Controller {
             $html = null;
             foreach ($datos as $key){
                if($key->Flag == 1){
+                  $disabled  = '';
                   $estado    = 'Pendiente';
                }
                if($key->Flag == 2){
+                  $disabled  = 'disabled';
                   $estado    = 'Aprobado';
                }
                if($key->Flag == 3) {
@@ -177,6 +182,7 @@ class Admin extends CI_Controller {
                   $estado    = 'Rechazado';
                }
                if($key->Flag == 4) {
+                  $disabled  = '';
                   $estado    = 'Observado';
                }
                if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
@@ -232,9 +238,11 @@ class Admin extends CI_Controller {
             $html = null;
             foreach ($datos as $key){
                if($key->Flag == 1){
+                  $disabled  = '';
                   $estado    = 'Pendiente';
                }
                if($key->Flag == 2){
+                  $disabled  = 'disabled';
                   $estado    = 'Aprobado';
                }
                if($key->Flag == 3) {
@@ -242,6 +250,7 @@ class Admin extends CI_Controller {
                   $estado    = 'Rechazado';
                }
                if($key->Flag == 4) {
+                  $disabled  = '';
                   $estado    = 'Observado';
                }
                if($key->alertas == 1 || $key->Flag == 2 || $key->Flag == 3 || $key->Flag == 4){
