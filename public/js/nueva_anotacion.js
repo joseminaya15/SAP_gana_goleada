@@ -140,6 +140,11 @@ var nameAnotacion = null;
 var puntosGoles   = null;
 var card          = $('.mdl-card-cuentas');
 function selectAnotacion(id){
+	if(id == 'oportunidadb1'){
+		$('#descripcion').attr('placeholder', 'Detalle nombre, teléfono y mail del contacto del cliente');
+	} else {
+		$('#descripcion').attr('placeholder', 'Descripción');
+	}
 	var idButton = $('#'+id);
 	var name     = idButton.parents('.mdl-puntos').find('.name-anotacion').find('p').text();
 	var puntos   = idButton.parents('.mdl-puntos').find('.punto-imagen').html();
@@ -203,6 +208,11 @@ function restringirNum(){
 }
 var tab = 0;
 function selectTab(id){
+	if(id == 'sap') {
+		$('#descripcion').attr('placeholder', 'Detalle nombre, teléfono y mail del contacto del cliente');
+	} else {
+		$('#descripcion').attr('placeholder', 'Deal Registration ID');
+	}
 	var idPanel      = $('#Tab'+id);
 	card.find('.mdl-card__title').find('h2').text();
 	idPanel.find('.mdl-puntos').find('.mdl-radio').removeClass('is-checked');
