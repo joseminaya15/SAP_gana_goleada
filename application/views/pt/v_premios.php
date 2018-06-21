@@ -55,6 +55,7 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="active"><a href="#Tabhome" aria-controls="home" role="tab" data-toggle="tab">GB</a></li>
                             <li><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">B1</a></li>
+                            <li><a href="#Tabgol" aria-controls="Tabgol" role="tab" data-toggle="tab">Melhor marcador do ano</a></li>
                         </ul>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active p-0 m-b-20" id="Tabhome">
@@ -75,6 +76,24 @@
                                 <div class="col-sm-4 text-center premioQ">
                                     <img src="<?php echo RUTA_IMG?>premios/pbq3.png">
                                 </div>      
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade p-0 m-b-20" id="Tabgol">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Posição</th>
+                                                <th>Equipe</th>
+                                                <th>Capitão</th>
+                                                <th>País</th>
+                                                <th>Pontuação</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php echo $html ?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xs-12 cierreQ m-b-15">
