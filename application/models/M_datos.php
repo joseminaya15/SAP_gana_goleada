@@ -75,7 +75,8 @@ class M_datos extends  CI_Model{
                        u.Pais,
                        a.alertas,
                        u.usuario,
-                       a.fecha
+                       a.fecha,
+                       a.descripcion
                   FROM servicios s,
                        anotaciones a,
                        users u
