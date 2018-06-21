@@ -55,6 +55,7 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="active"><a href="#Tabhome" aria-controls="home" role="tab" data-toggle="tab">GB</a></li>
                             <li><a href="#Tabsap" aria-controls="Tabsap" role="tab" data-toggle="tab">B1</a></li>
+                            <li><a href="#Tabgol" aria-controls="Tabgol" role="tab" data-toggle="tab">Goleador del año</a></li>
                         </ul>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active p-0 m-b-20" id="Tabhome">
@@ -81,6 +82,25 @@
                                 <div class="col-xs-12 cierreQ m-b-15">
                                     <p>*El premio es por LAC</p>
                                 </div>        
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade p-0 m-b-20" id="Tabgol">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Posici&oacute;n</th>
+                                                <th>Equipo</th>
+                                                <th>Capit&aacute;n</th>
+                                                <th>Pa&iacute;s</th>
+                                                <th>Score</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php echo $html ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>

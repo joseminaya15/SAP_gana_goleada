@@ -194,4 +194,23 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->row()->Id;
     }
+    function RankingGol(){
+        $sql = "SELECT s.*,
+                       a.*,
+                       u.Nombre_canal,
+                       u.Nombre_capitan,
+                       u.Pais,
+                       SUM(a.Goles) as Status
+                  FROM servicios s,
+                       anotaciones a,
+                       users u
+                 WHERE a.Id_serv = s.Id
+                   AND a.id_user = u.Id
+                   AND a.Flag = 2
+              GROUP BY a.id_user
+              ORDER BY SUM(a.Goles) DESC
+              LIMIT 1";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
 }
