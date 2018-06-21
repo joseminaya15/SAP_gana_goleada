@@ -54,6 +54,7 @@ class Admin extends CI_Controller {
                 } else {
                     $fecha = '-';
                 }
+                $key->descripcion = ($key->descripcion != '' ) ? $key->descripcion : '-' ;
                 $html .= '<tr>
                               <td class="text-center">'.$key->Deal_registration.'</td>
                               <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -61,6 +62,7 @@ class Admin extends CI_Controller {
                               <td class="text-left">'.$key->Nombre_canal.'</td>
                               <td class="text-left">'.$key->Nombre_capitan.'</td>
                               <td class="text-left">'.$key->Pais.'</td>
+                              <td class="text-left">'.$key->descripcion.'</td>
                               <td class="text-left" width="80">'.$fecha.'</td>
                               <td class="text-left">'.$estado.'</td>
                               <td class="text-center" width="120">
@@ -134,6 +136,7 @@ class Admin extends CI_Controller {
                     } else {
                         $fecha = '-';
                     }
+                    $key->descripcion = ($key->descripcion != '' ) ? $key->descripcion : '-' ;
                     $html .= '<tr>
                                   <td class="text-center">'.$key->Deal_registration.'</td>
                                   <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -141,6 +144,7 @@ class Admin extends CI_Controller {
                                   <td class="text-left">'.$key->Nombre_canal.'</td>
                                   <td class="text-left">'.$key->Nombre_capitan.'</td>
                                   <td class="text-left">'.$key->Pais.'</td>
+                                  <td class="text-left">'.$key->descripcion.'</td>
                                   <td class="text-left" width="80">'.$fecha.'</td>
                                   <td class="text-left">'.$estado.'</td>
                                   <td class="text-center" width="120">
@@ -205,6 +209,7 @@ class Admin extends CI_Controller {
                     } else {
                         $fecha = '-';
                     }
+                    $key->descripcion = ($key->descripcion != '' ) ? $key->descripcion : '-' ;
                     $html .= '<tr>
                                   <td class="text-center">'.$key->Deal_registration.'</td>
                                   <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -212,6 +217,7 @@ class Admin extends CI_Controller {
                                   <td class="text-left">'.$key->Nombre_canal.'</td>
                                   <td class="text-left">'.$key->Nombre_capitan.'</td>
                                   <td class="text-left">'.$key->Pais.'</td>
+                                  <td class="text-left">'.$key->descripcion.'</td>
                                   <td class="text-left" width="80">'.$fecha.'</td>
                                   <td class="text-left">'.$estado.'</td>
                                   <td class="text-center" width="120">
@@ -276,6 +282,7 @@ class Admin extends CI_Controller {
                     } else {
                         $fecha = '-';
                     }
+                    $key->descripcion = ($key->descripcion != '' ) ? $key->descripcion : '-' ;
                     $html .= '<tr>
                                 <td class="text-center">'.$key->Deal_registration.'</td>
                                 <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -283,6 +290,7 @@ class Admin extends CI_Controller {
                                 <td class="text-left">'.$key->Nombre_canal.'</td>
                                 <td class="text-left">'.$key->Nombre_capitan.'</td>
                                 <td class="text-left">'.$key->Pais.'</td>
+                                <td class="text-left">'.$key->descripcion.'</td>
                                 <td class="text-left" width="80">'.$fecha.'</td>
                                 <td class="text-left">'.$estado.'</td>
                                 <td class="text-center" width="120">

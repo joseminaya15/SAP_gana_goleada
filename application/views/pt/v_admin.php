@@ -50,7 +50,7 @@
             </div>
             <div class="mdl-card mdl-card-table md-admin">
                 <div class="table-responsive">
-                    <table id="example" class="display nowrap table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
+                    <table id="example" class="display table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
                                 <th class="text-center">Deal ID #</th>
@@ -59,6 +59,7 @@
                                 <th class="text-left">Nombre Canal</th>
                                 <th class="text-left">Nombre Capitán</th>
                                 <th class="text-left">Pa&iacute;s</th>
+                                <th class="text-left">Descripci&oacute;n</th>
                                 <th class="text-left" width="80">Fecha</th>
                                 <th class="text-left">Estado</th>
                                 <th class="text-center" width="120">Acción</th>

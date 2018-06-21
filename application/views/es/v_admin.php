@@ -58,7 +58,8 @@
                                 <th class="text-left">Nombre Empresa</th>
                                 <th class="text-left">Nombre Canal</th>
                                 <th class="text-left">Nombre Capitán</th>
-                                <th class="text-left">País</th>
+                                <th class="text-left">Pa&iacute;s</th>
+                                <th class="text-left">Descripci&oacute;n</th>
                                 <th class="text-left" width="80">Fecha</th>
                                 <th class="text-left">Estado</th>
                                 <th class="text-center" width="120">Acción</th>

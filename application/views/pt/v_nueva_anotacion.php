@@ -208,7 +208,7 @@
                                 <input type="texto" class="form-control" placeholder="Deal Registration ID" id="deal_regis" onkeypress="return valida(event)" onchange="restringirNum()" maxlength="6">
                             </div>
                             <div class="form-group">
-                                <textarea type="texto" rows="2" class="form-control" placeholder="Descrição" id="descripcion"></textarea> 
+                                <textarea type="texto" rows="2" class="form-control" placeholder="Nome do detalhe, telefone e e-mail do contato do cliente" id="descripcion"></textarea> 
                             </div>
                             <div class="col-xs-6 p-0">
                                 <div class="form-group input-date">
