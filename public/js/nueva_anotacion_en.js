@@ -145,7 +145,22 @@ function existeFecha(fecha){
 var nameAnotacion = null;
 var puntosGoles   = null;
 var card          = $('.mdl-card-cuentas');
+var idLocal 	  = '';
 function selectAnotacion(id){
+	if(idLocal != id){
+		$('#deal_regis').val('');
+	}
+	if(id == 'oportunidadb1'){
+		$('#descripcion').attr('placeholder', "Detail name, phone and mail of the customer's contact");
+	} else {
+		$('#descripcion').attr('placeholder', 'Description');
+	}
+	if (id == 'oportunidad' || id == 'social_selling') {
+		$('#deal_regis').attr('maxlength', '10');
+	} else {
+		$('#deal_regis').attr('maxlength', '6');
+	}
+	idLocal = id;
 	var idButton = $('#'+id);
 	var name     = idButton.parents('.mdl-puntos').find('.name-anotacion').find('p').text();
 	var puntos   = idButton.parents('.mdl-puntos').find('.punto-imagen').html();
