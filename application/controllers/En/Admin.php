@@ -33,11 +33,11 @@ class Admin extends CI_Controller {
                     $estado    = 'Pendiente';
                 }
                 if($key->Flag == 2){
-                    $disabled  = 'disabled';
+                    $disabled  = '';
                     $estado    = 'Aprobado';
                 }
                 if($key->Flag == 3) {
-                    $disabled  = 'disabled';
+                    $disabled  = '';
                     $estado    = 'Rechazado';
                 }
                 if($key->Flag == 4) {
@@ -113,11 +113,11 @@ class Admin extends CI_Controller {
                         $estado    = 'Pendiente';
                     }
                     if($key->Flag == 2){
-                        $disabled  = 'disabled';
+                        $disabled  = '';
                         $estado    = 'Aprobado';
                     }
                     if($key->Flag == 3) {
-                        $disabled  = 'disabled';
+                        $disabled  = '';
                         $estado    = 'Rechazado';
                     }
                     if($key->Flag == 4) {
@@ -184,11 +184,11 @@ class Admin extends CI_Controller {
                         $estado    = 'Pendiente';
                     }
                     if($key->Flag == 2){
-                        $disabled  = 'disabled';
+                        $disabled  = '';
                         $estado    = 'Aprobado';
                     }
                     if($key->Flag == 3) {
-                        $disabled  = 'disabled';
+                        $disabled  = '';
                         $estado    = 'Rechazado';
                     }
                     if($key->Flag == 4) {
@@ -255,11 +255,11 @@ class Admin extends CI_Controller {
                         $estado    = 'Pendiente';
                     }
                     if($key->Flag == 2){
-                        $disabled  = 'disabled';
+                        $disabled  = '';
                         $estado    = 'Aprobado';
                     }
                     if($key->Flag == 3) {
-                        $disabled  = 'disabled';
+                        $disabled  = '';
                         $estado    = 'Rechazado';
                     }
                     if($key->Flag == 4) {
