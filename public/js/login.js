@@ -120,29 +120,13 @@ function cerrarCesion(){
         }
     });
 }
-
+var id_anular = null;
 function anular(id, btn){
     $('#btnanular'+btn).prop('disabled', true);
     $('#btnaceptar'+btn).prop('disabled', true);
-    $.ajax({
-        data : {id_serv : id},
-        url  : 'admin/anularAnotacion',
-        type : 'POST'
-    }).done(function(data){
-        try{
-            data = JSON.parse(data);
-            if(data.error == 0){
-                $('#tabla').html('');
-                $('#tabla').append(data.tabla);
-            }else {
-                return;
-            }
-        }catch(err){
-            msj('error',err.message);
-        }
-    });
+    $('#modalAnular').modal('show');
+    id_anular = id;
 }
-
 function aceptar(id, btn){
     $('#btnanular'+btn).prop('disabled', true);
     $('#btnaceptar'+btn).prop('disabled', true);
@@ -164,7 +148,6 @@ function aceptar(id, btn){
         }
     });
 }
-
 function contactar(ids, btns){
     $('#btncontactar'+btns).prop('disabled', true);
     $.ajax({
@@ -185,7 +168,6 @@ function contactar(ids, btns){
         }
     });
 }
-
 function cambiarIdioma(){
     var idioma = $('#Idioma').val();
     if(idioma == 'Español'){
@@ -217,14 +199,33 @@ function sendEmail(email){
         url   : 'Admin/sendEmail',
         type  : 'POST'
     }).done(function(data){
-    try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-        }else{
-          return;
+        try{
+            data = JSON.parse(data);
+            if(data.error == 0){
+            }else{
+              return;
+            }
+        } catch (err){
+            msj('error',err.message);
         }
-    } catch (err){
-        msj('error',err.message);
-    }
-});
+    });
+}
+function confirmarAnulacion(){
+    $.ajax({
+        data : {id_serv : id_anular},
+        url  : 'admin/anularAnotacion',
+        type : 'POST'
+    }).done(function(data){
+        try{
+            data = JSON.parse(data);
+            if(data.error == 0){
+                $('#tabla').html('');
+                $('#tabla').append(data.tabla);
+            }else {
+                return;
+            }
+        }catch(err){
+            msj('error',err.message);
+        }
+    });
 }

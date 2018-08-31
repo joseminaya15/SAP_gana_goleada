@@ -962,6 +962,29 @@ header.dtp-header .dtp-actual-year {
     margin: 8px 0;
     color: #000000;
 }
+.js-anular .mdl-card__title{
+	display: block;
+}
+.js-anular .mdl-card__title h2{
+	font-size: 22px;
+	line-height: 26px;
+	margin:  10px 0;
+}
+.js-anular .mdl-card__actions{
+	padding: 16px;
+}
+.js-anular .mdl-card__actions .js-button{
+	margin: 0 5px;
+	background-color: #F0AB00;
+	color: #FFFFFF;
+	box-shadow: none;
+	text-transform: initial;
+	font-family: 'RobotoBold';
+}
+.js-anular .mdl-card__actions .js-button.js-default{
+	background-color: transparent;
+	color: #F0AB00;
+}
 @media ( min-width : 800px ) {
 	.dtp>.dtp-content {
 		max-width: 530px;

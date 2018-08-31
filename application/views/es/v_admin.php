@@ -73,6 +73,27 @@
             </div>
         </div>
     </section>
+    <!-- Modal -->
+    <div class="modal fade modal-center" id="modalAnular" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="mdl-card js-anular">
+                    <div class="mdl-card__title">
+                        <h2>¿Estas seguro de rechazar esta oportunidad?</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="form-group">
+                            <textarea type="texto" rows="3" class="form-control" placeholder="Motivo de rechazo" id="empresa"></textarea>
+                        </div>
+                    </div>
+                    <div class="mdl-card__actions text-right">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-default" data-dismiss="modal">Cancelar</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="confirmarAnulacion()">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.min.js"></script>
