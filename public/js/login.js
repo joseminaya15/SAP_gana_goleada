@@ -211,8 +211,10 @@ function sendEmail(email){
     });
 }
 function confirmarAnulacion(){
+    var motivo = $('#empresa').val();
     $.ajax({
-        data : {id_serv : id_anular},
+        data : {id_serv : id_anular,
+                motivo  : motivo },
         url  : 'admin/anularAnotacion',
         type : 'POST'
     }).done(function(data){
@@ -221,6 +223,7 @@ function confirmarAnulacion(){
             if(data.error == 0){
                 $('#tabla').html('');
                 $('#tabla').append(data.tabla);
+                $('#modalAnular').modal('hide');
             }else {
                 return;
             }
