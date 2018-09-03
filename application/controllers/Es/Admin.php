@@ -66,7 +66,7 @@ class Admin extends CI_Controller {
                               <td class="text-left" width="80">'.$fecha.'</td>
                               <td class="text-left">'.$estado.'</td>
                               <td class="text-center" width="120">
-                                  <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                  <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                                   <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                                   <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                               </td>
@@ -149,7 +149,7 @@ class Admin extends CI_Controller {
                                   <td class="text-left" width="80">'.$fecha.'</td>
                                   <td class="text-left">'.$estado.'</td>
                                   <td class="text-center" width="120">
-                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                                       <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                                       <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                                   </td>
@@ -223,7 +223,7 @@ class Admin extends CI_Controller {
                                   <td class="text-left" width="80">'.$fecha.'</td>
                                   <td class="text-left">'.$estado.'</td>
                                   <td class="text-center" width="120">
-                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                                       <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                                       <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                                   </td>
@@ -296,7 +296,7 @@ class Admin extends CI_Controller {
                                 <td class="text-left" width="80">'.$fecha.'</td>
                                 <td class="text-left">'.$estado.'</td>
                                 <td class="text-center" width="120">
-                                <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                                 <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                                 <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                                 </td>
@@ -323,7 +323,7 @@ class Admin extends CI_Controller {
                                  'smtp_host' => 'smtpout.secureserver.net',
                                  'smtp_port' => 3535,
                                  'smtp_user' => 'info@marketinghpe.com',
-                                 'smtp_pass' => 'hpEmSac$18',
+                                 'smtp_pass' => 'Ag0#3918Peh',
                                  'mailtype'  => 'html',
                                  'charset'   => 'utf-8',
                                  'newline'   => "\r\n");
@@ -403,7 +403,7 @@ class Admin extends CI_Controller {
                                  'smtp_host' => 'smtpout.secureserver.net',
                                  'smtp_port' => 3535,
                                  'smtp_user' => 'info@marketinghpe.com',
-                                 'smtp_pass' => 'hpEmSac$18',
+                                 'smtp_pass' => 'Ag0#3918Peh',
                                  'mailtype'  => 'html',
                                  'charset'   => 'utf-8',
                                  'newline'   => "\r\n");

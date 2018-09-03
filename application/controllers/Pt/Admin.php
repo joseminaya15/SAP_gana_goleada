@@ -323,7 +323,7 @@ class Admin extends CI_Controller {
                                  'smtp_host' => 'smtpout.secureserver.net',
                                  'smtp_port' => 3535,
                                  'smtp_user' => 'info@marketinghpe.com',
-                                 'smtp_pass' => 'hpEmSac$18',
+                                 'smtp_pass' => 'Ag0#3918Peh',
                                  'mailtype'  => 'html',
                                  'charset'   => 'utf-8',
                                  'newline'   => "\r\n");
@@ -405,7 +405,7 @@ class Admin extends CI_Controller {
                                  'smtp_host' => 'smtpout.secureserver.net',
                                  'smtp_port' => 3535,
                                  'smtp_user' => 'info@marketinghpe.com',
-                                 'smtp_pass' => 'hpEmSac$18',
+                                 'smtp_pass' => 'Ag0#3918Peh',
                                  'mailtype'  => 'html',
                                  'charset'   => 'utf-8',
                                  'newline'   => "\r\n");
