@@ -54,7 +54,6 @@ class Admin extends CI_Controller {
                 } else {
                     $fecha = '-';
                 }
-                $key->descripcion = ($key->descripcion != '' ) ? $key->descripcion : '-' ;
                 $html .= '<tr>
                               <td class="text-center">'.$key->Deal_registration.'</td>
                               <td class="text-left">'.$key->Tipo_serv.'</td>
@@ -62,11 +61,10 @@ class Admin extends CI_Controller {
                               <td class="text-left">'.$key->Nombre_canal.'</td>
                               <td class="text-left">'.$key->Nombre_capitan.'</td>
                               <td class="text-left">'.$key->Pais.'</td>
-                              <td class="text-left">'.$key->descripcion.'</td>
                               <td class="text-left" width="80">'.$fecha.'</td>
                               <td class="text-left">'.$estado.'</td>
                               <td class="text-center" width="120">
-                                  <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                  <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.', &#39;'.$key->usuario.'&#39;)" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                                   <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                                   <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                               </td>
@@ -97,8 +95,10 @@ class Admin extends CI_Controller {
         try {
             $id_serv   = $this->input->post('id_serv');
             $motivo    = $this->input->post('motivo');
-            $arrUpdt   = array('Flag' => FLAG_RECHAZADO,
-                                'alertas' => FLAG_RECHAZADO);
+            $email     = $this->input->post('email');
+            $arrUpdt   = array('Flag'    => FLAG_RECHAZADO,
+                               'alertas' => FLAG_RECHAZADO,
+                               'motivo'  => $motivo);
             $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
             $datos     = $this->M_datos->getDatosAdmin('Ingles');
             $count     = 1;
@@ -147,7 +147,7 @@ class Admin extends CI_Controller {
                                   <td class="text-left" width="80">'.$fecha.'</td>
                                   <td class="text-left">'.$estado.'</td>
                                   <td class="text-center" width="120">
-                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.', &#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                                       <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                                       <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                                   </td>
@@ -156,7 +156,7 @@ class Admin extends CI_Controller {
                 }
                 $data['tabla'] = $html;
             }
-            $this->sendEmailAnula($motivo);
+            $this->sendEmailAnula($motivo, $email);
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();
@@ -170,7 +170,8 @@ class Admin extends CI_Controller {
         try {
             $id_serv   = $this->input->post('id_serv');
             $arrUpdt   = array('Flag' => FLAG_APROBADO,
-                               'alertas' => FLAG_APROBADO);
+                               'alertas' => FLAG_APROBADO,
+                               'motivo'  => NULL);
             $datosUpdt = $this->M_datos->updateDatos($arrUpdt, $id_serv, 'anotaciones');
             $datos     = $this->M_datos->getDatosAdmin('Ingles');
             $count     = 1;
@@ -219,7 +220,7 @@ class Admin extends CI_Controller {
                                   <td class="text-left" width="80">'.$fecha.'</td>
                                   <td class="text-left">'.$estado.'</td>
                                   <td class="text-center" width="120">
-                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                      <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.', &#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                                       <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                                       <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                                   </td>
@@ -290,7 +291,7 @@ class Admin extends CI_Controller {
                                 <td class="text-left" width="80">'.$fecha.'</td>
                                 <td class="text-left">'.$estado.'</td>
                                 <td class="text-center" width="120">
-                                <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
+                                <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Rechazar" onclick="anular('.$key->Id.', '.$count.', &#39;'.$key->usuario.'&#39;);" id="btnanular'.$count.'" '.$disabled.'><i class="mdi mdi-close"></i></button>
                                 <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Aprobar" onclick="aceptar('.$key->Id.', '.$count.');sendEmail(&#39;'.$key->usuario.'&#39;);" id="btnaceptar'.$count.'" '.$disabled.'><i class="mdi mdi-done"></i></button>
                                 <button type="button" class="mdl-button mdl-js-button mdl-button--icon" data-toggle="tooltip" data-placement="bottom" title="Contactar" onclick="contactar('.$key->Id.', '.$i.');" id="btncontactar'.$i.'" '.$disabled2.'><i class="mdi mdi-warning"></i></button>
                                 </td>
@@ -387,13 +388,12 @@ class Admin extends CI_Controller {
         echo json_encode(array_map('utf8_encode', $data));
     }
 
-    function sendEmailAnula($motivo){
+    function sendEmailAnula($motivo = null, $email = null){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-            $email_partner = $this->input->post('email');
-            print_r($email_partner);
-            print_r("    ");
+            $email_partner =  $email;
+            $texto1 = 'Lamentamos informarles que su postulación ha sido rechazada. La razón te lo explicamos aquí: '.$motivo ;
             $this->load->library("email");
             $configGmail = array('protocol'  => 'smtp',
                                  'smtp_host' => 'smtpout.secureserver.net',
@@ -405,7 +405,7 @@ class Admin extends CI_Controller {
                                  'newline'   => "\r\n");
             $this->email->initialize($configGmail);
             $this->email->from('info@sap-latam.com');
-            $this->email->to('pyf136@gmail.com');
+            $this->email->to('pyf136@gmail.com'/*$email_partner*/);
             $this->email->subject('Gracias por tu participación. Tu postulación ya fue evaluada en SAP Gana por Goleada.');
             $texto = '<!DOCTYPE html>
                         <html>
@@ -446,7 +446,7 @@ class Admin extends CI_Controller {
                                                     <td style="text-align: center;padding: 0;margin: 0;padding: 10px 0 5px 0;"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Estimado Socio de Negocios:</font></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">Lamentamos informarles que su postulación ha sido rechazada. La razón, es la siguiente: '.$motivo.'</font></td>
+                                                    <td style="text-align: center;padding-top: 10px;padding: 5px 0 30px 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">'.$texto1.'</font></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: center;padding: 2px 0;line-height: 16px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Saludos,</font></td>

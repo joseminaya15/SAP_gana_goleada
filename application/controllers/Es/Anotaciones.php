@@ -332,8 +332,10 @@ class Anotaciones extends CI_Controller {
       $data['msj']   = null;
       try {
           $Id_anotacion = $this->input->post('id');
+          $motivo       = $this->M_datos->getDatosAnotacionById($Id_anotacion);
           $arrUpdt = array('alertas' => NULL);
           $this->M_datos->updateDatos($arrUpdt, $Id_anotacion, 'anotaciones');
+          $data['motivo'] = ($motivo[0]->motivo == null) ? '-': $motivo[0]->motivo;
           $data['error'] = EXIT_SUCCESS;
       } catch (Exception $e){
           $data['msj'] = $e->getMessage();

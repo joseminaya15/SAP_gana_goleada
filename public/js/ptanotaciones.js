@@ -48,16 +48,7 @@ function showModalAlert(dato,contador, id){
 	conteo = contador;
 	var nameTitle   = modalAlert.find('.mdl-card__title').find('h2');
 	var description = modalAlert.find('.mdl-card__supporting-text');
-	if(dato == 1){
-		nameTitle.text('Entre em contato conosco');
-		description.html('<p>Queremos entrar em contato com você, por favor nos escreva um email: <a href="mailto:carina.gonzales@sap.com">carina.gonzales@sap.com</a></p>');
-	}else if(dato == 2) {
-		nameTitle.text('Você marcou gols!');
-		description.html('<p>Sua oportunidade foi aceitada.</p>');
-	}else if(dato == 3) {
-		nameTitle.text('Seus gols foram rejeitados!');
-		description.html('<p>Sua oportunidade foi rejeitada, por favor entre em contato conosco. <a href="mailto:carina.gonzales@sap.com">carina.gonzales@sap.com</a></p>');
-	}
+	var motivo = null;
 	$.ajax({
 		data : {id : id},
 		url  : 'Anotaciones/showModalAlert',
@@ -66,6 +57,17 @@ function showModalAlert(dato,contador, id){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
+			if(dato == 1){
+				nameTitle.text('Entre em contato conosco');
+				description.html('<p>Queremos entrar em contato com você, por favor nos escreva um email: <a href="mailto:carina.gonzales@sap.com">carina.gonzales@sap.com</a></p>');
+			}else if(dato == 2) {
+				nameTitle.text('Você marcou gols!');
+				description.html('<p>Sua oportunidade foi aceitada.</p>');
+			}else if(dato == 3) {
+				motivo = (data.motivo == '-') ? '' : '<br><p>Razões:</p><il>'+data.motivo+'</il>';
+				nameTitle.text('Seus gols foram rejeitados!');
+				description.html('<p>Sua oportunidade foi rejeitada, por favor entre em contato conosco. <a href="mailto:carina.gonzalez@sap.com">carina.gonzalez@sap.com</a></p>'+motivo);
+			}
         	modalAlert.modal('show');
         }else {
         	return;

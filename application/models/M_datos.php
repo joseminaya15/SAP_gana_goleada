@@ -29,6 +29,13 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql, $id_serv);
         return $result->result();
     }
+    function getDatosAnotacionById($id){
+        $sql = "SELECT a.*
+                  FROM anotaciones a
+                 WHERE Id = ?";
+        $result = $this->db->query($sql, $id);
+        return $result->result();
+    }
     function getTotalGoles($empresa){
         $sql = "SELECT s.*,
                        a.*,

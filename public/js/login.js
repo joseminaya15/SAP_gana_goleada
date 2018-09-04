@@ -120,12 +120,14 @@ function cerrarCesion(){
         }
     });
 }
-var id_anular = null;
-function anular(id, btn){
+var id_anular   = null;
+var emailGlobal = null;
+function anular(id, btn, user){
     $('#btnanular'+btn).prop('disabled', true);
     $('#btnaceptar'+btn).prop('disabled', true);
     $('#modalAnular').modal('show');
-    id_anular = id;
+    id_anular   = id;
+    emailGlobal = user;
 }
 function aceptar(id, btn){
     $('#btnanular'+btn).prop('disabled', true);
@@ -212,9 +214,15 @@ function sendEmail(email){
 }
 function confirmarAnulacion(){
     var motivo = $('#empresa').val();
+    if (motivo == null || motivo == '') {
+        toastr.remove();
+        msj('error', 'Indicar el motivo, por favor.');
+        return;
+    }
     $.ajax({
         data : {id_serv : id_anular,
-                motivo  : motivo },
+                motivo  : motivo,
+                email   : emailGlobal},
         url  : 'admin/anularAnotacion',
         type : 'POST'
     }).done(function(data){
